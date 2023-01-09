@@ -10,6 +10,13 @@ app.use(express.static('public'));
 
 app.get('/', (req,res)=>{
     res.sendFile(path.resolve(__dirname, './views/home.html'))
+    // res.sendFile(path.resolve(__dirname, './views/cart.html'))
+    // res.sendFile(path.resolve(__dirname, './views/login.html'))
+    // res.sendFile(path.resolve(__dirname, './views/product.html'))
+    // res.sendFile(path.resolve(__dirname, './views/register.html'))
+
+
+
 });
 
 
