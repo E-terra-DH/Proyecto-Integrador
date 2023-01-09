@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-integrador",
+  "version": "1.0.0",
+  "description": "Hola! Somos especialistas en plantas, tanto de interior y exterior. Nuestras plantas vienen de productores tanto de Colombia y Argentina para traerte las plantas mas lindas para tu hogar, seleccionando las plantas con amor para todos los amantes de la naturaleza.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroMaury/Proyecto-Integrador.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlejandroMaury/Proyecto-Integrador/issues"
+  },
+  "homepage": "https://github.com/AlejandroMaury/Proyecto-Integrador#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
