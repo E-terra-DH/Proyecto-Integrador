@@ -18,18 +18,39 @@
   /* opacity: 0.5;  */
 }
 
+.nav_bar {
+  text-align: center;
+  flex-direction: row;
+  visibility: visible;
+  flex-grow:80% ;
+  position: static;
+  color: #344E41;
+  font-size: 30px;
+}
+
+
+.copy-right{
+ 
+  
+  text-align: center;
+  
+  align-self: flex-end;
+
+  
+}
 
 .titulo {
   align-items: center;
   font-style: oblique;
-  font-size: 45px;
+  font-size: 60px;
   color: #588157;
   text-align: center;
   margin: auto;
 }
 
 #link{
-  color:red
+  color:red;
+  text-align: right;
 }
 
 .container {
@@ -93,10 +114,4 @@ input {
   background: #27ae60;
 }
 
-.nav_bar {
-  text-align: center;
-  visibility: visible;
-  position: static;
-  color: #344E41;
-  font-size: 25px;
-}
+
