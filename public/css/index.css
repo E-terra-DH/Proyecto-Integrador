@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main .img-categories {
+    width: 10px;
+}
+
+
+main .img-sales {
+    width: 30px;
+}
