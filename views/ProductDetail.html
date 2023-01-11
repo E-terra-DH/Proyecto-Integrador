@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title> Productos </title>
 </head>
 <body>
-    <h1>Productos</h1>
+    <header>
+        <img src="" alt=""><!-- Agregar logo -->
+        <h1>Terra</h1>
+        <div class="form" action="#" method="get">
+            <input class="input" type="text" readonly value = "buscar productos, marcas y más" />
+            <div class="submit"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+    </header>
+
+    <section>
+        <ul>
+            <li>All</li>
+            <li>Ofertas</li>
+            <li>Novedades</li>
+            <li>Historial</li>
+            <li>Ayuda</li>
+        </ul>
+        <ul>
+            <li><i class="fa-regular fa-id-card"></i></li>
+            <li><i class="fa-solid fa-basket-shopping"></i></li>
+        </ul>
+    </section>
+
+    <main>
+        <div>
+            <img src="../public/Images/bonsai_4.jpg" alt="">
+            <h4>Nombre Artículo</h4>
+            <button>Agregar a favoritos</button>
+            <p class="price">Precio</p>
+            <select name="quantity" id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <button class="agregar-carrito">Agregar al carrito</button>
+        </div>
+        <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <section>
+            <div class="description">
+                <h4>Descripción</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
+            </div>
+            <div class="opinion">
+                <h4>Opiniones</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Términos y condiciones</li>
+            <li>Preguntas frecuentes</li>
+            <li>contacto</li>
+        </ul>
+        <p>
+            Creado con ♡ por e-Terra
+        </p>
+    </footer>
 </body>
 </html>
