@@ -1,14 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main .img-categories {
-    width: 10px;
+  width: 10px;
 }
 
-
-main .img-sales {
-    width: 30px;
+.prueba {
+  width: 300px;
+  height: 300px;
+  border: dashed red 2px;
 }
