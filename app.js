@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { clearScreenDown } = require('readline');
-const PORT = 3030;
+const PORT = 3006;
 
 
 

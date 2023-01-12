@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #a3b18a;
+  /* background-color: #a3b18a; */
 }
 
 html {
@@ -49,11 +49,20 @@ body {
   margin-right: 50px;
 }
 .titulo {
+  display: flexbox;
   margin: -19px;
   color: #3a5a40;
+  /* position: fixed; */
   font-size: 70px;
   text-align: center;
   text-decoration: none;
+  
+}
+
+.titulo-2{
+  display: block;
+  text-align: center;
+
 }
 
 .buscar {
