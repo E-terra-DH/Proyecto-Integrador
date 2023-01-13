@@ -15,20 +15,27 @@ body {
   font-family: "lora";
   font-size: 1.2rem;
   min-height: 100%;
+  min-width:auto;
+  margin: 150px;
+  margin-bottom: 50px;
 }
 
-.grid-conteiner > * {
-  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 4px;
-  padding: 10px;
-  text-align: center;
+.header{
+  position: fixed;
+  width: 700px;
 }
-
 .logo {
+  margin-top: -59px;
+
+  margin-left: -50px;
+  width: 13px;
+  height: 13px;
+}
+
+.logo1 {
   display: flex;
-  margin-top: 25px;
-  margin-right: 250px;
-  margin-left: 10px;
+  image-rendering: optimizeQuality;
+  /* border: dashed blue 2px; */
 }
 
 .logos-superiores {
@@ -43,35 +50,38 @@ body {
   margin-right: 50px;
 }
 
+
 .user {
   text-align: right;
   margin-top: 5px;
   margin-right: 50px;
 }
+.log-in{
+  text-decoration: none;
+}
+
 .titulo {
   display: flexbox;
   margin: -19px;
   color: #3a5a40;
-  /* position: fixed; */
+ 
   font-size: 70px;
   text-align: center;
   text-decoration: none;
-  
-}
-
-.titulo-2{
-  display: block;
-  text-align: center;
-
 }
 
 .buscar {
-  margin-left: 200px;
-  margin-right: 200px;
+  text-align: center;
+  margin-left: 350px;
+  margin-right: 350px;
   border-radius: 25px;
   border: gray solid 2px;
 }
 
+.navbar {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .links-generales {
   color: black;
   margin: 5vh;
@@ -80,30 +90,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-.grid-conteiner {
-  display: grid;
-  gap: 10px;
-  grid-template-areas:
-    "header"
-    "navbar"
-    "main"
-    "sidebar"
-    "footer";
-}
-
-/* @media(min-width: 600px){
-  .grid-conteiner{
-    grid-template-columns: 200px auto;
-    grid-template-rows: 100px 50px auto 100px;
-    grid-template-areas: 
-    "header  header"
-    "navbar  navbar"
-    "sidebar main"
-    "footer  footer";
-
-  }
-} */
 
 .sidebar {
   background-color: aqua;
@@ -137,13 +123,15 @@ body {
 }
 
 .redes {
-  padding: 10px;
+  text-align: center;
+
   margin: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .anuncios {
+  font-size: 2.5vh;
   margin-top: 45px;
   display: flex;
   flex-wrap: wrap;
