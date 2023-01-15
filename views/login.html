@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>log in</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/css/login.css" />
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <h1>e-terra log in</h1>
-</body>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Iniciá Sesión</h1>
+    <h3>Que bueno que volviste!</h3>
+    <form action="/login" method="post">
+      <div>
+        <label> Usuario</label>
+        <input
+          type="text"
+          name="Usuario"
+          placeholder="Enter Username"
+          required
+        />
+      </div>
+      <div>
+        <label>Username</label>
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <div>
+        <label>Contraseña</label>
+        <input
+          type="password"
+          name="contraseña"
+          placeholder="Contraseña"
+          required
+        />
+      </div>
+      <a href="#">Olvidaste tu contraseña?</a>
+      <button type="submit">Iniciar Sesion</button>  
+     </form>
+
+     <div>No estas registrado? <a href="#">registrate</a></div>
+  </body>
 </html>
