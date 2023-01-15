@@ -12,7 +12,7 @@ body {
     margin-top: 20px;
 }  
 
-img {
+.product-image {
     width:350px;
     /* border-radius: 5px; */
 }
@@ -23,11 +23,14 @@ header {
     display: flex;
     grid-template-areas: "flor center";
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+    gap: 10px;
+    position: relative;
 }
 
 .flor {
-    width: 160px;
+    width: 130px;
 }
 
 .logo {
@@ -35,8 +38,8 @@ header {
 }
 
 .center {
-    position: abosolute;
-    right: 40vw;
+    /* position: abosolute;
+    justify-content: center; */
 }
 
 .form {
@@ -117,6 +120,7 @@ button:hover {
     display: flex;
     gap: 5px;
     align-items: center;
+    margin: 5px;
 }
 
 .quantity {
@@ -145,7 +149,24 @@ button:hover {
 /* -------------DETALLE INFO------------- */
 
 .description, .opinion {
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+.related-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.related-images img {
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 10px 0px;
+}
+
+.related-products {
+    margin: 15px 0px;
 }
 
 /* -------------FOOTER------------- */
@@ -153,5 +174,21 @@ button:hover {
 footer {
     margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    position: absolute;
+    bottom: 20 px;
+}
+
+
+/*--------------TABLET------------*/
+@media (min-width:481px) {
+
+}
+
+
+
+/*--------------DESKTOP------------*/
+@media (min-width:769px) {
+    
 }
