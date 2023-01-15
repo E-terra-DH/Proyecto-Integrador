@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/ProductDetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title> Productos </title>
 </head>
 <body>
     <header>
-        <img src="" alt=""><!-- Agregar logo -->
-        <h1>Terra</h1>
-        <div class="form" action="#" method="get">
-            <input class="input" type="text" readonly value = "buscar productos, marcas y más" />
-            <div class="submit"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <img class="flor" src="../public/Images/flor-logo.png" alt="">
+        <div class="center">
+            <img class="logo" src="../public/Images/logo-sin-flor.png" alt="">
+            <div class="form" action="#" method="get">
+                <input class="input" type="text" readonly value = "Buscar productos, marcas y más" />
+                <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
         </div>
     </header>
 
-    <section>
+    <section class="nav-bar">
         <ul>
             <li>All</li>
             <li>Ofertas</li>
@@ -25,41 +29,48 @@
             <li>Historial</li>
             <li>Ayuda</li>
         </ul>
-        <ul>
-            <li><i class="fa-regular fa-id-card"></i></li>
-            <li><i class="fa-solid fa-basket-shopping"></i></li>
+        <ul class="user-icons">
+            <li><i class="fa-solid fa-user"></i></li>
+            <li><i class="fa-solid fa-cart-shopping"></i></li>
         </ul>
     </section>
 
     <main>
-        <div>
-            <img src="../public/Images/bonsai_4.jpg" alt="">
-            <h4>Nombre Artículo</h4>
-            <button>Agregar a favoritos</button>
-            <p class="price">Precio</p>
-            <select name="quantity" id="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-            </select>
-            <button class="agregar-carrito">Agregar al carrito</button>
-        </div>
-        <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-instagram"></i>
+        <div class="product">
+            <img class="product-image" src="../public/Images/bonsai_4.jpg" alt="">
+            <div class="product-info">
+                <div class="name">
+                    <h2>POTUS</h2>
+                    <button>♡ Agregar a favoritos</button>
+                </div>
+                <h3 class="price">$1200</h3>
+                <div class="select">
+                    <p>Cantidad</p>
+                    <select class="quantity" name="quantity" id="quantity">Cantidad
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+                <button class="add-cart">Agregar al carrito</button>
+                <div class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-instagram"></i>
+            </div>
+            </div>
         </div>
         <section>
             <div class="description">
-                <h4>Descripción</h4>
+                <h3>Descripción</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
             </div>
             <div class="opinion">
-                <h4>Opiniones</h4>
+                <h3>Opiniones</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
             </div>
         </section>
