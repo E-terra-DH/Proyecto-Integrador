@@ -3,7 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* BODY */
 
+.container {
+  font-family:  'Lora', serif;
+}
+/* HEADER */
+.logo {
+  width: 50%;
+  padding: 10px;
+  margin-top: 80px;
+  align-items: center;
+}
+
+nav {
+  align-content: space-between;
+}
+/* MAIN */
 main .img-categories {
   width: 10px;
 }
@@ -14,3 +30,4 @@ main .img-categories {
   border: dashed red 2px;
   
 }
+/* FOOTER */

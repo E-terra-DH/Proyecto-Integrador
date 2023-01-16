@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>TERRA</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="" rel="stylesheet"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 </head>
-<body>
-    <h1>e-terra</h1>
-    /*buscador*/
-    /*logo*/
-    <header>
-        <nav>
+<body class="container">
+    <header class="header">
+        <div class="top-header">
+            <div class="logo">
+              <img src="/Images/logo_4.svg" alt="" />
+            </div>
+                <div class="buscar">
+                    <input type="text" placeholder="Buscar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+        </div>
+        <nav class="nav">
             <a href="/login.html" target="_blank">log in</a>
             <a href="/register.html" target="_blank">Registro</a>
             <a href="/ProductDetail.html" target="_blank"> Producto </a> 
@@ -24,7 +30,7 @@
         </nav>
     </header>
     <main>
-        <!-- <section class="categories">
+         <section class="categories">
             <h2 class="title">CATEGORIAS</h2>
             <div class="img-categories">
                 <img src="/Images/bonsai_2.jpg" width="250px" height="200px" alt="" class="img-interior">
@@ -56,7 +62,7 @@
                     <h3>Accesorios</h3>
                 </div>
             </div>
-        </section> -->
+        </section> 
         <section class="sales">
             <h2 class="title">MAS VENDIDOS</h2>
             <div class="img-text">
@@ -65,7 +71,7 @@
             <div class="img-sales">
                 <img class="prueba" src="/Images/bonsai_1.jpg" width="250px" height="200px" alt="">
             </div>
-            <!-- <div class="img-text">
+            <div class="img-text">
                 <h3>ORQUIDEA</h3>
             </div>
             <div class="img-sales">
@@ -86,10 +92,10 @@
                     <h3>Potus</h3>
                 </div>
             <div class="img-sales">
-                <img src="/Images/potus.jpg" alt="">
-            </div> -->
+                <img src="/Images/potus.jpg"  width="450px" height="400px" alt="">
+            </div>
         </section>
-        <!-- <section>
+        <section>
             <div class="news-box">
                 <img src="/Images/staff.jpg" width="450px" height="400px" alt="">
                 <div class="news-text">
@@ -97,7 +103,7 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit animi tempora eius sit molestiae eligendi natus, quasi illo id, debitis voluptates doloribus nulla facere aliquid repellat voluptatem magnam modi!</p>
                 </div>
             </div>
-        </section> -->
+        </section> 
     </main>
     <footer>
         <nav>
@@ -105,7 +111,7 @@
             <a href="" target="_blank"> Contacto</a>
             <a href="" target="_blank"> Preguntas Frecuentes</a> 
         </nav> 
-        <h2 class="final-title">&copy; Creado con (corazon) por e-Terra Team</h2>
+        <h2 class="final-title">&copy; Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team</h2>
     </footer>
 </body>
 </html>
