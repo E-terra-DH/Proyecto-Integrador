@@ -16,9 +16,11 @@
   align-items: center;
 }
 
-nav {
-  align-content: space-between;
+.navegador {
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
+
 /* MAIN */
 main .img-categories {
   width: 10px;
