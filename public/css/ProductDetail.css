@@ -1,3 +1,14 @@
+/* 
+Colores 
+color:#DAD7CD;
+color:#A3B18A;
+color:#588157;
+color:#3A5A40;
+color:#344E41;
+color: #F0CA7A;
+color: #988AB1;
+color: #805781; */
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +21,9 @@ body {
     width: 70vw;
     margin: 0px auto;
     margin-top: 20px;
+    background-color: #F9DBA5;
+    /* background-color: #F0CA7A; */
+    /* background-color: #A3B18A; */
 }  
 
 .product-image {
@@ -21,7 +35,7 @@ body {
 
 header {
     display: flex;
-    grid-template-areas: "flor center";
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
@@ -30,7 +44,11 @@ header {
 }
 
 .flor {
-    width: 130px;
+    display: none;
+}
+
+.center {
+    justify-content: center;
 }
 
 .logo {
@@ -67,7 +85,18 @@ ul {
     display: flex;
 }
 
+i {
+    color: #344E41;
+    /* color: #805781; */
+}
+
+
 /* -------------DETALLE PRODUCTO------------- */
+
+h3, h2 {
+    color: #344E41;
+    font-weight: 700;
+}
 
 .product {
     display: flex;
@@ -92,21 +121,23 @@ h4 {
     margin-left: 5px;
 }
 
-button {
+.add {
     display: inline-block;
-    background-color: white;
-    border: grey solid 1px;
+    background-color: #988AB1;
+    border: #988AB1 solid 1px;
     padding: 10px;
     font-size: 14px;
     border-radius: 5px;
     transition-duration: 10ms;
+    opacity: 100%;
+    color: white;
 }
 
-button:hover {
+/* button:hover {
     background-color: rgba(231, 120, 30, 0.959);
     border: rgba(231, 120, 30, 0.959) solid 1px;
     color: white;
-}
+} */
 
 .select {
     display: flex;
@@ -126,15 +157,21 @@ button:hover {
 
 .add-cart {
     display: inline-block;
-    background-color: rgba(231, 120, 30, 0.959);
-    border: rgba(231, 120, 30, 0.959) solid 1px;
+    background-color: #588157;
+    border: #588157;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition-duration: 10ms;
 }
 
 .social i {
     font-size: 25px;
     width: 30px;
     height: 30px;
-    color: grey;
+    color: #344E41;
     margin: 10px 0px;
 }
 
@@ -168,7 +205,7 @@ button:hover {
     justify-content: space-between;
     position: fixed;
     bottom: 0px;
-    background-color: white;
+    background-color:  #F9DBA5;
     font-size: 25px;
     color: grey;
     gap: 50px;
@@ -201,6 +238,11 @@ footer {
 
     .input {
         width: 200px;
+    }
+
+    .to-fix {
+        /* position: fixed; */
+
     }
 }
 

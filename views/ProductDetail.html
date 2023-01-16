@@ -10,30 +10,35 @@
     <title> Productos </title>
 </head>
 <body>
-    <header>
-        <img class="flor" src="/Images/flor-logo.png" alt="">
-        <div class="center">
+    <div class="to-fix">
+        <header>
+            <a href="/index.html" class="logo">
             <img class="logo" src="/Images/logo-sin-flor.png" alt="">
+            </a>
             <div class="form" action="#" method="get">
                 <input class="input" type="text" readonly value = "Buscar productos, marcas y más" />
                 <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
-        </div>
-        </div>
-    </header>
+            </div>
+        </header>
 
-    <section class="nav-bar">
-        <ul>
-            <li>All</li>
-            <li>Ofertas</li>
-            <li>Novedades</li>
-            <li>Historial</li>
-            <li>Ayuda</li>
-        </ul>
-        <ul class="user-icons">
-            <li><i class="fa-solid fa-user"></i></li>
-            <li><i class="fa-solid fa-cart-shopping"></i></li>
-        </ul>
-    </section>
+        <section class="nav-bar">
+            <ul>
+                <li>Home</li>
+                <li>Registro</li>
+                <li>Login</li>
+                <li>Producto</li>
+                <li>Carrito</li>
+            </ul>
+            <ul class="user-icons">
+                <a href="/login.html" class="carrito">
+                <li><i class="fa-solid fa-user"></i></li>
+                </a>
+                <a href="/ProductCart.html" class="user">
+                <li><i class="fa-solid fa-cart-shopping"></i></li>
+                </a>
+            </ul>
+        </section>
+    </div>
 
     <main>
         <div class="product">
@@ -41,7 +46,7 @@
             <div class="product-info">
                 <div class="name">
                     <h2>POTUS</h2>
-                    <button>♡ Agregar a favoritos</button>
+                    <button class="add">♡ Agregar a favoritos</button>
                 </div>
                 <h3 class="price">$1200</h3>
                 <div class="select">
@@ -98,7 +103,7 @@
         <ul>
             <li>Términos y condiciones</li>
             <li>Preguntas frecuentes</li>
-            <li>contacto</li>
+            <li>Contacto</li>
         </ul>
         <p>
             Creado con ♡ por e-Terra
