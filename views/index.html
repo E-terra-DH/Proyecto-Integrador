@@ -10,28 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 </head>
-<body class="container">
-    <header class="header">
+<body>
+    <header>
         <div class="top-header">
             <div class="logo">
               <img src="/Images/logo_4.svg" alt="" />
             </div>
-                <div class="buscar">
-                    <input type="text" placeholder="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="form" action="#" method="GET">
+                    <input class="input" type="text" readonly value = "Buscar" />
+                    <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
         </div>
-        <nav class="nav">
-            <a href="/login.html" target="_blank">log in</a>
+        <nav class="nav-bar">
+            <a href="/login.html" target="_blank">Inicia sesion</a>
             <a href="/register.html" target="_blank">Registro</a>
-            <a href="/ProductDetail.html" target="_blank"> Producto </a> 
-            <a href="/ProductCart.html" target="_blank"> Carrito de compras </a>
-            <a href="/index.html" target="_blank"> Home </a>
+            <a href="/ProductDetail.html" target="_blank">Producto </a> 
+            <a href="/ProductCart.html" target="_blank">Carrito</a>
         </nav>
     </header>
     <main>
+        <h2 class="title">CATEGORIAS</h2>
          <section class="categories">
-            <h2 class="title">CATEGORIAS</h2>
             <div class="img-categories">
                 <img src="/Images/bonsai_2.jpg" width="250px" height="200px" alt="" class="img-interior">
                 <div class="img-text">
