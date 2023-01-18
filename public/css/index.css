@@ -27,27 +27,32 @@ header {
   position: relative;
 }
 
-.top-header {padding: 5px;
-width: 50%;
-text-align: center;
-margin-top: 10px;
-}
 
 .logo {
-  width: 50%;
-  padding: 10px;
-  margin-top: 80px;
-  align-items: center;
-  margin-right: 80px;
+  width: 100%;
+  justify-content: center;
+  padding: 30% 30%;
+  margin: 0%;
 }
 
 .nav-bar{ 
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: left;
-  padding: 0;
   }
+
+ .nav-bar a {
+  display: flex;
+  color:#588157;
+  text-decoration: none;
+  padding: 10px 20px;
+
+}  
+
+.nav-bar a:hover {
+  display: flex;
+  background-color: #A3B18A;
+}
+
 /* MAIN */
 
 .title{
@@ -59,30 +64,98 @@ margin-top: 10px;
   flex-wrap: nowrap;
 }
 .categories{
-  width: 50%;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  justify-items: flex-start;
+  padding: 10px;
   color: #588157;
   font-weight: normal;
+  flex-wrap: wrap;
+  margin: 5px;
+  
 }
 
 .img-categories {
-  width: 10px;
+  width: 100px;
+  height: auto;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
 }
 
-.sales{
-width: 50%;
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-justify-content: space-between;
-justify-items: flex-start;
-color: #588157;
-font-weight: normal;
+.img-sales {
+  width: 100px;
+  height: auto;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.img-text{
+  color: #344E41;
+  font-size:smaller;
+  font-weight: lighter;
+  text-decoration-line: none;
+  text-align: justify;
+}
+
+.sales {
+  display: flex;
+  padding: 10px;
+  color: #588157;
+  font-weight: normal;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+.img-news{
+  width: 300px;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.news-box {
+  margin-top: 100px;
+  display: flex;
+  padding: 25px;
+}
+
+.news-text{
+  padding-left: 20px;
+  font-weight: lighter;
+  font-size: smaller;
+  text-align: justify;
+}
+.news-text h3 {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 5%;
 }
 
 
 /* FOOTER */
+
+.nav-footer a{
+  display: flex;
+  justify-content: space-between;
+  font-size: 15%;
+  color:#588157;
+}
+.social{
+  display: flex;
+  justify-content: center;
+  color:#588157;
+  padding: 10px 20px; 
+  width: 30px;
+  height: 30px;
+  margin: 0px 100px;
+}
+
+.final-title{
+  display: flex;
+  justify-content: right;
+  color:#588157;
+  padding: 10px 20px;
+  text-align: right;
+  font-size: 15%;
+  font-weight: normal;
+}
