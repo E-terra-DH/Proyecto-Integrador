@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <title>Registro</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/register.css" />
     <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-    <h1>Registro</h1>
-</body>
+    <h1 class="registro ">Registro</h1> 
+    <h2 class= "cuenta">Crear cuenta</h2>
+    <p> <h4 class = "parrafo"> Crea tu usuario para controlar tus pedidos y comprar mas rapido tus plantas favoritas ! </h4> </p>
+    <form action = "/register.html"></form>
+        <div class= "usuario"> 
+        <label> Usuario:</label>
+        <input type = "text" name = "nombreUsuario">
+        </div>
+        <div class="email"> 
+        <label> Email : </label>
+        <input type = "email" name = "emailUsuario">
+        </div>
+        <div class="contraseña ">
+        <label> Contraseña: </label>
+        <input type  = "password" name = "contraseñaUsuario">
+        </div>
+        <div class = "contraseñaconfirmar">
+        <label> Confirmar contraseña: </label>
+        <input type = "password" name ="confirmarContraseña">
+         </div>
+        <div class = "tel">
+         <label> Telefono(opcional): </label>
+         <input type = "tel" name = "telefonoUsuario">
+        </div>
+        <div class = "boton">
+        <button type = "submit" > CREAR CUENTA </button>
+        </div>
+       
+        </body>
 </html>
