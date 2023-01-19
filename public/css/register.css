@@ -8,7 +8,7 @@ body {
 body {
     background-color: #F9DBA5;
 }
-    .registro { 
+.Terra { 
 font-size: 46px; 
 color:#344E41;
 text-align: center;
@@ -36,7 +36,7 @@ text-align: center;
     font-weight: bold;
     text-align: center;
     background-size: 130px;
-    background-color: #F9DBA5;
+    
 }
 .email {
     color:#344E41;
@@ -74,9 +74,38 @@ text-align: center ;
     text-align: center;
     font-size: 15px;
     line-height: 28px;
-   
-  
-    
 }
+.redes {
+    text-align: center;
+  
+    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+
+.pregunta {
+    text-align: center; 
+
+
+}
+
+ .iniciar {
+    text-align: center; 
+
+ }
+ .logo { 
+   width: 50px;
+   width: 216px;
+   margin-top: 16px;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+ 
+    
+   
+    
 
 
