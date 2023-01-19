@@ -26,7 +26,7 @@ text-align: center;
     font-weight: bold;
      text-align: center;
      font-weight: normal;
-     background-color: ;
+   
      
 }
 .usuario {
@@ -75,19 +75,9 @@ text-align: center ;
     font-size: 15px;
     line-height: 28px;
 }
-.redes {
-    text-align: center;
   
-    margin: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-
 .pregunta {
     text-align: center; 
-
-
 }
 
  .iniciar {
