@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background-color:#E5F7E4 ;
+  font-family:"Roboto";
+}
 /* Colores de la pagina  */
 .color{
   color:#DAD7CD;
