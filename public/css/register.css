@@ -8,44 +8,75 @@ body {
 body {
     background-color: #F9DBA5;
 }
-    .prueba { 
-font-size: 50px; 
+    .registro { 
+font-size: 46px; 
 color:#344E41;
 text-align: center;
+
 }
 .cuenta {
-    font-weight: normal;
-    font-size:20px ;
+    font-weight: bold;
+    font-size:25px ;
     color:black;
     text-align: center;
+    
 }
 .parrafo {
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: bold;
      text-align: center;
+     font-weight: normal;
+     background-color: ;
+     
 }
 .usuario {
-    font-weight: normal;
+    color:#344E41;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: bold;
     text-align: center;
+    background-size: 130px;
+    background-color: #F9DBA5;
 }
 .email {
-font-weight: normal;
+    color:#344E41;
+font-family: 400;
+    font-size: 15px;
+    line-height: 28px;
+font-weight: bold;
 text-align: center ;
 }
+
 .contraseña {
-    font-weight: normal;
+    color:#344E41;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: bold;
     text-align: center;
 }
 .contraseñaconfirmar{
-    font-weight: normal ;
+    color:#344E41;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: bold;
     text-align: center;
     ;
 }
 .tel {
-    font-weight: normal;
+    color:#344E41;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: bold;
     text-align: center;
+   
 }
-.crear {
+.boton {
     text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+   
+  
+    
 }
 
 
