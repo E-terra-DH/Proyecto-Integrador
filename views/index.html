@@ -12,15 +12,13 @@
 </head>
 <body>
     <header>
-        <div class="top-header">
-            <div class="logo">
-              <img src="/Images/logo_4.svg" alt="" />
+            <div>
+              <img class="logo" src="/Images/logo_4.svg" alt="" />
             </div>
                 <div class="form" action="#" method="GET">
                     <input class="input" type="text" readonly value = "Buscar" />
                     <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
-        </div>
         <nav class="nav-bar">
             <a href="/login.html" target="_blank">Inicia sesion</a>
             <a href="/register.html" target="_blank">Registro</a>
@@ -29,74 +27,77 @@
         </nav>
     </header>
     <main>
+
         <h2 class="title">CATEGORIAS</h2>
          <section class="categories">
-            <div class="img-categories">
-                <img src="/Images/bonsai_2.jpg" width="250px" height="200px" alt="" class="img-interior">
+            <div>
+                <img class="img-categories" src="/Images/bonsai_2.jpg" alt="">
                 <div class="img-text">
                     <h3>Interior</h3>
                 </div>
             </div>
-            <div class="img-categories">
-                <img src="/Images/rosas_1.jpg" width="250px" height="200px" alt="" class="img-exterior">
+            <div>
+                <img class="img-categories" src="/Images/rosas_1.jpg">
                 <div class="img-text">
                     <h3>Exterior</h3>
                 </div>
             </div>
-            <div class="img-categories">
-                <img src="/Images/macetas.jpg" width="250px" height="200px" alt="" class="img-macetas">
+            <div>
+                <img class="img-categories" src="/Images/macetas.jpg" alt="">
                 <div class="img-text">
                     <h3>Macetas</h3>
                 </div>
             </div>
-            <div class="img-categories">
-                <img src="/Images/germinando.jpg" width="250px" height="200px" alt="" class="img-sustratos">
+            <div>
+                <img class="img-categories" src="/Images/germinando.jpg"alt="">
                 <div class="img-text">
                     <h3>Sustratos</h3>
                 </div>
             </div>
-            <div class="img-categories">
-                <img src="/Images/regalos.jpg" width="250px" height="200px" alt="" class="img-sustratos">
+            <div>
+                <img class="img-categories" src="/Images/regalos.jpg" alt="">
                 <div class="img-text">
                     <h3>Accesorios</h3>
                 </div>
             </div>
         </section> 
+
+        <h2 class="title">MAS VENDIDOS</h2>
         <section class="sales">
-            <h2 class="title">MAS VENDIDOS</h2>
-            <div class="img-text">
-                <h3>BONSAI</h3>
+            <div>
+                <img class="img-sales" src="/Images/bonsai_1.jpg" alt="">
+                <div class="img-text">
+                    <h3>Bonsai</h3>
+                </div>
             </div>
-            <div class="img-sales">
-                <img class="prueba" src="/Images/bonsai_1.jpg" width="250px" height="200px" alt="">
+            <div>
+                <img class="img-sales" src="/Images/orquidea_2.jpg" alt="">
+                <div class="img-text">
+                    <h3>Orquidea</h3>
+                </div>
             </div>
-            <div class="img-text">
-                <h3>ORQUIDEA</h3>
-            </div>
-            <div class="img-sales">
-                <img src="/Images/orquidea_2.jpg" width="250px" height="200px" alt="">
+            <div>
+                <img class="img-sales" src="/Images/tulipanes.jpg" alt="">
                 <div class="img-text">
                     <h3>tulipanes</h3>
                 </div>    
-            <div class="img-sales">
-                <img src="/Images/tulipanes.jpg" width="250px" height="200px" alt="">
-            </div>    
+            </div>
+            <div >
+                <img class="img-sales" src="/Images/suculenta_1.jpg" alt="">    
                 <div class="img-text">
                     <h3>Suculentas</h3>
                 </div>
-            <div class="img-sales">
-                <img src="/Images/suculenta_1.jpg" width="250px" height="200px" alt="">
             </div>
+            <div>
+                <img class="img-sales" src="/Images/potus.jpg" alt="">
                 <div class="img-text">
                     <h3>Potus</h3>
                 </div>
-            <div class="img-sales">
-                <img src="/Images/potus.jpg"  width="450px" height="400px" alt="">
             </div>
         </section>
         <section>
             <div class="news-box">
-                <img src="/Images/staff.jpg" width="450px" height="400px" alt="">
+                <img class="img-news" src="/Images/staff.jpg" alt="">
                 <div class="news-text">
                     <h3>NOVEDADES</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit animi tempora eius sit molestiae eligendi natus, quasi illo id, debitis voluptates doloribus nulla facere aliquid repellat voluptatem magnam modi!</p>
@@ -105,11 +106,16 @@
         </section> 
     </main>
     <footer>
-        <nav>
+        <nav class="nav-footer">
             <a href="" target="_blank"> Terminos y Condiciones</a>
             <a href="" target="_blank"> Contacto</a>
             <a href="" target="_blank"> Preguntas Frecuentes</a> 
         </nav> 
+        <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
         <h2 class="final-title">&copy; Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team</h2>
     </footer>
 </body>

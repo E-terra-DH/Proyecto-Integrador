@@ -4,60 +4,73 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* background-color: #a3b18a; */
+  font-family: 'Lora', serif;
+  list-style-type: none;
 }
 
-html {
-  height: 100%;
-}
+
 
 body {
-  font-family: "lora";
+  width: 70vw;
+  margin: 0px auto;
+  margin-top: 20px;
+  background-color: #F9DBA5;
+  /* font-family: "lora";
   font-size: 1.2rem;
   min-height: 100%;
   min-width: auto;
-  margin: 100px;
+  margin: 100px; */
 }
 
-.header {
-  /* position: fixed; */
-  width: auto;
-}
-.logo {
-  display: flex;
-  margin-top: -59px;
-
-  margin-left: -50px;
-  width: 13px;
-  height: 13px;
-}
-
-.logo1 {
- margin-left: 350px;
-
-  /* border: dashed blue 2px; */
-}
-
-.logos-superiores {
+header {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+  position: relative;
 }
-.carrito {
-  order: 1;
-  margin-top: 5px;
-  text-align: right;
+.logo {
+  width: 230px;
+}
 
-  margin-right: 50px;
+.form {
+  background-color: white;
+  border: grey solid 1px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 10px 0px;
 }
 
-.user {
-  text-align: right;
-  margin-top: 5px;
-  margin-right: 50px;
+.input {
+  border: white;
+  width: 190px;
+  padding-right: 5px;
+  border-right: grey solid 1px;
 }
-.log-in {
-  text-decoration: none;
+
+/* .nav-bar {
+  display: none;
+} */
+
+ul {
+  display: flex;
+  padding-right: 3px;
+  gap: 10px;
 }
+
+.user-icons {
+  display: flex;
+}
+
+i {
+  color: #344E41;
+  /* color: #805781; */
+}
+
+
 
 .titulo {
   height: 170px;
@@ -69,23 +82,6 @@ body {
   margin-right: 250px;
   border-radius: 25px;
   border: gray solid 2px;
-}
-
-.navbar {
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.links-generales {
-  color: black;
-  margin: 5vh;
-  font-size: 5vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.sidebar {
-  background-color: aqua;
 }
 
 .product1 {
@@ -130,3 +126,44 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* ----------RESPONSIVE-------- */
+
+/* ------TABLET------ */
+@media (min-width:481px) {
+  .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0px;
+      border-bottom: 1px grey solid;
+      margin-bottom: 20px;
+  }    
+
+  .bottom-nav {
+      display: none;
+  }
+
+  .input {
+      width: 200px;
+  }
+
+ 
+
+  }
+
+
+/* ------------DESKTOP-------------- */
+@media (min-width:769px) {
+  .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0px;
+      border-bottom: 1px grey solid;
+      margin-bottom: 20px;
+  }    
+
+  .bottom-nav {
+      display: none;
+  }
+}
+
