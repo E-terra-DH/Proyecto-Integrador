@@ -11,9 +11,8 @@
  
 /* BODY */
 
-body {
-  font-family:  'Lora', serif;
-    background-color: #F9DBA5;
+.container {
+  font-family: "Roboto";
 }
 
 /* HEADER */
