@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>log in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -15,36 +16,57 @@
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
+
   <body>
-    <h1>Iniciá Sesión</h1>
-    <h3>Que bueno que volviste!</h3>
-    <form action="/login" method="post">
-      <div>
-        <label> Usuario</label>
+    <header>
+      <img class="logo-header" src="/Images/logo-sin-flor.png" alt="" />
+    </header>
+  <nav>
+    <div class="links-generales">
+      <article>All</article>
+      <article>Ofertas</article>
+      <article>Novedades</article>
+      <article>Historial</article>
+      <article>Ayuda</article>
+    </div>
+  </nav>
+    <main>
+      <h1 class="form-title">Iniciá Sesión</h1>
+      <h3 class="form-title2">Que bueno que volviste!</h3>
+      <form action="/login" method="post">
+        <label>
+          <i class="fa-solid fa-user"></i></label>
         <input
           type="text"
           name="Usuario"
           placeholder="Enter Username"
           required
         />
-      </div>
-      <div>
-        <label>Username</label>
-        <input type="email" name="email" placeholder="Email" required />
-      </div>
-      <div>
-        <label>Contraseña</label>
+        
+        <label>
+          <i class="fa-solid fa-lock"></i></label>
         <input
           type="password"
           name="contraseña"
           placeholder="Contraseña"
           required
         />
-      </div>
-      <a href="#">Olvidaste tu contraseña?</a>
-      <button type="submit">Iniciar Sesion</button>  
-     </form>
+        <a class="olvidaste-contraseña" href="#">Olvidaste tu contraseña?</a>
+        <button type="submit">Iniciar Sesion</button>
+      </form>
 
-     <div>No estas registrado? <a href="#">registrate</a></div>
+      <div>No estas registrado? <a href="/register.html">registrate</a></div>
+    </main>
+
+    <footer>
+      <ul class="ul-footer">
+        <li>Términos y condiciones</li>
+        <li>Preguntas frecuentes</li>
+        <li>Contacto</li>
+    </ul>
+    <p>
+        Creado con ♡ por e-Terra
+    </p>
+    </footer>
   </body>
 </html>
