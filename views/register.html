@@ -6,53 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/register.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Registro</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/register.css" />
     <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-   
-    <header> <img class = "logo" src="/Images/logo-sin-flor.png" alt="#"></header>
-    <h2 class= "cuenta">Crear cuenta</h2>
-    <p> <h4 class = "parrafo"> Crea tu usuario para controlar tus pedidos y comprar mas rapido tus plantas favoritas ! </h4> </p>
-    <form action = "/register.html"></form>
-        <div class= "usuario"> 
-        <label> Usuario:</label>
-        <input type = "text" name = "nombreUsuario">
+    <header>
+        <a href="/index.html" class="logo">
+        <img class="logo" src="/Images/logo-sin-flor.png" alt="">
+        </a>
+        <div class="form" action="#" method="get">
+            <input class="input" type="text" readonly value = "Buscar productos, marcas y más" />
+            <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
         </div>
-        <div class="email"> 
-        <label> Email : </label>
-        <input type = "email" name = "emailUsuario">
+    </header>
+    <section class="nav-bar">
+        <ul>
+            <a href="/index.html"><li>Home</li></a>
+            <a href="/register.html"><li>Registro</li></a>
+            <a href="/ProductDetail.html"><li>Producto</li></a>
+        </ul>
+        <ul class="user-icons">
+            <a href="/login.html" class="carrito">
+            <li><i class="fa-solid fa-user"></i></li>
+            </a>
+            <a href="/ProductCart.html" class="user">
+            <li><i class="fa-solid fa-cart-shopping"></i></li>
+            </a>
+        </ul>
+    </section>
+    <main>
+        
+        <h2 class= "cuenta">Crear cuenta</h2>
+        <p> <h4 class = "parrafo"> Crea tu usuario para controlar tus pedidos y comprar mas rapido tus plantas favoritas ! </h4> </p>
+        <form action = "/register.html"></form>
+            <div class= "usuario"> 
+            <label> Usuario:</label>
+            <input type = "text" name = "nombreUsuario">
+            </div>
+            <div class="email"> 
+            <label> Email : </label>
+            <input type = "email" name = "emailUsuario">
+            </div>
+            <div class="contraseña ">
+            <label> Contraseña: </label>
+            <input type  = "password" name = "contraseñaUsuario">
+            </div>
+            <div class = "contraseñaconfirmar">
+            <label> Confirmar contraseña: </label>
+            <input type = "password" name ="confirmarContraseña">
+             </div>
+            <div class = "tel">
+             <label> Telefono(opcional): </label>
+             <input type = "tel" name = "telefonoUsuario">
+            </div>
+            <div class = "boton">
+                <button type = "submit" > CREAR CUENTA </button>
+                </div>
+            <p class = "pregunta"> Ya tenes cuenta?
+            </p>
+            <p class = "iniciar">  Inicia sesion </p> 
+        
+              </div>
+              </main>
+        <div>
+            <ul class="bottom-nav">
+                <li class="bottom"><i class="fa-solid fa-house"></i></li>
+                <li class="bottom"><i class="fa-solid fa-user"></i></li>
+                <li class="bottom"><i class="fas fa-bars"></i></li>
+                <li class="bottom"><i class="fa-solid fa-heart"></i></li>
+            </ul>
         </div>
-        <div class="contraseña ">
-        <label> Contraseña: </label>
-        <input type  = "password" name = "contraseñaUsuario">
-        </div>
-        <div class = "contraseñaconfirmar">
-        <label> Confirmar contraseña: </label>
-        <input type = "password" name ="confirmarContraseña">
-         </div>
-        <div class = "tel">
-         <label> Telefono(opcional): </label>
-         <input type = "tel" name = "telefonoUsuario">
-        </div>
-        <div class = "boton">
-        <button type = "submit" > CREAR CUENTA </button>
-        </div>
-        <p class = "pregunta"> Ya tenes cuenta?
-        </p>
-        <p class = "iniciar">  Inicia sesion </p> 
-    
-          </div>
-         <footer>
-        <div class = "anuciados">
-        <article>Terminos y condiciones  </article>
-        <article> Preguntas frecuentes </article>
-        <article> Contacto </article>
-        </div>
-        </footer>
+    </main>
+    <footer>
+        <ul>
+            <li>Términos y condiciones</li>
+            <li>Preguntas frecuentes</li>
+            <li>Contacto</li>
+        </ul>
+        <p>&copy; Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team</p>
+    </footer>
 
-    </body>
+</body>
 </html>
