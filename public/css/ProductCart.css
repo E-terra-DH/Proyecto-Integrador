@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lora', serif;
+  font-family: 'Roboto';
   list-style-type: none;
 }
 
@@ -57,8 +57,17 @@ header {
 
 ul {
   display: flex;
+  
   padding-right: 3px;
   gap: 10px;
+  text-decoration: none;
+  
+}
+
+a {
+text-decoration: none;
+color: #344E41;
+font-weight: bold;
 }
 
 .user-icons {
@@ -84,6 +93,14 @@ i {
   border: gray solid 2px;
 }
 
+.delete, .empty{
+  background-color: #344E41;
+  color: white;
+  font-size: 15px;
+  text-align: right;
+  margin-left: 80px;
+border-radius: 5px;
+}
 .product1 {
   padding: 20px;
   margin-bottom: 20px;
@@ -100,6 +117,13 @@ i {
 .resumen {
   /* margin: 2vh; */
   text-align: left;
+}
+
+.codigo{
+  margin-left: 45px;
+  border-radius: 15px;
+  padding-inline: 45px;
+  border:black 3px;
 }
 .total-carrito {
   text-align: right;
@@ -160,6 +184,8 @@ i {
       padding: 10px 0px;
       border-bottom: 1px grey solid;
       margin-bottom: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
   }    
 
   .bottom-nav {
