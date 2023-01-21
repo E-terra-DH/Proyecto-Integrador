@@ -13,26 +13,24 @@
 </head>
 <body>
     <header>
-        <a href=""></a>
-            <div class="logo">
-                <img src="/Images/logo-sin-flor.png" width="230px" heigth="200" alt="" />
-            </div>
-            <div class="form" action="#" method="GET">
-                <input class="input" type="text" readonly value = "Buscar productos, marcas y más"/>
-                <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-        <nav>
-            <section>
-                <ul class="nav-bar">
-            <a class="nav-bar-a" href="/login.html"><li>Login</li></a>
-            <a href="/register.html"><li>Registro</li></a>
-            <a href="/ProductDetail.html"><li>Producto</li></a>
-            <a href="/ProductCart.html"><li>Carrito</li></a>
-            </ul>
-        </section>
-        <section>
+        <a href="/index.html" class="logo">
+        <img class="logo" src="/Images/logo-sin-flor.png" alt="">
+        </a>
+        <div class="form" action="#" method="get">
+            <input class="input" type="text" readonly value = "Buscar productos, marcas y más" />
+            <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+    </header>
+    <section class="nav-bar">
+        <ul>
+            <li>Home</li>
+            <li>Registro</li>
+            <li>Login</li>
+            <li>Producto</li>
+            <li>Carrito</li>
+        </ul>
         <ul class="user-icons">
-            <a href="/login.html" class="shopping-car">
+            <a href="/login.html" class="carrito">
             <li><i class="fa-solid fa-user"></i></li>
             </a>
             <a href="/ProductCart.html" class="user">
@@ -40,78 +38,95 @@
             </a>
         </ul>
     </section>
-</nav>
-    </header>
     <main>
-        <h2 class="title">CATEGORIAS</h2>
-        <section class="container">
-            <div class="container-categories">
-                <img class="img-categories" src="/Images/potus_ok.jpeg" width="200" heigth="150" alt="">
-                <h3 class="img-text">Interior</h3>
-            </div>
-                <div>
-                <img class="img-categories" src="/Images/bonsai_ficus.jpeg" width="200" heigth="150" alt="">
-                <h3 class="img-text">Exterior</h3>
-            </div>
-            <div>
-                <img class="img-categories" src="/public/Images/macetas.jpeg" width="200" heigth="150" alt="">
-                <h3 class="img-text">Macetas</h3>
-            </div>
-                <div>
-                <img class="img-categories" src="/Images/sustratos_2.jpeg" width="200" heigth="150" alt="">
-                <h3 class="img-text">Sustratos</h3>
-            </div>
-            <div>
-                <img class="img-categories" src="/Images/acces_set.jpeg" width="200" heigth="150" alt="">
-                <h3 class="img-text">Accesorios</h3>
-            </div>
-            </div>
-        </section> 
-        <!--<section>
-            <h2 class="title">MAS VENDIDOS</h2>
-            <div class="sales">
-                <img class="img-sales" src="/Images/bonsai_1.jpg" alt="">
-                    <h3 class="img-text">Bonsais</h3>
-                <img class="img-sales" src="/Images/orquidea_2.jpg" alt="">
-                
-                    <h3 class="img-text">Orquideas</h3>
-                <img class="img-sales" src="/Images/tulipanes.jpg" alt="">
-                
-                    <h3 class="img-text">Tulipanes</h3>
-                <img class="img-sales" src="/Images/suculenta_1.jpg" alt="">    
-                
-                    <h3 class="img-text">Suculentas</h3>
-                <img class="img-sales" src="/Images/potus.jpg" alt="">
-                
-                    <h3 class="img-text">Potus</h3>
-                </div>
-        </section>
         <section>
-            <div class="news-box">
-                <img class="img-news" src="/Images/staff.jpg" alt="">
-                <div class="news-text">
-                    <h3>NOVEDADES</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit animi tempora eius sit molestiae eligendi natus, quasi illo id, debitis voluptates doloribus nulla facere aliquid repellat voluptatem magnam modi!</p>
+            <h3 class="main-section-categories">CATEGORIAS</h3>
+            <div class="products">
+                <article class="align-img">
+                <img class="main-img-categories" src="/Images/bonsai_ficus.jpeg" width="200" height="150" alt="">
+                <div class="description">
+                <h4 class="description-article">Exterior</h4>
                 </div>
+            </article>
+            <article class="align-img">
+                <img class="main-img-categories" src="/Images/potus.jpg" width="200" height="150" alt="">
+                <div class="description">
+                <h4 class="description-article">Interior</h4>
+                </div>
+            </article>
+            <article class="align-img">
+                <img class="main-img-categories" src="/Images/macetas.jpeg" width="200" height="150" alt="">
+                <div class="description">
+                <h4 class="description-article">Macetas</h4>
+                </div>
+            </article>
+            <article class="align-img">
+                <img class="main-img-categories" src="/Images/sustratos_2.jpeg" width="200" height="150" alt="">
+                <div class="description">
+                <h4 class="description-article">Sustratos</h4>
+                </div>
+            </article>
+            <article class="align-img">
+                <img class="main-img-categories" src="/Images/acces_set.jpeg" width="200" height="150" alt="">
+                <div class="description">
+                <h4 class="description-article">Accesorios</h4>
+                </div>
+            </article>
             </div>
-        </section> 
-            <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-instagram"></i>
+        </section>
+            <section>
+            <h3 class="main-section-categories">MAS VENDIDOS</h3>
+            <article class="align-img">
+                <img class="main-img-categories" src="/Images/bonsai_ficus.jpeg" width="200" height="150" alt="">
+                <div class="description">
+                <p class="price-article">$10.000</p>
+                <h4 class="description-article">Bonsai</h4>
+            </div>
+            </article>
+            <article class="align-img">
+                <img class="main-img-categories" src="/Images/potus.jpg" width="200" height="150" alt="">
+                <div class="description">
+                <p class="price-article">$1.200</p>
+                <h4 class="description-article">Potus Miami</h4>
+            </div>
+            </article>
+            <article class="align-img">
+                <img class="main-img-categories" src="/public/Images/suculenta_1.jpg" width="200" height="150" alt="">
+                <div class="description">
+                <p class="price-article">$1.200</p>
+                <h4 class="description-article">Suculentas</h4>
+            </div>
+            </article>
+            <article class="align-img">
+                <img class="main-img-categories" src="/public/Images/rosas_1.jpg" width="200" height="150" alt="">
+                <div class="description">
+                <p class="price-article">$1.200</p>
+                <h4 class="description-article">Rosas</h4>
+            </div>
+            </article><article class="align-img">
+                <img class="main-img-categories" src="/public/Images/nuevas_plantas.jpg" width="200" height="150" alt="">
+                <div class="description">
+                <p class="price-article">$1.200</p>
+                <h4 class="description-article">ssss</h4>
+            </div>
+            </article>
+        </section>
+        <div>
+            <ul class="bottom-nav">
+                <li class="bottom"><i class="fa-solid fa-house"></i></li>
+                <li class="bottom"><i class="fa-solid fa-user"></i></li>
+                <li class="bottom"><i class="fas fa-bars"></i></li>
+                <li class="bottom"><i class="fa-solid fa-heart"></i></li>
+            </ul>
         </div>
     </main>
-    <footer class="container">
-        <div>
-            <div class="footer-elements">
-                <ul class="bottom-nav">
-                    <li>Terminos y Condiciones</li>
-                    <li>Contacto</li>
-                    <li>Preguntas Frecuentes</li> 
-                </ul> 
-                <h2 class="final-title">&copy; Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team</h2>
-            </div>
-        </div>
+    <footer>
+        <ul>
+            <li>Términos y condiciones</li>
+            <li>Preguntas frecuentes</li>
+            <li>Contacto</li>
+        </ul>
+        <p>&copy; Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team</p>
     </footer>
 </body>
 </html>
