@@ -8,12 +8,24 @@
 }
 header{
    display: flex;
-   justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: relative;
 }
 
 .logo-header{
    width: 265px;
    margin-top: 30px;
+}
+.form-logo{
+   background-color: white;
+   border: grey solid 1px;
+   padding: 10px;
+   font-size: 14px;
+   border-radius: 5px;
+   margin: 10px 0px;
 }
 nav{
    display: none ;
@@ -26,6 +38,9 @@ nav{
     justify-content: center;
     margin-top: 25px;
     padding: 4px;
+}
+a{
+   text-decoration: none;
 }
 body {
     width: 70vw;
@@ -108,6 +123,17 @@ main{
  footer{
    margin-top: 15px;
  }
+ .bottom-nav {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   right: 34px;
+   top: 138px;
+   font-size: 25px;
+   color: grey;
+   gap: 80px;
+   width: 70vw;
+}
 
 
 
@@ -117,8 +143,11 @@ main{
     gap: 22px;
     font-size: 19px;
     justify-content: center;
-    margin-top: 25px;
     border-bottom: 1px solid;
     padding: 7px;
+   }
+
+   .bottom-nav{
+      display: none;
    }
  }
