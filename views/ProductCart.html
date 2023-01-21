@@ -35,35 +35,40 @@
       </header>
 
       <section class="nav-bar">
-        <ul>
-          <li>Home</li>
-          <li>Registro</li>
-          <li>Login</li>
-          <li>Producto</li>
-          <li>Carrito</li>
-        </ul>
-
-        <ul class="user-icons">
-          <a href="/login.html" class="carrito">
-            <li><i class="fa-solid fa-user"></i></li>
-          </a>
-          <a href="/ProductCart.html" class="user">
-            <li><i class="fa-solid fa-cart-shopping"></i></li>
-          </a>
+        
+          <ul class="user-icons">
+          <!-- <a href="/index.html"><li><i class="fa-solid fa-igloo"></i></li> </a>
+          <a href="/register.html"><li><i class="fa-solid fa-address-card"></i></li> </a>
+          <a href="/login.html"><li></li> </a>
+          <a href="/ProductDetail.html"><li><i class="fa-solid fa-diagram-project"></i></li> </a> -->
+          <a href="/index.html"><li>Home</li></a>
+           <a href="/register.html"><li>Registro</li></a> 
+           <!-- <a href="/login.html"><li>Login</li></a> -->
+           <a href="/ProductDetail.html"><li>Producto</li></a> 
+           <a href="/login.html" class="carrito"><li><i class="fa-solid fa-user"></i></li></a>
+          <a href="/ProductCart.html" class="user"><li><i class="fa-solid fa-cart-shopping"></i></li></a>
         </ul>
       </section>
     </div>
 
     <main>
-      <div class="product1">aquí está tu primer compra</div>
-      <div class="product2">aquí está tu segunda compra</div>
+      <div class="product1">
+        <img src="/Images/bonsai_3.jpg" alt="producto A" width="150px" height="150px">
+        <input class="empty" type="button" value="Vaciar carrito"><i class="fa-regular fa-folder-open"></i>
+        <input class="delete" type="button" value="Eliminar producto"><i class="fa-solid fa-trash"></i>
+          </div>
+      <div class="product2">Aquí está tu segunda compra
+        <input class="empty" type="button" value="Vaciar carrito"><i class="fa-regular fa-folder-open"></i>
+        <input class="delete" type="button" value="Eliminar producto"><i class="fa-solid fa-trash"></i>
+      
+      </div>
     </main>
     <footer class="footer">
       <div class="resumen">
         <article class="descuento">Cupón Descuento</article>
         <h5 class="info-descuento">Sí tienes cupón ingresaló</h5>
         <article class="codigo">
-          <input type="number" placeholder="ingresa el codigo" />
+          <input class="codigo" type="number" placeholder="ingresa el codigo" />
         </article>
       </div>
       <div class="total-carrito">
