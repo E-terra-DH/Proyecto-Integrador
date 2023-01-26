@@ -6,148 +6,244 @@
   margin: 0;
   list-style-type: none
 }
-header{
-   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    position: relative;
+
+
+main {
+   width: 100vw;
+   background-color: #988AB1;
+   height: 100vh;
 }
 
-.logo-header{
-   width: 265px;
-   margin-top: 30px;
-}
-.form-logo{
-   background-color: white;
-   border: grey solid 1px;
-   padding: 10px;
-   font-size: 14px;
-   border-radius: 5px;
-   margin: 10px 0px;
-}
-nav{
-   display: none ;
+.main-content {
+   display: flex;
+   justify-content: center;
 }
 
-.links-generales{
-   display: flex;
-    gap: 22px;
-    font-size: 19px;
-    justify-content: center;
-    margin-top: 25px;
-    padding: 4px;
-}
-a{
-   text-decoration: none;
-}
-body {
-    width: 70vw;
-    margin: 0px auto;
-    margin-top: 20px;
-    background-color: #E5F7E4;
+.logo {
+   width: 250px;
+   margin-bottom: 15px;
 }
 
-main{
+.register {
    display: flex;
-   align-items: center;
-   min-height: 80vh;
-   flex-wrap: wrap;
    flex-direction: column;
    justify-content: center;
-   font-size: 21px;
-   line-height: 46px;
-   font-family:"Roboto";
-}
-.usuario{
-   position: relative;
-   top: 31px;
-   right: 124px;
-   color: #344E41;
+   align-items: center;
+   padding: 50px 0px 0px 0px;
+   background-color: #988AB1;
 }
 
-.candado{
-   position: relative;
-    top: 31px;
-    right: 123px;
-    color: #344E41;
-}
-
- .form-title{
-   color: #344E41;
-   text-align: center;
-   font-size: 35px;
-   font-weight: lighter;
- }
- .form-title2{
-   color: #344E41;
-   text-align: center;
-   font-size: 19px;
-   font-weight: lighter;
- }
-
- form{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
- }
-
- input{
-   margin-top: -5px;
-   font-size: 17px;
-   border-radius: 0px;
- }
-
-.olvidaste-contraseña{
-   font-size: 13px;
-}
-
- button{
-   margin-top: 10px;
+.form-title, .form-title2 {
+   font-family: roboto;
    font-size: 20px;
-   background-color: #392b4f;
    color: white;
+   margin-bottom: 10px;
 }
 
- .registro{
+form {
+   display: flex;
+   flex-direction: column;
+}
+
+.fa-solid {
+   padding-right: 5px;
+   color: #344E41;
+}
+
+.usuario, .candado {
+   background-color: white;
+   border: white solid 1px;
+   padding: 5px;
+   padding-left: 7px;
    font-size: 14px;
+   border-radius: 15px;
+   margin: 10px 0px;
+   width: 200px;
+}
+
+input {
+   border: white;
+   width: 150px;
+   padding-left: 8px;
+   border-left: #344E41 solid 1px;
+   font-size: 15px;
+   color: #344E41;
+   font-family: roboto;
  }
 
- .ul-footer{
-   display: flex;
-   padding-right: 3px;
-    gap: 10px;
- }
+.login-button {
+   width: 200px;
+   margin-top: 10px;
+   border: #344E41;
+   border-radius: 18px;
+   background-color: #344E41;
+   color: white;
+   padding: 10px;
+   font-size: 16;
+   font-family: roboto;
+   font-size: 16px;
+}
 
- footer{
-   margin-top: 15px;
- }
- .bottom-nav {
-   display: flex;
-   justify-content: space-between;
+.link-sub {
+   color: #640aa1;
+   text-decoration: underline;
+}
+
+.otros-login{
+   margin: 10px 0px;
+   color: white;
+   line-height: 25px;
+}
+
+.with-love {
    position: relative;
-   right: 34px;
-   top: 138px;
-   font-size: 25px;
-   color: grey;
-   gap: 80px;
-   width: 70vw;
+   color: white;
+   margin-top: 40px;
+   /* bottom: 10px;
+   left: 20px; */
 }
 
 
+/*--------------TABLET------------*/
 
- @media (min-width:481px){
-   nav{
+@media (min-width:481px) {
+
+   .main-content {
       display: flex;
-    gap: 22px;
-    font-size: 19px;
-    justify-content: center;
-    border-bottom: 1px solid;
-    padding: 7px;
+      justify-content: left;
    }
 
-   .bottom-nav{
-      display: none;
+   .logo {
+      width: 250px;
+      margin-bottom: 15px;
    }
- }
+
+   .form-title, .form-title2 {
+      font-family: roboto;
+      font-size: 18px;
+      color: white;
+      margin-bottom: 10px;
+   }
+
+   .main-image-container {
+      width: 40vw;
+      min-height: 100vh;
+      background-image: url("../Images/login-terra-plant.png");
+      background-size: cover;
+   }
+
+   .usuario, .candado {
+      background-color: white;
+      border: white solid 1px;
+      padding: 5px;
+      padding-left: 7px;
+      font-size: 14px;
+      border-radius: 15px;
+      margin: 10px 0px;
+      width: 200px;
+   }
+
+   input {
+      border: white;
+      width: 150px;
+      padding-left: 8px;
+      border-left: #344E41 solid 1px;
+      font-size: 15px;
+      color: #344E41;
+      font-family: roboto;
+    }
+
+   .login-button {
+      width: 200px;
+      margin-top: 10px;
+      border: #344E41;
+      border-radius: 18px;
+      background-color: #344E41;
+      color: white;
+      padding: 10px;
+      font-size: 16;
+      font-family: roboto;
+      font-size: 16px;
+   }
+
+   .register {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 0px 0px 30px;
+      background-color: #988AB1;
+   }
+}
+
+
+@media (min-width:769px) {
+
+   .logo {
+      width: 250px;
+      margin-bottom: 20px;
+   }
+
+   .form-title, .form-title2 {
+      font-family: roboto;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 10px;
+   }
+
+   .main-image-container {
+      width: 57vw;
+      background-image: url("../Images/login-terra-plant.png");
+      background-size: cover;
+   }
+
+   .usuario, .candado {
+      background-color: white;
+      border: white solid 1px;
+      padding: 5px;
+      padding-left: 7px;
+      font-size: 14px;
+      border-radius: 15px;
+      margin: 10px 0px;
+      width: 200px;
+   }
+
+   input {
+      border: white;
+      width: 150px;
+      padding-left: 8px;
+      border-left: #344E41 solid 1px;
+      font-size: 15px;
+      color: #344E41;
+      font-family: roboto;
+    }
+
+   .login-button {
+      width: 200px;
+      margin-top: 10px;
+      border: #344E41;
+      border-radius: 18px;
+      background-color: #344E41;
+      color: white;
+      padding: 10px;
+      font-size: 16;
+      font-family: roboto;
+      font-size: 16px;
+   }
+
+   .register {
+      display: flex;
+      flex-direction: column;
+      padding: 60px 0px 0px 40px;
+      background-color: #988AB1;
+   }
+}
+
+@media (min-width:1000px) {
+
+   .main-image-container {
+      width: 70vw;
+   }
+
+   .register {
+      padding: 0px 0px 0px 4vw;
+   }
+}

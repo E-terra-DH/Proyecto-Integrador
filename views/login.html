@@ -18,70 +18,39 @@
   </head>
 
   <body>
-    <header>
-      <a href="/index.html">
-      <img  class="logo-header" src="/Images/logo-sin-flor.png" alt="" />
-    </a>
-    <div class="form-logo" action="#" method="get">
-      <input class="input" type="text" readonly value = "Buscar productos, marcas y más" />
-      <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
-  </div>
-    </header>
-  <nav>
-    <div class="links-generales">
-      <a href=""><article>All</article></a>
-      <a href=""><article>Ofertas</article></a>
-      <a href=""><article>Novedades</article></a>
-      <a href=""><article>Historial</article></a>
-      <a href=""><article>Ayuda</article></a>
-    </div>
-  </nav>
     <main>
-      <h1 class="form-title">Iniciá Sesión</h1>
-      <h3 class="form-title2">Que bueno que volviste!</h3>
-      <form action="/login" method="post">
-        <label class="usuario">
-          <i class="fa-solid fa-user"></i></label>
-        <input
-          type="text"
-          name="Usuario"
-          placeholder="Enter Username"
-          required
-        />
-        
-        <label class="candado">
-          <i class="fa-solid fa-lock"></i></label>
-        <input
-          type="password"
-          name="contraseña"
-          placeholder="Contraseña"
-          required
-        />
-        <a class="olvidaste-contraseña" href="#">Olvidaste tu contraseña?</a>
-        <button type="submit">Iniciar Sesion</button>
-      </form>
+      <section class="main-content">
+        <div class="main-image-container">
+          <!-- <img class="main-image" src="/Images/login-terra-plant.png" alt=""> -->
+        </div>
 
-      <div class="registro">No estas registrado? <a href="/register.html">registrate</a></div>
+        <div class="register">
+          <a href="/index.html" class="logo"><img class="logo" src="/Images/logo-blanco.png" alt=""></a>
+          <h3 class="form-title2">¡Qué bueno que volviste!</h3>
+          <h1 class="form-title">Iniciá sesión aquí...</h1>
 
-      <div>
-        <ul class="bottom-nav">
-            <li class="bottom"><i class="fa-solid fa-house"></i></li>
-            <li class="bottom"><i class="fa-solid fa-user"></i></li>
-            <li class="bottom"><i class="fas fa-bars"></i></li>
-            <li class="bottom"><i class="fa-solid fa-heart"></i></li>
-        </ul>
-    </div>
+          <form action="/login" method="post">
+            <label class="usuario">
+              <i class="fa-solid fa-user"></i>
+            <input type="text" name="Usuario" placeholder="Nombre de usuario" required/></label>
+            
+            <label class="candado">
+              <i class="fa-solid fa-lock"></i>
+            <input type="password" name="contraseña" placeholder="Contraseña" required/></label>
+
+            <button class="login-button" type="submit">Iniciar Sesion</button>
+          </form>
+
+          <div class="otros-login">
+            <a class="link-sub" href="#">¿Olvidaste tu contraseña?</a>
+            <div class="registro">¿No estás registrado? <a class="link-sub" href="/register.html">regístrate</a></div>
+          </div>
+
+          <p class="with-love">
+            Creado con ♡ por e-Terra
+          </p>
+        </section>
+      </div>
     </main>
-
-    <footer>
-      <ul class="ul-footer">
-        <li>Términos y condiciones</li>
-        <li>Preguntas frecuentes</li>
-        <li>Contacto</li>
-    </ul>
-    <p>
-        Creado con ♡ por e-Terra
-    </p>
-    </footer>
   </body>
 </html>
