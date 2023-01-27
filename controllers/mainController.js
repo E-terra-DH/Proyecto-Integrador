@@ -1,6 +1,6 @@
 const controller = {
-    prueba: (req, res) => {
-        return res.render('prueba');
+    XXXX: (req, res) => {
+        return res.render('XXXX');
     }
 }
 
