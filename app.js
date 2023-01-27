@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const { clearScreenDown } = require('readline');
-const PORT = process.env.PORT || 3006;
+const PORT = process.env.PORT || 3007;
 
 const mainRoutes=require('./routes/mainRoutes');
 
