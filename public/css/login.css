@@ -19,6 +19,7 @@ main {
    justify-content: center;
 }
 
+/*------------------------------ header ------------------------------*/
 .logo {
    width: 250px;
    margin-bottom: 15px;
@@ -69,7 +70,7 @@ input {
    font-size: 15px;
    color: #344E41;
    font-family: roboto;
- }
+}
 
 .login-button {
    width: 200px;
