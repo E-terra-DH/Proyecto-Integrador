@@ -13,8 +13,11 @@ app.use(express.static('public'));
 app.use(express.static('views'));
 
 app.use('/',mainRoutes);
+app.use('/index',mainRoutes);
 app.use('/register',mainRoutes);
+app.use('/login',mainRoutes);
 app.use('/productDetail',mainRoutes);
+app.use('/productCart',mainRoutes);
 
 
 app.listen(PORT, () => {

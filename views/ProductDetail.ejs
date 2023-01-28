@@ -1,142 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/ProductDetail.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/ProductDetail.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title> Productos </title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Productos</title>
+  </head>
+  <body>
     <div class="to-fix">
-        <header>
-            <section class="nav-search">
-                <ul class="nav-bar">
-                    <li><a class="label" href="/index">Home</a></li>
-                    <li><a class="label" href="/register">Registro</a></li>
-                    <li><a class="label" href="/ProductDetail">Producto</a></li>
-                    <li><a class="label-icon" href="/login" class="carrito"><i class="fa-solid fa-user"></i></a></li>
-                    <li><a class="label-icon" href="/ProductCart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-    
-                <div class="form" action="#" method="get">
-                <input class="input" type="text" readonly value = "Buscar plantas y productos"/>
-                <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
-                </div>
-            </section>
-    
-            <div>
-                <ul class="bottom-nav">
-                    <li class="bottom"><i class="fa-solid fa-house"></i></li>
-                    <li class="bottom"><i class="fa-solid fa-user"></i></li>
-                    <li class="bottom"><i class="fas fa-bars"></i></li>
-                    <li class="bottom"><i class="fa-solid fa-heart"></i></li>
-                </ul>
-            </div>
-
-            <div class="main-banner-image"></div>
-            <img class="logo-white" src="/Images/logo-blanco.png" alt="">
+      <header>
+        <%- include('./partials/header.ejs')  %> 
+      </header>
     </div>
 
     <main>
-        <div class="return">
-            <li><p> <<<--- Regresá para ver más productos</p></li>
-        </div>
-        <div class="product">
-            <img class="product-image" src="/Images/product-begonia-maculata.png" alt="">
-            <div class="product-info">
-                <div class="name">
-                    <h2>Begonia Maculata</h2>
-                    <button class="add">♡ Agregar a favoritos</button>
-                </div>
-                <div class="cost">
-                    <h3 class="price">$1200</h3>
-                    <div class="select">
-                        <p>Cantidad</p>
-                        <select class="quantity" name="quantity" id="quantity">Cantidad
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="description">
-                    <h3>Descripción</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
-                </div>
-                <div class="opinion">
-                    <h3>Opiniones</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
-                </div>
-                <button class="add-cart">Agregar al carrito</button>
-                <div class="social">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
+      <div class="return">
+        <li><p><<<--- Regresá para ver más productos</p></li>
+      </div>
+      <div class="product">
+        <img
+          class="product-image"
+          src="/Images/product-begonia-maculata.png"
+          alt=""
+        />
+        <div class="product-info">
+          <div class="name">
+            <h2>Begonia Maculata</h2>
+            <button class="add">♡ Agregar a favoritos</button>
+          </div>
+          <div class="cost">
+            <h3 class="price">$1200</h3>
+            <div class="select">
+              <p>Cantidad</p>
+              <select class="quantity" name="quantity" id="quantity">
+                Cantidad
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
             </div>
+          </div>
+          <div class="description">
+            <h3>Descripción</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Laudantium voluptatibus nemo deserunt rerum reiciendis corporis
+              consequuntur tenetur sequi fuga. Optio vero minima cupiditate
+              laudantium aperiam nisi assumenda iure reiciendis nostrum?
+            </p>
+          </div>
+          <div class="opinion">
+            <h3>Opiniones</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Laudantium voluptatibus nemo deserunt rerum reiciendis corporis
+              consequuntur tenetur sequi fuga. Optio vero minima cupiditate
+              laudantium aperiam nisi assumenda iure reiciendis nostrum?
+            </p>
+          </div>
+          <button class="add-cart">Agregar al carrito</button>
+          <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
+      </div>
 
-        <section class="related-products">
-            <h3 class="related-title">Productos relacionados</h3>
+      <section class="related-products">
+        <h3 class="related-title">Productos relacionados</h3>
 
-            <div class="ltd-products">
-                <article class="product-item">
-                    <div class="img-fit">
-                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
-                    </div>
-                    <div class="product-details">
-                        <h2 class="product-description">Ave del paraíso</h2>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <div class="img-fit">
-                    <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
-                    </div>
-                    <div class="product-details">
-                        <h2 class="product-description">Philodendron</h2>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <div class="img-fit">
-                    <img class="product-img" src="/Images/product-syngonium.png" alt="">
-                    </div>
-                    <div class="product-details">
-                        <h2 class="product-description">Syngonium</h2>
-                    </div>
-                </article>
+        <div class="ltd-products">
+          <article class="product-item">
+            <div class="img-fit">
+              <img
+                class="product-img"
+                src="/Images/product-ave-paraiso.png"
+                alt=""
+              />
             </div>
-        </section>
+            <div class="product-details">
+              <h2 class="product-description">Ave del paraíso</h2>
+            </div>
+          </article>
 
-        <div>
-            <ul class="bottom-nav">
-                <li class="bottom"><i class="fa-solid fa-house"></i></li>
-                <li class="bottom"><i class="fa-solid fa-user"></i></li>
-                <li class="bottom"><i class="fas fa-bars"></i></li>
-                <li class="bottom"><i class="fa-solid fa-heart"></i></li>
-            </ul>
+          <article class="product-item">
+            <div class="img-fit">
+              <img
+                class="product-img"
+                src="/Images/product-philodendron-white-knight.png"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <h2 class="product-description">Philodendron</h2>
+            </div>
+          </article>
+
+          <article class="product-item">
+            <div class="img-fit">
+              <img
+                class="product-img"
+                src="/Images/product-syngonium.png"
+                alt=""
+              />
+            </div>
+            <div class="product-details">
+              <h2 class="product-description">Syngonium</h2>
+            </div>
+          </article>
         </div>
+      </section>
+
+      <div>
+        <ul class="bottom-nav">
+          <li class="bottom"><i class="fa-solid fa-house"></i></li>
+          <li class="bottom"><i class="fa-solid fa-user"></i></li>
+          <li class="bottom"><i class="fas fa-bars"></i></li>
+          <li class="bottom"><i class="fa-solid fa-heart"></i></li>
+        </ul>
+      </div>
     </main>
 
     <footer>
-        <section class="foot">
-            <ul class="footer-info">
-                <li class="terms">Términos y condiciones</li>
-                <li class="terms">Preguntas frecuentes</li>
-                <li>Contacto</li>
-            </ul>
-            <p class="hecho-con-amor">Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team</p>
-        </section>
+      <section class="foot">
+        <ul class="footer-info">
+          <li class="terms">Términos y condiciones</li>
+          <li class="terms">Preguntas frecuentes</li>
+          <li>Contacto</li>
+        </ul>
+        <p class="hecho-con-amor">
+          Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team
+        </p>
+      </section>
     </footer>
-</body>
+  </body>
 </html>

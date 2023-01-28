@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"Roboto";
+    box-sizing: border-box;
+    list-style-type: none
+}
+
+body {
+    width: 100vw;
+    margin: 0px auto;
+    background-color: #F9DBA5;
+    /* background-color: #F0CA7A; */
+    /* background-color: #A3B18A; */
+}  
+
+
+/* -------------HEADER------------- */
+
+.nav-bar, .nav-search {
+    display: none;
+  }
+  
+.bottom-nav {
+  width: 100vw;
+  padding: 7px 15vw;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0px;
+  background-color: #E5F7E4;
+  font-size: 25px;
+  color: #344E41;
+  gap: 50px;
+  z-index: 5;
+}
+
+.main-banner-image {
+    width: 100vw;
+    height: 200px;
+    background-image: url("../Images/main-banner-terra.png");
+    background-size: cover;
+}
+
+/* .to-fix {
+    position: relative;
+} */
+
+.logo-white {
+    width: 200px;
+    position: absolute;
+    right: 29px;
+    top: 70px;
+    z-index: 1;
+}
+
+/*--------------TABLET------------*/
+@media (min-width:481px) {
+
+    .logo-white {
+        right: 29px;
+        top: 90px;
+    }
+
+    .label {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        border-right: 1px white solid;
+        padding-right: 11px;
+      }
+      
+      .label-icon {
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        padding-right: 10px;
+      }
+    
+      .nav-bar {
+        display: flex;
+        padding: 10px 0px;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+    
+      .nav-search {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px 3vw;
+        background-color: #805781;
+        color: white;
+        /* height: 50px; */
+        position: fixed;
+        z-index: 2;
+      }
+      
+      .form {
+        background-color: white;
+        border: white solid 1px;
+        padding: 5px;
+        padding-left: 7px;
+        font-size: 14px;
+        border-radius: 15px;
+        margin: 10px 0px;
+        width: 31vw;
+      }
+      
+      .fa-magnifying-glass {
+        color: #344E41;
+      }
+      
+      .input {
+        border: white;
+        width: 25vw;
+        padding-right: 5px;
+        border-right: grey solid 1px;
+        font-size: 15px;
+        color: grey;
+        font-family: roboto;
+      }
+    
+    .bottom-nav {
+        display: none;
+    }
+}
+
+/* @media (min-width:800px) {
+
+    .product {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+} */
+
+
+/*--------------DESKTOP------------*/
+@media (min-width:769px) {
+
+    .logo-white {
+        width: 200px;
+        position: absolute;
+        right: 322px;
+        top: 100px;
+    }
+
+    .nav-search {
+        padding: 0px 7vw;
+    }
+    
+    .bottom-nav {
+        display: none;
+    }
+
+    .form {
+        width: 250px;
+    }
+
+    .input {
+        width: 200px;
+    }
+
+    .hecho-con-amor {
+        margin-top: 0px;
+      }
+}
