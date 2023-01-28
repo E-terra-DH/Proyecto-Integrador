@@ -15,44 +15,67 @@
     crossorigin="anonymous"
   ></script>
 
-  <body class="general-conteiner">
-    <div class="to-fix">
-      <header>
-        <a href="/index.html" class="logo">
-          <img class="logo" src="/Images/logo-sin-flor.png" alt="" />
-        </a>
-        <div class="form" action="#" method="get">
-          <input
-            class="input"
-            type="text"
-            readonly
-            value="Buscar productos, marcas y más"
-          />
-          <span class="submit"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></span>
+<body class="general-container">
+  <header>
+  </header>
+
+  <main>
+    <section>
+      <p class="next">Tus próximas compras --->>></p>
+      <div class="product titular">
+        <li class="product-info p">Producto</li>
+        <li class="quantity ca">Cantidad</li>
+        <li class="cost co">Costo</li>
+        <li class="clean"><button class="button-clean">Vaciar carrito</button></li>
+      </div>
+
+      <div class="product">
+        <div class="product-info">
+          <div class="product-description">
+            <img class="product-image" src="/Images/product-begonia-maculata.png" alt="">
+            <p>Begonia maculata</p>
+          </div>
         </div>
-      </header>
+        <div class="details">
+          <li class="quantity"><span class="mobile">Cantidad: </span> - 1 +</li>
+          <li class="cost"> <span class="mobile">Precio: </span>$1200</li>
+          <li class="clean"><i class="fa-solid fa-trash"></i></li>
+        </div>
+      </div>
 
-      <section class="nav-bar">
-        
-          <ul class="user-icons">
-          <!-- <a href="/index.html"><li><i class="fa-solid fa-igloo"></i></li> </a>
-          <a href="/register.html"><li><i class="fa-solid fa-address-card"></i></li> </a>
-          <a href="/login.html"><li></li> </a>
-          <a href="/ProductDetail.html"><li><i class="fa-solid fa-diagram-project"></i></li> </a> -->
-          <a href="/index.html"><li>Home</li></a>
-           <a href="/register.html"><li>Registro</li></a> 
-           <!-- <a href="/login.html"><li>Login</li></a> -->
-           <a href="/ProductDetail.html"><li>Producto</li></a> 
-           <a href="/login.html" class="carrito"><li><i class="fa-solid fa-user"></i></li></a>
-          <a href="/ProductCart.html" class="user"><li><i class="fa-solid fa-cart-shopping"></i></li></a>
-        </ul>
-      </section>
-    </div>
+      <div class="product">
+        <li class="product-info">
+          <div class="product-description">
+            <img class="product-image" src="/Images/product-syngonium.png" alt="">
+            <p>Syngonium</p>
+          </div>
+        </li>
+        <div class="details">
+          <li class="quantity"><span class="mobile">Cantidad: </span> - 1 +</li>
+          <li class="cost"> <span class="mobile">Precio: </span>$1200</li>
+          <li class="clean"><i class="fa-solid fa-trash"></i></li>
+        </div>
+      </div>
 
-    <main>
-      <div class="product1">
+    </section>
+
+    <section class="to-pay">
+      <!-- <li class="product-info"></li>
+      <li class="quantity"></li>
+      <li class="cost"></li>
+      <li class="clean">
+        <div class="end"> -->
+          <div>
+            <span class="total">Total:</span>
+            <span class="total">$2000</span>
+          </div>
+          <div><button class="pay">Ir a pagar</button></div>
+        <!-- </div>
+      </li> -->
+    </section>
+
+  </main>
+      <!-- <div class="product1">
         <img src="/Images/bonsai_3.jpg" alt="producto A" width="150px" height="150px">
         <input class="empty" type="button" value="Vaciar carrito"><i class="fa-regular fa-folder-open"></i>
         <input class="delete" type="button" value="Eliminar producto"><i class="fa-solid fa-trash"></i>
@@ -100,6 +123,6 @@
         grupo 6 DH TN-52
         <i class="fa-solid fa-heart"></i>
     </div> 
-    </footer>
+    </footer> -->
   </body>
 </html>

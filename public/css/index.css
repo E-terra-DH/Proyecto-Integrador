@@ -189,7 +189,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 10px 8vw 20px 8vw;
+  margin: 10px 8vw 40px 8vw;
 }
 
 .footer-info {

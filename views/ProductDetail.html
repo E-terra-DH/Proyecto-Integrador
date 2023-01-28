@@ -14,80 +14,107 @@
 <body>
     <div class="to-fix">
         <header>
-            <a href="/index.html" class="logo">
-            <img class="logo" src="/Images/logo-sin-flor.png" alt="">
-            </a>
-            <div class="form" action="#" method="get">
-                <input class="input" type="text" readonly value = "Buscar productos, marcas y más" />
+            <section class="nav-search">
+                <ul class="nav-bar">
+                    <li><a class="label" href="/index.html">Home</a></li>
+                    <li><a class="label" href="/register.html">Registro</a></li>
+                    <li><a class="label" href="/ProductDetail.html">Producto</a></li>
+                    <li><a class="label-icon" href="/login.html" class="carrito"><i class="fa-solid fa-user"></i></a></li>
+                    <li><a class="label-icon" href="/ProductCart.html" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+    
+                <div class="form" action="#" method="get">
+                <input class="input" type="text" readonly value = "Buscar plantas y productos"/>
                 <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+            </section>
+    
+            <div>
+                <ul class="bottom-nav">
+                    <li class="bottom"><i class="fa-solid fa-house"></i></li>
+                    <li class="bottom"><i class="fa-solid fa-user"></i></li>
+                    <li class="bottom"><i class="fas fa-bars"></i></li>
+                    <li class="bottom"><i class="fa-solid fa-heart"></i></li>
+                </ul>
             </div>
-        </header>
 
-        <section class="nav-bar">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/register.html">Registro</a></li>
-                <li><a href="/login.html">Login</a></li>
-                <li><a href="/ProductDetail.html">Producto</a></li>
-                <li><a href="/ProductCar.html">Carrito</a></li>
-            </ul>
-            <ul class="user-icons">
-                <a href="/login.html" class="carrito">
-                <li><i class="fa-solid fa-user"></i></li>
-                </a>
-                <a href="/ProductCart.html" class="user">
-                <li><i class="fa-solid fa-cart-shopping"></i></li>
-                </a>
-            </ul>
-        </section>
+            <div class="main-banner-image"></div>
+            <img class="logo-white" src="/Images/logo-blanco.png" alt="">
     </div>
 
     <main>
+        <div class="return">
+            <li><p> <<<--- Regresá para ver más productos</p></li>
+        </div>
         <div class="product">
-            <img class="product-image" src="/Images/bonsai_4.jpg" alt="">
+            <img class="product-image" src="/Images/product-begonia-maculata.png" alt="">
             <div class="product-info">
                 <div class="name">
-                    <h2>POTUS</h2>
+                    <h2>Begonia Maculata</h2>
                     <button class="add">♡ Agregar a favoritos</button>
                 </div>
-                <h3 class="price">$1200</h3>
-                <div class="select">
-                    <p>Cantidad</p>
-                    <select class="quantity" name="quantity" id="quantity">Cantidad
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                    </select>
+                <div class="cost">
+                    <h3 class="price">$1200</h3>
+                    <div class="select">
+                        <p>Cantidad</p>
+                        <select class="quantity" name="quantity" id="quantity">Cantidad
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="description">
+                    <h3>Descripción</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
+                </div>
+                <div class="opinion">
+                    <h3>Opiniones</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
                 </div>
                 <button class="add-cart">Agregar al carrito</button>
                 <div class="social">
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-whatsapp"></i>
                     <i class="fa-brands fa-instagram"></i>
-            </div>
+                </div>
             </div>
         </div>
-        <section>
-            <div class="description">
-                <h3>Descripción</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
-            </div>
-            <div class="opinion">
-                <h3>Opiniones</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium voluptatibus nemo deserunt rerum reiciendis corporis consequuntur tenetur sequi fuga. Optio vero minima cupiditate laudantium aperiam nisi assumenda iure reiciendis nostrum?</p>
-            </div>
-        </section>
 
         <section class="related-products">
-            <h3>Productos relacionados</h3>
-            <div class="related-images">
-                <img src="/Images/germinando.jpg" alt="">
-                <img src="/Images/germinando.jpg" alt="">
-                <img src="/Images/germinando.jpg" alt="">
+            <h3 class="related-title">Productos relacionados</h3>
+
+            <div class="ltd-products">
+                <article class="product-item">
+                    <div class="img-fit">
+                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h2 class="product-description">Ave del paraíso</h2>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <div class="img-fit">
+                    <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h2 class="product-description">Philodendron</h2>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <div class="img-fit">
+                    <img class="product-img" src="/Images/product-syngonium.png" alt="">
+                    </div>
+                    <div class="product-details">
+                        <h2 class="product-description">Syngonium</h2>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -102,14 +129,14 @@
     </main>
 
     <footer>
-        <ul>
-            <li>Términos y condiciones</li>
-            <li>Preguntas frecuentes</li>
-            <li>Contacto</li>
-        </ul>
-        <p>
-            Creado con ♡ por e-Terra
-        </p>
+        <section class="foot">
+            <ul class="footer-info">
+                <li class="terms">Términos y condiciones</li>
+                <li class="terms">Preguntas frecuentes</li>
+                <li>Contacto</li>
+            </ul>
+            <p class="hecho-con-amor">Hecho con <i class="fa-solid fa-leaf"></i> por e-Terra Team</p>
+        </section>
     </footer>
 </body>
 </html>
