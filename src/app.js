@@ -11,9 +11,10 @@ app.set('view engine','ejs')
 
 app.use(express.static('public'));
 app.use(express.static('views'));
+app.use(express.static('src'));
 
 app.use('/',mainRoutes);
-app.use('/index',mainRoutes);
+app.use(path.resolve('./src/views/index'),mainRoutes);
 app.use('/register',mainRoutes);
 app.use('/login',mainRoutes);
 app.use('/productDetail',mainRoutes);
