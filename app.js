@@ -13,9 +13,16 @@ app.use(express.static('public'));
 app.use(express.static('views'));
 
 app.use('/',mainRoutes);
+app.use('/register',mainRoutes);
+app.use('/productDetail',mainRoutes);
 
 
+app.listen(PORT, () => {
+    console.log(`Server run puerto on ${PORT}`);
+})
 
+
+/*
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/index.html'))
 });
@@ -36,6 +43,5 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/register.html'))
 });
  
-app.listen(PORT, () => {
-    console.log(`Server run puerto on ${PORT}`);
-})
+
+*/
