@@ -21,6 +21,8 @@ app.use('/register',mainRoutes);
 app.use('/login',mainRoutes);
 app.use('/productDetail',mainRoutes);
 app.use('/productCart',mainRoutes);
+app.use('/productList',mainRoutes);
+app.use('/formLoad',mainRoutes);
 
 
 app.listen(PORT, () => {

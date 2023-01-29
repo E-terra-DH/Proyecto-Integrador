@@ -1,138 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('./partials/head.ejs')  %> 
-    <title>TERRA</title>
-    <link rel="stylesheet" href="css/index.css">
+   <%- include('./partials/head.ejs')  %> 
+    <title>Listado de productos</title>
+    <link rel="stylesheet" href="css/productList.css">
 </head>
 <body>
     <header>
-        <div class="banner-container">
-            <img class="banner" src="/Images/banner-principal2.gif" alt="">
-        </div>
-        <a href="/index" class="logo">
-        <img class="logo" src="/Images/logo-blanco.png" alt="">
-        </a>
-
-        <!-- <img class="main-text" src="/Images/main-text.png" alt=""> -->
-        <img class="main-text-left" src="/Images/main-text-left.png" alt="">
-
-        <section class="nav-search">
-            <ul class="nav-bar">
-                <li><a class="label" href="/index">Home</a></li>
-                <li><a class="label" href="/register">Registro</a></li>
-                <li><a class="label" href="/ProductDetail">Producto</a></li>
-                <li><a class="label-icon" href="/login" class="carrito"><i class="fa-solid fa-user"></i></a></li>
-                <li><a class="label-icon" href="/ProductCart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-
-            <div class="form" action="#" method="get">
-            <input class="input" type="text" readonly value = "Buscar plantas y productos"/>
-            <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
-            </div>
-        </section>
-
-        <div>
-            <ul class="bottom-nav">
-                <li><a class="labelbot" href="/index"><i class="fa-solid fa-house"></i></a></li>
-                <li><a class="labelbot" href="/register"><i class="fa-solid fa-user"></i></a></li>
-                <li><a class="labelbot" href="/productList"><i class="fas fa-bars"></i></a></li>
-                <li><a class="labelbot" href="/ProductCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-              </ul>
-        </div>
-
+        <%- include('./partials/header.ejs')  %> 
     </header>
     
     <main>
-        <section class="categories">
-            <h3 class="cat-titles">Categorías</h3>
-
-            <div class="products">
-                <a href="/productList">
-                <article class="cat">
-                <div class="square">
-                <img class="img-cat" src="/Images/categoria-plantas2.png" alt="">
-                </div>
-                <h4 class="description">Plantas</h4>
-                </article>
-                </a>
- 
-                <a href="/productList">
-                <article class="cat">
-                <div class="square">
-                <img class="img-cat" src="/Images/categoria-macetas2.png" alt="">
-                </div>
-                <h4 class="description">Macetas</h4>
-                </article>
-                </a>
-
-                <a href="/productList">
-                <article class="cat">
-                <div class="square">
-                <img class="img-cat" src="/Images/categoría-accesorios2.png" alt="">
-                </div>
-                <h4 class="description">Accesorios</h4>
-                </article>
-                </a>
-
-                <a href="/productList">
-                <article class="cat">
-                <div class="square">
-                <img class="img-cat" src="/Images/categoria-sustratos.png" alt="">
-                </div>
-                <h4 class="description">Sustratos</h4>
-                </article>
-                </a>
-
-            </div>
-        </section>
-
-        <section class="best-sellers">
-            <h3 class="bs-titles">Más vendidos</h3>
-
-            <section class="bs-products">
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Ave del paraíso</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Philodendron</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-syngonium.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Syngonium</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-begonia-maculata.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Begonia maculata</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-            
-            </section>
-        </section>
-
         <section class="catalogue">
-            <h3 class="cat-titles">Catálogo de productos</h3>
+            <h3 class="cat-titles">Explora todo nuestro catálogo --->>></h3>
 
             <section class="ct-products">
 
@@ -171,13 +51,84 @@
                         <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
                     </div>
                 </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Ave del paraíso</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Philodendron</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-syngonium.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Syngonium</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-begonia-maculata.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Begonia maculata</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Ave del paraíso</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Philodendron</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-syngonium.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Syngonium</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
+
+                <article class="product-item">
+                    <img class="product-img" src="/Images/product-begonia-maculata.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-description">Begonia maculata</h2>
+                        <p class="price">50 USD</p>
+                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                    </div>
+                </article>
             
             </section>
-        </section>
     </main>
 
     <footer>
-        <%- include('./partials/footer.ejs')  %> 
+        <%- include('./partials/footer.ejs') %> 
     </footer>
 </body>
 </html>

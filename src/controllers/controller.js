@@ -14,8 +14,13 @@ const controller = {
     },    
     login: (req, res) => {
         return res.render('login');
-    }    
-
+    },
+    productList: (req, res) => {
+        return res.render('productList');
+    },    
+    formLoad: (req, res) => {
+        return res.render('formLoad');
+    }
 };
 
 

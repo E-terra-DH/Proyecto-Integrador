@@ -20,10 +20,12 @@ color: #805781; */
 body {
     width: 100vw;
     margin: 0px auto;
-    background-color: #F9DBA5;
-    /* background-color: #F0CA7A; */
-    /* background-color: #A3B18A; */
-}  
+    background-color: #E5F7E4;
+}
+
+main {
+  background-color: #E5F7E4;
+}
 
 /* -------------HEADER------------- */
 
@@ -69,6 +71,10 @@ body {
 h3, h2 {
     color: #344E41;
     font-weight: 700;
+}
+
+p {
+  color: #344E41;
 }
 
 .return {
@@ -225,40 +231,7 @@ h4 {
 
 /* -------------FOOTER------------- */
 
-footer {
-    color: white;
-    background-color: #805781;
-    padding: 5px 0px;
-    width: 100vw;
-  }
-  
-  .foot {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 10px 8vw 40px 8vw;
-  }
-  
-  .footer-info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    color: white;
-    font-size: 20px;
-  }
-  
-  .terms {
-    padding-right: 20px;
-    border-right: white 2px solid;
-  }
-  
-  .hecho-con-amor {
-    /* padding-left: 20px; */
-    color: white;
-    font-size: 20px;
-    margin-top: 10px;
-  }
+
 
 
 /*--------------TABLET------------*/

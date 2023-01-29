@@ -9,7 +9,7 @@
 body {
     width: 100vw;
     margin: 0px auto;
-    background-color: #F9DBA5;
+    background-color: #E5F7E4;
     /* background-color: #F0CA7A; */
     /* background-color: #A3B18A; */
 }  
@@ -52,6 +52,10 @@ body {
     right: 29px;
     top: 70px;
     z-index: 1;
+}
+
+.fa-solid {
+  color: white;
 }
 
 /*--------------TABLET------------*/
@@ -165,7 +169,7 @@ body {
         width: 200px;
     }
 
-    .hecho-con-amor {
+    /* .hecho-con-amor {
         margin-top: 0px;
-      }
+      } */
 }

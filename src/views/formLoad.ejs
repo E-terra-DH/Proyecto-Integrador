@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./partials/head.ejs')  %> 
+    <title>Listado de productos</title>
+    <link rel="stylesheet" href="css/formLoad.css">
+</head>
+<body>
+    <header>
+        <%- include('./partials/header.ejs')  %> 
+    </header>
+    
+    <main>
+        
+        <div class="new-product">
+
+            <h3>Crea aquí un nuevo producto --->>></h3>
+
+            <form action="/login" method="post">
+                
+                <label class="icon-register">
+                <input class="input2" type="text" name="name" placeholder="Nombre del producto" required/>
+                </label>
+
+                <label class="icon-register">
+                <textarea class="description" name="description" id="description" placeholder="Descripción" cols="30" rows="10"></textarea>
+                </label>
+
+                <label class="icon-register">
+                <input class="input2" type="file" name="Image" placeholder="Sube la imagen" required/>
+                </label>
+
+                <section class="category">
+                    <div>
+                    <p class="p">Categoría:</p>
+                    </div>
+                    <div>
+                    <input class="check" type="checkbox" name="Plantas">Plantas
+                    <input class="check" type="checkbox" name="Macetas">Macetas
+                    <input class="check" type="checkbox" name="Accesorios">Accesorios
+                    <input class="check" type="checkbox" name="Sustratos">Sustratos
+                    </div>
+                </section>
+
+                <label class="icon-register">
+                <input class="input2"  type="text" name="price" placeholder="Precio en USD" required/>
+                </label>
+
+                <button class="load-button" type="submit">Crea nuevo producto</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %> 
+    </footer>
+</body>
+</html>

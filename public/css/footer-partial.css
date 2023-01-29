@@ -1,0 +1,39 @@
+footer {
+    color: white;
+    background-color: #805781;
+    padding: 5px 0px;
+    width: 100vw;
+  }
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 8vw 40px 8vw;
+  }
+
+li {
+  color: white;
+}
+  
+  .footer-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .terms {
+    padding-right: 20px;
+    border-right: white 2px solid;
+  }
+  
+  .hecho-con-amor {
+    /* padding-left: 20px; */
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+  }
