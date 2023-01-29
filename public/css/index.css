@@ -118,6 +118,11 @@ body {
   flex-wrap: wrap;
 }
 
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
 /* -------------------------MAIN BEST SELLERS-------------------------- */
 
 .best-sellers {
@@ -192,42 +197,15 @@ body {
   justify-content: center;
 }
 
-/* ----FOOTER----
-
-footer {
-  color: white;
-  background-color: #805781;
-  padding: 5px 0px;
-  width: 100vw;
-}
-
-.foot {
+/* .bottom-nav-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 10px 8vw 40px 8vw;
-}
-
-.footer-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  color: white;
-  font-size: 20px;
-}
-
-.terms {
-  padding-right: 20px;
-  border-right: white 2px solid;
-}
-
-.hecho-con-amor {
-  /* padding-left: 20px;
-  color: white;
-  font-size: 20px;
+  padding: 0px 3vw;
+  background-color: #E5F7E4;
+  color: #344E41;
 } */
-
 
 /*--------------TABLET------------*/
 
@@ -269,17 +247,30 @@ footer {
     padding-right: 11px;
   }
 
-  .labelbot {
-    text-decoration: none;
-    list-style: none;
+  a {
     color: #344E41;
   }
 
-  .labelbot .fa-solid {
+  .label-btm {
     text-decoration: none;
     list-style: none;
     color: #344E41;
+    border-right: 1px white solid;
+    padding-right: 11px;
   }
+
+  /* .labelbot {
+    text-decoration: none;
+    list-style: none;
+    color: #344E41;
+    padding-right: 10px;
+  }
+
+  .labelbot, .fa-solid {
+    text-decoration: none;
+    list-style: none;
+    color: #344E41;
+  } */
 
   /* a:-webkit-any-link {
     color: #344E41;

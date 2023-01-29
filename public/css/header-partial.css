@@ -42,10 +42,6 @@ body {
     background-size: cover;
 }
 
-/* .to-fix {
-    position: relative;
-} */
-
 .logo-white {
     width: 200px;
     position: absolute;
@@ -54,8 +50,12 @@ body {
     z-index: 1;
 }
 
-.fa-solid {
-  color: white;
+.label-btm {
+  text-decoration: none;
+  list-style: none;
+  color: #344E41;
+  border-right: 1px white solid;
+  padding-right: 11px;
 }
 
 /*--------------TABLET------------*/
@@ -74,7 +74,7 @@ body {
         padding-right: 11px;
       }
       
-      .label-icon {
+      .label-icon3 {
         text-decoration: none;
         list-style: none;
         color: white;

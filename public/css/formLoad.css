@@ -70,7 +70,7 @@ form {
     flex-direction: column;
     justify-content: left;
     font-size: 18px;
-    padding-left: 15px;
+    margin-left: 15px;
     color: white;
     font-family: roboto;
     gap: 10px;
@@ -98,7 +98,17 @@ form {
 
 .category {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.cb {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+}
+
+.check {
+    margin-left: 10px;
 }
 
 @media (min-width:481px) {

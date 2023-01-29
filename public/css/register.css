@@ -106,6 +106,10 @@ input {
    left: 20px; */
 }
 
+.fa-leaf {
+   color: white;
+}
+
 @media (min-width:481px) {
 
   .main-content {
