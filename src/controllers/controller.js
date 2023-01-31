@@ -1,25 +1,25 @@
 
 const controller = {
     index: (req, res) => {
-        return res.render('index');
+         res.render('./users/index');
     },
     register: (req, res) => {
-        return res.render('register');
+         res.render('./users/register');
     },
     productDetail: (req, res) => {
-        return res.render('productDetail');
+         res.render('./products/productDetail');
     },
     productCart: (req, res) => {
-        return res.render('productCart');
+         res.render('./products/productCart');
     },    
     login: (req, res) => {
-        return res.render('login');
+         res.render('./users/login');
     },
     productList: (req, res) => {
-        return res.render('productList');
+         res.render('./products/productList');
     },    
     formLoad: (req, res) => {
-        return res.render('formLoad');
+         res.render('formLoad');
     }
 };
 
