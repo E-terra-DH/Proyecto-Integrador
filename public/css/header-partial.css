@@ -80,6 +80,10 @@ body {
         color: white;
         padding-right: 10px;
       }
+
+      .user, .cart {
+        color: white;
+      }
     
       .nav-bar {
         display: flex;
