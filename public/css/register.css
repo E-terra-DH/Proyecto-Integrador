@@ -42,7 +42,6 @@ main {
    margin-bottom: 10px;
 }
 
-
 form {
    display: flex;
    flex-direction: column;
@@ -134,6 +133,7 @@ input {
      min-height: 100vh;
      background-image: url("../Images/register-img.png");
      background-size: cover;
+     opacity: 50%;
   }
 
   .icon-register {

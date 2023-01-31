@@ -80,9 +80,13 @@ p {
 .return {
     display: flex;
     align-items: center;
-    color: #344E41;
+    color: #344E41; 
     margin: 25px 0px 0px 10vw;
     font-size: 17px;
+}
+
+.return i {
+  color: #344E41;
 }
 
 .cost {
