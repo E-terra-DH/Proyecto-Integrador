@@ -9,9 +9,6 @@ const ProductDetail=require('./routes/ProductDetail');
 
 app.set('views', path.resolve(__dirname,'views'));
 
-/*preguntar como desde carpeta products ver los ejs de productos. */
-// app.set('products', path.resolve(__dirname,'./src/views/products'));
-
 app.set('view engine','ejs')
 
 
