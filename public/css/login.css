@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  list-style-type: none
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   list-style-type: none
 }
 
 
@@ -34,7 +34,8 @@ main {
    background-color: #988AB1;
 }
 
-.form-title, .form-title2 {
+.form-title,
+.form-title2 {
    font-family: roboto;
    font-size: 20px;
    color: white;
@@ -51,7 +52,8 @@ form {
    color: #344E41;
 }
 
-.usuario, .candado {
+.usuario,
+.candado {
    background-color: white;
    border: white solid 1px;
    padding: 5px;
@@ -90,7 +92,7 @@ input {
    text-decoration: underline;
 }
 
-.otros-login{
+.otros-login {
    margin: 10px 0px;
    color: white;
    line-height: 25px;
@@ -122,7 +124,8 @@ input {
       margin-bottom: 15px;
    }
 
-   .form-title, .form-title2 {
+   .form-title,
+   .form-title2 {
       font-family: roboto;
       font-size: 18px;
       color: white;
@@ -137,7 +140,16 @@ input {
       opacity: 50%;
    }
 
-   .usuario, .candado {
+   .label-icon3 {
+      text-decoration: none;
+      list-style: none;
+      color: white;
+      padding-right: 10px;
+      margin-bottom: 30px;
+   }
+
+   .usuario,
+   .candado {
       background-color: white;
       border: white solid 1px;
       padding: 5px;
@@ -156,7 +168,7 @@ input {
       font-size: 15px;
       color: #344E41;
       font-family: roboto;
-    }
+   }
 
    .login-button {
       width: 200px;
@@ -169,6 +181,11 @@ input {
       font-size: 16;
       font-family: roboto;
       font-size: 16px;
+   }
+
+   .login-button a {
+      color: white;
+      text-decoration: none;
    }
 
    .register {
@@ -187,7 +204,8 @@ input {
       margin-bottom: 20px;
    }
 
-   .form-title, .form-title2 {
+   .form-title,
+   .form-title2 {
       font-family: roboto;
       font-size: 20px;
       color: white;
@@ -200,7 +218,8 @@ input {
       background-size: cover;
    }
 
-   .usuario, .candado {
+   .usuario,
+   .candado {
       background-color: white;
       border: white solid 1px;
       padding: 5px;
@@ -219,7 +238,7 @@ input {
       font-size: 15px;
       color: #344E41;
       font-family: roboto;
-    }
+   }
 
    .login-button {
       width: 200px;
