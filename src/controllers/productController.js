@@ -1,15 +1,15 @@
 let ProductDetail = [
     {
-    title: "",
-    price: "",
-    description: "",
-    image: ""
+    title: "potus miami",
+    price: "$1200",
+    description: "Potus miami verde",
+    image: "../"
     },
     
     {
-        title: "",
-        price: "",
-        description: "",
+        title: "tulipanes",
+        price: "$600",
+        description: "tulipanes color rosa",
         image: ""
     }
     ]
