@@ -140,14 +140,6 @@ input {
       opacity: 50%;
    }
 
-   .label-icon3 {
-      text-decoration: none;
-      list-style: none;
-      color: white;
-      padding-right: 10px;
-      margin-bottom: 30px;
-   }
-
    .usuario,
    .candado {
       background-color: white;
