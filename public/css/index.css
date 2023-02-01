@@ -51,7 +51,7 @@ body {
   width: 25vw;
   position: absolute;
   left: 53px;
-  top: 18vh;
+  top: 13vh;
 }
 
 .nav-bar, .nav-search {
@@ -70,6 +70,11 @@ body {
   color: #344E41;
   gap: 50px;
   z-index: 5;
+}
+
+.fa-cart-shopping, .fa-house, .fa-user, .fa-bars {
+color: #344E41;
+  
 }
 
 /* -------------------------MAIN CATEGORIES-------------------------- */
@@ -284,6 +289,62 @@ a {
     padding-right: 10px;
   }
 
+  /*.nav-bar {
+    display: flex;
+    padding: 10px 0px;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .nav-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 3vw;
+    background-color: #805781;
+    color: white;
+    /* height: 50px; */
+  }
+  
+  /*.form {
+    background-color: white;
+    border: white solid 1px;
+    padding: 5px;
+    padding-left: 7px;
+    font-size: 14px;
+    border-radius: 15px;
+    margin: 10px 0px;
+    width: 31vw;
+  }
+  
+  .fa-magnifying-glass {
+    color: #344E41;
+  }
+  
+  .input {
+    border: white;
+    width: 25vw;
+    padding-right: 5px;
+    border-right: grey solid 1px;
+    font-size: 15px;
+    color: grey;
+    font-family: roboto;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+
+  .products, .ct-products, .bs-products {
+    justify-content: space-around;
+  }
+}
+
+/*--------------DESKTOP------------*/
+@media (min-width:769px) {
+
   .nav-bar {
     display: flex;
     padding: 10px 0px;
@@ -335,11 +396,6 @@ a {
   .products, .ct-products, .bs-products {
     justify-content: space-around;
   }
-}
-
-/*--------------DESKTOP------------*/
-@media (min-width:769px) {
-
   /* ----------------------------BANNER---------------------------- */
   .banner-container {
     width: 100vw;

@@ -14,7 +14,6 @@ body {
     /* background-color: #A3B18A; */
 }  
 
-
 /* -------------HEADER------------- */
 
 .nav-bar, .nav-search {
@@ -40,6 +39,11 @@ body {
     height: 200px;
     background-image: url("../Images/main-banner-terra.png");
     background-size: cover;
+}
+.icon-user-cart{
+display: flex;
+gap: 15px;
+font-size: 22px;
 }
 
 .logo-white {
@@ -85,56 +89,7 @@ body {
         color: white;
       }
     
-      .nav-bar {
-        display: flex;
-        padding: 10px 0px;
-        gap: 10px;
-        font-size: 20px;
-        font-weight: 400;
-      }
-    
-      .nav-search {
-        width: 100vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 0px 3vw;
-        background-color: #805781;
-        color: white;
-        /* height: 50px; */
-        position: fixed;
-        z-index: 2;
-      }
       
-      .form {
-        background-color: white;
-        border: white solid 1px;
-        padding: 5px;
-        padding-left: 7px;
-        font-size: 14px;
-        border-radius: 15px;
-        margin: 10px 0px;
-        width: 31vw;
-      }
-      
-      .fa-magnifying-glass {
-        color: #344E41;
-      }
-      
-      .input {
-        border: white;
-        width: 25vw;
-        padding-right: 5px;
-        border-right: grey solid 1px;
-        font-size: 15px;
-        color: grey;
-        font-family: roboto;
-      }
-    
-    .bottom-nav {
-        display: none;
-    }
 }
 
 /* @media (min-width:800px) {
@@ -171,6 +126,54 @@ body {
 
     .input {
         width: 200px;
+    }
+    .nav-bar {
+      display: flex;
+      padding: 10px 0px;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  
+    .nav-search {
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0px 3vw;
+      background-color: #805781;
+      color: white;
+      /* height: 50px; */
+      position: fixed;
+      z-index: 2;
+    }
+    
+    .form {
+      background-color: white;
+      border: white solid 1px;
+      padding: 5px;
+      padding-left: 24px;
+      font-size: 16px;
+      border-radius: 24px;
+      margin: 10px 0px;
+      width: 30vw;
+    }
+    
+    .fa-magnifying-glass {
+      color: #344E41;
+      position: relative;
+      left: 4px;
+    }
+    
+    .input {
+      border: white;
+      width: 25vw;
+      padding-right: 5px;
+      border-right: grey solid 1px;
+      font-size: 15px;
+      color: grey;
+      font-family: roboto;
     }
 
     /* .hecho-con-amor {
