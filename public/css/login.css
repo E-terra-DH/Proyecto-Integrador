@@ -4,34 +4,33 @@
    box-sizing: border-box;
    padding: 0;
    margin: 0;
-   list-style-type: none
+   list-style-type: none;
 }
 
-
-main {
-   width: 100vw;
-   background-color: #988AB1;
-   height: 100vh;
+body{
+   background-image:url(/Images/fondo-login.jpg);
+   background-size: cover;
 }
-
-.main-content {
-   display: flex;
-   justify-content: center;
-}
-
-/*------------------------------ header ------------------------------*/
-.logo {
+.logo{
    width: 250px;
    margin-bottom: 15px;
+}
+.main-content{
+   display: flex;
+   justify-content: center;
 }
 
 .register {
    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 50px 0px 0px 0px;
-   background-color: #988AB1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #988AB1;
+    padding: 93px;
+    position: absolute;
+    opacity: 95%;
+    top: 78px;
+    border-radius: 4px;
 }
 
 .form-title,
@@ -87,15 +86,23 @@ input {
    font-size: 16px;
 }
 
+.inicia-sesion{
+   color: white;
+}
+
 .link-sub {
    color: #640aa1;
    text-decoration: underline;
+
 }
 
 .otros-login {
    margin: 10px 0px;
-   color: white;
-   line-height: 25px;
+    color: white;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .with-love {
@@ -109,157 +116,106 @@ input {
 .fa-leaf {
    color: white;
 }
+.nav-search{
+   display: none;
+}
+.bottom-nav {
+   width: 108vw;
+   padding: 7px 15vw;
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   bottom: 0px;
+   background-color: #E5F7E4;
+   font-size: 25px;
+   color: #344E41;
+   gap: 50px;
+   z-index: 5;
+ }
+.fa-bars{
+   color: #344E41;
+}
+@media (min-width:430px) {
+   .nav-search{
+      display: none;
+   }
+   
 
-/*--------------TABLET------------*/
-
-@media (min-width:481px) {
-
-   .main-content {
-      display: flex;
-      justify-content: left;
    }
 
-   .logo {
-      width: 250px;
-      margin-bottom: 15px;
+/*------------------------------ header ------------------------------*/
+
+@media (min-width:800px) {
+
+   .bottom-nav{
+      display: none;
    }
 
-   .form-title,
-   .form-title2 {
-      font-family: roboto;
-      font-size: 18px;
-      color: white;
-      margin-bottom: 10px;
+.label {
+   text-decoration: none;
+   list-style: none;
+   color: white;
+   border-right: 1px white solid;
+   padding-right: 11px;
    }
-
-   .main-image-container {
-      width: 40vw;
-      min-height: 100vh;
-      background-image: url("../Images/login-terra-plant.png");
-      background-size: cover;
-      opacity: 50%;
+   
+   .label-icon {
+     text-decoration: none;
+     list-style: none;
+     color: white;
+     padding-right: 10px;
    }
-
-   .usuario,
-   .candado {
+ 
+   .nav-bar {
+     display: flex;
+     padding: 10px 0px;
+     gap: 10px;
+     font-size: 20px;
+     font-weight: 400;
+   }
+ 
+   .nav-search {
+     width: 100vw;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+     padding: 0px 3vw;
+     background-color: #805781;
+     color: white;
+     /* height: 50px; */
+     position: fixed;
+     z-index: 2;
+   }
+   
+   .form {
       background-color: white;
       border: white solid 1px;
       padding: 5px;
       padding-left: 7px;
       font-size: 14px;
       border-radius: 15px;
-      margin: 10px 0px;
-      width: 200px;
-   }
-
-   input {
-      border: white;
-      width: 150px;
-      padding-left: 8px;
-      border-left: #344E41 solid 1px;
-      font-size: 15px;
-      color: #344E41;
-      font-family: roboto;
-   }
-
-   .login-button {
-      width: 200px;
-      margin-top: 10px;
-      border: #344E41;
-      border-radius: 18px;
-      background-color: #344E41;
-      color: white;
-      padding: 10px;
-      font-size: 16;
-      font-family: roboto;
-      font-size: 16px;
-   }
-
-   .login-button a {
-      color: white;
-      text-decoration: none;
-   }
-
-   .register {
-      display: flex;
-      flex-direction: column;
-      padding: 40px 0px 0px 30px;
-      background-color: #988AB1;
-   }
-}
-
-
-@media (min-width:769px) {
-
-   .logo {
+      /* margin: 10px 0px; */
       width: 250px;
-      margin-bottom: 20px;
+      position: relative;
+      right: 104px;
    }
-
-   .form-title,
-   .form-title2 {
-      font-family: roboto;
-      font-size: 20px;
-      color: white;
-      margin-bottom: 10px;
+   
+   .fa-magnifying-glass {
+     color: #344E41;
    }
-
-   .main-image-container {
-      width: 57vw;
-      background-image: url("../Images/login-terra-plant.png");
-      background-size: cover;
-   }
-
-   .usuario,
-   .candado {
-      background-color: white;
-      border: white solid 1px;
-      padding: 5px;
-      padding-left: 7px;
-      font-size: 14px;
-      border-radius: 15px;
-      margin: 10px 0px;
-      width: 200px;
-   }
-
-   input {
-      border: white;
-      width: 150px;
-      padding-left: 8px;
-      border-left: #344E41 solid 1px;
-      font-size: 15px;
-      color: #344E41;
-      font-family: roboto;
-   }
-
-   .login-button {
-      width: 200px;
-      margin-top: 10px;
-      border: #344E41;
-      border-radius: 18px;
-      background-color: #344E41;
-      color: white;
-      padding: 10px;
-      font-size: 16;
-      font-family: roboto;
-      font-size: 16px;
-   }
-
-   .register {
-      display: flex;
-      flex-direction: column;
-      padding: 60px 0px 0px 40px;
-      background-color: #988AB1;
-   }
-}
-
-@media (min-width:1000px) {
-
-   .main-image-container {
-      width: 70vw;
-   }
-
-   .register {
-      padding: 0px 0px 0px 4vw;
+   .icon-user-cart{
+     display: flex;
+     gap: 15px;
+     font-size: 22px;
+     }
+   .input {
+     border: white;
+ width: 200px;
+ padding-right: 5px;
+ border-right: grey solid 1px;
+ font-size: 15px;
+ color: grey;
+ font-family: roboto;
    }
 }

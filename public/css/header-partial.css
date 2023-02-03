@@ -141,7 +141,7 @@ font-size: 22px;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      padding: 0px 3vw;
+      padding: 2px 3vw;
       background-color: #805781;
       color: white;
       /* height: 50px; */
@@ -150,14 +150,14 @@ font-size: 22px;
     }
     
     .form {
-      background-color: white;
-      border: white solid 1px;
-      padding: 5px;
-      padding-left: 24px;
-      font-size: 16px;
-      border-radius: 24px;
-      margin: 10px 0px;
-      width: 30vw;
+    background-color: white;
+    border: white solid 1px;
+    padding: 5px;
+    padding-left: 7px;
+    font-size: 14px;
+    border-radius: 15px;
+    /* margin: 10px 0px; */
+    width: 250px;
     }
     
     .fa-magnifying-glass {
@@ -168,12 +168,12 @@ font-size: 22px;
     
     .input {
       border: white;
-      width: 25vw;
-      padding-right: 5px;
-      border-right: grey solid 1px;
-      font-size: 15px;
-      color: grey;
-      font-family: roboto;
+    width: 200px;
+    padding-right: 5px;
+    border-right: grey solid 1px;
+    font-size: 15px;
+    color: grey;
+    font-family: roboto;
     }
 
     /* .hecho-con-amor {

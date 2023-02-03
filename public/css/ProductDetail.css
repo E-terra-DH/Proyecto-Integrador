@@ -34,17 +34,17 @@ main {
   }
   
 .bottom-nav {
-  width: 100vw;
-  padding: 7px 15vw;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 0px;
-  background-color: #E5F7E4;
-  font-size: 25px;
-  color: #344E41;
-  gap: 50px;
-  z-index: 5;
+  width: 106vw;
+    padding: 7px 15vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    background-color: #E5F7E4;
+    font-size: 25px;
+    color: #344E41;
+    gap: 50px;
+    z-index: 5;
 }
 
 .main-banner-image {
@@ -247,11 +247,11 @@ h4 {
     }
 
     .label {
-        text-decoration: none;
-        list-style: none;
-        color: white;
-        border-right: 1px white solid;
-        padding-right: 11px;
+      text-decoration: none;
+      list-style: none;
+      color: white;
+      border-right: 1px white solid;
+      padding-right: 11px;
       }
       
       .label-icon {
@@ -285,32 +285,33 @@ h4 {
       
       .form {
         background-color: white;
-        border: white solid 1px;
-        padding: 5px;
-        padding-left: 7px;
-        font-size: 14px;
-        border-radius: 15px;
-        margin: 10px 0px;
-        width: 31vw;
+    border: white solid 1px;
+    padding: 5px;
+    padding-left: 7px;
+    font-size: 14px;
+    border-radius: 15px;
+    /* margin: 10px 0px; */
+    width: 250px;
       }
       
       .fa-magnifying-glass {
         color: #344E41;
       }
-      
+      .icon-user-cart{
+        display: flex;
+        gap: 15px;
+        font-size: 22px;
+        }
       .input {
         border: white;
-        width: 25vw;
-        padding-right: 5px;
-        border-right: grey solid 1px;
-        font-size: 15px;
-        color: grey;
-        font-family: roboto;
+    width: 200px;
+    padding-right: 5px;
+    border-right: grey solid 1px;
+    font-size: 15px;
+    color: grey;
+    font-family: roboto;
       }
     
-    .bottom-nav {
-        display: none;
-    }
 }
 
 @media (min-width:800px) {
