@@ -19,7 +19,7 @@ const controller = {
          res.render('./products/productList');
     },    
     formLoad: (req, res) => {
-         res.render('formLoad');
+         res.render('./formLoad');
     }
 };
 
