@@ -45,3 +45,28 @@
 - No comunicar los cambios en archivos de los compañeros.
 - No preguntar en el momento adecuado si tenemos dudas.
 - Argentinizar la pagina (hacerla en español RAE)
+
+
+## Retro sprint 3
+
+# 1. Comenzar a hacer.
+- Aprender mas sobre usabilidad y aplicarlo al e-commerce. 
+- Arreglo del tamaño de las imagenes, para que queden mas uniformes. 
+
+# 2. Hacer mas.
+- Ayudar a Maira con detalles del CSS. 
+- Repaso general del CSS y CRUD. 
+- Poner mas cuidado en la clase. 
+- Codear mas en grupo. 
+- Si necesitamos ayuda o no entenemos algo, preugntar, tanto en el grupo como en la clase. 
+
+# 3. Continuar haciendo.
+- Seguir juntandonos, por meet y mantener la comunicacion en el grupo. 
+- Ayudarnos entre todos. 
+- Distribucion de tareas segun las fortalezas de cada integrante del grupo. 
+
+# 4. Hacer menos
+- Procastinacion. 
+- Dejar de dudar en la capacidad de uno. 
+
+# 5. Dejar de hacer
