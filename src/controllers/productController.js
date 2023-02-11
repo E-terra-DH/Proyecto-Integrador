@@ -1,17 +1,18 @@
-let ProductDetail = [
-    {
-    title: "potus miami",
-    price: "$1200",
-    description: "Potus miami verde",
-    image: "/public/Images/potus_ok.jpeg"
-    },
-    
-    {
-        title: "tulipanes",
-        price: "$600",
-        description: "tulipanes color rosa",
-        image: "/public/Images/tulipanes.jpg"
-    }
-    ]
-
-    module.exports = productController
+const productController =  {
+    productDetail: (req, res) => {
+        res.render('./products/productDetail');
+   },
+   productCart: (req, res) => {
+        res.render('./products/productCart');
+   },    
+   productList: (req, res) => {
+        res.render('./products/productList');
+   },    
+   formLoad: (req, res) => {
+        res.render('./formLoad');
+   },    
+   formEdit: (req, res) => {
+        res.render('./formularioEdit');
+   }
+ };
+ module.exports = productController;
