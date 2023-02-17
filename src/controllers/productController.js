@@ -8,9 +8,7 @@ const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 
 const productController = {
-     /*getPlantas: () => {
-          return JSON.parse(fs.readFileSync(plantasPath, 'utf-8'));
-     },*/
+   
      index: (req, res) => {
 
           res.render('./products/index', {
