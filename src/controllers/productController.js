@@ -8,7 +8,7 @@ const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 
 const productController = {
-   
+
      index: (req, res) => {
 
           res.render('./products/index', {
@@ -20,9 +20,7 @@ const productController = {
      productDetail: (req, res) => {
           res.render('./products/productDetail')
      },
-     productCart: (req, res) => {
-          res.render('./products/productCart');
-     },
+
      create: (req, res) => {
           res.render('./products/formLoad');
      },
@@ -43,6 +41,10 @@ const productController = {
      productList: (req, res) => {
           res.render('./products/productList');
      },
+     productCart: (req, res) => {
+          res.render('./products/productCart');
+     },
+
      formLoad: (req, res) => {
           res.render('./formLoad');
      },

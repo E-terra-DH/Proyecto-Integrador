@@ -23,7 +23,8 @@ router.put('/edit/:id', productController.update );// se usa para diferenciar cu
 
 router.get('/cart',productController.productCart);
 router.get('/detail',productController.productDetail);
-//router.get('/list',productController.productList);
+router.get('/list',productController.productList);
+router.get('/cart',productController.productCart);
 
 
 // Rutas a crear
