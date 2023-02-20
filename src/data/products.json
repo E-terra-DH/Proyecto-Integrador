@@ -1,47 +1,11 @@
 [
  {
-  "id": 1676849759301,
-  "name": "Rosas",
-  "imagen": "imagen",
-  "categoria": "sin categoria",
-  "disponible": "sin disponibilidad",
-  "precio": "$25",
-  "cantidad": "sin cantidad"
- },
- {
-  "id": 1676851455191,
-  "name": "Orquidea",
-  "imagen": "imagen",
-  "categoria": "Interior",
-  "disponible": "sin disponibilidad",
-  "precio": "$150",
-  "cantidad": "sin cantidad"
- },
- {
-  "id": 1676851501589,
-  "name": "Margarita",
-  "imagen": "imagen",
-  "categoria": "Exterior",
-  "disponible": "sin disponibilidad",
-  "precio": "$25",
-  "cantidad": "sin cantidad"
- },
- {
-  "id": 1676851548106,
+  "id": 1676932831457,
   "name": "Tulipanes",
   "imagen": "imagen",
   "categoria": "Exterior",
   "disponible": "sin disponibilidad",
   "precio": "$150",
-  "cantidad": "sin cantidad"
- },
- {
-  "id": 1676853046313,
-  "name": "Heiliconias",
-  "imagen": "imagen",
-  "categoria": "Interior",
-  "disponible": "sin disponibilidad",
-  "precio": "$25",
   "cantidad": "sin cantidad"
  }
 ]

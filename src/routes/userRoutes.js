@@ -5,8 +5,10 @@ const path = require('path');
 const userController = require('../controllers/userController');
 
 router.get('/register',userController.register);
-router.get('/login',userController.login);
+router.get('/login',/*middleware*/ userController.login);
 
+
+// CRUD 
 router.get('/list',userController.list);
 
 router.get('/edit/:idUser', userController.edit);

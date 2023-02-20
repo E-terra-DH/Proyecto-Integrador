@@ -96,6 +96,8 @@ const productController = {
 
 
      },
+
+     // Son simples vistas 
      productList: (req, res) => {
           res.render('./products/productList');
      },
