@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Listado de plantas disponibles en E-Terra</h1><!-- TODO:Realizar css y contenido visual -->
+
+<br><!-- TODO:Realizar css y contenido visual -->
+
+<h2><a href="/products/create">Crear planta nueva</a></h2>
+<br><!-- TODO:Realizar css y contenido visual -->
+
+<br>
+<ul>
+  <% plantasList.forEach(planta => { %>
+  <li>
+    <a href="/products/<%= planta.id %>"><%= planta.name %> </a>
+    -
+    <a href="/products/edit/<%= planta.id %>"> Editar </a>
+    -
+    <a href="/products/delete/<%= planta.id %>"> Eliminar </a>
+  </li>
+  <% }) %>
+</ul>
+<br><!--  TODO: corregir malas practicas de diseño-->
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+  <%- include('../partials/footer.ejs')  %> 
+</footer>

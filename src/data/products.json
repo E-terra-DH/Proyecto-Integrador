@@ -1,20 +1,47 @@
-[{"id":1,"name":"Disappearing Monkeyflower","disponible":true,"precio":"$92.72","cantidad":1},
-{"id":2,"name":"Mt. Diablo Helianthella","disponible":true,"precio":"$131.14","cantidad":2},
-{"id":3,"name":"Hole-in-the-sand Plant","disponible":true,"precio":"$119.98","cantidad":3},
-{"id":4,"name":"Navajo Fleabane","disponible":true,"precio":"$90.41","cantidad":4},
-{"id":5,"name":"Cusick's Pincushion","disponible":false,"precio":"$29.41","cantidad":5},
-{"id":6,"name":"Nebraska Sedge","disponible":false,"precio":"$91.37","cantidad":6},
-{"id":7,"name":"Clamshell Orchid","disponible":false,"precio":"$79.08","cantidad":7},
-{"id":8,"name":"Sierra Currant","disponible":false,"precio":"$68.77","cantidad":8},
-{"id":9,"name":"Milkpea","disponible":true,"precio":"$145.46","cantidad":9},
-{"id":10,"name":"Strawberry","disponible":false,"precio":"$101.33","cantidad":10},
-{"id":11,"name":"Hall's Beardtongue","disponible":false,"precio":"$71.33","cantidad":11},
-{"id":12,"name":"Tapellaria Lichen","disponible":false,"precio":"$51.16","cantidad":12},
-{"id":13,"name":"Rattan's Beardtongue","disponible":true,"precio":"$131.23","cantidad":13},
-{"id":14,"name":"Dwarf Red Blackberry","disponible":true,"precio":"$142.26","cantidad":14},
-{"id":15,"name":"Coastal Dunes Milkvetch","disponible":true,"precio":"$93.63","cantidad":15},
-{"id":16,"name":"European Privet","disponible":false,"precio":"$130.51","cantidad":16},
-{"id":17,"name":"Knotweed Spineflower","disponible":true,"precio":"$87.01","cantidad":17},
-{"id":18,"name":"Triangle Waterfern","disponible":false,"precio":"$55.08","cantidad":18},
-{"id":19,"name":"Crossidium Moss","disponible":false,"precio":"$86.31","cantidad":19},
-{"id":20,"name":"Knapweed","disponible":false,"precio":"$38.45","cantidad":20}]
+[
+ {
+  "id": 1676849759301,
+  "name": "Rosas",
+  "imagen": "imagen",
+  "categoria": "sin categoria",
+  "disponible": "sin disponibilidad",
+  "precio": "$25",
+  "cantidad": "sin cantidad"
+ },
+ {
+  "id": 1676851455191,
+  "name": "Orquidea",
+  "imagen": "imagen",
+  "categoria": "Interior",
+  "disponible": "sin disponibilidad",
+  "precio": "$150",
+  "cantidad": "sin cantidad"
+ },
+ {
+  "id": 1676851501589,
+  "name": "Margarita",
+  "imagen": "imagen",
+  "categoria": "Exterior",
+  "disponible": "sin disponibilidad",
+  "precio": "$25",
+  "cantidad": "sin cantidad"
+ },
+ {
+  "id": 1676851548106,
+  "name": "Tulipanes",
+  "imagen": "imagen",
+  "categoria": "Exterior",
+  "disponible": "sin disponibilidad",
+  "precio": "$150",
+  "cantidad": "sin cantidad"
+ },
+ {
+  "id": 1676853046313,
+  "name": "Heiliconias",
+  "imagen": "imagen",
+  "categoria": "Interior",
+  "disponible": "sin disponibilidad",
+  "precio": "$25",
+  "cantidad": "sin cantidad"
+ }
+]

@@ -12,11 +12,14 @@ const userDetail=require('./routes/userRoutes');
 app.set('views', path.resolve(__dirname,'views')); /*para que el path resuelva la ruta para la carpeta views, donde esta ejs*/
 
 app.set('view engine','ejs') /*para ir donde esta ejs*/
+app.use(methodOverride('_method'));
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 app.use(express.static('public'));
 app.use(express.static('views'));
 
-app.use(methodOverride('_method'));
 
 app.use('/',mainRoutes);
 app.use('/products',productRoutes);
