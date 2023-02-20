@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>Eliminando plantas</h1>
+<h2 style="color: red;">¿Estas seguro que eliminaras esta planta?</h2>
+
+<p>Probando Eliminar</p>
+
+
+
+<form method="post" action="/products/delete/<%= planta.id %>?_method=DELETE">
+<label for="name">Nombre de la planta</label>
+<input type="text" name="name" value="<%= planta.name %>" disabled>
+
+
+<button type="submit">Eliminar</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <%- include('../partials/footer.ejs')  %> 
+  </footer>
+  
+</body>
+</html>
+

@@ -14,20 +14,20 @@
         
         <div class="new-product">
 
-            <h3>Crea aquí un nuevo producto --->>></h3>
+            <h3 style="border-radius: 25%; color: #344E41;">Crea aquí un nuevo producto</h3>
 
-            <form action="/login" method="post">
+            <form action="./create" method="post">
                 
                 <label class="icon-register">
                 <input class="input2" type="text" name="name" placeholder="Nombre del producto" required/>
                 </label>
 
                 <label class="icon-register">
-                <textarea class="description" name="description" id="description" placeholder="Descripción" cols="30" rows="10"></textarea>
+                <textarea class="description" name="categoria" id="description" placeholder="Descripción" cols="30" rows="10"></textarea>
                 </label>
 
                 <label class="icon-register">
-                <input class="input2" type="file" name="Image" placeholder="Sube la imagen" required/>
+                <input class="input2" type="file" name="imagen" placeholder="Sube la imagen" required/>
                 </label>
 
                 <section class="category">
@@ -43,7 +43,7 @@
                 </section>
 
                 <label class="icon-register">
-                <input class="input2"  type="text" name="price" placeholder="Precio en USD" required/>
+                <input class="input2"  type="text" name="precio" placeholder="Precio en USD" required/>
                 </label>
 
                 <button class="load-button" type="submit">Crea nuevo producto</button>

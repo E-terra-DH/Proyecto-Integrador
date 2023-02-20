@@ -1,15 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <H1>HOLA ESTAMOS PERDIDOS</H1>
-  
+<%- include('../partials/header.ejs') %>
 
+<body>
+    <H1 style="color: blue;">Edita las plantas que desees</H1><!-- TODO:Estilos de css y parte visual-->
+  
+<form method="post" action="/products/edit/<%= planta.id %>?_method=PUT"></form>
+<label for="name">Nombre de la planta</label>
+<input type="text" name="name" value="<%= planta.name %>">
+<label for="categoria">Tipo de planta</label>
+<input type="text" name="categoria" value="<%= planta.categoria %>">
+<label for="disponible">Disponible</label>
+<input type="checkbox" name="disponible" value="<%= planta.disponible %>">
+<label for="precio">Precio</label>
+<input type="price" name="precio" value="<%= planta.precio %>">
+<label for="cantidad">Cantidad</label>
+<input type="number" name="cantidad" value="<%= planta.cantidad %>">
+
+
+<button type="submit">Editar</button>
+
+
+<footer>
+    <%- include('../partials/footer.ejs')  %> 
+  </footer>
+  
 
 </body>
 </html>
+

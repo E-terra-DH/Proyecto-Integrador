@@ -7,11 +7,13 @@ const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 
 
-const productController = {
 
+
+const productController = {
+     dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante
      index: (req, res) => {
 
-          res.render('./products/index', {
+          res.render('./products/listaProducts', {
                title: 'Listado de productos',
                plantasList: dataBaseProducts
           });
@@ -22,35 +24,89 @@ const productController = {
      },
 
      create: (req, res) => {
-          res.render('./products/formLoad');
+          res.render('./products/formLoad', {
+               title: 'Nueva planta'
+          });
      },
      store: (req, res) => {
-          // TODO:crear la logica
+          let plantas = productController.dataBaseProducts();
+          let newPlanta = {
+               "id": Date.now(),
+               "name": req.body.name || 'sin nombre',
+               "imagen": "imagen",
+               "categoria": req.body.categoria || 'sin categoria',
+               "disponible": req.body.disponible || 'sin disponibilidad',
+               "precio": req.body.precio || 'sin precio',
+               "cantidad": req.body.cantidad || 'sin cantidad'
+          }
+
+          plantas.push(newPlanta);
+
+          fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
+
+          res.redirect('./index');
      },
      edit: (req, res) => {
+          let plantaId = req.params.id;
+          let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
+          res.render('./products/formularioEdit', {
+               title: 'Editando plantas',
+               planta
 
-          res.render('./products/formularioEdit');
+          });
      },
      update: (req, res) => {
+          let plantaId = req.params.id;
+          let plantas = productController.dataBaseProducts();
+
+          plantas.forEach((planta, index) => {
+               if (planta.id == plantaId) {
+                    planta.name = req.body.name;
+                    planta.categoria = req.body.categoria;
+                    // planta.disponible = req.body.disponible;
+                    planta.precio = req.body.precio;
+                    planta.cantidad = req.body.cantidad;
 
 
-          //TODO:Implementar logica
+                    planta[index] = planta;
+               }
+          })
+
+          fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
+
+          //res.redirect('/products/index')
+
+
      },
+     delete: (req, res) => {
+          let plantaId = req.params.id;
+          let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
+
+          res.render('products/delete', {
+               title: 'Eliminando plantas',
+               planta
+          });
+
+     },
+     destroy: (req, res) => {
+          let plantaId = req.params.id;
+          let plantas = productController.dataBaseProducts();
+
+          newPlantas = plantas.filter(planta => planta.id != plantaId);
+
+          fs.writeFileSync(productsPath, JSON.stringify(newPlantas, null, ' '));
+
+          res.redirect('/products/index');
 
 
+     },
      productList: (req, res) => {
           res.render('./products/productList');
      },
      productCart: (req, res) => {
           res.render('./products/productCart');
-     },
-
-     formLoad: (req, res) => {
-          res.render('./formLoad');
-     },
-     formEdit: (req, res) => {
-          res.render('./formularioEdit');
      }
+
 };
 
 
