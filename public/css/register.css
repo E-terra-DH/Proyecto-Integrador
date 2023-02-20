@@ -47,8 +47,12 @@ form {
 
 .fa-solid {
    padding-right: 5px;
-   color: #344E41;
+    color: #344E41;
+    position: relative;
+    top: 1p;
+    top: 4px;
 }
+
 
 .icon-register {
   background-color: white;
@@ -182,7 +186,7 @@ padding-right: 11px;
    /* margin: 10px 0px; */
    width: 250px;
    position: relative;
-   right: 113px;
+   right: 104px;
 }
 
 .fa-magnifying-glass {
@@ -201,6 +205,17 @@ border-right: grey solid 1px;
 font-size: 15px;
 color: grey;
 font-family: roboto;
+}
+
+.create{
+   background-color: #344E41;
+    border: #805781 solid 1px;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    transition-duration: 10ms;
+    opacity: 100%;
+    color: white;
 }
 
 

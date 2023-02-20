@@ -135,6 +135,23 @@ input {
 .fa-bars{
    color: #344E41;
 }
+
+.create{
+   background-color: #344E41;
+    border: #805781 solid 1px;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    transition-duration: 10ms;
+    opacity: 100%;
+    color: white;
+}
+
+.fa-cart-shopping, .fa-user{
+   position: relative;
+   top: 4px;
+}
+
 @media (min-width:430px) {
    .nav-search{
       display: none;
@@ -198,7 +215,7 @@ input {
       /* margin: 10px 0px; */
       width: 250px;
       position: relative;
-      right: 104px;
+      right: 99px;
    }
    
    .fa-magnifying-glass {

@@ -73,8 +73,9 @@ body {
 }
 
 .fa-cart-shopping, .fa-house, .fa-user, .fa-bars {
-color: #344E41;
-  
+  color: #344E41;
+  position: relative;
+  top: 3px;
 }
 
 /* -------------------------MAIN CATEGORIES-------------------------- */
@@ -188,6 +189,18 @@ a {
   position: absolute;
   right: 15px;
   bottom: -30px;
+}
+
+.create{
+  background-color: #344E41;
+    border: #805781 solid 1px;
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    transition-duration: 10ms;
+    opacity: 100%;
+    /* gap: 1px; */
+    color: white;
 }
 
 /* -------------------------CONTENEDOR CATÁLOGO-------------------------- */

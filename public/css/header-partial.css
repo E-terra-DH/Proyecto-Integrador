@@ -175,6 +175,20 @@ font-size: 22px;
     color: grey;
     font-family: roboto;
     }
+    .fa-user, .fa-cart-shopping{
+      position: relative;
+    top: 4px
+    }
+    .create{
+      background-color: #344E41;
+       border: #805781 solid 1px;
+       padding: 8px;
+       font-size: 13px;
+       border-radius: 6px;
+       transition-duration: 10ms;
+       opacity: 100%;
+       color: white;
+   }
 
     /* .hecho-con-amor {
         margin-top: 0px;
