@@ -5,10 +5,6 @@ const productsPath = path.join(__dirname, '../data/products.json');
 const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 
-
-
-
-
 const productController = {
      dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante
      index: (req, res) => {

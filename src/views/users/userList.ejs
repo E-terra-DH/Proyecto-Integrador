@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('../partials/head.ejs')  %> 
+    <title>Listado de productos</title>
+    <link rel="stylesheet" href="/css/usersList.css">
+</head>
+<body>
+    <header>
+        <%- include('../partials/header.ejs')  %> 
+    </header>
+
+    <main>
+<form method= "POST" action="/users/delete/<%= users [i].id %>?_method=DELETE">
+    <button type="submit">DELETE</button>
+</form>
+</main>
+
+<footer>
+    <%- include('../partials/footer.ejs') %> 
+</footer>
+</body>
+</html>
