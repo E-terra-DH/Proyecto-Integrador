@@ -13,8 +13,30 @@ const productController = {
                title: 'Listado de productos',
                plantasList: dataBaseProducts
           });
-     }
-     ,
+     },
+     macetas: (req, res) => {
+
+          res.render('./products/macetas', {
+               title: 'Listado de accesorios',
+               
+          });
+     },
+     accesorios: (req, res) => {
+
+          res.render('./products/accesorios', {
+               title: 'Listado de accesorios',
+               
+          });
+     },
+     sustratos: (req, res) => {
+
+          res.render('./products/sustratos', {
+               title: 'Listado de sustratos',
+               
+          });
+     },
+
+
      productDetail: (req, res) => {
           res.render('./products/productDetail')
      },

@@ -7,5 +7,14 @@
   "disponible": "sin disponibilidad",
   "precio": "$150",
   "cantidad": "sin cantidad"
+ },
+ {
+  "id": 1677081350799,
+  "name": "Girasoles",
+  "imagen": "imagen",
+  "categoria": "Exterior",
+  "disponible": "sin disponibilidad",
+  "precio": "$25",
+  "cantidad": "sin cantidad"
  }
 ]
