@@ -177,7 +177,8 @@ font-size: 22px;
     }
     .fa-user, .fa-cart-shopping{
       position: relative;
-    top: 4px
+    top: 4px;
+    color: #344E41;
     }
     .create{
       background-color: #344E41;
@@ -188,6 +189,7 @@ font-size: 22px;
        transition-duration: 10ms;
        opacity: 100%;
        color: white;
+       text-decoration: none;
    }
 
     /* .hecho-con-amor {

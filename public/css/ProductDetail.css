@@ -161,7 +161,7 @@ h4 {
     border-radius: 5px;
 }
 
-.add-cart {
+.add-cart, .edit, .delete {
     display: inline-block;
     background-color: #588157;
     border: #588157;
@@ -172,6 +172,7 @@ h4 {
     font-size: 18px;
     border-radius: 5px;
     transition-duration: 10ms;
+    text-decoration: none;
 }
 
 .social i {

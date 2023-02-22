@@ -145,6 +145,7 @@ input {
     transition-duration: 10ms;
     opacity: 100%;
     color: white;
+    text-decoration: none;
 }
 
 .fa-cart-shopping, .fa-user{

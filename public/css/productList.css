@@ -14,10 +14,11 @@
 
 .cat-titles {
   font-size: 20px;
-  font-family: roboto;
-  margin: 10px 20px;
-  color: #344E41;
-  font-weight: normal;
+    font-family: roboto;
+    margin: 10px 20px;
+    color: #344E41;
+    font-weight: bold;
+    text-align: center;
 }
 
 .catalogue {
@@ -70,4 +71,19 @@
   position: absolute;
   right: 15px;
   bottom: -20px;
+}
+
+.bottom-nav{
+  width: 92vw;
+    padding: 7px 15vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    background-color: #E5F7E4;
+    font-size: 25px;
+    color: #344E41;
+    gap: 50px;
+    left: 1px;
+    z-index: 5;
 }
