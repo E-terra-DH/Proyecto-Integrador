@@ -72,8 +72,9 @@
           <!-- <h3 class="form-title2">¡Crea tu cuenta!</h3> -->
           <h1 class="form-title">¡Creá tu cuenta!</h1>
         
-          <form action="/login" method="post">
-            
+          <form action="/login" method="post" > 
+            <!-- action="/users/delete///%= users [i].id %>?_method=DELETE" -->
+
             <label class="icon-register">
                 <i class="fa-solid fa-envelope"></i>
             <input type="text" name="e-mail" placeholder="Escribe tu e-mail" required/></label>
@@ -88,7 +89,7 @@
 
             <label class="icon-register">
                 <i class="fa-solid fa-check"></i>
-            <input type="password-conf" name="contraseña-conf" placeholder="Confirmar contraseña" required/></label>
+            <input type="password" name="contraseña-conf" placeholder="Confirmar contraseña" required/></label>
 
             <label class="icon-register">
                 <i class="fa-solid fa-mobile-screen"></i>
