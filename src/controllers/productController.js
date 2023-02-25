@@ -81,7 +81,11 @@ const productController = {
                if (planta.id == plantaId) {
                     planta.name = req.body.name;
                     planta.edad = req.body.edad;
-                    
+                    planta.categoria=req.body.categoria;
+                    planta.disponible=req.body.disponible;
+                    planta.precio=req.body.precio;
+                    planta.cantidad=req.body.cantidad;
+
 
                     plantas[i] = planta
                }
@@ -89,7 +93,7 @@ const productController = {
           fs.writeFileSync(productsPath,JSON.stringify(plantas,null,' '));
 
           res.redirect('/products/index')
-          console.log('verificando que llega desde el nagegador', plantas);
+         //console.log('verificando que llega desde el nagegador', plantas);
 
      },
      delete: (req, res) => {

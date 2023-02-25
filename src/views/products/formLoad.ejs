@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <%- include('../partials/head.ejs')  %> 
-    <title>Listado de productos</title>
-    <link rel="stylesheet" href="../css/formLoad.css">
+    <%- include('../partials/head.ejs') %>
+        <title>Listado de productos</title>
+        <link rel="stylesheet" href="../css/formLoad.css">
 </head>
+
 <body>
     <header>
-        <%- include('../partials/header.ejs')  %> 
+        <%- include('../partials/header.ejs') %>
     </header>
-    
+
     <main>
-        
+
         <div class="new-product">
 
             <h3 style="border-radius: 25%; color: #344E41;">Crea aquí un nuevo producto</h3>
 
             <form action="./create" method="post">
-                
+                <label for="name">Nombre de la planta</label>
+                <input type="text" name="name">
+                <label for="categoria">Tipo de planta</label>
+                <input type="text" name="categoria">
+                <label for="disponible">Disponible</label>
+                <input type="checkbox" name="disponible">
+                <label for="precio">Precio</label>
+                <input type="price" name="precio">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="cantidad">
+
+
+
+
+
+
+
+                <!--  
                 <label class="icon-register">
                 <input class="input2" type="text" name="name" placeholder="Nombre del producto" required/>
                 </label>
@@ -28,9 +47,9 @@
 
                 <label class="icon-register">
                 <input class="input2" type="file" name="imagen" placeholder="Sube la imagen" required/>
-                </label>
+                </label> -->
 
-              <!--   <section class="category">
+                <!--   <section class="category">
                     <div>
                     <p class="p">Categoría(s):</p>
                     </div>
@@ -42,10 +61,10 @@
                     </div>
                 </section> -->
 
-                <label class="icon-register">
+                <!--   <label class="icon-register">
                 <input class="input2"  type="text" name="precio" placeholder="Precio en USD" required/>
                 </label>
-
+ -->
                 <button class="load-button" type="submit">Crea nuevo producto</button>
             </form>
         </div>
@@ -53,7 +72,8 @@
     </main>
 
     <footer>
-        <%- include('../partials/footer.ejs') %> 
+        <%- include('../partials/footer.ejs') %>
     </footer>
 </body>
+
 </html>
