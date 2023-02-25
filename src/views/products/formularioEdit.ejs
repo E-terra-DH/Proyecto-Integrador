@@ -3,20 +3,23 @@
 <body>
     <H1 style="color: blue;">Edita las plantas que desees</H1><!-- TODO:Estilos de css y parte visual-->
   
-<form method="post" action="/products/edit/<%= planta.id %>?_method=PUT"></form>
+<form method="post" action="/products/edit/<%= planta.id %>?_method=PUT">
 <label for="name">Nombre de la planta</label>
 <input type="text" name="name" value="<%= planta.name %>">
 <label for="categoria">Tipo de planta</label>
 <input type="text" name="categoria" value="<%= planta.categoria %>">
-<label for="disponible">Disponible</label>
-<input type="checkbox" name="disponible" value="<%= planta.disponible %>">
+<!-- <label for="disponible">Disponible</label>
+<input type="checkbox" name="disponible" value=" planta.disponible">
 <label for="precio">Precio</label>
-<input type="price" name="precio" value="<%= planta.precio %>">
-<label for="cantidad">Cantidad</label>
-<input type="number" name="cantidad" value="<%= planta.cantidad %>">
-
+<input type="price" name="precio" value=" planta.precio ">
+ <label for="cantidad">Cantidad</label>
+ --> <!-- <input type="number" name="cantidad" value="planta.cantidad"> -->
 
 <button type="submit">Editar</button>
+
+
+
+</form>
 
 
 <footer>

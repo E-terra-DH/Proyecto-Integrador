@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { stringify } = require('querystring');
-const productsPath = path.join(__dirname, '../data/products.json');
+const productsPath = path.join(__dirname, '../Data/products.json');
 const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 
@@ -18,21 +18,21 @@ const productController = {
 
           res.render('./products/macetas', {
                title: 'Listado de accesorios',
-               
+
           });
      },
      accesorios: (req, res) => {
 
           res.render('./products/accesorios', {
                title: 'Listado de accesorios',
-               
+
           });
      },
      sustratos: (req, res) => {
 
           res.render('./products/sustratos', {
                title: 'Listado de sustratos',
-               
+
           });
      },
 
@@ -77,23 +77,19 @@ const productController = {
           let plantaId = req.params.id;
           let plantas = productController.dataBaseProducts();
 
-          plantas.forEach((planta, index) => {
+          plantas.forEach((planta, i) => {
                if (planta.id == plantaId) {
                     planta.name = req.body.name;
-                    planta.categoria = req.body.categoria;
-                    // planta.disponible = req.body.disponible;
-                    planta.precio = req.body.precio;
-                    planta.cantidad = req.body.cantidad;
+                    planta.edad = req.body.edad;
+                    
 
-
-                    planta[index] = planta;
+                    plantas[i] = planta
                }
           })
+          fs.writeFileSync(productsPath,JSON.stringify(plantas,null,' '));
 
-          fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
-
-          //res.redirect('/products/index')
-
+          res.redirect('/products/index')
+          console.log('verificando que llega desde el nagegador', plantas);
 
      },
      delete: (req, res) => {

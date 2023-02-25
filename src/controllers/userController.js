@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { stringify } = require('querystring');
-const usersPath = path.join(__dirname, '../data/users.json');
+const usersPath = path.join(__dirname, '../Data/users.json');
 const dataBaseUsers = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 
 const userController = {
