@@ -1,1 +1,29 @@
-[]
+[
+ {
+  "id": 1677359457246,
+  "name": "Rosas",
+  "imagen": "imagen",
+  "categoria": "Exterior",
+  "disponible": "on",
+  "precio": "$50",
+  "cantidad": "1"
+ },
+ {
+  "id": 1677359476078,
+  "name": "Girasoles",
+  "imagen": "imagen",
+  "categoria": "Exterior",
+  "disponible": "on",
+  "precio": "$100",
+  "cantidad": "10"
+ },
+ {
+  "id": 1677359495219,
+  "name": "Tulipanes",
+  "imagen": "imagen",
+  "categoria": "Exterior",
+  "disponible": "sin disponibilidad",
+  "precio": "$23",
+  "cantidad": "100"
+ }
+]
