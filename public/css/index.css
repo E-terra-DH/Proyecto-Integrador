@@ -78,6 +78,10 @@ body {
   top: 3px;
 }
 
+.icon-header {
+  color: white;
+}
+
 /* -------------------------MAIN CATEGORIES-------------------------- */
 
 .cat-titles {

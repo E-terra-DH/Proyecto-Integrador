@@ -1,25 +1,38 @@
-<%- include('../partials/header.ejs') %>
+<html>
 
-<h1>Eliminando plantas</h1>
-<h2 style="color: red;">¿Estas seguro que eliminaras esta planta?</h2>
+<head>
+  <%- include('../partials/head.ejs') %>
+  <title>Borrar producto</title>
+  <link rel="stylesheet" href="../../../css/delete.css">
+</head>
 
-<p>Probando Eliminar</p>
+<body>
+  
+  <header>
+    <%- include('../partials/header.ejs') %>
+  </header>
 
+  <main>
+    <h3 class="delete-title">¿Seguro quieres eliminar este producto?</h3>
 
+    <form method="post" action="/products/delete/<%= planta.id %>?_method=DELETE">
+      <div class="delete-content">
 
-<form method="post" action="/products/delete/<%= planta.id %>?_method=DELETE">
-<label for="name">Nombre de la planta</label>
-<input type="text" name="name" value="<%= planta.name %>" disabled>
+        <div>
+          <img class="product-image" src="/Images/<%= planta.image %>" style="width:168px; height:200px"/>
+        </div>
 
+        <div class="info-product">
+          <h4 class="title"><%= planta.name %></h4>
+          <h4 class="description"><%= planta.descripcion %></h4>
+        </div>
+      </div>
 
-<button type="submit">Eliminar</button>
-</form>
-<br>
-<br>
-<br>
-<br>
+      <button class="load-button" type="submit">Eliminar</button>
+    </form>
+  </main>
 
-<footer>
+  <footer>
     <%- include('../partials/footer.ejs')  %> 
   </footer>
   

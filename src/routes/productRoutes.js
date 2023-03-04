@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const upload = require('../middlewares/multer');
 
 const productController = require('../controllers/productController');
-
-
 
 // Ruta a lista de products
 router.get('/', productController.productList);
@@ -17,7 +16,7 @@ router.get('/sustratos', productController.sustratos);
 
 // CREAR Productos usando el formulario
 router.get('/create', productController.create);
-router.post('/create', productController.store);
+router.post('/create', upload.single('image'), productController.store);
 
 //Editar productos desde el id y la vista de listado 
 router.get('/edit/:id', productController.edit);
@@ -29,7 +28,7 @@ router.delete('/delete/:id', productController.destroy);
 
 
 router.get('/cart', productController.productCart);
-router.get('/detail', productController.productDetail);
+router.get('/:id', productController.productDetail); //PÁGINA DE DETALLE DE PRODUCTO
 router.get('/list', productController.productList);
 router.get('/cart', productController.productCart);
 

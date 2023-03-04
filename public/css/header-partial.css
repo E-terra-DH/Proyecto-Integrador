@@ -34,6 +34,10 @@ body {
   z-index: 5;
 }
 
+.icon-header {
+  color: #344E41;
+}
+
 .main-banner-image {
     width: 100vw;
     height: 200px;
@@ -175,11 +179,13 @@ font-size: 22px;
     color: grey;
     font-family: roboto;
     }
+
     .fa-user, .fa-cart-shopping{
       position: relative;
-    top: 4px;
-    color: #344E41;
+      top: 4px;
+      color: white;
     }
+
     .create{
       background-color: #344E41;
        border: #805781 solid 1px;

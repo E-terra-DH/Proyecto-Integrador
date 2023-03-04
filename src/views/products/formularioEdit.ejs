@@ -1,32 +1,63 @@
-<%- include('../partials/header.ejs') %>
+<html>
+
+<head>
+    <title>Editando productos</title>
+    <link rel="stylesheet" href="../../../css/formLoad.css">
+</head>
+
+<header>
+    <%- include('../partials/header.ejs') %>
+</header>
 
 <body>
-    <H1 style="color: blue;">Edita las plantas que desees</H1><!-- TODO:Estilos de css y parte visual-->
-  
-<form method="post" action="/products/edit/<%= planta.id %>?_method=PUT">
-<label for="name">Nombre de la planta</label>
-<input type="text" name="name" value="<%= planta.name %>">
-<label for="categoria">Tipo de planta</label>
-<input type="text" name="categoria" value="<%= planta.categoria %>">
-<label for="disponible">Disponible</label>
-<input type="checkbox" name="disponible" value=" <%planta.disponible%>">
-<label for="precio">Precio</label>
-<input type="price" name="precio" value=" <%planta.precio%> ">
- <label for="cantidad">Cantidad</label>
-<input type="number" name="cantidad" value="<%planta.cantidad%>"> 
 
-<button>Editar</button>
+    <main>
+
+        <div class="new-product">
+
+            <h3>Editando producto</h3>
+
+            <form method="post" action="/products/edit/<%= planta.id %>?_method=PUT">
+
+                <label for="name">Nombre del producto</label>
+                <input class="icon-register" type="text" name="name" value="<%=planta.name%>">
+
+                <label for="categoria">Tipo de producto</label>
+                <label class="categories" for="categoria">
+                    <input type="radio" name="categoria" value="Plantas">Plantas
+                    <input type="radio" name="categoria" value="Macetas">Macetas
+                    <input type="radio" name="categoria" value="Accesorios">Accesorios
+                    <input type="radio" name="categoria" value="Sustratos">Sustratos
+                </label>
 
 
+                <label for="precio">Descripción</label>
+                <textarea class="icon-register" name="descripcion"><%=planta.descripcion%></textarea>
 
-</form>
+                <label for="precio">Precio</label>
+                <input class="icon-register" type="price" name="precio" value="<%=planta.precio%>">
 
+                <label for="cantidad">Cantidad</label>
+                <input class="icon-register" type="number" name="cantidad" value="<%=planta.cantidad%>">
 
-<footer>
-    <%- include('../partials/footer.ejs')  %> 
-  </footer>
-  
+                <label for="image">Imagen</label>
+                <input class="icon-register" type="file" name="image" id="image">
+
+                <label class="categories" for="disponible">Disponible
+                    <input type="radio" name="categoria" value="Disponible">Sí
+                    <input type="radio" name="categoria" value="No disponible">No
+                </label>
+
+                <button class="load-button" type="submit">Editar producto</button>
+            </form>
+        </div>
+
+    </main>
 
 </body>
-</html>
 
+<footer>
+    <%- include('../partials/footer.ejs') %>
+</footer>
+
+</html>

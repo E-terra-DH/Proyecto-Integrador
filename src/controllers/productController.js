@@ -36,26 +36,31 @@ const productController = {
           });
      },
 
-
      productDetail: (req, res) => {
-          res.render('./products/productDetail')
-     },
+          let plantaId = req.params.id;
+		let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
+		res.render('./products/productDetail', {
+			planta});
+	},
 
      create: (req, res) => {
           res.render('./products/formLoad', {
                title: 'Nueva planta'
           });
      },
+
      store: (req, res) => {
           let plantas = productController.dataBaseProducts();
+          let image = req.file.filename;
           let newPlanta = {
                "id": Date.now(),
                "name": req.body.name || 'sin nombre',
-               "imagen": "imagen",
-               "categoria": req.body.categoria || 'sin categoria',
-               "disponible": req.body.disponible || 'sin disponibilidad',
+               "descripcion": req.body.descripcion,
                "precio": req.body.precio || 'sin precio',
-               "cantidad": req.body.cantidad || 'sin cantidad'
+               "cantidad": req.body.cantidad || 'sin cantidad',
+               "image": image || 'sin imagen',
+               "categoria": req.body.categoria,
+               "disonible": req.body.disponible
           }
 
           plantas.push(newPlanta);
@@ -64,6 +69,7 @@ const productController = {
 
           res.redirect('./index');
      },
+
      edit: (req, res) => {
           let plantaId = req.params.id;
           let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);

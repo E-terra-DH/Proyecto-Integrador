@@ -1,30 +1,35 @@
 <%- include('../partials/header.ejs') %>
 
-<h1>Listado de plantas disponibles en E-Terra</h1><!-- TODO:Realizar css y contenido visual -->
+<head>
+  <link rel="stylesheet" href="/css/listas-CRUD.css" />
+</head>
 
-<br><!-- TODO:Realizar css y contenido visual -->
+<section class="main-section">
 
-<h2><a href="/products/create">Crear planta nueva</a></h2>
-<br><!-- TODO:Realizar css y contenido visual -->
+  <h3>---> Nuestras plantas disponibles</h3>
 
-<br>
-<ul>
-  <% plantasList.forEach(planta => { %>
-  <li>
-    <a href="/products/<%= planta.id %>"><%= planta.name %> </a>
-    -
-    <a href="/products/edit/<%= planta.id %>"> Editar </a>
-    -
-    <a href="/products/delete/<%= planta.id %>"> Eliminar </a>
-  </li>
-  <% }) %>
-</ul>
-<br><!--  TODO: corregir malas practicas de diseño-->
-<br>
-<br>
-<br>
-<br>
-<br>
+  <button class="main-button"><a class="font-color" href="/products/create">Crear nuevo producto</a></button>
+
+  <ul>
+    <% plantasList.forEach(planta => { %>
+    <li>
+      <a class="item" href="/products/<%= planta.id %>"><%= planta.name %> </a>
+        
+      <button class="other-buttons"> 
+      <a class="item-button" href="/products/edit/<%= planta.id %>"> Editar </a>
+      </button>
+        
+      <button class="other-buttons"> 
+      <a class="item-button" href="/products/delete/<%= planta.id %>"> Eliminar </a>
+      </button>
+
+      <br>
+
+    </li>
+    <% }) %>
+  </ul>
+
+</section>
 
 <footer>
   <%- include('../partials/footer.ejs')  %> 

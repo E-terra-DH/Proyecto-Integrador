@@ -16,56 +16,41 @@
 
         <div class="new-product">
 
-            <h3 style="border-radius: 25%; color: #344E41;">Crea aquí un nuevo producto</h3>
+            <h3>Crea un producto nuevo</h3>
 
-            <form action="./create" method="post">
-                <label for="name">Nombre de la planta</label>
-                <input type="text" name="name">
-                <label for="categoria">Tipo de planta</label>
-                <input type="text" name="categoria">
-                <label for="disponible">Disponible</label>
-                <input type="checkbox" name="disponible">
+            <form action="./create" method="post" enctype="multipart/form-data">
+
+                <label for="name">Nombre del producto</label>
+                <input class="icon-register" type="text" name="name">
+                
+                <label for="categoria">Tipo de producto</label>
+                <label class="categories" for="categoria">
+                    <input type="radio" name="categoria" value="Plantas" id="Plantas">Plantas
+                    <input type="radio" name="categoria" value="Macetas" id="Macetas">Macetas
+                    <input type="radio" name="categoria" value="Accesorios" id="Accesorios">Accesorios
+                    <input type="radio" name="categoria" value="Sustratos" id="Sustratos">Sustratos
+                </label>
+                
+
+                <label for="precio">Descripción</label>
+                <textarea class="icon-register" name="descripcion"></textarea>
+
                 <label for="precio">Precio</label>
-                <input type="price" name="precio">
+                <input class="icon-register" type="price" name="precio">
+
                 <label for="cantidad">Cantidad</label>
-                <input type="number" name="cantidad">
+                <input class="icon-register" type="number" name="cantidad">
 
+                <label for="image">Imagen</label>
+                <input class="icon-register" type="file" name="image" id="image">
 
-
-
-
-
-
-                <!--  
-                <label class="icon-register">
-                <input class="input2" type="text" name="name" placeholder="Nombre del producto" required/>
+                <label class="categories" for="disponible">Disponible
+                    <input type="radio" name="disponible" value="Disponible">Sí
+                    <input type="radio" name="disponible" value="No disponible">No
                 </label>
 
-                <label class="icon-register">
-                <textarea class="description" name="categoria" id="description" placeholder="Categoria" cols="2" rows="2"></textarea>
-                </label>
 
-                <label class="icon-register">
-                <input class="input2" type="file" name="imagen" placeholder="Sube la imagen" required/>
-                </label> -->
-
-                <!--   <section class="category">
-                    <div>
-                    <p class="p">Categoría(s):</p>
-                    </div>
-                    <div class="cb">
-                    <input class="check" type="checkbox" name="Plantas">Plantas
-                    <input class="check" type="checkbox" name="Macetas">Macetas
-                    <input class="check" type="checkbox" name="Accesorios">Accesorios
-                    <input class="check" type="checkbox" name="Sustratos">Sustratos
-                    </div>
-                </section> -->
-
-                <!--   <label class="icon-register">
-                <input class="input2"  type="text" name="precio" placeholder="Precio en USD" required/>
-                </label>
- -->
-                <button class="load-button" type="submit">Crea nuevo producto</button>
+                <button class="load-button" type="submit">Crear producto</button>
             </form>
         </div>
 

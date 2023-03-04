@@ -1,0 +1,49 @@
+main {
+    width: 100vw;
+    background-color: #E5F7E4;
+    padding: 20px 20vw;
+}
+
+h3 {
+    font-family: roboto;
+    font-size: 22px;
+    font-weight: 600;
+    color: #344E41;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-family: roboto;
+    font-size: 19px;
+    color: #344E41;
+    margin-bottom: 10px;
+}
+
+.title{
+    font-weight: 600;
+}
+
+.description {
+    font-weight: 300;
+}
+
+.delete-content{
+    display: flex;
+}
+
+.info-product{
+    margin-left: 10px;
+}
+
+.load-button {
+    width: 200px;
+    margin-top: 15px;
+    border: #344E41;
+    border-radius: 18px;
+    background-color: #344E41;
+    color: white;
+    padding: 10px;
+    font-size: 16;
+    font-family: roboto;
+    font-size: 16px;
+}

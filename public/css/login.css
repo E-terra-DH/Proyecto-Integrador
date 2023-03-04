@@ -15,6 +15,7 @@ body{
    width: 250px;
    margin-bottom: 15px;
 }
+
 .main-content{
    display: flex;
    justify-content: center;
@@ -49,6 +50,10 @@ form {
 .fa-solid {
    padding-right: 5px;
    color: #344E41;
+}
+
+.icon-header {
+   color: white;
 }
 
 .usuario,

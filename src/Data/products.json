@@ -18,12 +18,13 @@
   "cantidad": "10"
  },
  {
-  "id": 1677359495219,
-  "name": "Tulipanes",
-  "imagen": "imagen",
-  "categoria": "Exterior",
-  "disponible": "sin disponibilidad",
-  "precio": "$23",
-  "cantidad": "100"
+  "id": 1677967364510,
+  "name": "Cafetera <3<3<3<3<3",
+  "descripcion": "asdgsbgrnsrthae",
+  "precio": "5",
+  "cantidad": "6",
+  "image": "product-1677967364485.jpg",
+  "categoria": "Accesorios",
+  "disonible": "Disponible"
  }
 ]
