@@ -36,19 +36,19 @@
                 
 
                 <label for="precio">Descripción</label>
-                <textarea class="icon-register" name="descripcion"></textarea>
+                <textarea class="icon-register" name="descripcion" value=" <%= locals.oldBody ? locals.oldBody.descripcion : '' %> "></textarea>
                 <% if (locals.mensajeDeError && mensajeDeError.descripcion) { %>
                     <p class="error-message"> <%= mensajeDeError.descripcion.msg  %> </p>
                 <% } %>
 
                 <label for="precio">Precio</label>
-                <input class="icon-register" type="price" name="precio">
+                <input class="icon-register" type="price" name="precio" value=" <%= locals.oldBody ? locals.oldBody.precio : '' %> ">
                 <% if (locals.mensajeDeError && mensajeDeError.precio) { %>
                     <p class="error-message"> <%= mensajeDeError.precio.msg  %> </p>
                 <% } %>
 
                 <label for="cantidad">Cantidad</label>
-                <input class="icon-register" type="number" name="cantidad">
+                <input class="icon-register" type="number" name="cantidad" value=" <%= locals.oldBody ? locals.oldBody.cantidad : '' %> ">
                 <% if (locals.mensajeDeError && mensajeDeError.cantidad) { %>
                     <p class="error-message"> <%= mensajeDeError.cantidad.msg  %> </p>
                 <% } %>
