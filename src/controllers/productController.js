@@ -3,6 +3,7 @@ const path = require('path');
 const { stringify } = require('querystring');
 const productsPath = path.join(__dirname, '../Data/products.json');
 const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
+const { validationResult } = require('express-validator'); // Aquí desestructuramos algo cuando es propio de un módulo.
 
 
 const productController = {
@@ -50,8 +51,18 @@ const productController = {
      },
 
      store: (req, res) => {
+          let errors = validationResult(req);
+          if (!errors.isEmpty()){ //si errors no viene vacío. Es decir, si sí hay errores de validación
+               return res.render('./products/formLoad', { //copy paste de procesamiento create
+                    title: 'Nueva planta',
+                    mensajeDeError: errors.mapped(), //enviar errores a la vista como un objeto
+                    oldBody: req.body
+               });
+          }
+
           let plantas = productController.dataBaseProducts();
           let image = req.file.filename;
+
           let newPlanta = {
                "id": Date.now(),
                "name": req.body.name || 'sin nombre',
@@ -82,18 +93,18 @@ const productController = {
      update: (req, res) => {
           let plantaId = req.params.id;
           let plantas = productController.dataBaseProducts();
-
+          //let image = req.file.filename;// REPITO LO MISMO DE CREATE PARA SUBIR IMAGEN PERO LA PÁGINA SE ME ROMPE
           plantas.forEach((planta, i) => {
                if (planta.id == plantaId) {
-                    planta.name = req.body.name;
-                    planta.edad = req.body.edad;
-                    planta.categoria=req.body.categoria;
-                    planta.disponible=req.body.disponible;
-                    planta.precio=req.body.precio;
-                    planta.cantidad=req.body.cantidad;
+                   planta.name = req.body.name;
+                   planta.descripcion = req.body.descripcion;
+                   planta.precio = req.body.precio;
+                   planta.cantidad = req.body.cantidad;
+                   //planta.image = image;// REPITO LO MISMO DE CREATE PARA SUBIR IMAGEN PERO LA PÁGINA SE ME ROMPE
+                   planta.categoria = req.body.categoria;
+                   planta.disponible = req.body.disponible;
 
-
-                    plantas[i] = planta
+                   plantas[i] = planta;
                }
           })
           fs.writeFileSync(productsPath,JSON.stringify(plantas,null,' '));

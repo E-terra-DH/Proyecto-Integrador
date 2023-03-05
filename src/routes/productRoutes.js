@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const upload = require('../middlewares/multer');
+const validateProductInfo = require('../middlewares/validations');
 
 const productController = require('../controllers/productController');
 
@@ -16,11 +17,11 @@ router.get('/sustratos', productController.sustratos);
 
 // CREAR Productos usando el formulario
 router.get('/create', productController.create);
-router.post('/create', upload.single('image'), productController.store);
+router.post('/create', upload.single('image'), validateProductInfo, productController.store);
 
 //Editar productos desde el id y la vista de listado 
 router.get('/edit/:id', productController.edit);
-router.put('/edit/:id', productController.update);// se usa para diferenciar cuando se actualiza
+router.put('/edit/:id', upload.single('image'), validateProductInfo, productController.update);// se usa para diferenciar cuando se actualiza
 
 //Eliminando productos 
 router.get('/delete/:id', productController.delete);

@@ -19,6 +19,14 @@ label {
     margin-top: 10px
 }
 
+.error-message{
+    display: inline-block;
+    width: 600px;
+    color: purple;
+    text-align: left;
+    font-style: italic;
+}
+
 input {
     border: white;
     width: 150px;

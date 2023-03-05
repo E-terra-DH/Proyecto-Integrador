@@ -1,17 +1,17 @@
 [
  {
   "id": 1677359457246,
-  "name": "Rosas",
-  "imagen": "imagen",
-  "categoria": "Exterior",
-  "disponible": "on",
-  "precio": "$50",
-  "cantidad": "1"
+  "name": "Rosas6",
+  "image": "imagen",
+  "categoria": "Accesorios",
+  "precio": "$20",
+  "cantidad": "5",
+  "descripcion": "Hola! soy una rosa"
  },
  {
   "id": 1677359476078,
   "name": "Girasoles",
-  "imagen": "imagen",
+  "image": "imagen",
   "categoria": "Exterior",
   "disponible": "on",
   "precio": "$100",

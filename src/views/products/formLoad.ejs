@@ -21,8 +21,11 @@
             <form action="./create" method="post" enctype="multipart/form-data">
 
                 <label for="name">Nombre del producto</label>
-                <input class="icon-register" type="text" name="name">
-                
+                <input class="icon-register" type="text" name="name" value=" <%= locals.oldBody ? locals.oldBody.name : '' %> ">
+                <% if (locals.mensajeDeError && mensajeDeError.name) { %>
+                    <p class="error-message"> <%= mensajeDeError.name.msg  %> </p>
+                <% } %>
+
                 <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria">
                     <input type="radio" name="categoria" value="Plantas" id="Plantas">Plantas
@@ -34,12 +37,21 @@
 
                 <label for="precio">Descripción</label>
                 <textarea class="icon-register" name="descripcion"></textarea>
+                <% if (locals.mensajeDeError && mensajeDeError.descripcion) { %>
+                    <p class="error-message"> <%= mensajeDeError.descripcion.msg  %> </p>
+                <% } %>
 
                 <label for="precio">Precio</label>
                 <input class="icon-register" type="price" name="precio">
+                <% if (locals.mensajeDeError && mensajeDeError.precio) { %>
+                    <p class="error-message"> <%= mensajeDeError.precio.msg  %> </p>
+                <% } %>
 
                 <label for="cantidad">Cantidad</label>
                 <input class="icon-register" type="number" name="cantidad">
+                <% if (locals.mensajeDeError && mensajeDeError.cantidad) { %>
+                    <p class="error-message"> <%= mensajeDeError.cantidad.msg  %> </p>
+                <% } %>
 
                 <label for="image">Imagen</label>
                 <input class="icon-register" type="file" name="image" id="image">
