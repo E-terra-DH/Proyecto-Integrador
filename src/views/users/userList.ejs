@@ -1,23 +1,71 @@
-<!DOCTYPE html>
+<%- include('../partials/header.ejs') %>
+
+<head>
+  <link rel="stylesheet" href="/css/listas-CRUD.css" />
+</head>
+
+<section class="main-section">
+
+  <h3>---> Usuarios</h3>
+
+  <!-- <button class="main-button"><a class="font-color" href="/products/create">Crear nuevo producto</a></button> -->
+
+  <ul>
+    <% usersList.forEach(user => { %>
+    <li>
+      <a class="item" href="/products/<%= user.id %>"><%= user.name %> </a>
+        
+      <button class="other-buttons"> 
+      <a class="item-button" href="/products/edit/<%= user.id %>"> Editar </a>
+      </button>
+        
+      <button class="other-buttons"> 
+      <a class="item-button" href="/products/delete/<%= user.id %>"> Eliminar </a>
+      </button>
+
+      <br>
+
+    </li>
+    <% }) %>
+  </ul>
+
+</section>
+
+<footer>
+  <%- include('../partials/footer.ejs')  %> 
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
-   <%- include('../partials/head.ejs')  %> 
+   < include('../partials/head.ejs')  %> 
     <title>Listado de Usuarios</title>
     <link rel="stylesheet" href="/css/usersList.css">
 </head>
 <body>
     <header>
-        <%- include('../partials/header.ejs')  %> 
+        < include('../partials/header.ejs')  %> 
     </header>
 
     <main>
-<form method= "POST" action="/users/delete/<%= users [i].id %>?_method=DELETE">
+<form method= "POST" action="/users/delete/< users[i].id %>?_method=DELETE">
     <button type="submit">DELETE</button>
 </form>
 </main>
 
 <footer>
-    <%- include('../partials/footer.ejs') %> 
+    < include('../partials/footer.ejs') %> 
 </footer>
 </body>
-</html>
+</html> -->

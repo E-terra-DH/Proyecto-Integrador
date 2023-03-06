@@ -4,14 +4,19 @@ const path = require('path');
 
 const userController = require('../controllers/userController');
 
-router.get('/register',userController.register);
-router.get('/login',/*middleware*/ userController.login);
 
 // CRUD 
-router.get('/index',userController.index);
+router.get('/index', userController.index);
 
-router.get('/create', userController.create);
-router.post('/create', userController.store);
+//REGISTRO
+router.get('/register', userController.register); //Formulario de registro de usuarios
+router.post('/register', userController.store); //Creación de un nuevo usuario
+
+//LOGIN
+router.get('/login',/*middleware*/ userController.login);
+
+//PERFIL DE USUARIO
+// router.get('/profile/:idUser', userController.profile);
 
 router.get('/edit/:idUser', userController.edit);
 router.put('/edit/:idUser', userController.update);

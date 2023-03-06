@@ -87,6 +87,16 @@ input {
   font-family: roboto;
 }
 
+.input-image {
+   border: white;
+   width: 150px;
+   padding-left: 8px;
+   font-size: 15px;
+   color: #344E41;
+   font-family: roboto;
+   /* display: none; */
+}
+
 .register-button {
   width: 200px;
   margin-top: 10px;

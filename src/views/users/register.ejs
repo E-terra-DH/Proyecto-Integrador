@@ -73,20 +73,20 @@
           <!-- <h3 class="form-title2">¡Crea tu cuenta!</h3> -->
           <h1 class="form-title">¡Creá tu cuenta!</h1>
         
-          <form action="/login" method="post" > 
+          <form action="/login" method="post" enctype="multipart/form-data"> 
             <!-- action="/users/delete///%= users [i].id %>?_method=DELETE" -->
 
             <label class="icon-register">
                 <i class="fa-solid fa-envelope"></i>
-            <input type="text" name="e-mail" placeholder="Escribe tu e-mail" required/></label>
+            <input type="text" name="email" placeholder="Escribe tu e-mail" required/></label>
             
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
-            <input type="text" name="Usuario" placeholder="Nombre de usuario" required/></label>
+            <input type="text" name="usuario" placeholder="Nombre de usuario" required/></label>
             
             <label class="icon-register">
               <i class="fa-solid fa-lock"></i>
-            <input type="password" name="contraseña" placeholder="Contraseña" required/></label>
+            <input type="password" name="contrasena" placeholder="Contraseña" required/></label>
 
             <label class="icon-register">
                 <i class="fa-solid fa-check"></i>
@@ -94,7 +94,11 @@
 
             <label class="icon-register">
                 <i class="fa-solid fa-mobile-screen"></i>
-            <input type="cel" name="cel" placeholder="Celular (opcional)" required/></label>
+            <input type="cel" name="cel" placeholder="Celular" required/></label>
+
+            <label class="icon-register">
+              <!-- <i class="fa-solid fa-mobile-screen"></i> -->
+            <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar" required/></label>
 
             <button class="register-button" type="submit">Crear cuenta</button>
           </form>

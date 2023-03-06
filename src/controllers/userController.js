@@ -14,33 +14,31 @@ const userController = {
          });
         },
 
-    register: (req, res) => {
-         res.render('./users/register');
-    },
+
     login: (req, res) => {
      res.render('./users/login');
     },
 
-    create: (req, res) => {
-        res.render('./users/register', {
-             title: 'Nuevo Usuario'
-        });
-   },
-   store: (req, res) => {
+    register: (req, res) => {
+         res.render('./users/register');
+    },
+
+     store: (req, res) => {
         let users = userController.dataBaseUsers();
+     //    let avatar = req.file.filename;
         let newUser = {
              "id": Date.now(),
-             "nombre": req.body.nombre || 'sin nombre',
-             "apellido": req.body.apellido || 'sin apellido',
-             "email": req.body.email || 'sin email',
-             "contraseña": req.body.contraseña || 'sin contraseña',
-             "tipo": req.body.tipo || 'sin tipo',
-             "avatar": req.body.avatar || 'sin avatar',
+             "email": req.body.email || 'sin nombre',
+             "usuario": req.body.usuario || 'sin apellido',
+             "contrasena": req.body.contrasena || 'sin contraseña',
+             "cel": req.body.cel || 'sin celular',
+          //    "tipo": noAdmin,
+          //    "avatar": avatar || 'sin avatar',
         }
 
         users.push(newUser);
 
-        fs.writeFileSync(usersPath, JSON.stringify(usuarios, null, ' '));
+        fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
 
         res.redirect('./index');
    },

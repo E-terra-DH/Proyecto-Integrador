@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3006;
 
 const mainRoutes=require('./routes/mainRoutes');
 const productRoutes=require('./routes/productRoutes');
-const userDetail=require('./routes/userRoutes');
+const userRoutes=require('./routes/userRoutes');
 
 app.set('views', path.resolve(__dirname,'views')); /*para que el path resuelva la ruta para la carpeta views, donde esta ejs*/
 
@@ -23,7 +23,7 @@ app.use(express.static('views'));
 
 app.use('/',mainRoutes);
 app.use('/products',productRoutes);
-app.use('/users', userDetail);
+app.use('/users', userRoutes); //Ver ruteo de productos
 
 //---error---
 app.use((req, res) => {

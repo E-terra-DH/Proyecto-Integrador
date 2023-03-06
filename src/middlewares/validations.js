@@ -11,7 +11,7 @@ const validateProductInfo = [
     body('precio')
         .notEmpty().isInt().withMessage('Agrega el precio del producto').bail(),
     body('cantidad')
-        .notEmpty().isInt().withMessage('Agrega las cantidades disponibles del producto').bail(),
+        .notEmpty().isInt().withMessage('Agrega la cantidad disponible del producto').bail(),
 ]
 
 module.exports = validateProductInfo;

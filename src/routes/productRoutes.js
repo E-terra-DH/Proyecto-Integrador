@@ -7,7 +7,7 @@ const validateProductInfo = require('../middlewares/validations');
 const productController = require('../controllers/productController');
 
 // Ruta a lista de products
-router.get('/', productController.productList);
+// router.get('/', productController.productList); //ESTE LO COMENTÉ PORQUE REALMENTE LO ESTAMOS HACIENDO EN EL INDEX
 
 //Creando indice de productos disponibles
 router.get('/index', productController.index);
@@ -30,7 +30,7 @@ router.delete('/delete/:id', productController.destroy);
 
 router.get('/cart', productController.productCart);
 router.get('/:id', productController.productDetail); //PÁGINA DE DETALLE DE PRODUCTO
-router.get('/list', productController.productList);
+router.get('/list', productController.productCatalogue);
 router.get('/cart', productController.productCart);
 
 

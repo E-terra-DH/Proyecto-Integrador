@@ -137,9 +137,14 @@ const productController = {
      },
 
      // Son simples vistas 
-     productList: (req, res) => {
+     // productList: (req, res) => { // ESTA ES LA VISTA QUE TENEMOS EN EL CONTROLADOR DE INDEX
+     //      res.render('./products/listaProducts');
+     // },
+
+     productCatalogue: (req, res) => {
           res.render('./products/productList');
      },
+
      productCart: (req, res) => {
           res.render('./products/productCart');
      }
