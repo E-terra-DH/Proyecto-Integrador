@@ -7,9 +7,9 @@ const validateProductInfo = [
         .isLength({ max: 20}).withMessage('Máximo puedo tener 20 caracteres').bail(),
     body('descripcion')
         .notEmpty().withMessage('Agrega la descripción del producto').bail()
-        .isLength({ min: 300}).withMessage('Por lo menos necesito 300 caracteres').bail(),
+        .isLength({ min: 10}).withMessage('Por lo menos necesito 300 caracteres').bail(),
     body('precio')
-        .notEmpty().isInt().withMessage('Agrega el precio del producto').bail(),
+        .notEmpty().isCurrency().withMessage('Agrega el precio del producto').bail(),
     body('cantidad')
         .notEmpty().isInt().withMessage('Agrega la cantidad disponible del producto').bail(),
 ]

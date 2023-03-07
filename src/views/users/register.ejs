@@ -73,7 +73,7 @@
           <!-- <h3 class="form-title2">¡Crea tu cuenta!</h3> -->
           <h1 class="form-title">¡Creá tu cuenta!</h1>
         
-          <form action="/login" method="post" enctype="multipart/form-data"> 
+          <form action="./register" method="post" enctype="multipart/form-data"> 
             <!-- action="/users/delete///%= users [i].id %>?_method=DELETE" -->
 
             <label class="icon-register">
@@ -88,17 +88,16 @@
               <i class="fa-solid fa-lock"></i>
             <input type="password" name="contrasena" placeholder="Contraseña" required/></label>
 
-            <label class="icon-register">
+            <!-- <label class="icon-register">
                 <i class="fa-solid fa-check"></i>
-            <input type="password" name="contraseña-conf" placeholder="Confirmar contraseña" required/></label>
+            <input type="password" name="contraseña-conf" placeholder="Confirmar contraseña" required/></label> -->
 
             <label class="icon-register">
                 <i class="fa-solid fa-mobile-screen"></i>
             <input type="cel" name="cel" placeholder="Celular" required/></label>
 
             <label class="icon-register">
-              <!-- <i class="fa-solid fa-mobile-screen"></i> -->
-            <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar" required/></label>
+            <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar"/></label>
 
             <button class="register-button" type="submit">Crear cuenta</button>
           </form>

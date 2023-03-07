@@ -14,6 +14,7 @@ router.get('/index', productController.index);
 router.get('/macetas', productController.macetas);
 router.get('/accesorios', productController.accesorios);
 router.get('/sustratos', productController.sustratos);
+router.get('/list', productController.productCatalogue);
 
 // CREAR Productos usando el formulario
 router.get('/create', productController.create);
@@ -30,7 +31,6 @@ router.delete('/delete/:id', productController.destroy);
 
 router.get('/cart', productController.productCart);
 router.get('/:id', productController.productDetail); //PÁGINA DE DETALLE DE PRODUCTO
-router.get('/list', productController.productCatalogue);
 router.get('/cart', productController.productCart);
 
 

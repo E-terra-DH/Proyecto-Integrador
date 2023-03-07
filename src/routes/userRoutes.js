@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const upload = require('../middlewares/multer');
+// const validateProductInfo = require('../middlewares/validations');
 
 const userController = require('../controllers/userController');
 
@@ -10,7 +12,7 @@ router.get('/index', userController.index);
 
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
-router.post('/register', userController.store); //Creación de un nuevo usuario
+router.post('/register', upload.single('avatar'), userController.store); //Creación de un nuevo usuario
 
 //LOGIN
 router.get('/login',/*middleware*/ userController.login);

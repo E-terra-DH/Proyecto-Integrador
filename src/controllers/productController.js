@@ -15,6 +15,11 @@ const productController = {
                plantasList: dataBaseProducts
           });
      },
+
+     productCatalogue: (req, res) => {
+          res.render('../views/products/productList')
+     },
+
      macetas: (req, res) => {
 
           res.render('./products/macetas', {
@@ -75,7 +80,7 @@ const productController = {
           }
 
           plantas.push(newPlanta);
-
+          
           fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
 
           res.redirect('./index');
@@ -140,10 +145,6 @@ const productController = {
      // productList: (req, res) => { // ESTA ES LA VISTA QUE TENEMOS EN EL CONTROLADOR DE INDEX
      //      res.render('./products/listaProducts');
      // },
-
-     productCatalogue: (req, res) => {
-          res.render('./products/productList');
-     },
 
      productCart: (req, res) => {
           res.render('./products/productCart');

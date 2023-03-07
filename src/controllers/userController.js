@@ -22,26 +22,26 @@ const userController = {
     register: (req, res) => {
          res.render('./users/register');
     },
+    
+    store: (req, res) => {
+     let users = userController.dataBaseUsers();
+     let avatar = req.file.filename;
+     let newUser = {
+          "id": Date.now(),
+          "email": req.body.email || 'sin nombre',
+          "usuario": req.body.usuario || 'sin apellido',
+          "contrasena": req.body.contrasena || 'sin contraseña',
+          "cel": req.body.cel || 'sin celular',
+          "tipo": 'noAdmin',
+          "avatar": avatar || 'sin avatar',
+     }
 
-     store: (req, res) => {
-        let users = userController.dataBaseUsers();
-     //    let avatar = req.file.filename;
-        let newUser = {
-             "id": Date.now(),
-             "email": req.body.email || 'sin nombre',
-             "usuario": req.body.usuario || 'sin apellido',
-             "contrasena": req.body.contrasena || 'sin contraseña',
-             "cel": req.body.cel || 'sin celular',
-          //    "tipo": noAdmin,
-          //    "avatar": avatar || 'sin avatar',
-        }
+     users.push(newUser);
 
-        users.push(newUser);
+     fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
 
-        fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
-
-        res.redirect('./index');
-   },
+     res.redirect('/users/index');
+    },
 
     edit:(req,res)=>{
         let userId = req.params.id;
