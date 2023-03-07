@@ -141,6 +141,18 @@ input {
    color: #344E41;
 }
 
+.remember{
+   color: white;
+   font-size: 15px;
+   text-decoration: none;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row-reverse;
+
+  
+}
+
+
 .create{
    background-color: #344E41;
     border: #805781 solid 1px;

@@ -16,7 +16,7 @@ const userController = {
 
 
     login: (req, res) => {
-     res.render('./users/login');
+     res.render('./auth/login');
     },
 
     register: (req, res) => {

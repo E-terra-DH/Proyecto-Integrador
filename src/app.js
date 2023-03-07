@@ -5,6 +5,12 @@ const { clearScreenDown } = require('readline');
 const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3006;
 
+//Para validar la sesión y gurdar las cookies
+const userSessionMdlw = require('./middlewares/userSessionMdlw');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+
+
 const mainRoutes=require('./routes/mainRoutes');
 const productRoutes=require('./routes/productRoutes');
 const userRoutes=require('./routes/userRoutes');
@@ -16,6 +22,18 @@ app.use(methodOverride('_method'));
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+app.use(cookieParser());
+app.use(session({
+    secret:'Clave obligatoria',
+    resave:false,
+    saveUninitialized:true
+    //cookie: {masAge: 120000} //Tiempo de 2 minutos guardando la cookie;
+}
+));
+
+app.use(userSessionMdlw);
+
+
 
 app.use(express.static('public'));
 app.use(express.static('views'));
