@@ -12,6 +12,20 @@ const validateProductInfo = [
         .notEmpty().isCurrency().withMessage('Agrega el precio del producto').bail(),
     body('cantidad')
         .notEmpty().isInt().withMessage('Agrega la cantidad disponible del producto').bail(),
+    body('image').custom((value, { req }) => {
+        let file = req.file;
+        // let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        if (!file) {
+            throw new Error ('Sube una imagen para este producto')
+        }
+        // } else {
+        //     let fileExtension = path.extname(file.originalname);
+        //     if (!acceptedExtensions.includes(fileExtension)){
+        //         throw new Error ('Las extensiones permitidas son .jpg, .png y .gif')
+        //     }
+        // }
+        return true
+    })
 ]
 
 module.exports = validateProductInfo;

@@ -26,5 +26,25 @@
   "image": "product-1677967364485.jpg",
   "categoria": "Accesorios",
   "disonible": "Disponible"
+ },
+ {
+  "id": 1678293056190,
+  "name": "    sdfasdfasdf  ",
+  "descripcion": "oi´hupioj}pok,´pl´+",
+  "precio": "$6",
+  "cantidad": "2",
+  "image": "product-1678293056119.jpg",
+  "categoria": "Accesorios",
+  "disonible": "No disponible"
+ },
+ {
+  "id": 1678308367574,
+  "name": "   holi ",
+  "descripcion": "Soy un nuevo producto",
+  "precio": "5",
+  "cantidad": "3",
+  "image": "product-1678308367531.jpg",
+  "categoria": "Macetas",
+  "disonible": "Disponible"
  }
 ]

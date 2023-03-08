@@ -21,7 +21,7 @@
             <form action="./create" method="post" enctype="multipart/form-data">
 
                 <label for="name">Nombre del producto</label>
-                <input class="icon-register" type="text" name="name" value=" <%= locals.oldBody ? locals.oldBody.name : '' %> ">
+                <input class="icon-register" type="text" name="name" value=" <%= locals.oldBody ? oldBody.name : '' %> ">
                 <% if (locals.mensajeDeError && mensajeDeError.name) { %>
                     <p class="error-message"> <%= mensajeDeError.name.msg  %> </p>
                 <% } %>
@@ -36,13 +36,13 @@
                 
 
                 <label for="precio">Descripción</label>
-                <textarea class="icon-register" name="descripcion" value=" <%= locals.oldBody ? locals.oldBody.descripcion : '' %> "></textarea>
+                <textarea class="icon-register" name="descripcion" value=" <%= locals.oldBody ? oldBody.descripcion : '' %> "></textarea>
                 <% if (locals.mensajeDeError && mensajeDeError.descripcion) { %>
                     <p class="error-message"> <%= mensajeDeError.descripcion.msg  %> </p>
                 <% } %>
 
                 <label for="precio">Precio</label>
-                <input class="icon-register" type="price" name="precio" value=" <%= locals.oldBody ? locals.oldBody.precio : '' %> ">
+                <input class="icon-register" type="number" name="precio" value=" <%= locals.oldBody ? locals.oldBody.precio : '' %> ">
                 <% if (locals.mensajeDeError && mensajeDeError.precio) { %>
                     <p class="error-message"> <%= mensajeDeError.precio.msg  %> </p>
                 <% } %>
@@ -54,7 +54,10 @@
                 <% } %>
 
                 <label for="image">Imagen</label>
-                <input class="icon-register" type="file" name="image" id="image">
+                <input class="icon-register" type="file" name="image" id="image" required>
+                <% if (locals.mensajeDeError && mensajeDeError.image) { %>
+                    <p class="error-message"> <%= mensajeDeError.image.msg  %> </p>
+                <% } %>
 
                 <label class="categories" for="disponible">Disponible
                     <input type="radio" name="disponible" value="Disponible">Sí
