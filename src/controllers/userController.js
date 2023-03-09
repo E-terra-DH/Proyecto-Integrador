@@ -3,6 +3,8 @@ const path = require('path');
 const { stringify } = require('querystring');
 const usersPath = path.join(__dirname, '../Data/users.json');
 const dataBaseUsers = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+const bcrypt = require('bcryptjs');
+
 
 const userController = {
     dataBaseUsers: () => { return JSON.parse(fs.readFileSync(usersPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante
@@ -23,14 +25,29 @@ const userController = {
          res.render('./users/register');
     },
     
-    store: (req, res) => {
+    createUser: (req, res) => {
+
+     // ERROR SI EL USUARIO YA EXISTE
+     // let existingUser = userController.dataBaseUsers().findByField('email', req.body.email);
+
+     // if(existingUser) {
+     //      return res.render('../views/users/register', {
+     //           errors: {
+     //                email: {
+     //                     msg: 'Este email ya está registrado'
+     //                }
+     //           },
+     //           oldData: req.body
+     //      })
+     // }
+
      let users = userController.dataBaseUsers();
      let avatar = req.file.filename;
      let newUser = {
           "id": Date.now(),
           "email": req.body.email || 'sin nombre',
           "usuario": req.body.usuario || 'sin apellido',
-          "contrasena": req.body.contrasena || 'sin contraseña',
+          "contrasena": bcrypt.hashSync(req.body.contrasena, 10),
           "cel": req.body.cel || 'sin celular',
           "tipo": 'noAdmin',
           "avatar": avatar || 'sin avatar',
@@ -63,7 +80,7 @@ const userController = {
                  user.email = req.body.email;
                  user.contraseña = req.body.contraseña;
                  user.tipo = req.body.tipo;
-                 user.avatar = req.body.avatar;
+                 user.avatar = req.file.filename;
 
                  user[index] = user;
             }
@@ -93,8 +110,20 @@ const userController = {
 
         res.redirect('/users/index');
 
+     },
 
-    },
+     userProfile: (req, res) => {
+          let userId = req.params.id;
+          let user = userController.dataBaseUsers().find(user => user.id == userId);
+
+
+          console.log(user);
+
+          res.render('../views/users/userProfile.ejs', {
+               title: 'user profile',
+               user: user,
+          })
+    }
 };
 
 module.exports = userController;

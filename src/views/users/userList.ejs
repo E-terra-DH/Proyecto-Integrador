@@ -13,7 +13,7 @@
   <ul>
     <% usersList.forEach(user => { %>
     <li>
-      <a class="item" href="/products/<%= user.id %>"><%= user.name %> </a>
+      <a class="item" href="/users/<%= user.id %>"><%= user.usuario %> </a>
         
       <button class="other-buttons"> 
       <a class="item-button" href="/products/edit/<%= user.id %>"> Editar </a>

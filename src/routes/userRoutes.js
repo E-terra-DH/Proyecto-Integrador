@@ -12,7 +12,7 @@ router.get('/index', userController.index);
 
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
-router.post('/register', upload.single('avatar'), userController.store); //Creación de un nuevo usuario
+router.post('/register', upload.single('avatar'), userController.createUser); //Creación de un nuevo usuario
 
 //LOGIN
 router.get('/login',/*middleware*/ userController.login);
@@ -25,5 +25,7 @@ router.put('/edit/:idUser', userController.update);
 
 router.get('/delete/:idUser', userController.delete);
 router.delete('/delete/:idUser', userController.destroy);
+
+router.get('/:id', userController.userProfile); //Detalle de usuario
 
 module.exports = router;

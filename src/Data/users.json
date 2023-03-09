@@ -205,5 +205,14 @@
   "cel": "12",
   "tipo": "noAdmin",
   "avatar": "product-1678154860935.jpg"
+ },
+ {
+  "id": 1678314151580,
+  "email": "maira@gmail.com",
+  "usuario": "maira",
+  "contrasena": "$2a$10$TKotzwPWAdPNSaLA6e0RFO9gC/Sx0M4r.nIkvcEJSyNw2wjJ.4.3q",
+  "cel": "30063",
+  "tipo": "noAdmin",
+  "avatar": "product-1678314151533.jpg"
  }
 ]

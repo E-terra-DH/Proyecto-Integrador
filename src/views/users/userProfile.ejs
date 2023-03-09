@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("../partials/head.ejs") %> 
+    <title>Productos</title>
+    <link rel="stylesheet" href="/css/ProductDetail.css" />
+  </head>
+  <body>
+    <div class="to-fix">
+      <header>
+        <%- include('../partials/header.ejs')  %> 
+      </header>
+    </div>
+
+    <main>
+      <div class="return">
+        <li><p><i class="fa-solid fa-arrow-left"></i> Regresá para ver más productos</p></li>
+      </div>
+      <div class="product">
+        <img
+          class="product-image"
+          src="../../../Images/<%= user.avatar %>"
+          alt=""
+          style="width:300px; height:300px"
+
+        />
+        <div class="product-info">
+          <div class="name">
+            <h2> <%= user.usuario %> </h2>
+            <button class="add">♡ Agregar a favoritos</button>
+          </div>
+          <div class="cost">
+            <h3 class="price"><%= user.email %></h3>
+          <div class="description">
+            <h3>Descripción</h3>
+            <p>
+              <%= user.cel %>
+            </p>
+          </div>
+          <div class="opinion">
+            <h3>user.cel</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Laudantium voluptatibus nemo deserunt rerum reiciendis corporis
+              consequuntur tenetur sequi fuga. Optio vero minima cupiditate
+              laudantium aperiam nisi assumenda iure reiciendis nostrum?
+            </p>
+          </div>
+          <div class="add-delete-edit">
+          <a class="edit" href="#">Editar</a>
+          <a class="delete" href="#">Borrar</a></div>
+
+          <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <ul class="bottom-nav">
+          <li class="bottom"><a class="label-btm" href="/index"><i class="fa-solid fa-house"></i></a></li>
+              <li class="bottom"><a class="label-btm" href="/register"><i class="fa-solid fa-user"></i></a></li>
+              <li class="bottom"><a class="label-btm" href="products/productList"><i class="fas fa-bars"></i></a></li>
+              <li class="bottom"><a class="label-btm" href="/ProductCart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <%- include('../partials/footer.ejs')  %> 
+    </footer>
+    
+  </body>
+</html>
