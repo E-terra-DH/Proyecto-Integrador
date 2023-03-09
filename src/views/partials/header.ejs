@@ -30,6 +30,21 @@
           ><i class="icon-header fa-solid fa-cart-shopping"></i
         ></a>
       </li>
+<!-- probando  -->
+</li>
+<% if (locals.userLogged) { %>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/logout">log out</a></li>
+    <% } else { %>
+        <li><a href="/login">Log in</a></li>
+        <li><a href="/register">Register</a></li>
+
+        <% } %>
+    </li>
+
+    <!-- termina prueba -->
+
+
     </div>
     </ul>
 

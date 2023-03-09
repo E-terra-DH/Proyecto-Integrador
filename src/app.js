@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 3006;
 
 //Para validar la sesión y gurdar las cookies
 const userSessionMdlw = require('./middlewares/userSessionMdlw');
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
+const cookieParser = require('cookie-parser'); // Proceso de guardar la cookie con la contraseña
+const session = require('express-session'); // Proceso de login
 
 
 const mainRoutes=require('./routes/mainRoutes');
@@ -32,9 +32,6 @@ app.use(session({
 ));
 
 app.use(userSessionMdlw);
-
-
-
 app.use(express.static('public'));
 app.use(express.static('views'));
 
