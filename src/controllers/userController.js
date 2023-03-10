@@ -3,6 +3,7 @@ const path = require('path');
 const { stringify } = require('querystring');
 const usersPath = path.join(__dirname, '../Data/users.json');
 const dataBaseUsers = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 
 
@@ -16,20 +17,21 @@ const userController = {
           });
      },
 
-
-     login: (req, res) => {
-          res.render('./auth/login');
-     },
-     
-
-
-
-
      register: (req, res) => {
           res.render('./users/register');
      },
 
      createUser: (req, res) => {
+
+          // ERRORES DE VALIDACIÓN
+          let errors = validationResult(req);
+          if(!errors.isEmpty()){
+               return res.render('./users/register', {
+                    title: 'Nuevo usuario',
+                    mensajeDeError: errors.mapped(),
+                    oldBOdy: req.body
+               });
+          }
 
           // ERROR SI EL USUARIO YA EXISTE
           // let existingUser = userController.dataBaseUsers().findByField('email', req.body.email);
@@ -48,7 +50,7 @@ const userController = {
           let users = userController.dataBaseUsers();
           let avatar = req.file.filename;
           let newUser = {
-               "id": Date.now(),
+               "idUser": Date.now(),
                "email": req.body.email || 'sin nombre',
                "usuario": req.body.usuario || 'sin apellido',
                "contrasena": bcrypt.hashSync(req.body.contrasena, 10),
@@ -116,18 +118,18 @@ const userController = {
 
      },
 
-     userProfile: (req, res) => {
-          let userId = req.params.id;
-          let user = userController.dataBaseUsers().find(user => user.id == userId);
+     // userProfile: (req, res) => {
+     //      let userId = req.params.id;
+     //      let user = userController.dataBaseUsers().find(user => user.id == userId);
 
 
-          console.log(user);
+     //      console.log(user);
 
-          res.render('../views/users/userProfile.ejs', {
-               title: 'user profile',
-               user: user,
-          })
-     }
+     //      res.render('../views/users/userProfile.ejs', {
+     //           title: 'user profile',
+     //           user: user,
+     //      })
+     // }
 };
 
 module.exports = userController;

@@ -34,6 +34,15 @@ body{
     border-radius: 4px;
 }
 
+.error-message{
+   display: inline-block;
+   /* width: 300px; */
+   color: purple;
+   text-align: left;
+   font-style: italic;
+   font-size: 14px;
+}
+
 .form-title,
 .form-title2 {
    font-family: roboto;
@@ -65,12 +74,12 @@ form {
    font-size: 14px;
    border-radius: 15px;
    margin: 10px 0px;
-   width: 200px;
+   width: 260px;
 }
 
 input {
    border: white;
-   width: 150px;
+   width: 210px;
    padding-left: 8px;
    border-left: #344E41 solid 1px;
    font-size: 15px;

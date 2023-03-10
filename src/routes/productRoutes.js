@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const upload = require('../middlewares/multer');
-const validateProductInfo = require('../middlewares/validations');
+const validateProductInfo = require('../middlewares/validationsProducts');
 
 const productController = require('../controllers/productController');
 

@@ -69,7 +69,7 @@ form {
   font-size: 14px;
   border-radius: 15px;
   margin: 10px 0px;
-  width: 200px;
+  width: 260px;
 }
 
 .link-sub {
@@ -79,7 +79,7 @@ form {
 
 input {
   border: white;
-  width: 150px;
+  width: 210px;
   padding-left: 8px;
   border-left: #344E41 solid 1px;
   font-size: 15px;
@@ -95,6 +95,15 @@ input {
    color: #344E41;
    font-family: roboto;
    /* display: none; */
+}
+
+.error-message{
+   display: inline-block;
+   /* width: 300px; */
+   color: purple;
+   text-align: left;
+   font-style: italic;
+   font-size: 14px;
 }
 
 .register-button {

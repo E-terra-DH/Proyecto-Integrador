@@ -4,10 +4,8 @@ ejemplo: visita la pagina pero quiere ir a carrito, ahi le pido que este loggead
 a login, para que lo haga
 */
 
-
-
 const guestMdwl = (req, res, next) => {
-    if (!req.session.userLogged && !req.cookies.userLogged) {
+    if (!req.session.userLogged) { // && !req.cookies.userLogged) {
         return res.redirect('/login');
     }
     next();
@@ -16,3 +14,15 @@ const guestMdwl = (req, res, next) => {
 
 
 module.exports = guestMdwl;
+
+//OTRA OPCIÓN
+
+//Si tengo a alguien en sessión. quiero que automáticamente mi sistema lo redirija al login
+
+// const guestMdwl = (req, res, next) => {
+//     if (req.session.userLogged) {        // si tengo al usuario logueado en sesión
+//         return res.redirect('/profile'); // quiero redirigir a esta persona a su perfil
+//     }
+//     next();                              // si no, quiero que el request siga con us cadena de peticiones
+    
+// };

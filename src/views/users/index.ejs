@@ -10,8 +10,13 @@
         <section class="nav-search">
             <ul class="nav-bar">
               <li><a class="label" href="/">Home</a></li>
-              <li><a class="label" href="/users/register">Registro</a></li>
-              <li><a class="label" href="/products/detail">Producto</a></li>
+              <li>
+                <% if (locals.usserLogged) { %>
+                    <a href=""> </a>
+                <% } else { %>
+                    <a class="label" href="/users/register">Registro</a>
+                <% } %>
+              </li>
               <li><a class="label" href="/products/list">Catálogo</a></li>
               <li><a class="label" href="/products/index">Lista CRUD</a></li>
               <li>
@@ -30,9 +35,15 @@
             <div class="icon-user-cart">
                 <!-- <a class="create" href="/products/create">Crear</a> -->
               <li>
-                <a class="label-icon3" href="/users/login" class="user"
+                <% if (locals.userLogged) { %>
+                <a class="label-icon3" href="/profile" class="user"
                   ><i class="icon-header fa-solid fa-user"></i
                 ></a>
+                <% } else { %>
+                <a class="label-icon3" href="/login" class="user"
+                  ><i class="icon-header fa-solid fa-user"></i
+                ></a>
+                <% } %>
               </li>
               <li>
                 <a class="label-icon3" href="/products/cart" class="cart"

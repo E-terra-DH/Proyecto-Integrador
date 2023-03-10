@@ -18,7 +18,6 @@
     <ul class="nav-bar">
       <li><a class="label" href="/">Home</a></li>
       <li><a class="label" href="/users/register">Registro</a></li>
-      <li><a class="label" href="/products/detail">Producto</a></li>
       <li><a class="label" href="/products/list">Catálogo</a></li>
     </ul>
     <div class="form" action="#" method="get">
@@ -28,7 +27,15 @@
     <div class="icon-user-cart">
       <!-- <a class="create" href="/products/create">Crear</a> -->
       <li>
-        <a class="label-icon3" href="/users/login" class="user"><i class="icon-header fa-solid fa-user"></i></a>
+        <% if (locals.userLogged) { %>
+          <a class="label-icon3" href="/profile" class="user"
+            ><i class="icon-header fa-solid fa-user"></i
+          ></a>
+        <% } else { %>
+          <a class="label-icon3" href="/login" class="user"
+            ><i class="icon-header fa-solid fa-user"></i
+          ></a>
+        <% } %>
       </li>
       <li>
         <a class="label-icon3" href="/products/cart" class="cart"><i
@@ -63,20 +70,29 @@
         <h3 class="form-title2">¡Qué bueno que volviste!</h3>
         <h1 class="form-title">Iniciá sesión aquí...</h1>
 
-        <form action="/login" method="post">
+        <form action="./login" method="post">
           <label class="usuario">
             <i class="fa-solid fa-user"></i>
-            <input type="text" name="name" placeholder="Nombre de usuario" required /></label>
+            <input type="email" name="email" placeholder="E-mail" value="<%= locals.oldBody ? oldBody.email : '' %>"/></label>
+            <% if(locals.errors && errors.email) { %>
+              <p class="error-message"> <%= errors.email.msg  %> </p>
+            <% } %>
 
           <label class="candado">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="contraseña" placeholder="Contraseña" required /></label>
+            <input type="password" name="contrasena" placeholder="Contraseña"/></label>
+            <% if(locals.errors && errors.contrasena) { %>
+              <p class="error-message"> <%= errors.contrasena.msg  %> </p>
+            <% } %>
+
+          <br>
+
           <label class="remember">
             <!-- Para recordar el usuario y su contraseña = cookie -->
-            <input type="checkbox" name="remember" id="remember"> Recuerdame 
+            <input type="checkbox" name="remember" id="remember">Recuérdame 
           </label>
 
-          <button class="login-button" type="submit"> <a class="inicia-sesion" href="/">Iniciar Sesion</a></button>
+          <button class="login-button" type="submit"> <a class="inicia-sesion">Iniciar Sesión</a></button>
         </form>
 
         <div class="otros-login">

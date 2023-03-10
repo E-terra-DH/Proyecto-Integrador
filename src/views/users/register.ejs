@@ -20,7 +20,6 @@
         <ul class="nav-bar">
           <li><a class="label" href="/">Home</a></li>
           <li><a class="label" href="/users/register">Registro</a></li>
-          <li><a class="label" href="/products/detail">Producto</a></li>
           <li><a class="label" href="/products/list">Catálogo</a></li>
         </ul>
         <div class="form" action="#" method="get">
@@ -37,9 +36,15 @@
           <div class="icon-user-cart">
             <!-- <a class="create" href="/products/create">Crear</a> -->
           <li>
-            <a class="label-icon3" href="/users/login" class="user"
-              ><i class="icon-header fa-solid fa-user"></i
-            ></a>
+            <% if (locals.userLogged) { %>
+              <a class="label-icon3" href="/profile" class="user"
+                ><i class="icon-header fa-solid fa-user"></i
+              ></a>
+              <% } else { %>
+              <a class="label-icon3" href="/login" class="user"
+                ><i class="icon-header fa-solid fa-user"></i
+              ></a>
+            <% } %>
           </li>
           <li>
             <a class="label-icon3" href="/products/cart" class="cart"
@@ -77,16 +82,25 @@
             <!-- action="/users/delete///%= users [i].id %>?_method=DELETE" -->
 
             <label class="icon-register">
-                <i class="fa-solid fa-envelope"></i>
-            <input type="text" name="email" placeholder="Escribe tu e-mail" required/></label>
+              <i class="fa-solid fa-envelope"></i>
+            <input type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" required/></label>
+            <% if (locals.mensajeDeError && mensajeDeError.email) { %>
+              <p class="error-message"> <%= mensajeDeError.email.msg  %> </p>
+            <% } %>
             
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
-            <input type="text" name="usuario" placeholder="Nombre de usuario" required/></label>
+            <input type="text" name="usuario" placeholder="Nombre de usuario" value="<%= locals.oldBody ? oldBody.usuario : '' %>"/></label>
+            <% if (locals.mensajeDeError && mensajeDeError.usuario) { %>
+              <p class="error-message"> <%= mensajeDeError.usuario.msg  %> </p>
+            <% } %>
             
             <label class="icon-register">
               <i class="fa-solid fa-lock"></i>
-            <input type="password" name="contrasena" placeholder="Contraseña" required/></label>
+            <input type="password" name="contrasena" placeholder="Contraseña" value="<%= locals.oldBody ? oldBody.contrasena : '' %>"/></label>
+            <% if (locals.mensajeDeError && mensajeDeError.contrasena) { %>
+              <p class="error-message"> <%= mensajeDeError.contrasena.msg  %> </p>
+            <% } %>
 
             <!-- <label class="icon-register">
                 <i class="fa-solid fa-check"></i>
@@ -94,10 +108,16 @@
 
             <label class="icon-register">
                 <i class="fa-solid fa-mobile-screen"></i>
-            <input type="cel" name="cel" placeholder="Celular" required/></label>
+            <input type="cel" name="cel" placeholder="Celular" value="<%= locals.oldBody ? oldBody.cel : '' %>"/></label>
+            <% if (locals.mensajeDeError && mensajeDeError.cel) { %>
+              <p class="error-message"> <%= mensajeDeError.cel.msg  %> </p>
+            <% } %>
 
             <label class="icon-register">
             <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar"/></label>
+            <% if (locals.mensajeDeError && mensajeDeError.avatar) { %>
+              <p class="error-message"> <%= mensajeDeError.avatar.msg  %> </p>
+            <% } %>
 
             <button class="register-button" type="submit">Crear cuenta</button>
           </form>
