@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3006;
 
 //Para validar la sesión y gurdar las cookies
-const userSessionMdlw = require('./middlewares/userSessionMdlw');
+// const userSessionMdlw = require('./middlewares/userSessionMdlw');
 const userLoggedMdlw = require('./middlewares/userLoggedMdlw');
 const cookieParser = require('cookie-parser'); // Proceso de guardar la cookie con la contraseña
 const session = require('express-session'); // Proceso de login
@@ -33,7 +33,7 @@ app.use(session({
 ));
 
 app.use(userLoggedMdlw);
-app.use(userSessionMdlw);
+// app.use(userSessionMdlw);
 app.use(express.static('public'));
 app.use(express.static('views'));
 

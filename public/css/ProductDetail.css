@@ -124,6 +124,26 @@ p {
     /* padding-top: 10px; */
 }
 
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Logout {
+  display: inline-block;
+  background-color: #588157;
+  border: #588157;
+  color: white;
+  font-weight: 500;
+  padding: 7px;
+  margin-top: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  transition-duration: 10ms;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
 .name {
     display: flex;
     gap: 20px;
@@ -181,6 +201,7 @@ h4 {
     height: 30px;
     color: #344E41;
     margin: 10px 0px;
+    align-items: center;
 }
 
 /* -------------DETALLE INFO------------- */

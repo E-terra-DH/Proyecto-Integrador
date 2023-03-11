@@ -14,7 +14,7 @@
 
     <main>
       <div class="return">
-        <li><p><i class="fa-solid fa-arrow-left"></i> Regresá para ver más productos</p></li>
+        <li><p>Tu perfil</p></li>
       </div>
       <div class="product">
         <img
@@ -24,21 +24,26 @@
           style="width:300px; height:300px"
 
         />
-        <div class="product-info">
+        <div class="user-info">
           <div class="name">
             <h2> <%= user.usuario %> </h2>
-            <button class="add">♡ Agregar a favoritos</button>
+            <!-- <button class="add">♡ Agregar a favoritos</button> -->
           </div>
-          <div class="cost">
-            <h3 class="price"><%= user.email %></h3>
+
           <div class="description">
-            <h3>Descripción</h3>
+            <h3>Correo</h3>
+            <p>
+              <%= user.email %>
+            </p>
+          </div>
+          <div class="description">
+            <h3>Celular</h3>
             <p>
               <%= user.cel %>
             </p>
           </div>
           <div class="opinion">
-            <h3>user.cel</h3>
+            <h3>Bio</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Laudantium voluptatibus nemo deserunt rerum reiciendis corporis
@@ -46,14 +51,12 @@
               laudantium aperiam nisi assumenda iure reiciendis nostrum?
             </p>
           </div>
-          <div class="add-delete-edit">
-          <a class="edit" href="#">Editar</a>
-          <a class="delete" href="#">Borrar</a></div>
 
           <div class="social">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-instagram"></i>            
+            <a class="Logout" href="/logout">Logout</a>
           </div>
         </div>
       </div>

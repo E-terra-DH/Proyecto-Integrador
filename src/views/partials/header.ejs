@@ -3,7 +3,13 @@
 <section class="nav-search">
     <ul class="nav-bar">
       <li><a class="label" href="/">Home</a></li>
-      <li><a class="label" href="/users/register">Registro</a></li>
+      <li>
+        <% if (!locals.isLogged) { %>
+          <a class="label" href="/users/register">Registro</a>
+        <% } else { %>
+          
+        <% } %>
+      </li>
       <li><a class="label" href="/products/list">Catálogo</a></li>
     </ul>
     <div class="form" action="#" method="get">
@@ -18,25 +24,26 @@
       ></span>
     </div>
       <div class="icon-user-cart">
-        <!-- <a class="create" href="/products/create">Crear</a> -->
-      <li>
-        <% if (locals.userLogged) { %>
-        <a class="label-icon3" href="/profile" class="user"
-          ><i class="icon-header fa-solid fa-user"></i
-        ></a>
-        <% } else { %>
-        <a class="label-icon3" href="/login" class="user"
-          ><i class="icon-header fa-solid fa-user"></i
-        ></a>
-        <% } %>
-      </li>
-      <li>
-        <a class="label-icon3" href="/products/cart" class="cart"
-          ><i class="icon-header fa-solid fa-cart-shopping"></i
-        ></a>
-      </li>
-
-    </div>
+        <% if(locals.isLogged) {%>
+          <li>
+              <a class="avatar-nav" href="/profile">
+                  <img class="avatar-img-nav" src="../../../Images/<%= locals.userLogged.avatar %>" alt="">
+                  <p class="username-nav"><%= locals.userLogged.usuario %></p>
+              </a>
+          </li>
+          <% } else { %>
+          <li>
+              <a class="label-icon3" href="/login" class="user"
+              ><i class="icon-header fa-solid fa-user"></i
+              ></a>
+          </li>
+          <% } %>
+          <li>
+              <a class="label-icon3" href="/products/cart" class="cart"
+              ><i class="icon-header fa-solid fa-cart-shopping"></i>
+              </a>
+          </li>
+      </div>
     </ul>
 
     
@@ -45,7 +52,13 @@
   <div>
     <ul class="bottom-nav">
       <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
-      <li class="bottom"><a class="label-btm" href="/users/register"><i class="fa-solid fa-user"></i></a></li>
+      <li class="bottom">
+        <% if(locals.isLogged) { %>
+          <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
+        <% } else { %>
+          <a class="label-btm" href="/login"><i class="fa-solid fa-user"></i></a>
+        <% } %>
+      </li>
       <li class="bottom"><a class="label-btm" href="/productList"><i class="fas fa-bars"></i></a></li>
       <li class="bottom"><a class="label-btm" href="/products/cart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
     </ul>

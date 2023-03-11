@@ -281,6 +281,24 @@ a {
     padding-right: 11px;
   }
 
+  .avatar-nav { /*Imagen + nombre de usuario */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .avatar-img-nav { /* Estilo imagen */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .username-nav{
+    padding-left: 6px;
+    color: white;
+    font-size: 16px;
+  }
+
   /* .labelbot {
     text-decoration: none;
     list-style: none;
@@ -441,9 +459,11 @@ a {
     }
     .icon-user-cart{
       display: flex;
+      align-items: center;
       gap: 15px;
       font-size: 22px;
-      }
+    }
+    
     .input {
       border: white;
   width: 200px;
