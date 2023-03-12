@@ -259,5 +259,14 @@
   "cel": "3008641580",
   "tipo": "noAdmin",
   "avatar": "product-1678411160823.jpg"
+ },
+ {
+  "idUser": 1678623513586,
+  "email": "valeconde-2004@hotmail.com",
+  "usuario": "Valentino Conde",
+  "contrasena": "$2a$10$lHYkhdTCsfGDB6rZJs01teBNGOCLFP2zMkXlTbTjtlrBb/Lo1aBD.",
+  "cel": "3541694114",
+  "tipo": "noAdmin",
+  "avatar": "product-1678623513575.jpeg"
  }
 ]
