@@ -6,7 +6,7 @@ const validateRegister = [
 
     body('usuario')
         .isLength({ min: 3}).withMessage('Por lo menos necesito 5 caracteres').bail()
-        .isLength({ max: 15}).withMessage('Máximo puedo tener 20 caracteres').bail(),
+        .isLength({ max: 35}).withMessage('Máximo puedo tener 20 caracteres').bail(),
 
     body('contrasena')
         .isLength({ min: 5}).withMessage('Por lo menos necesito 5 caracteres').bail(),
