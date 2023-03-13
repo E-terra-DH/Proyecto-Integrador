@@ -268,5 +268,23 @@
   "cel": "3541694114",
   "tipo": "noAdmin",
   "avatar": "product-1678623513575.jpeg"
+ },
+ {
+  "idUser": 1678665961122,
+  "email": "alejandroarang@gmail.com",
+  "usuario": "Alejandro Arango",
+  "contrasena": "$2a$10$i5BVXUmDUs3DQNH/MrdSkOuVsoaGU.H6IYUHx9ExfyKVgd8igBjeS",
+  "cel": "3136917038",
+  "tipo": "noAdmin",
+  "avatar": "product-1678665961115.jpg"
+ },
+ {
+  "idUser": 1678666278655,
+  "email": "prueba123@hotmail.com",
+  "usuario": "Con I mayus en multer",
+  "contrasena": "$2a$10$9CI5fDF/jYGa0IERHgKpo.tNo1YQt5e3AGksNjJP5baAQol1lO4NC",
+  "cel": "3125896478",
+  "tipo": "noAdmin",
+  "avatar": "product-1678666278652.png"
  }
 ]

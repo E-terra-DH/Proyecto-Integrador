@@ -1,6 +1,6 @@
 const multer = require('multer');
 const path = require('path');
-const imagesPath = path.resolve(__dirname, '../../public/images');
+const imagesPath = path.resolve(__dirname, '../../public/Images');
 
 //Configuarion para donde vamos a guardar los archivos y con que nombre
 const storage = multer.diskStorage({
