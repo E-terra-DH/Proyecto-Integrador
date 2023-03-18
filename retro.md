@@ -70,3 +70,31 @@
 - Dejar de dudar en la capacidad de uno. 
 
 # 5. Dejar de hacer
+
+
+## Retro sprint 4
+
+# 1. Comenzar a hacer.
+- Aprender mas sobre usabilidad y aplicarlo al e-commerce. 
+- Arreglo del tamaño de las imagenes, para que queden mas uniformes.
+- Limpiar pruebas, vistas de prueba e imagenes que no correspondan al producto de la pagina 
+
+# 2. Hacer mas.
+- Ayudar a Maira con detalles del CSS. 
+- Repaso general del CSS y CRUD.
+- Nivelarnos los 4 para repartir mas facil las tareas.
+- Consolidar lenguaje para cuando programemos tengamos un poco de estandar.
+ 
+
+# 3. Continuar haciendo.
+- Seguir juntandonos, por meet y mantener la comunicacion en el grupo. 
+- Ayudarnos entre todos. 
+- Distribucion de tareas segun las fortalezas de cada integrante del grupo.
+- Mirando alternativas de aprendizaje. 
+
+# 4. Hacer menos
+- Procastinacion. 
+- Dejar de dudar en la capacidad de uno.
+- Buscar complicaciones al codigo 
+
+# 5. Dejar de hacer
