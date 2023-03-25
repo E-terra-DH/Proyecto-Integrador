@@ -16,6 +16,7 @@ router.get('/accesorios', productController.accesorios);
 router.get('/sustratos', productController.sustratos);
 router.get('/list', productController.productCatalogue);
 
+
 // CREAR Productos usando el formulario
 router.get('/create', productController.create);
 router.post('/create', upload.single('image'), validateProductInfo, productController.store);

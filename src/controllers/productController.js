@@ -4,6 +4,9 @@ const { stringify } = require('querystring');
 const productsPath = path.join(__dirname, '../Data/products.json');
 const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 const { validationResult } = require('express-validator'); // Aquí desestructuramos algo cuando es propio de un módulo.
+const { name } = require('ejs');
+
+
 
 
 const productController = {
@@ -17,6 +20,7 @@ const productController = {
      },
 
      productCatalogue: (req, res) => {
+          
           res.render('../views/products/productList')
      },
 
