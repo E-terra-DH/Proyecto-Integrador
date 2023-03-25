@@ -15,6 +15,8 @@ const session = require('express-session'); // Proceso de login
 const mainRoutes=require('./routes/mainRoutes');
 const productRoutes=require('./routes/productRoutes');
 const userRoutes=require('./routes/userRoutes');
+const { sequelize } = require('../database/models');
+const Product = require('../database/models/Product');
 
 app.set('views', path.resolve(__dirname,'views')); /*para que el path resuelva la ruta para la carpeta views, donde esta ejs*/
 
@@ -48,7 +50,13 @@ app.use((req, res) => {
         title: '404'
     });
 })
-
+sequelize.authenticate()
+.then(()=>{
+    console.log("conect con la base")
+})
+.catch(error =>{
+    console.log("el error de conexion es:" +error)
+})
 
 app.listen(PORT, () => {
     console.log(`Server run puerto on http://localhost:${PORT}`);
