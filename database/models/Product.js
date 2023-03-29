@@ -38,8 +38,8 @@ module.exports = (sequelize,DataTypes) =>{
        
     };
     let config ={
-        //tabletName: "products",
-        //timeStamps: true,
+        tabletname: "products",
+        timestamps: true,
         underscored: true,
     }
     const Product = sequelize.define(alias, cols,config);

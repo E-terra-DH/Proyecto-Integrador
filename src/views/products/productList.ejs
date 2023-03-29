@@ -16,18 +16,28 @@
         <section class="catalogue">
             <h3 class="cat-titles">Explora todo nuestro catálogo</h3>
 
+            <button class="new-product"><a class="new-p" href="/products/create">Crea un nuevo producto</a></button>
+
             <section class="ct-products">
 
+                <% plantasList.forEach(planta => { %>
+            
                 <article class="product-item">
-                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
+                    <!-- <a href="/products/<%= planta.id %>"><img class="product-img" src="/Images/product-ave-paraiso.png" alt=""></a>  -->
+                    <a href="/products/<%= planta.id %>"><img class="product-img" src="/Images/<%= planta.image %>" alt=""></a> 
                     <div class="product-info">
-                        <h2 class="product-description">Ave del paraiso</h2>
-                        <p class="price">50 USD</p>
+                        <a href="/products/<%= planta.id %>"><h2 class="product-description"><%= planta.name %></h2></a>
+                        <a href="/products/<%= planta.id %>"><p class="price"><%= planta.precio %> USD</p></a>
                         <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                        <!--Poner condicional solo para administradores-->
+                        <a class="item-button" href="/products/edit/<%= planta.id %>">Editar</a>
+                        <a class="item-button" href="/products/delete/<%= planta.id %>">Eliminar</a>
                     </div>
                 </article>
 
-                <article class="product-item">
+                <% }) %>
+
+                <!-- <article class="product-item">
                     <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
                     <div class="product-info">
                         <h2 class="product-description">Philodendron</h2>
@@ -126,7 +136,7 @@
                         <p class="price">50 USD</p>
                         <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
                     </div>
-                </article>
+                </article> -->
             
             </section>
 

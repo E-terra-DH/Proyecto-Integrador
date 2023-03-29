@@ -6,11 +6,22 @@ const dataBaseProducts = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 const { validationResult } = require('express-validator'); // Aquí desestructuramos algo cuando es propio de un módulo.
 const { name } = require('ejs');
 
-
+//Llamado a modelos
+// const {Product, ProductCategory} = require('../../database/models');
+const db = require('../../database/models');
+const sequelize = db.sequelize;
+const Product = db.Product;
+const ProductCategory = db.ProductCategory;
 
 
 const productController = {
-     dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante
+
+     // dataBaseProducts: Product.findAll()
+     // .then(products => {
+     //      console.log(products)
+     // }),
+     dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante   
+     
      index: (req, res) => {
 
           res.render('./products/listaProducts', {
@@ -20,8 +31,11 @@ const productController = {
      },
 
      productCatalogue: (req, res) => {
-          
-          res.render('../views/products/productList')
+
+          res.render('../views/products/productList', {
+               title: 'Catálogo de productos',
+               plantasList: dataBaseProducts
+          })
      },
 
      macetas: (req, res) => {

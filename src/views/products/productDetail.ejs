@@ -14,14 +14,18 @@
 
     <main>
       <div class="return">
-        <li><p><i class="fa-solid fa-arrow-left"></i> Regresá para ver más productos</p></li>
+        <li>
+          <a href="/products/list">
+          <p><i class="fa-solid fa-arrow-left"></i> Regresá para ver más productos</p>
+          </a>
+        </li>
       </div>
       <div class="product">
         <img
           class="product-image"
           src="/Images/<%= planta.image %>"
           alt=""
-          style="width:540px; height:600px"
+          style="width:400px; height:400px"
         />
         <div class="product-info">
           <div class="name">
@@ -29,7 +33,7 @@
             <button class="add">♡ Agregar a favoritos</button>
           </div>
           <div class="cost">
-            <h3 class="price"><%= planta.precio %></h3>
+            <h3 class="price"><%= planta.precio %> USD</h3>
             <div class="select">
               <p>Cantidad</p>
               <select class="quantity" name="quantity" id="quantity">
@@ -50,7 +54,7 @@
               <%= planta.descripcion %>
             </p>
           </div>
-          <div class="opinion">
+          <!-- <div class="opinion">
             <h3>Opiniones</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -58,7 +62,7 @@
               consequuntur tenetur sequi fuga. Optio vero minima cupiditate
               laudantium aperiam nisi assumenda iure reiciendis nostrum?
             </p>
-          </div>
+          </div> -->
           <div class="add-delete-edit">
           <button class="add-cart">Agregar al carrito</button>
           <a class="edit" href="#">Editar</a>

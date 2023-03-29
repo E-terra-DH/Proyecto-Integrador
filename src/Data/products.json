@@ -55,5 +55,15 @@
   "cantidad": "3",
   "image": "product-1679613357010.png",
   "disonible": "Disponible"
+ },
+ {
+  "id": 1680031609633,
+  "name": "  Ave del Paraíso",
+  "descripcion": "Esta planta originaria de sudáfrica, se cultiva extensamente como planta ornamental por la forma peculiar de su flor.  Es una belleza natural de la que es imposible no enamorarse. Si bien en una maceta puede alcanzar una altura máxima de metro y medio, plantada directamente en suelo puede superar los dos metros y medio. Como buena planta tropical, necesita al menos cuatro horas de sol diarias especialmente en los meses de frío.",
+  "precio": "50",
+  "cantidad": "16",
+  "image": "product-1680031609609.png",
+  "categoria": "Plantas",
+  "disonible": "Disponible"
  }
 ]
