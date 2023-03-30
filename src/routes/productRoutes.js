@@ -10,6 +10,7 @@ const productController = require('../controllers/productController');
 // router.get('/', productController.productList); //ESTE LO COMENTÉ PORQUE REALMENTE LO ESTAMOS HACIENDO EN EL INDEX
 
 //Creando indice de productos disponibles
+router.get('/BDD',productController.dataBaseProducts);
 router.get('/index', productController.index);
 router.get('/macetas', productController.macetas);
 router.get('/accesorios', productController.accesorios);

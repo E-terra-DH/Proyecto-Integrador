@@ -27,7 +27,7 @@ module.exports = (sequelize,DataTypes) =>{
             allowNull: false,
         },
         phone:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         avatar:{
@@ -43,8 +43,8 @@ module.exports = (sequelize,DataTypes) =>{
        
     };
     let config ={
-        //tabletName: "users",
-        //timeStamps: true,
+        tableName: "users",
+        timestamps: false,
         underscored: true,
     }
     const User = sequelize.define(alias, cols,config);

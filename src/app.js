@@ -50,13 +50,13 @@ app.use((req, res) => {
         title: '404'
     });
 })
-sequelize.authenticate()
-.then(()=>{
-    console.log("conect con la base")
-})
-.catch(error =>{
-    console.log("el error de conexion es:" +error)
-})
+// sequelize.authenticate()
+// .then(()=>{
+//     console.log("conect con la base")
+// })
+// .catch(error =>{
+//     console.log("el error de conexion es:" +error)
+// })
 
 app.listen(PORT, () => {
     console.log(`Server run puerto on http://localhost:${PORT}`);

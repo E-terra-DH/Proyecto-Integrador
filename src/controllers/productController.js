@@ -11,16 +11,42 @@ const { name } = require('ejs');
 const db = require('../../database/models');
 const sequelize = db.sequelize;
 const Product = db.Product;
+const User=db.User;
 const ProductCategory = db.ProductCategory;
 
 
 const productController = {
 
-     // dataBaseProducts: Product.findAll()
-     // .then(products => {
-     //      console.log(products)
-     // }),
-     dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante   
+     dataBaseProducts:async (req,res)=>{
+try {
+    //let products= await Product.findAll();
+let user= await User.findAll();
+     res.json({
+          user,
+          //products
+     });
+
+     
+} catch (error) {
+     res.json(error)
+}
+
+
+
+          // Product.findAll()
+          // .then(products => {
+          //      //console.log(products)
+          //      res.json({
+          //           products
+          //      })
+               
+
+          // })
+          // .catch(error=>{
+          //      res.JSON(error)
+          // })
+     },
+     // dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante   
      
      index: (req, res) => {
 
