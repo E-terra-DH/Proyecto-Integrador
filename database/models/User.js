@@ -30,11 +30,6 @@ module.exports = (sequelize,DataTypes) =>{
             type: DataTypes.STRING,
             allowNull: false,
         },
-        avatar:{
-            type: DataTypes.BLOB,
-            allowNull: false,
-
-        },
         userCategories_id:{
             type: DataTypes.INTEGER,
             allowNull: true,

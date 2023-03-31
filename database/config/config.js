@@ -1,23 +1,23 @@
 module.exports ={
   "development": {
-    "username": "root",
-    "password": "123456",
+    "username": "eterra",
+    "password": null,
     "database": "terra",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port": "3306"
   },
   "test": {
-    "username": "root",
-    "password": "123456",
-    "database": "database_test",
+    "username": "eterra",
+    "password": null,
+    "database": "terra",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "123456",
-    "database": "database_production",
+    "username": "eterra",
+    "password": null,
+    "database": "terra",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
