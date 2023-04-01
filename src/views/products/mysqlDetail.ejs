@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= productsId.title %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+<body>
+   
+    <h1><%= productsId.title %> </h1>    
+    <br>
+    <p>nombre: <%= productsId.name %> </p>
+    <p>precio: <%= productsId.price %> </p>
+    <p>Descripción: <%= productsId.description %> </p>
+    <p>Inventario: <%= productsId.stock %> </p>
+    <p>Categoria: <%= productsId.products_categories_id %> </p>
+    <!-- Trae el id de la categoria pero no el nombre -->
+    
+
+    <br>
+    <!-- <section>
+        <a class="botonModificar" href="/movies/edit/<%= productsId.id %>">Modificar</a>
+        <a class="botonBorrar" href="/movies/delete/<%= productsId.id %>">Borrar</a>
+        <a class="botonVolver" href="/movies">Listado de Películas</a>
+    </section> -->
+
+</body>
+</html>

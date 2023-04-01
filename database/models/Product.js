@@ -26,7 +26,7 @@ module.exports = (sequelize,DataTypes) =>{
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull: true,
         },
-        productsCategories_id:{
+        products_categories_id:{
             type: DataTypes.INTEGER,
             allowNull: true,
 
@@ -44,7 +44,7 @@ module.exports = (sequelize,DataTypes) =>{
     Product.associate = function(models){
         Product.belongsTo(models.ProductCategory,{
             as: "productsCategories",
-            foreignKey: "productsCategories_id"
+            foreignKey: "products_categories_id"
         } )
     }    
     return Product
