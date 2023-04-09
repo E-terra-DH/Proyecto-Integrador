@@ -16,18 +16,21 @@ const ProductCategory = db.ProductCategory;
 
 const productController = {
 
+     //dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante   
      // dataBaseProducts: Product.findAll()
      // .then(products => {
      //      console.log(products)
      // }),
-     dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante   
-     
      index: (req, res) => {
 
-          res.render('./products/listaProducts', {
-               title: 'Listado de productos',
-               plantasList: dataBaseProducts
-          });
+          db.Product.findAll()
+              .then(plantasList => {
+               res.render('./products/listaProducts', {plantasList})
+          })          
+          // res.render('./products/listaProducts', {
+          //      title: 'Listado de productos',
+          //      plantasList: dataBaseProducts
+          // });
      },
 
      productCatalogue: (req, res) => {
@@ -61,10 +64,16 @@ const productController = {
      },
 
      productDetail: (req, res) => {
-          let plantaId = req.params.id;
-		let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
-		res.render('./products/productDetail', {
-			planta});
+          Product.findByPk(req.params.id)
+          .then(planta => {
+               res.render('./products/productDetail', {
+                    planta})
+          })
+
+          // let plantaId = req.params.id;
+		// let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
+		// res.render('./products/productDetail', {
+		// 	planta});
 	},
 
      create: (req, res) => {

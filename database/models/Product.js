@@ -4,7 +4,7 @@ const { sequelize } = require(".");
 module.exports = (sequelize,DataTypes) =>{
     let alias = "Product"
     let cols = {
-        id : {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
