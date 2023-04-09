@@ -22,15 +22,11 @@ module.exports = (sequelize,DataTypes) =>{
             type:DataTypes.TEXT,
             allowNull: true,
         },
-        image: {
-            type: DataTypes.BLOB,
-            allowNull: true,
-        },
         stock:{
             type: DataTypes.INTEGER.UNSIGNED,
             allowNull: true,
         },
-        productsCategories_id:{
+        products_categories_id:{
             type: DataTypes.INTEGER,
             allowNull: true,
 
@@ -38,16 +34,17 @@ module.exports = (sequelize,DataTypes) =>{
        
     };
     let config ={
-        tabletname: "products",
-        timestamps: true,
+        tableName: "products",
+        timestamps: false,
         underscored: true,
+
     }
     const Product = sequelize.define(alias, cols,config);
 
     Product.associate = function(models){
         Product.belongsTo(models.ProductCategory,{
             as: "productsCategories",
-            foreignKey: "productsCategories_id"
+            foreignKey: "products_categories_id"
         } )
     }    
     return Product

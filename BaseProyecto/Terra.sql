@@ -32,9 +32,8 @@ CREATE TABLE `products` (
   `name` varchar(255) NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `description` text DEFAULT NULL,
-  `image` blob DEFAULT NULL,
   `stock` int(11) DEFAULT NULL,
-  `productsCategories_id` int(11) DEFAULT NULL
+  `products_categories_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -72,8 +71,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `phone` int(11) NOT NULL,
-  `avatar` blob NOT NULL,
-  `userCategories_id` int(11) DEFAULT NULL
+  `user_categories_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -85,7 +83,7 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_882a4ba8-b7f1-4332-8ab4-3575b7f80058` (`productsCategories_id`);
+  ADD KEY `FK_882a4ba8-b7f1-4332-8ab4-3575b7f80058` (`products_categories_id`);
 
 --
 -- Indices de la tabla `productscategories`
@@ -104,7 +102,7 @@ ALTER TABLE `usercategories`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_223fee66-696b-42b2-9602-583b5ff05ff4` (`userCategories_id`);
+  ADD KEY `FK_223fee66-696b-42b2-9602-583b5ff05ff4` (`user_categories_id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -142,13 +140,13 @@ ALTER TABLE `users`
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `FK_882a4ba8-b7f1-4332-8ab4-3575b7f80058` FOREIGN KEY (`productsCategories_id`) REFERENCES `productscategories` (`id`);
+  ADD CONSTRAINT `FK_882a4ba8-b7f1-4332-8ab4-3575b7f80058` FOREIGN KEY (`products_categories_id`) REFERENCES `productscategories` (`id`);
 
 --
 -- Filtros para la tabla `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `FK_223fee66-696b-42b2-9602-583b5ff05ff4` FOREIGN KEY (`userCategories_id`) REFERENCES `usercategories` (`id`);
+  ADD CONSTRAINT `FK_223fee66-696b-42b2-9602-583b5ff05ff4` FOREIGN KEY (`user_categories_id`) REFERENCES `usercategories` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

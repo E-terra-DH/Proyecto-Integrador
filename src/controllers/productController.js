@@ -11,16 +11,54 @@ const { name } = require('ejs');
 const db = require('../../database/models');
 const sequelize = db.sequelize;
 const Product = db.Product;
+const User = db.User;
 const ProductCategory = db.ProductCategory;
 
 
-const productController = {
+const productController =
+{
+     /* -----------------------CON LA BASE DE DATOS DE MySQL-------------------*/
+     listaProductos: async (req, res) => {
+          try {
+               let products = await Product.findAll();
+               // res.json({  products});
+               res.render('../views/products/listaMysql', { products })
+          }
+          catch (error) {
+               res.json(error)
+          }
+     },
+     detalleMysql: async (req, res) => {
+          try {
+               let productsId = await Product.findByPk(req.params.id);
+               //res.json(productsId)
+               res.render('../views/products/mysqlDetail', { productsId })
 
-     //dataBaseProducts: () => { return JSON.parse(fs.readFileSync(productsPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante   
-     // dataBaseProducts: Product.findAll()
-     // .then(products => {
-     //      console.log(products)
-     // }),
+          }
+          catch (error) {
+               res.json(error)
+
+          }
+     },
+     editmysql: async (req, res) => {
+          try {
+               let productsId = await Product.findByPk(req.params.id);
+               //res.json({productsId});
+               res.render('../views/products/editMysql', { productsId })
+          }
+          catch (error) {
+               res.json(error)
+          }
+     },
+
+
+
+
+
+
+
+
+     /* -----------------------CON LA BASE DE DATOS DE JASON-------------------*/
      index: (req, res) => {
 
           db.Product.findAll()
@@ -84,7 +122,7 @@ const productController = {
 
      store: (req, res) => {
           let errors = validationResult(req);
-          if (!errors.isEmpty()){ //si errors no viene vacío. Es decir, si sí hay errores de validación
+          if (!errors.isEmpty()) { //si errors no viene vacío. Es decir, si sí hay errores de validación
                return res.render('./products/formLoad', { //copy paste de procesamiento create
                     title: 'Nueva planta',
                     mensajeDeError: errors.mapped(), //enviar errores a la vista como un objeto
@@ -107,7 +145,7 @@ const productController = {
           }
 
           plantas.push(newPlanta);
-          
+
           fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
 
           res.redirect('./index');
@@ -128,21 +166,21 @@ const productController = {
           //let image = req.file.filename;// REPITO LO MISMO DE CREATE PARA SUBIR IMAGEN PERO LA PÁGINA SE ME ROMPE
           plantas.forEach((planta, i) => {
                if (planta.id == plantaId) {
-                   planta.name = req.body.name;
-                   planta.descripcion = req.body.descripcion;
-                   planta.precio = req.body.precio;
-                   planta.cantidad = req.body.cantidad;
-                   //planta.image = image;// REPITO LO MISMO DE CREATE PARA SUBIR IMAGEN PERO LA PÁGINA SE ME ROMPE
-                   planta.categoria = req.body.categoria;
-                   planta.disponible = req.body.disponible;
+                    planta.name = req.body.name;
+                    planta.descripcion = req.body.descripcion;
+                    planta.precio = req.body.precio;
+                    planta.cantidad = req.body.cantidad;
+                    //planta.image = image;// REPITO LO MISMO DE CREATE PARA SUBIR IMAGEN PERO LA PÁGINA SE ME ROMPE
+                    planta.categoria = req.body.categoria;
+                    planta.disponible = req.body.disponible;
 
-                   plantas[i] = planta;
+                    plantas[i] = planta;
                }
           })
-          fs.writeFileSync(productsPath,JSON.stringify(plantas,null,' '));
+          fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
 
           res.redirect('/products/index')
-         //console.log('verificando que llega desde el nagegador', plantas);
+          //console.log('verificando que llega desde el nagegador', plantas);
 
      },
      delete: (req, res) => {
