@@ -43,7 +43,6 @@ const productController =
      editmysql: async (req, res) => {
           try {
                let productsId = await Product.findByPk(req.params.id);
-               //res.json({productsId});
                res.render('../views/products/editMysql', { productsId })
           }
           catch (error) {
@@ -52,25 +51,17 @@ const productController =
      },
 
 
-
-
-
-
-
-
-     /* -----------------------CON LA BASE DE DATOS DE JASON-------------------*/
-     index: (req, res) => {
-
-          db.Product.findAll()
-              .then(plantasList => {
-               res.render('./products/listaProducts', {plantasList})
-          })          
-          // res.render('./products/listaProducts', {
-          //      title: 'Listado de productos',
-          //      plantasList: dataBaseProducts
-          // });
+     /* -----------------------CON LA BASE DE DATOS DE JSON-------------------*/
+     index: async (req, res) => {
+          try {
+               let plantasList = await Product.findAll();
+               res.render('./products/listaProducts', { plantasList })
+          }
+          catch (error) {
+               res.json(error)
+          }
      },
-
+     
      productCatalogue: (req, res) => {
 
           res.render('../views/products/productList', {
@@ -101,18 +92,14 @@ const productController =
           });
      },
 
-     productDetail: (req, res) => {
-          Product.findByPk(req.params.id)
-          .then(planta => {
-               res.render('./products/productDetail', {
-                    planta})
-          })
-
-          // let plantaId = req.params.id;
-		// let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
-		// res.render('./products/productDetail', {
-		// 	planta});
-	},
+     productDetail: async (req, res) => {
+          try {
+               let planta = await Product.findByPk(req.params.id)
+               res.render('./products/productDetail', {planta})
+          } catch (error) {
+               res.json(error)
+          }
+     },
 
      create: (req, res) => {
           res.render('./products/formLoad', {
@@ -130,86 +117,82 @@ const productController =
                });
           }
 
-          let plantas = productController.dataBaseProducts();
-          let image = req.file.filename;
-
           let newPlanta = {
-               "id": Date.now(),
+               //"id": Date.now(),
                "name": req.body.name || 'sin nombre',
-               "descripcion": req.body.descripcion,
-               "precio": req.body.precio || 'sin precio',
-               "cantidad": req.body.cantidad || 'sin cantidad',
-               "image": image || 'sin imagen',
-               "categoria": req.body.categoria,
+               "description": req.body.descripcion,
+               "price": req.body.precio || 'sin precio',
+               "stock": req.body.cantidad || 'sin cantidad',
+               "image": req.file.filename || 'sin imagen',
+               "products_categories_id": req.body.categoria,
                "disonible": req.body.disponible
           }
 
-          plantas.push(newPlanta);
+          Product.create(newPlanta);
 
-          fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
+          //fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
 
           res.redirect('./index');
      },
 
-     edit: (req, res) => {
-          let plantaId = req.params.id;
-          let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
-          res.render('./products/formularioEdit', {
-               title: 'Editando plantas',
-               planta
+     edit: async (req, res) => {
 
-          });
+          try {
+               let product = await Product.findByPk(req.params.id)
+               res.render('./products/formularioEdit', {
+                    title: 'Editando plantas',
+                    product
+               }); 
+          } catch (error) {
+              res.json(error);
+          }
      },
+     
      update: (req, res) => {
-          let plantaId = req.params.id;
-          let plantas = productController.dataBaseProducts();
-          //let image = req.file.filename;// REPITO LO MISMO DE CREATE PARA SUBIR IMAGEN PERO LA PÁGINA SE ME ROMPE
-          plantas.forEach((planta, i) => {
-               if (planta.id == plantaId) {
-                    planta.name = req.body.name;
-                    planta.descripcion = req.body.descripcion;
-                    planta.precio = req.body.precio;
-                    planta.cantidad = req.body.cantidad;
-                    //planta.image = image;// REPITO LO MISMO DE CREATE PARA SUBIR IMAGEN PERO LA PÁGINA SE ME ROMPE
-                    planta.categoria = req.body.categoria;
-                    planta.disponible = req.body.disponible;
 
-                    plantas[i] = planta;
+          Product.update(
+               {
+                    "name": req.body.name,
+                    "description": req.body.descripcion,
+                    "price": req.body.precio,
+                    "stock": req.body.cantidad,
+                    //"image": req.file.filename,
+                    "products_categories_id": req.body.categoria,
+                    "disonible": req.body.disponible
+               }, {
+                    where: {
+                         id: req.params.id
+                    }
+               }
+          )
+          .then(()=> {
+               res.redirect('/products/index')
+          })
+     },
+
+     delete: async (req, res) => {
+
+          try {
+               let planta = await Product.findByPk(req.params.id)
+               res.render('products/delete', {
+                    title: 'Eliminando plantas',
+                    planta
+               }); 
+          } catch (error) {
+              res.json(error);
+          }
+     },
+
+     destroy: (req, res) => {
+
+          Product.destroy({
+               where: {
+                    id: req.params.id
                }
           })
-          fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
-
-          res.redirect('/products/index')
-          //console.log('verificando que llega desde el nagegador', plantas);
-
-     },
-     delete: (req, res) => {
-          let plantaId = req.params.id;
-          let planta = productController.dataBaseProducts().find(planta => planta.id == plantaId);
-
-          res.render('products/delete', {
-               title: 'Eliminando plantas',
-               planta
-          });
-
-     },
-     destroy: (req, res) => {
-          let plantaId = req.params.id;
-          let plantas = productController.dataBaseProducts();
-
-          newPlantas = plantas.filter(planta => planta.id != plantaId);
-
-          fs.writeFileSync(productsPath, JSON.stringify(newPlantas, null, ' '));
-
+          
           res.redirect('/products/index');
-
-
      },
-
-     // Son simples vistas 
-     // productList: (req, res) => { // ESTA ES LA VISTA QUE TENEMOS EN EL CONTROLADOR DE INDEX
-     //      res.render('./products/listaProducts');
-     // },
 
      productCart: (req, res) => {
           res.render('./products/productCart');

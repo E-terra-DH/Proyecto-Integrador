@@ -17,10 +17,10 @@
 
             <h3>Editando producto</h3>
 
-            <form method="post" action="/products/edit/<%= planta.id %>?_method=PUT">
+            <form method="post" action="/products/edit/<%= product.id %>?_method=PUT">
 
                 <label for="name">Nombre del producto</label>
-                <input class="icon-register" type="text" name="name" value="<%=planta.name%>">
+                <input class="icon-register" type="text" name="name" value="<%=product.name%>">
 
                 <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria">
@@ -32,13 +32,13 @@
 
 
                 <label for="precio">Descripción</label>
-                <textarea class="icon-register" name="descripcion"><%=planta.descripcion%></textarea>
+                <textarea class="icon-register" name="descripcion"><%=product.description%></textarea>
 
                 <label for="precio">Precio</label>
-                <input class="icon-register" type="price" name="precio" value="<%=planta.precio%>">
+                <input class="icon-register" type="price" name="precio" value="<%=product.price%>">
 
                 <label for="cantidad">Cantidad</label>
-                <input class="icon-register" type="number" name="cantidad" value="<%=planta.cantidad%>">
+                <input class="icon-register" type="number" name="cantidad" value="<%=product.stock%>">
 
                 <label for="image">Imagen</label>
                 <input class="icon-register" type="file" name="image" id="image">

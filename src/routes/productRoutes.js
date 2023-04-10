@@ -14,17 +14,6 @@ router.get('/mysqlProducts',productController.listaProductos);
 router.get('/mysqlDetail/:id',productController.detalleMysql);
 router.get('/editmysql/:id',productController.editmysql);
 
-
-
-
-
-
-
-
-
-
-
-
 /*-----------------------------------------------------------------------------*/
 
 //Creando indice de productos disponibles en la base de datos JSON
