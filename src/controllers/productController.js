@@ -62,12 +62,17 @@ const productController =
           }
      },
      
-     productCatalogue: (req, res) => {
-
-          res.render('../views/products/productList', {
-               title: 'Catálogo de productos',
-               plantasList: dataBaseProducts
-          })
+     productCatalogue: async (req, res) => {
+          try {
+               let plantasList = await Product.findAll();
+               res.render('../views/products/productList', {
+                    title: 'Catálogo de productos',
+                    plantasList
+               })
+          }
+          catch (error) {
+               res.json(error)
+          }    
      },
 
      macetas: (req, res) => {
