@@ -55,7 +55,7 @@ const userController = {
                "usuario": req.body.usuario || 'sin apellido',
                "contrasena": bcrypt.hashSync(req.body.contrasena, 10),
                "cel": req.body.cel || 'sin celular',
-               "tipo": 'noAdmin',
+               "tipo": 'User',
                "avatar": avatar || 'sin avatar',
           }
 
@@ -118,18 +118,18 @@ const userController = {
 
      },
 
-     // userProfile: (req, res) => {
-     //      let userId = req.params.id;
-     //      let user = userController.dataBaseUsers().find(user => user.id == userId);
+     profile: (req, res) => {
+          let userId = req.params.id;
+          let user = userController.dataBaseUsers().find(user => user.id == userId);
 
 
-     //      console.log(user);
+          console.log(user);
 
-     //      res.render('../views/users/userProfile.ejs', {
-     //           title: 'user profile',
-     //           user: user,
-     //      })
-     // }
+          res.render('../views/users/userProfile.ejs', {
+               title: 'user profile',
+           user: user,
+          })
+     }
 };
 
 module.exports = userController;

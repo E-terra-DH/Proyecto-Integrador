@@ -14,14 +14,18 @@
     <% plantasList.forEach(planta => { %>
     <li>
       <a class="item" href="/products/<%= planta.id %>"><%= planta.name %> </a>
-        
-      <button class="other-buttons"> 
-      <a class="item-button" href="/products/edit/<%= planta.id %>"> Editar </a>
-      </button>
-        
-      <button class="other-buttons"> 
-      <a class="item-button" href="/products/delete/<%= planta.id %>"> Eliminar </a>
-      </button>
+      
+      <div>
+        <%  if (locals.adminLogged) { %>
+          <button class="other-buttons"> 
+          <a class="item-button" href="/products/edit/<%= planta.id %>"> Editar </a>
+          </button>
+            
+          <button class="other-buttons"> 
+          <a class="item-button" href="/products/delete/<%= planta.id %>"> Eliminar </a>
+          </button>
+        <% } %>
+      </div>
 
       <br>
 

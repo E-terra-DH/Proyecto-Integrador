@@ -23,22 +23,36 @@ const controller = {
         let user = users.find(user => user.email == req.body.email);
 
         // VALIDAR SI EL USUARIO ESTÁ EN LA BASE DE DATOS
-        if(user){ //Si encontré a la persona
-
+        if (user) { //Si encontré a la persona
             //VALIDAR CONTRASEÑA
             let passwordOk = bcrypt.compareSync(req.body.contrasena, user.contrasena);
             if(passwordOk){
                 delete user.contrasena; // Borrar la contraseña del usuario
-                req.session.userLogged = user; // Guardar la sesión del usuario
-                 if (req.body.remember) {
-                     res.cookie(
-                         'userLogged',
-                         user,
-                         { maxAge: 60000 } // valor en milisigundos que va a guardar la cookie del lado del cliente 1 minuto
-                     )
-                 }
-                res.redirect('/profile');
-            } 
+
+                //SI USUARIO ADMINISTRADOR
+                if (user.type == 'Admin') {
+                    req.session.admin = user; // Guardar la sesión del administrador
+                    if (req.body.remember) {
+                        res.cookie(
+                            'userLogged',
+                            user,
+                            { maxAge: 60000 } // valor en milisigundos que va a guardar la cookie del lado del cliente 1 minuto
+                        )
+                    }
+                    res.redirect('/admin');
+                } else {
+                // SI USUARIO NO ADMINISTRADOR
+                    req.session.userLogged = user; // Guardar la sesión del usuario
+                    if (req.body.remember) {
+                        res.cookie(
+                            'userLogged',
+                            user,
+                            { maxAge: 60000 } // valor en milisigundos que va a guardar la cookie del lado del cliente 1 minuto
+                        )
+                    }
+                    res.redirect('/profile');
+                } 
+            
             return res.render('./auth/login', { //Si la contraseña no corresponde
                 errors: {
                     contrasena: {
@@ -46,14 +60,15 @@ const controller = {
                     }
                 }
             });
-        }
-        return res.render('./auth/login', { //Si el usuario no está en la base de datos
-            errors: {
-                email: {
-                    msg: "No estás registrado"
-                }
             }
-        });
+            return res.render('./auth/login', { //Si el usuario no está en la base de datos
+                errors: {
+                    email: {
+                        msg: "No estás registrado"
+                    }
+                }
+            })
+        }
     },
 
     logout: (req, res) => {
@@ -63,13 +78,18 @@ const controller = {
     },
     
     profile: (req, res) => {
-
         res.render('../views/users/userProfile', { 
             title: 'Profile',
             user: req.session.userLogged // Guardo el user logged en la variable user que llevo a la vista
         })
-    }
-};
+    },
 
+    admin: (req, res) => {
+        res.render('../views/users/userProfile', { 
+            title: 'Profile',
+            user: req.session.admin // Guardo el user logged en la variable user que llevo a la vista
+        })
+    }
+}
 
 module.exports = controller;

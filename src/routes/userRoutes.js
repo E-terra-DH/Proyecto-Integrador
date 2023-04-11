@@ -30,6 +30,6 @@ router.put('/edit/:idUser', userController.update);
 router.get('/delete/:idUser', userController.delete);
 router.delete('/delete/:idUser', userController.destroy);
 
-// router.get('/:id', userController.userProfile); //Detalle de usuario
+//router.get('/:id', userController.profile); //Detalle de usuario
 
 module.exports = router;

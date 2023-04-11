@@ -23,7 +23,7 @@
   "apellido": "Strickett",
   "email": "gstrickett2@techcrunch.com",
   "password": "W0AG5Qp1g",
-  "type": "user",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -32,7 +32,7 @@
   "apellido": "Peetermann",
   "email": "tpeetermann3@tamu.edu",
   "password": "roPmUsf",
-  "type": "Admin",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -41,7 +41,7 @@
   "apellido": "Hankinson",
   "email": "mhankinson4@nature.com",
   "password": "jSUJia04XGVl",
-  "type": "owner",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -50,7 +50,7 @@
   "apellido": "Attwoul",
   "email": "vattwoul5@marketwatch.com",
   "password": "h5Vt7f4Al8K",
-  "type": "owner",
+  "type": "User",
   "avatar": "/images/persona1"
  },
  {
@@ -59,7 +59,7 @@
   "apellido": "Prosser",
   "email": "kprosser6@cdc.gov",
   "password": "i5foRLTv5",
-  "type": "user",
+  "type": "User",
   "avatar": "/images/persona1"
  },
  {
@@ -68,7 +68,7 @@
   "apellido": "Lune",
   "email": "mlune7@discuz.net",
   "password": "123456",
-  "type": "customer",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -77,7 +77,7 @@
   "apellido": "McCosh",
   "email": "pmccosh8@csmonitor.com",
   "password": "hPl4gXcKN4",
-  "type": "owner",
+  "type": "User",
   "avatar": "/images/persona2"
  },
  {
@@ -104,7 +104,7 @@
   "apellido": "Buddell",
   "email": "wbuddellb@java.com",
   "password": "HXKuHJCZ",
-  "type": "owner",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -113,7 +113,7 @@
   "apellido": "Steiner",
   "email": "vsteinerc@mapquest.com",
   "password": "Q7wCyRUYKkf",
-  "type": "owner",
+  "type": "User",
   "avatar": "/images/persona2"
  },
  {
@@ -122,7 +122,7 @@
   "apellido": "Vanyukov",
   "email": "bvanyukovd@123-reg.co.uk",
   "password": "exXOddYyy7u",
-  "type": "owner",
+  "type": "User",
   "avatar": "/images/persona1"
  },
  {
@@ -131,7 +131,7 @@
   "apellido": "Diss",
   "email": "hdisse@typepad.com",
   "password": "RCsSEiy",
-  "type": "customer",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -140,7 +140,7 @@
   "apellido": "Rustadge",
   "email": "arustadgef@bing.com",
   "password": "aOHtBEBp",
-  "type": "owner",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -149,7 +149,7 @@
   "apellido": "Delcastel",
   "email": "bdelcastelg@drupal.org",
   "password": "JdQQhw7L43VC",
-  "type": "customer",
+  "type": "User",
   "avatar": "/images/persona4"
  },
  {
@@ -158,7 +158,7 @@
   "apellido": "Corner",
   "email": "tcornerh@arizona.edu",
   "password": "F3intNj",
-  "type": "customer",
+  "type": "User",
   "avatar": "/images/persona4"
  },
  {
@@ -176,7 +176,7 @@
   "apellido": "Kevern",
   "email": "rkevernj@forbes.com",
   "password": "4IOpG6wZL",
-  "type": "user",
+  "type": "User",
   "avatar": "/images/persona3"
  },
  {
@@ -185,7 +185,7 @@
   "usuario": "12345",
   "contrasena": "12",
   "cel": "12",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678154817804.jpg"
  },
  {
@@ -194,7 +194,7 @@
   "usuario": "12345",
   "contrasena": "12",
   "cel": "12",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678154842356.jpg"
  },
  {
@@ -203,7 +203,7 @@
   "usuario": "12345",
   "contrasena": "12",
   "cel": "12",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678154860935.jpg"
  },
  {
@@ -212,7 +212,7 @@
   "usuario": "maira",
   "contrasena": "$2a$10$TKotzwPWAdPNSaLA6e0RFO9gC/Sx0M4r.nIkvcEJSyNw2wjJ.4.3q",
   "cel": "30063",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678314151533.jpg"
  },
  {
@@ -221,7 +221,7 @@
   "usuario": "maira",
   "contrasena": "$2a$10$FuFL8JgFAxku9QuwaIWWPeOqHUmAsIQuIBYr5B239lBwJc17ZzCjG",
   "cel": "3008641580",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678405568297.jpg"
  },
  {
@@ -230,7 +230,7 @@
   "usuario": "maira",
   "contrasena": "$2a$10$q5xOT.umXMuMNIlfZpB7b.pKOL07RV50YsV0idcWSGhdOlr6/iAOm",
   "cel": "3008641580",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678408778610.jpg"
  },
  {
@@ -239,7 +239,7 @@
   "usuario": "Alejandro",
   "contrasena": "$2a$10$G.Hx8pugDBbn7R4rOvnbYuSg2W8JYB6RWhrYLO/JHVPBu6K2a7Ro2",
   "cel": "330003000303",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678409492377.jpg"
  },
  {
@@ -248,7 +248,7 @@
   "usuario": "Alejandro",
   "contrasena": "321",
   "cel": "330003000303",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678409492377.jpg"
  },
  {
@@ -257,7 +257,7 @@
   "usuario": "DuqueAle",
   "contrasena": "$2a$10$U/J/.nuPQkLEG9lJK937vuET72ct5yyahTQkY8/KnpruqM4VkBZQ2",
   "cel": "3008641580",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678411160823.jpg"
  },
  {
@@ -266,7 +266,7 @@
   "usuario": "Valentino Conde",
   "contrasena": "$2a$10$lHYkhdTCsfGDB6rZJs01teBNGOCLFP2zMkXlTbTjtlrBb/Lo1aBD.",
   "cel": "3541694114",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678623513575.jpeg"
  },
  {
@@ -275,7 +275,7 @@
   "usuario": "Alejandro Arango",
   "contrasena": "$2a$10$i5BVXUmDUs3DQNH/MrdSkOuVsoaGU.H6IYUHx9ExfyKVgd8igBjeS",
   "cel": "3136917038",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678665961115.jpg"
  },
  {
@@ -284,7 +284,16 @@
   "usuario": "Con I mayus en multer",
   "contrasena": "$2a$10$9CI5fDF/jYGa0IERHgKpo.tNo1YQt5e3AGksNjJP5baAQol1lO4NC",
   "cel": "3125896478",
-  "tipo": "noAdmin",
+  "tipo": "User",
   "avatar": "product-1678666278652.png"
+ },
+ {
+  "idUser": 1681184691719,
+  "email": "maira@gmail.com",
+  "usuario": "maira",
+  "contrasena": "$2a$10$bLvNvVSToYQGEi0/2PJluu5eR/IbOHXZ7YJVhvCbO7Nd7fTMTbmSG",
+  "cel": "1234567890",
+  "tipo": "Admin",
+  "avatar": "product-1681184691672.JPG"
  }
 ]

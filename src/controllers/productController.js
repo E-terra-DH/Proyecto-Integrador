@@ -135,8 +135,6 @@ const productController =
 
           Product.create(newPlanta);
 
-          //fs.writeFileSync(productsPath, JSON.stringify(plantas, null, ' '));
-
           res.redirect('./index');
      },
 
