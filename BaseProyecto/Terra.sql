@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `description` text DEFAULT NULL,
   `stock` int(11) DEFAULT NULL,
@@ -68,6 +69,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `surname` varchar(255) NOT NULL,
+  `avatar` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `phone` int(11) NOT NULL,
@@ -152,3 +154,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
