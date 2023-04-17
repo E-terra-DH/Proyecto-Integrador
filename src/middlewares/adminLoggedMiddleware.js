@@ -7,12 +7,11 @@ const adminLoggedMiddleware = (req, res, next) => {
         //Puedo pasar lo que tengo en sesión a una variable local
         res.locals.adminLogged = req.session.admin;
         //Así puedo requerir directamente información guardada dentro de userLogged en mi vista.
-    }
-
+    };
         
-    // if(req.cookies && req.cookies.adminLogged){
-    //     res.locals.userLogged=req.cookies.userLogged;
-    // }
+    if(req.cookies && req.cookies.adminLogged) {
+        res.locals.adminLogged=req.cookies.adminLogged;
+    };
     
     next();
 }
