@@ -295,5 +295,14 @@
   "cel": "1234567890",
   "tipo": "Admin",
   "avatar": "product-1681184691672.JPG"
+ },
+ {
+  "idUser": 1681761456185,
+  "email": "denisefussi@gmail.com",
+  "usuario": "Denise",
+  "contrasena": "$2a$10$YOOJ5U/AvFN3G8.0vUTm1.zt0kNSJ0jlRbVvDktXJN.0UZ4E8piSu",
+  "cel": "1158829324",
+  "tipo": "User",
+  "avatar": "product-1681761456176.jpeg"
  }
 ]
