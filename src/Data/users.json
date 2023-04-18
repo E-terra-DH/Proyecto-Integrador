@@ -304,5 +304,14 @@
   "cel": "1158829324",
   "tipo": "User",
   "avatar": "product-1681761456176.jpeg"
+ },
+ {
+  "idUser": 1681774762661,
+  "email": "mduquea2@gmail.com",
+  "usuario": "mai<3",
+  "contrasena": "$2a$10$/R47xSsaR0wksMbdjawt0uTEc4xkpj2Q5NOothUIm2eEmeZ3O.i6C",
+  "cel": "3008641580",
+  "tipo": "User",
+  "avatar": "product-1681761456176.jpeg"
  }
 ]

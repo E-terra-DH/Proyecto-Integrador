@@ -30,7 +30,8 @@ const controller = {
                 delete user.contrasena; // Borrar la contraseña del usuario
 
                 //SI USUARIO ADMINISTRADOR
-                if (user_categories_id == '1') {
+                //if (userCategories_id == '1') {
+                if (user.tipo == 'Admin') {    
                     req.session.admin = user; // Guardar la sesión del administrador
                     if (req.body.remember) {
                         res.cookie(
