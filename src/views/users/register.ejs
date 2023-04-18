@@ -89,14 +89,14 @@
             
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
-            <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.usuario : '' %>"/></label>
+            <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.nombre : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.usuario) { %>
               <p class="error-message"> <%= mensajeDeError.usuario.msg  %> </p>
             <% } %>
 
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
-            <input type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldBody ? oldBody.usuario : '' %>"/></label>
+            <input type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldBody ? oldBody.apellido : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.apellido) { %>
               <p class="error-message"> <%= mensajeDeError.apellido.msg  %> </p>
             <% } %>
