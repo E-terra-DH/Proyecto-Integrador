@@ -51,8 +51,9 @@ const userController = {
           let avatar = req.file.filename;
           let newUser = {
                "idUser": Date.now(),
-               "email": req.body.email || 'sin nombre',
-               "usuario": req.body.usuario || 'sin apellido',
+               "email": req.body.email,
+               "nombre": req.body.nombre || 'sin nombre',
+               "apellido": req.body.apellido || 'sin apellido',
                "contrasena": bcrypt.hashSync(req.body.contrasena, 10),
                "cel": req.body.cel || 'sin celular',
                "tipo": 'User',
