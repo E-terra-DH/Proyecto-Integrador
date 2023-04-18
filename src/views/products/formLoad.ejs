@@ -26,14 +26,17 @@
                     <p class="error-message"> <%= mensajeDeError.name.msg  %> </p>
                 <% } %>
 
+           
                 <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria">
-                    <input type="radio" name="categoria" value="Plantas" id="Plantas">Plantas
-                    <input type="radio" name="categoria" value="Macetas" id="Macetas">Macetas
-                    <input type="radio" name="categoria" value="Accesorios" id="Accesorios">Accesorios
-                    <input type="radio" name="categoria" value="Sustratos" id="Sustratos">Sustratos
+                    <input type="radio" name="categoria" value="1" id="Plantas">Plantas
+                    <input type="radio" name="categoria" value="2" id="Macetas">Macetas
+                    <input type="radio" name="categoria" value="3" id="Accesorios">Accesorios
+                    <input type="radio" name="categoria" value="4" id="Sustratos">Sustratos
                 </label>
-                
+             
+                </label>
+             
 
                 <label for="precio">Descripción</label>
                 <textarea class="icon-register" name="descripcion" value=" <%= locals.oldBody ? oldBody.descripcion : '' %> "></textarea>
