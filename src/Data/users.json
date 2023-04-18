@@ -295,5 +295,23 @@
   "cel": "1234567890",
   "tipo": "Admin",
   "avatar": "product-1681184691672.JPG"
+ },
+ {
+  "idUser": 1681777425293,
+  "email": "pepito@gmail.com",
+  "usuario": "pepitoo",
+  "contrasena": "$2a$10$oC.aq14Ow.3aD1iYkvfAje2ETDm75h2P0ksQGGrS5PGERiY4nKzLG",
+  "cel": "3541666666",
+  "tipo": "User",
+  "avatar": "product-1681777425244.png"
+ },
+ {
+  "idUser": 1681777465544,
+  "email": "elchico@gmail.com",
+  "usuario": "pepitoo",
+  "contrasena": "$2a$10$tnbe301c6F1JKYszRY.M6O/LHjC0koWVvWpzBJSkkDLNEOC8wC8Vu",
+  "cel": "3541666666",
+  "tipo": "User",
+  "avatar": "product-1681777465503.png"
  }
 ]

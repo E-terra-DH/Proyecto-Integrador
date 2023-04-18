@@ -101,7 +101,7 @@ INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`, `stock`, 
 -- AUTO_INCREMENT de la tabla `users`
 --
 --ALTER TABLE `users`--
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  --MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
