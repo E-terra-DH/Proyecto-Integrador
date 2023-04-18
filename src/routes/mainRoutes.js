@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const guestMdlw = require('../middlewares/guestMdlw');
 const authMdlw = require('../middlewares/authMdlw');
-//const adminMiddleware = require('../middlewares/adminMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 // const userSessionMdlw = require('../middlewares/userSessionMdlw');
 
 const mainController = require('../controllers/controller');

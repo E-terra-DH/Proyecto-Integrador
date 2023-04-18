@@ -30,13 +30,14 @@ const controller = {
                 delete user.contrasena; // Borrar la contraseña del usuario
 
                 //SI USUARIO ADMINISTRADOR
-                if (user.type == 'Admin') {
+                //if (userCategories_id == '1') {
+                if (user.tipo == 'Admin') {    
                     req.session.admin = user; // Guardar la sesión del administrador
                     if (req.body.remember) {
                         res.cookie(
-                            'userLogged',
+                            'adminLogged',
                             user,
-                            { maxAge: 60000 } // valor en milisigundos que va a guardar la cookie del lado del cliente 1 minuto
+                            { maxAge: 60000 * 30} // valor en milisigundos que va a guardar la cookie del lado del cliente 1 minuto
                         )
                     }
                     res.redirect('/admin');
@@ -47,7 +48,7 @@ const controller = {
                         res.cookie(
                             'userLogged',
                             user,
-                            { maxAge: 60000 } // valor en milisigundos que va a guardar la cookie del lado del cliente 1 minuto
+                            { maxAge: 60000 * 30} // valor en milisigundos que va a guardar la cookie del lado del cliente 1 minuto
                         )
                     }
                     res.redirect('/profile');

@@ -297,6 +297,7 @@
   "avatar": "product-1681184691672.JPG"
  },
  {
+<<<<<<< HEAD
   "idUser": 1681777425293,
   "email": "pepito@gmail.com",
   "usuario": "pepitoo",
@@ -313,5 +314,23 @@
   "cel": "3541666666",
   "tipo": "User",
   "avatar": "product-1681777465503.png"
+=======
+  "idUser": 1681761456185,
+  "email": "denisefussi@gmail.com",
+  "usuario": "Denise",
+  "contrasena": "$2a$10$YOOJ5U/AvFN3G8.0vUTm1.zt0kNSJ0jlRbVvDktXJN.0UZ4E8piSu",
+  "cel": "1158829324",
+  "tipo": "User",
+  "avatar": "product-1681761456176.jpeg"
+ },
+ {
+  "idUser": 1681774762661,
+  "email": "mduquea2@gmail.com",
+  "usuario": "mai<3",
+  "contrasena": "$2a$10$/R47xSsaR0wksMbdjawt0uTEc4xkpj2Q5NOothUIm2eEmeZ3O.i6C",
+  "cel": "3008641580",
+  "tipo": "User",
+  "avatar": "product-1681761456176.jpeg"
+>>>>>>> a23560a1e4f432c0b0f5ae880b1fa7e7e8699a4c
  }
 ]
