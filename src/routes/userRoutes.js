@@ -10,7 +10,9 @@ const userController = require('../controllers/userController');
 
 
 // CRUD 
-router.get('/index', userController.index);
+//Creando indice de productos disponibles en la base de datos MySQL
+router.get('/userListMysql',userController.index);
+//router.get('/index', userController.index);
 
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
