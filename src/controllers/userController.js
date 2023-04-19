@@ -5,16 +5,21 @@ const usersPath = path.join(__dirname, '../Data/users.json');
 const dataBaseUsers = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
+const { name } = require('ejs');
 
-//const {User,UserCategory} = require('../Data');
+//llamado de modelos
+const {User,UserCategory} = require('../../database/models');
+
 const userController = {
      dataBaseUsers: () => { return JSON.parse(fs.readFileSync(usersPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante
-     index: (req, res) => {
-
-          res.render('./users/userList', {
-               title: 'Usuarios',
-               usersList: dataBaseUsers
-          });
+     index : async (req, res) => {
+          try{
+               const User = await User.findAll();
+               const UserCategory = await UserCategory.findAll();
+               res.render('../views/users/userListMysql.ejs', {User,UserCategory});
+          } catch (error) {
+               res.json(error)
+          }
      },
 
      register: (req, res) => {
@@ -133,4 +138,4 @@ const userController = {
      }
 };
 
-module.exports = userController;
+module.exports = userController

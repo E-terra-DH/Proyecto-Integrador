@@ -343,5 +343,35 @@
   "cel": "1158829324",
   "tipo": "User",
   "avatar": "product-1681861851093.jpeg"
+ },
+ {
+  "idUser": 1681936068725,
+  "email": "denisefussi@gmail.com",
+  "nombre": "denise",
+  "apellido": "fussi",
+  "contrasena": "$2a$10$olvl03O6DsV7s7vueo8rMuI8DrPJlxUUWWXZpdt.D1zmSazkuRXja",
+  "cel": "1122112211",
+  "tipo": "User",
+  "avatar": "product-1681936068706.jpeg"
+ },
+ {
+  "idUser": 1681936118752,
+  "email": "denisefussi@gmail.com",
+  "nombre": "denise",
+  "apellido": "fussi",
+  "contrasena": "$2a$10$qS0fvQQoT22VL47pllf3yOmezkBeIvd7CBTP1M0kXi2BuFDWkZpy6",
+  "cel": "1122112211",
+  "tipo": "User",
+  "avatar": "product-1681936118733.jpeg"
+ },
+ {
+  "idUser": 1681936291490,
+  "email": "denisefussi@gmail.com",
+  "nombre": "denise",
+  "apellido": "fussi",
+  "contrasena": "$2a$10$l8ya7QeiCCcqP4J3FPffZOVO3BNde5x.4Zj9Xkd64709JnbFrwf5a",
+  "cel": "1122112211",
+  "tipo": "User",
+  "avatar": "product-1681936291470.jpeg"
  }
 ]
