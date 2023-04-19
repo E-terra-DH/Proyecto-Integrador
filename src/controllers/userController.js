@@ -6,7 +6,7 @@ const dataBaseUsers = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs');
 
-
+//const {User,UserCategory} = require('../Data');
 const userController = {
      dataBaseUsers: () => { return JSON.parse(fs.readFileSync(usersPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante
      index: (req, res) => {

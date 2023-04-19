@@ -333,5 +333,15 @@
   "cel": "3541666666",
   "tipo": "User",
   "avatar": "product-1681779574956.png"
+ },
+ {
+  "idUser": 1681861851112,
+  "email": "denisefussi@gmail.com",
+  "nombre": "denise",
+  "apellido": "fussi",
+  "contrasena": "$2a$10$tfVt7saNrHY5Vu2qIVypnuFirsEblEiucjlyBKxkgPfDpPTRyopby",
+  "cel": "1158829324",
+  "tipo": "User",
+  "avatar": "product-1681861851093.jpeg"
  }
 ]
