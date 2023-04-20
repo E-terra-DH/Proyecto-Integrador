@@ -13,14 +13,14 @@
   <ul>
     <% usersList.forEach(user => { %>
     <li>
-      <a class="item" href="/users/<%= user.id %>"><%= user.usuario %> </a>
+      <a class="item" href="/<%= user.id %>"><%= user.usuario %> </a>
         
       <button class="other-buttons"> 
-      <a class="item-button" href="/products/edit/<%= user.id %>"> Editar </a>
+      <a class="item-button" href="/<%= user.id %>"> Editar </a>
       </button>
         
       <button class="other-buttons"> 
-      <a class="item-button" href="/products/delete/<%= user.id %>"> Eliminar </a>
+      <a class="item-button" href="/<%= user.id %>"> Eliminar </a>
       </button>
 
       <br>

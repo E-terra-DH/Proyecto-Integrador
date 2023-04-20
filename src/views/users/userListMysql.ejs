@@ -1,32 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<%- include('../partials/header.ejs') %>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Productos </title>
-    <link rel='stylesheet' href='/css/style.css' />
-
+  <link rel="stylesheet" href="/css/listas-CRUD.css" />
 </head>
 
-<body>
-    
-    <h1>USUARIOS</h1>
-    <br>
-    <p>
-        <a class="botonAgregar" href="/users/add">Agregar un Usuario</a>
-        <a class="botonVolver" href="/">inicio</a>
-
-    </p>
-    <br>
-    <ul>
-        <% for( let i = 0; i < products.length; i++ ) { %>
-        <li>
-            <a href="../users/userListMysql<%= products[i].id %>"><%= products[i].name %></a>
-        </li>
-        <% } %>
-
-    </ul>
-</body>
-
-</html>
+<footer><%- include('../partials/footer.ejs') %></footer>

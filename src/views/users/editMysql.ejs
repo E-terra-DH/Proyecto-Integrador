@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="titulo">edit User</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+ 
+    <h1 class="titulo"> <%= %></h1>
+    <section class="formulario">
+        <form action="/<%=  %>" method="POST">
+            <label for="title"></label>
+            <p><input type="text" name="title" id="" value="<%=  %>" required></p>
+            <label for="rating"> </label>
+            <p><input type="number" name="rating" id="" value="<%=  %>" required></p>
+            <label for="awards"> </label>
+            <p><input type="number" name="awards" id="" value="<%= %>" required></p>
+            <label for="release_date"></label>
+            <p><input type="date" name="release_date" id="" value="<%=  %> required"></p>
+            <label for="length"></label>
+            <p><input type="number" name="length" id="" value="<%= %>" required></p>
+                     
+
+            
+            <br>
+            <p> <button class="botonAgregar" type="submit"></button>
+        
+            <a  class="botonVolver" href="/"></a></p>
+        </form>
+    </section>
+</body>
+
+</html>
