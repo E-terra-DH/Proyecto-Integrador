@@ -24,10 +24,10 @@
 
                 <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria">
-                    <input type="radio" name="categoria" value="<%=product.products_categories_id%>">Plantas
-                    <input type="radio" name="categoria" value="<%=product.products_categories_id%>">Macetas
-                    <input type="radio" name="categoria" value="<%=product.products_categories_id%>">Accesorios
-                    <input type="radio" name="categoria" value="<%=product.products_categories_id%>">Sustratos
+                    <input type="radio" name="categoria" <%=product.products_categories_id == "Planta" ? "selected" : ""%> value="1">Plantas
+                    <input type="radio" name="categoria" <%=product.products_categories_id == "Macetas" ? "selected" : ""%> value="2">Macetas
+                    <input type="radio" name="categoria" <%=product.products_categories_id == "Accesorios" ? "selected" : ""%> value="3">Accesorios
+                    <input type="radio" name="categoria" <%=product.products_categories_id == "Sustratos" ? "selected" : ""%> value="4">Sustratos
                 </label>
 
 
@@ -41,12 +41,8 @@
                 <input class="icon-register" type="number" name="cantidad" value="<%=product.stock%>">
 
                 <label for="image">Imagen</label>
-                <input class="icon-register" type="file" name="image" id="image">
+                <input class="icon-register" type="file" name="image" id="image" <%=product.image%>>
 
-                <label class="categories" for="disponible">Disponible
-                    <input type="radio" name="categoria" value="Disponible">Sí
-                    <input type="radio" name="categoria" value="No disponible">No
-                </label>
 
                 <button class="load-button" type="submit">Editar producto</button>
             </form>

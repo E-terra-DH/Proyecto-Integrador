@@ -192,7 +192,7 @@ const productController =
                     "description": req.body.descripcion,
                     "price": req.body.precio,
                     "stock": req.body.cantidad,
-                    "image": req.file.filename,
+                    //"image": req.file.filename,
                     "products_categories_id": req.body.categoria,
                     "disonible": req.body.disponible
                }, {
