@@ -14,14 +14,16 @@ router.get('/mysqlProducts',productController.listaProductos);
 router.get('/mysqlDetail/:id',productController.detalleMysql);
 router.get('/editmysql/:id',productController.editmysql);
 
-/*-----------------------------------------------------------------------------*/
-
-//Creando indice de productos disponibles en la base de datos JSON
-router.get('/index', productController.index);
+// Macetas, Accesorios y Sutratos
 router.get('/macetas', productController.macetas);
 router.get('/accesorios', productController.accesorios);
 router.get('/sustratos', productController.sustratos);
-router.get('/list', productController.productCatalogue);
+
+/*-----------------------------------------------------------------------------*/
+
+//Creando indice de productos disponibles en la base de datos JSON
+router.get('/index', productController.productCatalogue);
+router.get('/list', productController.index);
 
 
 // CREAR Productos usando el formulario

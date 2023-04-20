@@ -1,6 +1,57 @@
-<%- include('../partials/header.ejs') %>
-    
-<h1>Probando la pagina de Accesorios</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/productList.css">
+</head>
+
+<body>
+  <header>
+    <%- include('../partials/header.ejs') %>
+  </header>
+<main>
+              
+  <section class="catalogue">
+      <h3 class="cat-titles">Explora todo nuestro catálogo</h3>
+
+      <button class="new-product"><a class="new-p" href="/products/create">Crea un nuevo producto</a></button>
+
+      <section class="ct-products">
+
+          <% accesorios.forEach(accesorio => { %>
+      
+          <article class="product-item">
+             
+              <a href="/products/<%= accesorio.id %>"><img class="product-img" src="/Images/<%= accesorio.image %>" alt=""></a> 
+              <div class="product-info">
+                  <a href="/products/<%= accesorio.id %>"><h2 class="product-description"><%= accesorio.name %></h2></a>
+                  <a href="/products/<%= accesorio.id %>"><p class="price"><%= accesorio.price %> USD</p></a>
+                  <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                  <!--Poner condicional solo para administradores-->
+                  <% if (locals.adminLogged) {%>
+                      <a class="item-button" href="/products/edit/<%= accesorio.id %>">Editar</a>
+                      <a class="item-button" href="/products/delete/<%= accesorio.id %>">Eliminar</a>
+                  <% } %>
+              </div>
+          </article>
+
+          <% }) %>
+
+          
+      
+      </section>
+
+      <div>
+          <ul class="bottom-nav">
+            <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
+                <li class="bottom"><a class="label-btm" href="../users/register"><i class="fa-solid fa-user"></i></a></li>
+                <li class="bottom"><a class="label-btm" href="list"><i class="fas fa-bars"></i></a></li>
+                <li class="bottom"><a class="label-btm" href="cart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </div>
+</main>
 
 <footer>
     <%- include('../partials/footer.ejs')  %> 

@@ -49,22 +49,77 @@ const productController =
                res.json(error)
           }
      },
+     macetas: async (req, res) => {
+          try {
+               let macetas = await Product.findAll({
+                    attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
+                    where: {
+                         products_categories_id: 2
+                    }
+               })
+               //res.json({macetas})
+               res.render('../views/products/macetas.ejs', { title: 'Listado de macetas', macetas })
+          } catch (error) {
+               res.json(error)
+          }
+
+     },
+     accesorios: async (req, res) => {
+          try {
+               let accesorios = await Product.findAll({
+                    attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
+                    where: {
+                         products_categories_id: 3
+                    }
+               })
+               //res.json({accesorios})
+               res.render('../views/products/accesorios.ejs', { title: 'Listado de accesorios', accesorios })
+
+          } catch (error) {
+               res.json(error)
+          }
+
+     },
+     sustratos: async (req, res) => {
+          try {
+               let sustratos = await Product.findAll({
+                    attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
+                    where: {
+                         products_categories_id: 4
+                    }
+               })
+               //res.json({macetas})
+               res.render('../views/products/sustratos.ejs', { title: 'Listado de sustratos', sustratos })
+          } catch (error) {
+               res.json(error)
+          }
+
+     },
 
 
      /* -----------------------CON LA BASE DE DATOS DE JSON-------------------*/
      index: async (req, res) => {
           try {
                let plantasList = await Product.findAll();
-               res.render('./products/listaProducts', { plantasList })
+               res.render('./products/productList', { plantasList })
           }
           catch (error) {
                res.json(error)
           }
      },
-     
+
      productCatalogue: async (req, res) => {
           try {
-               let plantasList = await Product.findAll();
+               let plantasList = await Product.findAll({
+                    attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
+
+                    where: {
+                         products_categories_id: 1
+                    }
+
+               })
+
+
                res.render('../views/products/productList', {
                     title: 'Catálogo de productos',
                     plantasList
@@ -72,35 +127,13 @@ const productController =
           }
           catch (error) {
                res.json(error)
-          }    
-     },
-
-     macetas: (req, res) => {
-
-          res.render('./products/macetas', {
-               title: 'Listado de accesorios',
-
-          });
-     },
-     accesorios: (req, res) => {
-
-          res.render('./products/accesorios', {
-               title: 'Listado de accesorios',
-
-          });
-     },
-     sustratos: (req, res) => {
-
-          res.render('./products/sustratos', {
-               title: 'Listado de sustratos',
-
-          });
+          }
      },
 
      productDetail: async (req, res) => {
           try {
                let planta = await Product.findByPk(req.params.id)
-               res.render('./products/productDetail', {planta})
+               res.render('./products/productDetail', { planta })
           } catch (error) {
                res.json(error)
           }
@@ -145,12 +178,12 @@ const productController =
                res.render('./products/formularioEdit', {
                     title: 'Editando plantas',
                     product
-               }); 
+               });
           } catch (error) {
-              res.json(error);
+               res.json(error);
           }
      },
-     
+
      update: (req, res) => {
 
           Product.update(
@@ -163,14 +196,14 @@ const productController =
                     "products_categories_id": req.body.categoria,
                     "disonible": req.body.disponible
                }, {
-                    where: {
-                         id: req.params.id
-                    }
+               where: {
+                    id: req.params.id
                }
+          }
           )
-          .then(()=> {
-               res.redirect('/products/index')
-          })
+               .then(() => {
+                    res.redirect('/products/index')
+               })
      },
 
      delete: async (req, res) => {
@@ -180,9 +213,9 @@ const productController =
                res.render('products/delete', {
                     title: 'Eliminando plantas',
                     planta
-               }); 
+               });
           } catch (error) {
-              res.json(error);
+               res.json(error);
           }
      },
 
@@ -193,7 +226,7 @@ const productController =
                     id: req.params.id
                }
           })
-          
+
           res.redirect('/products/index');
      },
 
