@@ -9,29 +9,22 @@
 </head>
 
 <body>
- 
-    <h1 class="titulo"> <%= %></h1>
-    <section class="formulario">
-        <form action="/<%=  %>" method="POST">
-            <label for="title"></label>
-            <p><input type="text" name="title" id="" value="<%=  %>" required></p>
-            <label for="rating"> </label>
-            <p><input type="number" name="rating" id="" value="<%=  %>" required></p>
-            <label for="awards"> </label>
-            <p><input type="number" name="awards" id="" value="<%= %>" required></p>
-            <label for="release_date"></label>
-            <p><input type="date" name="release_date" id="" value="<%=  %> required"></p>
-            <label for="length"></label>
-            <p><input type="number" name="length" id="" value="<%= %>" required></p>
-                     
-
-            
-            <br>
-            <p> <button class="botonAgregar" type="submit"></button>
-        
-            <a  class="botonVolver" href="/"></a></p>
-        </form>
+    <figure>
+        <img src="/Images/logo-blanco.png" alt="Logo Terra">
+    </figure>
+    <h1><%= User.title %> </h1>    
+    <br>
+    <p>NAME: <%= User.name %> </p>
+    <p>SURNAME: <%= User.surname %> </p>
+    <p>EMAIL: <%= User.email %> </p>
+    <p>PHONE: <%= User.phone %> </p>
+    <br>
+    <section>
+        <a class="botonModificar" href="../users/editMysql/<%= User.id %>">Modificar</a>
+        <a class="botonBorrar" href="../users/deleteMysql <%= User.id %>">Borrar</a>
+        <a class="botonVolver" href="../users/userListMysql.ejs">Usuarios</a>
     </section>
+
 </body>
 
 </html>
