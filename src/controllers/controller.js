@@ -72,7 +72,8 @@ const controller = {
 
     logout: (req, res) => {
         req.session.destroy();//metodos de cookie-parser
-        res.clearCookie('userLogged');//metodos de cookie-parser
+        res.clearCookie('userLogged','adminLogged');//metodos de cookie-parser
+        res.clearCookie('adminLogged');//metodos de cookie-parser
         return res.redirect('/');
     },
     

@@ -373,5 +373,25 @@
   "cel": "1122112211",
   "tipo": "User",
   "avatar": "product-1681936291470.jpeg"
+ },
+ {
+  "idUser": 1682110560628,
+  "email": "nikita@prueba.com",
+  "nombre": "nikita",
+  "apellido": "gatica",
+  "contrasena": "$2a$10$1PGkAJmZWBgLkxwGDF.OAu.irupQ0hqFTugFb96ByuMUhSawoUQIS",
+  "cel": "3136917038",
+  "tipo": "User",
+  "avatar": "product-1682110560532.jpg"
+ },
+ {
+  "idUser": 1682111079327,
+  "email": "camila@prueba.com",
+  "nombre": "Camila",
+  "apellido": "Gutierrez",
+  "contrasena": "$2a$10$YXEs7rJni6tGWcUJxHe6Vui2rWXWr2pqBSsmQTP7JyHjJH5f2Zlg.",
+  "cel": "3136917038",
+  "tipo": "User",
+  "avatar": "product-1682111079119.jpg"
  }
 ]
