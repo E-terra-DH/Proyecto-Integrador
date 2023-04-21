@@ -3,8 +3,6 @@ const path = require('path');
 const usersPath = path.resolve(__dirname, '../Data/users.json');
 const bcrypt = require('bcryptjs');
 
-
-
 const controller = {
     index: (req, res) => {
         res.render('./users/index', {

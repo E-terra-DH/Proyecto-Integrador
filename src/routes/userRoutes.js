@@ -8,25 +8,6 @@ const validateRegister = require('../middlewares/validationsRegister');
 
 const userController = require('../controllers/userController');
 
-
-// CRUD 
-//Creando indice de usuarios  en la base de datos MySQL
-
-
-// // add users
-// router.get('/', userController.add);
-// // Create a new user
-// router.post('/', userController.create);
-// // Edit a user
-// router.get('/:id', userController.edit);
-// // Update a user
-// router.put('/:id', userController.update);
-// //Delete a user
-// router.get('/:id', userController.delete);
-// //Destroy a user
-// router.post('/destroy/:id', userController.destroy);
-
-
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
 router.post('/register', upload.single('avatar'), validateRegister, userController.createUser); //Creación de un nuevo usuario
