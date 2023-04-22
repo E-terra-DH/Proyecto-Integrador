@@ -139,7 +139,7 @@ const userController = {
                     });
                };
 
-               const confirmPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+               const confirmPassword = bcrypt.compareSync(req.body.contrasena, userToLogin.password);
 
                if (!confirmPassword) {
 
