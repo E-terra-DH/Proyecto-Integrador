@@ -120,9 +120,6 @@
 
             <label class="icon-register">
             <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar"/></label>
-            <% if (locals.mensajeDeError && mensajeDeError.avatar) { %>
-              <p class="error-message"> <%= mensajeDeError.avatar.msg  %> </p>
-            <% } %>
 
             <button class="register-button" type="submit">Crear cuenta</button>
           </form>

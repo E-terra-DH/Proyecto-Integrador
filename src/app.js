@@ -3,7 +3,8 @@ const app = express();
 const path = require('path');
 const { clearScreenDown } = require('readline');
 const methodOverride = require('method-override');
-const PORT = process.env.PORT || 3006;
+const PORT = process.env.PORT || 3006
+;
 
 //Para validar la sesión y gurdar las cookies
 // const userSessionMdlw = require('./middlewares/userSessionMdlw');
