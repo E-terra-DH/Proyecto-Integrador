@@ -50,8 +50,8 @@ const userController = {
                surname: req.body.apellido || 'sin apellido',
                password: bcrypt.hashSync(req.body.contrasena, 10),
                phone: req.body.cel || 'sin celular',
-               user_categories_id:'2',
-               avatar: avatar ||'usuarioDefault.jpg'
+               user_categories_id: '2',
+               avatar: avatar || 'usuarioDefault.jpg'
           }
 
           await User.create(newUser)
@@ -65,7 +65,7 @@ const userController = {
           //      //let users = userController.dataBaseUsers();
 
           //      //let avatar = req.file.filename;
-               
+
 
           // } catch (error) {
           //      res.json('error')
@@ -92,21 +92,133 @@ const userController = {
           //fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
 
 
-     }
-     // ,
+     },
 
-     // edit: (req, res) => {
-     //      let userId = req.params.id;
+     login: (req, res) => {
+          res.render('./auth/login', {
+              title: 'login'
+          });
+      },
 
-     //      let user = userController.dataBaseUsers().find(user => user.id == userId);
-     //      res.render('./users/register', {
-     //           title: 'Editando usuarios',
-     //           user
-     //      });
-     // },
-     // update: (req, res) => {
+     processLogin: async (req, res) => {
+          const error = validationResult(req);
+
+          if (!error.isEmpty()) {
+               return res.render('./auth/login', {
+
+                    error: error.mapped(),
+               });
+          };
+
+          try {
+
+               let userToLogin = await User.findOne({
+                    where: {
+                         email: req.body.email,
+                    },
+                    attributes: [
+                         'id',
+                         'name',
+                         'surname',
+                         'password',
+                         'email',
+                         'avatar',
+                         'user_categories_id',
+                    ]
+               });
+
+               if (!userToLogin) {
+
+                    return res.render('users/login', {
+
+                         error: {
+                              email: {
+                                   msg: 'Email no resgistrado'
+                              }
+                         },
+                    });
+               };
+
+               const confirmPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+
+               if (!confirmPassword) {
+
+                    return res.render('users/login', {
+
+                         error: {
+                              password: {
+                                   msg: 'Contaseña incorrecta'
+                              }
+                         },
+                    });
+               };
+
+               if (userToLogin.userCategory_id === 2) {
+                    delete userToLogin.dataValues.password;
+
+                    req.session.admin = userToLogin.dataValues;
+
+                    return res.redirect('/user/admin');
+               };
+
+               if (userToLogin.userCategory_id === 1) {
+                    delete userToLogin.dataValues.password;
+
+                    req.session.userLogged = userToLogin.dataValues;
+
+                    if (req.body.rememberme) {
+
+                         res.cookie('userCookie', userToLogin.dataValues, { maxage: 1000 * 60 * 60 });
+                    };
+
+                    res.redirect('/profile');
+               };
+          } catch (error) {
+               res.render('error');
+          }
+     },
+
+
+
+     edit: async (req, res) => {
+
+          let userId = req.params.id;
+          let user = User.findByPk(user => user.id == userId)
+          //let user = userController.dataBaseUsers().find(user => user.id == userId);
+          res.render('./users/register', {
+               title: 'Editando usuarios',
+               user
+
+
+
+          });
+     },
+     update: (req, res) => {
+          //aca hay que capturar el id. viaja la data de lo que viene del formulario, yo lo recibo. Armamos el registro igual al add.  
+          User.update({
+               name: req.body.name,
+               avatar: file ? file.filename : 'usuarioDefault.jpg',
+               surname: req.body.surname,
+               email: req.body.email,
+               password: bcrypt.hashSync(req.body.password, 10),
+               phone: req.body.phone,
+               userCategories_id: req.body.userCategories_id ? req.body.userCategories_id : '1',
+          },
+               {
+                    where: {
+                         id: req.params.id
+                    }
+               })
+               .then(() => {
+                    return res.redirect('/userListMtsql');
+               })
+               .catch(error => res.send('error'));
+     },
+
+
+     //async (req, res) => {
      //      let userId = req.params.id;
-     //      let user = userController.dataBaseUsers()
+     //      let user = User.findAll();
 
      //      user.forEach((user, index) => {
      //           if (user.id == userId) {
@@ -121,9 +233,9 @@ const userController = {
      //           }
      //      })
 
-     //      fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '));
+     //fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '));
 
-     // },
+
 
      // delete: (req, res) => {
      //      let userId = req.params.id;

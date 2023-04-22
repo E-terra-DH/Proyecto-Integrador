@@ -6,12 +6,13 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 // const userSessionMdlw = require('../middlewares/userSessionMdlw');
 
 const mainController = require('../controllers/controller');
+const userController = require('../controllers/userController');
 
 
 router.get('/', mainController.index);
 
-router.get('/login', authMdlw, mainController.login);
-router.post('/login', authMdlw, mainController.processLogin);
+router.get('/login', authMdlw, userController.login);
+router.post('/login', authMdlw, userController.processLogin);
 
 
 router.get('/admin', mainController.admin);
