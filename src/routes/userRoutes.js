@@ -10,7 +10,7 @@ const userController = require('../controllers/userController');
 
 
 /*----------------------------------------Rutas con MYSQL--------------------*/
-// router.get('/register',  userController.register);
+router.get('/listado',  userController.indice);
 // router.post('/register',userController.create);
 
 
@@ -20,7 +20,11 @@ const userController = require('../controllers/userController');
 
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
-router.post('/register', upload.single('avatar'), validateRegister, userController.createUser); //Creación de un nuevo usuario
+router.post('/register', upload.single('avatar'), userController.createUser); //Creación de un nuevo usuario
+
+// validateRegister
+
+
 
 //LOGIN
 // router.get('/login',/*middleware*/ userController.login);
@@ -30,11 +34,11 @@ router.post('/register', upload.single('avatar'), validateRegister, userControll
 //PERFIL DE USUARIO
 // router.get('/profile/:idUser', userController.profile);
 
-router.get('/edit/:idUser', userController.edit);
-router.put('/edit/:idUser', userController.update);
+// router.get('/edit/:idUser', userController.edit);
+// router.put('/edit/:idUser', userController.update);
 
-router.get('/delete/:idUser', userController.delete);
-router.delete('/delete/:idUser', userController.destroy);
+// router.get('/delete/:idUser', userController.delete);
+// router.delete('/delete/:idUser', userController.destroy);
 
 //router.get('/:id', userController.profile); //Detalle de usuario
 
