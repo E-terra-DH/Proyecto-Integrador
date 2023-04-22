@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="titulo">delete User</title>
+    <title class="titulo">Delete User</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -15,14 +15,19 @@
     </header>
   
     <main>
-      <h3 class="delete-title">¿Seguro quieres eliminar este usuario?</h3>
-  
-      <form method="post" action="/<%= .id %>?_method=DELETE">
-        <div class="delete-content">
-  
-  
-        <button class="load-button" type="submit">Eliminar</button>
-      </form>
+      <figure>
+        <img src="/Images/logo-blanco.png" alt="Logo Terra">
+      </figure>
+    <h1>Estas seguro de querer borrar este usuario: <%= User.id %>?</h1>
+    <p>
+        <form action="/users/deleteMysql/<%= User.id %>" method="POST">
+            <br>
+            <p> <button class="botonBorrar" type="submit">Borrar Usuario</button>
+            
+            <a  class="botonVolver" href="/index">Listado de Usuarios</a></p>
+
+        </form>
+    </p>
     </main>
   
     <footer>

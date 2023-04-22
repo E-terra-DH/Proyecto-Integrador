@@ -3,8 +3,6 @@ const path = require('path');
 const usersPath = path.resolve(__dirname, '../Data/users.json');
 const bcrypt = require('bcryptjs');
 
-
-
 const controller = {
     index: (req, res) => {
         res.render('./users/index', {
@@ -74,7 +72,8 @@ const controller = {
 
     logout: (req, res) => {
         req.session.destroy();//metodos de cookie-parser
-        res.clearCookie('userLogged');//metodos de cookie-parser
+        res.clearCookie('userLogged','adminLogged');//metodos de cookie-parser
+        res.clearCookie('adminLogged');//metodos de cookie-parser
         return res.redirect('/');
     },
     

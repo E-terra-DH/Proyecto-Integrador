@@ -69,7 +69,7 @@ const userController = {
 
           fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
 
-          res.redirect('/users/index');
+          res.redirect('/login');
      },
 
      edit: (req, res) => {

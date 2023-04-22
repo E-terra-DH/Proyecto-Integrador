@@ -16,6 +16,7 @@ const session = require('express-session'); // Proceso de login
 const mainRoutes=require('./routes/mainRoutes');
 const productRoutes=require('./routes/productRoutes');
 const userRoutes=require('./routes/userRoutes');
+const deniseRoutes=require('./routes/deniseRoutes');
 const { sequelize } = require('../database/models');
 const Product = require('../database/models/Product');
 
@@ -45,6 +46,7 @@ app.use(express.static('views'));
 app.use('/',mainRoutes);
 app.use('/products',productRoutes);
 app.use('/users', userRoutes); //Ver ruteo de productos
+app.use('/denise', deniseRoutes); 
 
 //---error---
 app.use((req, res) => {
