@@ -30,7 +30,11 @@ module.exports = (sequelize,DataTypes) =>{
             type: DataTypes.STRING,
             allowNull: false,
         },
-        userCategories_id:{
+        avatar:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        user_categories_id:{
             type: DataTypes.INTEGER,
             allowNull: true,
 

@@ -8,6 +8,16 @@ const validateRegister = require('../middlewares/validationsRegister');
 
 const userController = require('../controllers/userController');
 
+
+/*----------------------------------------Rutas con MYSQL--------------------*/
+// router.get('/register',  userController.register);
+// router.post('/register',userController.create);
+
+
+
+
+
+
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
 router.post('/register', upload.single('avatar'), validateRegister, userController.createUser); //Creación de un nuevo usuario

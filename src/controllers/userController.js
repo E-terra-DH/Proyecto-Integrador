@@ -1,15 +1,71 @@
-const fs = require('fs');
+// metodos de JSON 
+const bcrypt = require('bcryptjs');
 const path = require('path');
-const { stringify } = require('querystring');
 const usersPath = path.join(__dirname, '../Data/users.json');
+const fs = require('fs');
 const dataBaseUsers = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
 const { validationResult } = require('express-validator')
-const bcrypt = require('bcryptjs');
-const { name } = require('ejs');
 
 //llamado de modelos
-const {User,UserCategory} = require('../../database/models');
+const { User, UserCategory } = require('../../database/models');
+const { ValidationError } = require('sequelize');
 
+// const userController = {
+//      register: (req, res) => {
+//           res.render('./users/register')
+//      },
+
+//      create: async (req, res) => {
+//           const error = validationResult(req);
+//           if (!error.isEmpty()) {
+//                return res.render('users/register', {
+//                     error: error.mapped(),
+//                     oldBody: req.body
+//                })
+//           };
+//           try {
+//                const newUser = {
+//                     name: req.body.name,
+//                     surname: req.body.surname,
+//                     email: req.body.email,
+//                     password: bcrypt.hashSync(req.body.password, 10),
+//                     phone: req.body.phone,
+//                     avatar: 'usuarioDefault.jpg',
+//                     user_categories_id: req.body.category ? req.body.category : '1'
+//                };
+
+//                const badEmail = await User.findOne({
+//                     where: {
+//                          email: req.body.email
+//                     }
+//                });
+//                if (badEmail) {
+//                     return res.render('users/register', {
+//                          error: {
+//                               email: {
+//                                    msg: 'El email ya existe'
+//                               }
+//                          },
+//                          oldBody: req.body
+//                     });
+//                };
+
+//                await User.create(newUser, {
+//                     include: 'userCategories'
+//                });
+
+//                res.redirect('/login');
+
+
+
+
+//           } catch (error) {
+//                res.render('error')
+
+//           }
+//      }
+// }
+/*--------------------------------------------TODO SOBRE JSON----------------------------------*/
 const userController = {
      dataBaseUsers: () => { return JSON.parse(fs.readFileSync(usersPath, 'utf-8')); },// se crea aca para poder llamarla en metodos adelante
      index : async (req, res) => {
