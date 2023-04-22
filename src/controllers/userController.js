@@ -43,15 +43,15 @@ const userController = {
                });
           }
 
+          let avatar = req.file.filename;
           let newUser = {
-
                email: req.body.email,
                name: req.body.nombre || 'sin nombre',
                surname: req.body.apellido || 'sin apellido',
                password: bcrypt.hashSync(req.body.contrasena, 10),
                phone: req.body.cel || 'sin celular',
                user_categories_id:'2',
-               avatar: 'usuarioDefault.jpg'
+               avatar: avatar ||'usuarioDefault.jpg'
           }
 
           await User.create(newUser)

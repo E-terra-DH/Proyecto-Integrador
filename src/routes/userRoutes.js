@@ -20,9 +20,9 @@ router.get('/listado',  userController.indice);
 
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
-router.post('/register', upload.single('avatar'), userController.createUser); //Creación de un nuevo usuario
+router.post('/register', upload.single('avatar'), validateRegister, userController.createUser); //Creación de un nuevo usuario
 
-// validateRegister
+// 
 
 
 
