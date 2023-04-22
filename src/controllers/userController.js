@@ -153,7 +153,7 @@ const userController = {
                     });
                };
 
-               if (userToLogin.userCategory_id === 2) {
+               if (userToLogin.user_categories_id === 2) {
                     delete userToLogin.dataValues.password;
 
                     req.session.admin = userToLogin.dataValues;
