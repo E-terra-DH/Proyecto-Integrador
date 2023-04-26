@@ -125,3 +125,30 @@
 # 5. Dejar de hacer.
 
 Dejar mucha responsabilidad sobre uno solo de los compañeros. Nos pasó que Maira fue la que más trabajó en este primer sprint porque es quien más sabe de diseño, entonces recayó una responsabilidad muy grande sobre ella.
+
+
+## Retro sprint 7
+
+# 1. Comenzar a hacer.
+- Resolver los pendientes que fueron quedando de sprints anteriores.  
+- Comprometernos mas con el proyecto. 
+- Distribución de tareas al inicio del sprint. 
+
+# 2. Hacer mas.
+- Especificacion de las tareas concretas. Encuanto a la division de la tarea general a tareas mas en detalle/especificas. 
+- Ponerse al dia con el contenido y clases. 
+- Nivelarnos los 4 para repartir mas facil las tareas.
+- Consolidar lenguaje para cuando programemos tengamos un poco de estandar.
+- Coordinar horarios/dias para resolucion de tareas y dudas que nos surjan con lo que vamos codeando individualmente para el proyecto. 
+
+# 3. Continuar haciendo.
+- Seguir juntandonos, por meet y mantener la comunicacion en el grupo. 
+- Ayudarnos entre todos. 
+- Mirar alternativas de aprendizaje. 
+
+# 4. Hacer menos.
+- Procastinacion. 
+
+# 5. Dejar de hacer.
+
+Dejar mucha responsabilidad sobre uno solo de los compañeros. Nos pasó que Maira fue la que más trabajó en este primer sprint porque es quien más sabe de diseño, entonces recayó una responsabilidad muy grande sobre ella.
