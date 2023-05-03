@@ -164,7 +164,7 @@ const userController = {
                     });
                };
 
-               if (userToLogin.user_categories_id === 2) {
+               if (userToLogin.user_categories_id === 1) {
                     delete userToLogin.dataValues.password;
 
                     req.session.admin = userToLogin.dataValues;
@@ -177,7 +177,7 @@ const userController = {
                     return res.redirect('/users/profile');
                };
 
-               if (userToLogin.user_categories_id === 1) {
+               if (userToLogin.user_categories_id === 2) {
                     delete userToLogin.dataValues.password;
 
                     req.session.userLogged = userToLogin.dataValues;

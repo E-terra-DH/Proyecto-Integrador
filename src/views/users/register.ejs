@@ -93,8 +93,8 @@
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
             <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.nombre : '' %>"/></label>
-            <% if (locals.mensajeDeError && mensajeDeError.usuario) { %>
-              <p class="error-message"> <%= mensajeDeError.usuario.msg  %> </p>
+            <% if (locals.mensajeDeError && mensajeDeError.nombre) { %>
+              <p class="error-message"> <%= mensajeDeError.nombre.msg  %> </p>
             <% } %>
 
             <label class="icon-register">
