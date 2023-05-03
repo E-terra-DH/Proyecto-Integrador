@@ -27,15 +27,15 @@ router.post('/register', upload.single('avatar'), validateRegister, userControll
 
 
 //LOGIN
-// router.get('/login',/*middleware*/ userController.login);
-//router.post('/login', userController.processLogin);
+router.get('/login',/*middleware*/ userController.login);
+router.post('/login', userController.processLogin);
 
 
 //PERFIL DE USUARIO
 // router.get('/profile/:idUser', userController.profile);
 
-// router.get('/edit/:idUser', userController.edit);
-// router.put('/edit/:idUser', userController.update);
+router.get('/edit/:idUser', userController.edit);
+//router.put('/edit/:idUser', userController.update);
 
 // router.get('/delete/:idUser', userController.delete);
 // router.delete('/delete/:idUser', userController.destroy);
