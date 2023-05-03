@@ -10,10 +10,12 @@
         <section class="nav-search">
             <ul class="nav-bar">
               <li>
-                <% if (!locals.isLogged) { %>
-                    <a class="label" href="/users/register">Registro</a>
+                <% if (locals.isLogged) { %>
+                    <!-- <a class="label"></a> -->
+                <% } else if (locals.adminLogged) { %>
+                    <!-- <a class="label"></a> -->
                 <% } else { %>
-                    
+                    <a class="label" href="/users/register">Registro</a>
                 <% } %>
               </li>
               <li><a class="label" href="/products/list">Productos</a></li>
@@ -33,14 +35,21 @@
             <div class="icon-user-cart">
                 <% if(locals.isLogged) {%>
                 <li>
-                    <a class="avatar-nav" href="/profile">
+                    <a class="avatar-nav" href="/users/profile">
                         <img class="avatar-img-nav" src="../../../Images/<%= locals.userLogged.avatar %>" alt="">
                         <p class="username-nav"><%= locals.userLogged.usuario %></p>
                     </a>
                 </li>
+                <% } else if (locals.adminLogged) { %>
+                    <li>
+                        <a class="avatar-nav" href="/users/profile">
+                            <img class="avatar-img-nav" src="../../../Images/<%= locals.adminLogged.avatar %>" alt="">
+                            <p class="username-nav"><%= locals.adminLogged.usuario %></p>
+                        </a>
+                    </li>
                 <% } else { %>
                 <li>
-                    <a class="label-icon3" href="/login" class="user"
+                    <a class="label-icon3" href="users/login" class="user"
                     ><i class="icon-header fa-solid fa-user"></i
                     ></a>
                 </li>
@@ -73,6 +82,8 @@
               <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
               <li class="bottom">
                 <% if(locals.isLogged) { %>
+                    <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
+                <% } else if (locals.adminLogged) { %>
                     <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
                 <% } else { %>
                     <a class="label-btm" href="/login"><i class="fa-solid fa-user"></i></a>

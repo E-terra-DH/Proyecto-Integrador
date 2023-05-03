@@ -70,26 +70,21 @@ const controller = {
     //     }
     // },
 
+    profile: (req, res) => {
+
+        res.render('../views/users/userProfile.ejs', {
+             title: 'user profile',
+             user: req.session.userLogged || req.session.admin, // Guardo el user logged en la variable user que llevo a la vista
+        })
+    },
+    
     logout: (req, res) => {
         req.session.destroy();//metodos de cookie-parser
         res.clearCookie('userLogged','adminLogged');//metodos de cookie-parser
         res.clearCookie('adminLogged');//metodos de cookie-parser
         return res.redirect('/');
     },
-    
-    profile: (req, res) => {
-        res.render('../views/users/userProfile', { 
-            title: 'Profile',
-            user: req.session.userLogged // Guardo el user logged en la variable user que llevo a la vista
-        })
-    },
 
-    admin: (req, res) => {
-        res.render('../views/users/userProfile', { 
-            title: 'Profile',
-            user: req.session.admin // Guardo el user logged en la variable user que llevo a la vista
-        })
-    }
 }
 
 module.exports = controller;
