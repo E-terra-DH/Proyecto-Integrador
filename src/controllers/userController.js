@@ -43,6 +43,25 @@ const userController = {
                });
           }
 
+          let userToCreate = await User.findOne({
+               where: {
+                    email: req.body.email,
+               }
+          });
+
+          if (userToCreate) {
+
+               return res.render('./users/register', {
+
+                    errors: {
+                         email: {
+                              msgregistered: 'Este email ya está resgistrado'
+                         }
+                    },
+                    oldBody: req.body
+               });
+          };
+
           let avatar = req.file.filename;
           let newUser = {
                email: req.body.email,

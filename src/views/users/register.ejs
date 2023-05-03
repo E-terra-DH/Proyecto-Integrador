@@ -85,6 +85,10 @@
             <% if (locals.mensajeDeError && mensajeDeError.email) { %>
               <p class="error-message"> <%= mensajeDeError.email.msg  %> </p>
             <% } %>
+            <% if(locals.errors && errors.email) { %>
+              <p class="error-message"> <%= errors.email.msgregistered  %> </p>
+            <% } %>
+
             
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
