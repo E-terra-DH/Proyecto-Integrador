@@ -43,6 +43,25 @@ const userController = {
                });
           }
 
+          let userToCreate = await User.findOne({
+               where: {
+                    email: req.body.email,
+               }
+          });
+
+          if (userToCreate) {
+
+               return res.render('./users/register', {
+
+                    errors: {
+                         email: {
+                              msgregistered: 'Este email ya está resgistrado'
+                         }
+                    },
+                    oldBody: req.body
+               });
+          };
+
           let avatar = req.file.filename;
           let newUser = {
                email: req.body.email,
@@ -115,27 +134,19 @@ const userController = {
                let userToLogin = await User.findOne({
                     where: {
                          email: req.body.email,
-                    },
-                    attributes: [
-                         'id',
-                         'name',
-                         'surname',
-                         'password',
-                         'email',
-                         'avatar',
-                         'user_categories_id',
-                    ]
+                    }
                });
 
                if (!userToLogin) {
 
-                    return res.render('users/login', {
+                    return res.render('auth/login', {
 
-                         error: {
+                         errors: {
                               email: {
                                    msg: 'Email no resgistrado'
                               }
                          },
+                         oldBody: req.body
                     });
                };
 
@@ -143,25 +154,30 @@ const userController = {
 
                if (!confirmPassword) {
 
-                    return res.render('users/login', {
+                    return res.render('auth/login', {
 
-                         error: {
-                              password: {
+                         errors: {
+                              contrasena: {
                                    msg: 'Contaseña incorrecta'
                               }
                          },
                     });
                };
 
-               if (userToLogin.user_categories_id === 2) {
+               if (userToLogin.user_categories_id === 1) {
                     delete userToLogin.dataValues.password;
 
                     req.session.admin = userToLogin.dataValues;
 
-                    return res.redirect('/user/admin');
+                    if (req.body.rememberme) {
+
+                         res.cookie('userCookie', userToLogin.dataValues, { maxage: 1000 * 60 * 60 });
+                    };
+
+                    return res.redirect('/users/profile');
                };
 
-               if (userToLogin.userCategory_id === 1) {
+               if (userToLogin.user_categories_id === 2) {
                     delete userToLogin.dataValues.password;
 
                     req.session.userLogged = userToLogin.dataValues;
@@ -171,13 +187,12 @@ const userController = {
                          res.cookie('userCookie', userToLogin.dataValues, { maxage: 1000 * 60 * 60 });
                     };
 
-                    res.redirect('/profile');
+                    res.redirect('/users/profile');
                };
           } catch (error) {
                res.render('error');
           }
      },
-
 
 
      edit: async (req, res) => {
@@ -259,18 +274,14 @@ const userController = {
 
      // },
 
-     // profile: (req, res) => {
-     //      let userId = req.params.id;
-     //      let user = userController.dataBaseUsers().find(user => user.id == userId);
+     profile: (req, res) => {
 
-
-     //      console.log(user);
-
-     //      res.render('../views/users/userProfile.ejs', {
-     //           title: 'user profile',
-     //       user: user,
-     //      })
-     // }
+          res.render('../views/users/userProfile.ejs', {
+               title: 'user profile',
+               user: req.session.userLogged || req.session.admin, // Guardo el user logged en la variable user que llevo a la vista
+          })
+     }
+     
 };
 
 module.exports = userController

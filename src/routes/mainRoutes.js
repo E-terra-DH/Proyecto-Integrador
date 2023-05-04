@@ -14,10 +14,9 @@ router.get('/', mainController.index);
 router.get('/login', authMdlw, userController.login);
 router.post('/login', authMdlw, userController.processLogin);
 
+router.get('/profile', userController.profile);
 
-router.get('/admin', mainController.admin);
 router.get('/logout', mainController.logout);
-router.get('/:id', guestMdlw, mainController.profile);
 
 
 module.exports = router;

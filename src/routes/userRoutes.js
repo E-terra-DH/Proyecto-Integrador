@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const upload = require('../middlewares/multer');
 const validateRegister = require('../middlewares/validationsRegister');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 // const validateProductInfo = require('../middlewares/validations');
 
@@ -10,20 +11,13 @@ const userController = require('../controllers/userController');
 
 
 /*----------------------------------------Rutas con MYSQL--------------------*/
-router.get('/listado',  userController.indice);
+router.get('/listado', adminMiddleware, userController.indice);
 // router.post('/register',userController.create);
-
-
-
-
 
 
 //REGISTRO
 router.get('/register', userController.register); //Formulario de registro de usuarios
 router.post('/register', upload.single('avatar'), validateRegister, userController.createUser); //Creación de un nuevo usuario
-
-// 
-
 
 
 //LOGIN
@@ -32,7 +26,7 @@ router.post('/login', userController.processLogin);
 
 
 //PERFIL DE USUARIO
-// router.get('/profile/:idUser', userController.profile);
+router.get('/profile', userController.profile);
 
 router.get('/edit/:idUser', userController.edit);
 //router.put('/edit/:idUser', userController.update);
