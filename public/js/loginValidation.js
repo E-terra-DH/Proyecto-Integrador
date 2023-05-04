@@ -1,6 +1,4 @@
-//capturar los elementos
-const form = document.getElementById('form-login');
-//espera que se cargue el dom, el doc con todos los html css etc. 
+const form = document.getElementById('form-login'); 
 document.addEventListener('DOMContentLoaded', login);
 
 //funciones
