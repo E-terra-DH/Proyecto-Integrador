@@ -1,4 +1,4 @@
-/* 
+/*  
 Colores 
 color:#DAD7CD;
 color:#A3B18A;
@@ -85,8 +85,9 @@ p {
 .return {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #344E41; 
-    margin: 25px 0px 0px 10vw;
+    margin: 25px 10vw 0px 10vw;
     font-size: 17px;
 }
 
@@ -133,6 +134,21 @@ p {
   display: inline-block;
   background-color: #588157;
   border: #588157;
+  color: white;
+  font-weight: 500;
+  padding: 7px;
+  margin-top: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  transition-duration: 10ms;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.admin-edit {
+  display: inline-block;
+  background-color: #988AB1;
+  border: #988AB1;
   color: white;
   font-weight: 500;
   padding: 7px;
@@ -259,6 +275,11 @@ h4 {
 .description, .opinion {
     margin-top: 15px;
 }
+
+/* .edit-logout {
+  margin: ;
+
+} */
 
 /* -------------FOOTER------------- */
 

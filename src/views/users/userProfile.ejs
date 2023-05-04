@@ -15,18 +15,26 @@
     <main>
       <div class="return">
         <li><p>Tu perfil</p></li>
+        <div>
+          <a class="Logout" href="/logout">Logout</a>
+          <a class="Logout" href="">Editar perfil</a>
+          <a class="Logout" href="">Eliminar perfil</a>
+        </div>
       </div>
+      <div class="edit-logout">
+
+      </div>
+
       <div class="product">
         <img
           class="user-image"
           src="../../../Images/<%= user.avatar %>"
           alt=""
           style="width:300px; height:300px"
-
         />
         <div class="user-info">
           <div class="name">
-            <h2> <%= user.usuario %> </h2>
+            <h2> <%= user.name + ' ' + user.surname %> </h2>
             <!-- <button class="add">♡ Agregar a favoritos</button> -->
           </div>
 
@@ -39,7 +47,7 @@
           <div class="description">
             <h3>Celular</h3>
             <p>
-              <%= user.cel %>
+              <%= user.phone %>
             </p>
           </div>
           <div class="opinion">
@@ -51,18 +59,21 @@
               laudantium aperiam nisi assumenda iure reiciendis nostrum?
             </p>
           </div>
-          <div>
-            <% if (locals.adminLogged) {%>
-              <a href="/users/index">Editar usuarios</a>
-              <a href="/products/list">Editar productos</a>
-            <% } %>
-          </div>
 
           <div class="social">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-whatsapp"></i>
             <i class="fa-brands fa-instagram"></i>            
-            <a class="Logout" href="/logout">Logout</a>
+          </div>
+
+          <div>
+            <% if (locals.adminLogged) {%>
+              <div class="description">
+                <h3>Funciones de Administrador</h3>
+                <a class="admin-edit" href="/products/list">Editar productos</a>
+                <a class="admin-edit" href="/users/listado">Editar usuarios</a>
+              </div>
+            <% } %>
           </div>
         </div>
       </div>
