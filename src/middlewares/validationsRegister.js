@@ -14,7 +14,7 @@ const validateRegister = [
         .isLength({ max: 35}).withMessage('Máximo puedo tener 20 caracteres').bail(),
 
     body('contrasena')
-        .isLength({ min: 5}).withMessage('Por lo menos necesito 5 caracteres').bail(),
+        .isLength({ min: 8}).withMessage('Por lo menos necesito 8 caracteres').bail(),
 
     body('cel')
         .isInt().withMessage('Tu celular sólo debe contener números').bail()

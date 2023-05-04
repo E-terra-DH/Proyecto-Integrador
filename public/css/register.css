@@ -107,17 +107,21 @@ input {
 }
 
 .register-button {
-  width: 200px;
-  margin-top: 10px;
-  border: #344E41;
-  border-radius: 18px;
-  background-color: #344E41;
-  color: white;
-  padding: 10px;
-  font-size: 16;
-  font-family: roboto;
-  font-size: 16px;
+   width: 200px;
+   margin-top: 10px;
+   border: #344E41;
+   border-radius: 18px;
+   background-color: #344E41;
+   color: white;
+   padding: 10px;
+   font-size: 16;
+   font-family: roboto;
+   font-size: 16px;
+   /* left: 1px; */
+   position: relative;
+   left: 31px;
 }
+
 
 .otros-login{
    margin: 10px 0px;

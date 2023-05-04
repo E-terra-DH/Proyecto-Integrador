@@ -76,33 +76,33 @@
           <!-- <h3 class="form-title2">¡Crea tu cuenta!</h3> -->
           <h1 class="form-title">¡Creá tu cuenta!</h1>
         
-          <form action="./register" method="post" enctype="multipart/form-data"> 
+          <form  action="./register" id="formRegister" method="post" enctype="multipart/form-data"> 
             <!-- action="/users/delete///%= users [i].id %>?_method=DELETE" -->
 
             <label class="icon-register">
               <i class="fa-solid fa-envelope"></i>
-            <input type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" required/></label>
+            <input id="inputEmail" type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" required/></label>
             <% if (locals.mensajeDeError && mensajeDeError.email) { %>
               <p class="error-message"> <%= mensajeDeError.email.msg  %> </p>
             <% } %>
             
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
-            <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.nombre : '' %>"/></label>
+            <input id="name" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.nombre : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.usuario) { %>
               <p class="error-message"> <%= mensajeDeError.usuario.msg  %> </p>
             <% } %>
 
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
-            <input type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldBody ? oldBody.apellido : '' %>"/></label>
+            <input id="apellido" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldBody ? oldBody.apellido : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.apellido) { %>
               <p class="error-message"> <%= mensajeDeError.apellido.msg  %> </p>
             <% } %>
 
             <label class="icon-register">
               <i class="fa-solid fa-lock"></i>
-            <input type="password" name="contrasena" placeholder="Contraseña" value="<%= locals.oldBody ? oldBody.contrasena : '' %>"/></label>
+            <input id="contraseña"type="password" name="contraseña" placeholder="Contraseña" value="<%= locals.oldBody ? oldBody.contrasena : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.contrasena) { %>
               <p class="error-message"> <%= mensajeDeError.contrasena.msg  %> </p>
             <% } %>
@@ -113,7 +113,7 @@
 
             <label class="icon-register">
                 <i class="fa-solid fa-mobile-screen"></i>
-            <input type="cel" name="cel" placeholder="Celular" value="<%= locals.oldBody ? oldBody.cel : '' %>"/></label>
+            <input id= "phone"type="cel" name="cel" placeholder="Celular" value="<%= locals.oldBody ? oldBody.cel : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.cel) { %>
               <p class="error-message"> <%= mensajeDeError.cel.msg  %> </p>
             <% } %>
@@ -122,6 +122,8 @@
             <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar"/></label>
 
             <button class="register-button" type="submit">Crear cuenta</button>
+
+            <p id="errores"></p>
           </form>
         
           <div class="otros-login">
@@ -134,5 +136,8 @@
         </section>
       </div>
     </main>
+    <script src="/js/index.js"
+    type="text/javascript"
+    ></script>
   </body>
 </html>
