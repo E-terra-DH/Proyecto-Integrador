@@ -69,17 +69,22 @@
         <h3 class="form-title2">¡Qué bueno que volviste!</h3>
         <h1 class="form-title">Iniciá sesión aquí...</h1>
 
-        <form action="/login" method="post">
+        <div class="error">
+          <ul>
+            
+          </ul>
+        </div>
+        <form action="./login" id="form-login" method="post">
           <label class="usuario">
             <i class="fa-solid fa-user"></i>
-            <input type="email" name="email" placeholder="E-mail" value="<%= locals.oldBody ? oldBody.email : '' %>"/></label>
+            <input type="email" name="email" placeholder="E-mail" id="email" value="<%= locals.oldBody ? oldBody.email : '' %>"/></label>
             <% if(locals.errors && errors.email) { %>
               <p class="error-message"> <%= errors.email.msg  %> </p>
             <% } %>
 
           <label class="candado">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="contrasena" placeholder="Contraseña"/></label>
+            <input type="password" name="contrasena" placeholder="Contraseña" id="password"></label>
             <% if(locals.errors && errors.contrasena) { %>
               <p class="error-message"> <%= errors.contrasena.msg  %> </p>
             <% } %>
@@ -104,6 +109,7 @@
         <p class="with-love">
           Creado con <i class="fa-solid fa-leaf"></i> por e-Terra Team
         </p>
+        <script src="/public/js/loginValidation.js"></script>
     </section>
     </div>
   </main>
