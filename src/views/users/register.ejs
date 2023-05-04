@@ -81,7 +81,7 @@
 
             <label class="icon-register">
               <i class="fa-solid fa-envelope"></i>
-            <input id="inputEmail" type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" required/></label>
+            <input id="casillaEmail" type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" required/></label>
             <% if (locals.mensajeDeError && mensajeDeError.email) { %>
               <p class="error-message"> <%= mensajeDeError.email.msg  %> </p>
             <% } %>
@@ -92,7 +92,7 @@
             
             <label class="icon-register">
               <i class="fa-solid fa-user"></i>
-            <input type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.nombre : '' %>"/></label>
+            <input id= "name" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.nombre : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.usuario) { %>
               <p class="error-message"> <%= mensajeDeError.usuario.msg  %> </p>
             <% } %>
@@ -125,10 +125,12 @@
             <label class="icon-register">
             <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar"/></label>
 
-            <button class="register-button" type="submit">Crear cuenta</button>
+            <button id="enviar" class="register-button" type="submit">Crear cuenta</button>
 
-            <p id="errores"></p>
-          </form>
+            <div class="errores">
+              <ul></ul>
+            </div>
+          </form> 
         
           <div class="otros-login">
             <div class="registro">¿Ya tenés cuenta? <a class="link-sub" href="/users/login">Iniciá sesión</a></div>
