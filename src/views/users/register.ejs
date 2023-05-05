@@ -106,7 +106,7 @@
 
             <label class="icon-register">
               <i class="fa-solid fa-lock"></i>
-            <input id="contraseña"type="password" name="contraseña" placeholder="Contraseña" value="<%= locals.oldBody ? oldBody.contrasena : '' %>"/></label>
+            <input id="contrasena" type="password" name="contrasena" placeholder="Contraseña" value="<%= locals.oldBody ? oldBody.contrasena : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.contrasena) { %>
               <p class="error-message"> <%= mensajeDeError.contrasena.msg  %> </p>
             <% } %>

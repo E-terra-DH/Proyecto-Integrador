@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
   let email = document.getElementById("casillaEmail");
   let name = document.getElementById("name");
   let lastname = document.getElementById("apellido");
-  let password = document.getElementById("contraseña");
+  let password = document.getElementById("contrasena");
   let phone = document.getElementById("phone");
   let image = document.getElementById("avatar");
   
@@ -61,17 +61,6 @@ window.addEventListener("load", function () {
     }else {
         phone.style.borderBottomColor = "white"
         phone.style.borderLeft = "#344E41 solid 1px"
-    }
-    var expRegImage = /.(gif|jpeg|jpg|png)$/;
-    if (!expRegImage.test(image.value)) {
-      image.style.borderBottom = "#F23E3E solid 3px"
-      image.style.borderLeftColor = "white"
-      errores.push ('Debes seleccionar una imagen')
-     
-     
-    }else{
-        image.style.borderBottomColor = "white"
-        image.style.borderLeft = "#344E41 solid 1px"
     }
 
     if (errores.length >0) {
