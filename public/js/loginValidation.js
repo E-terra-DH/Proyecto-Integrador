@@ -8,17 +8,38 @@ function login(){
 form.email.addEventListener('blur', validarFormulario)
 form.password.addEventListener('blur', validarFormulario)
 
-form.addEventListener('submit', registrarUsuario)
+form.addEventListener('submit', loginUsuario)
 }
-function registrarUsuario(e){
-e.preventDefault();
+function loginUsuario(e){
 
 if (form.email.value == ""){
-    alert("Debes ingresar tu email")
+    ("Debes ingresar tu email")
 }
 
 if (form.password.value == ""){
-    alert("Debes ingresar tu contraseña")
+    ("Debes ingresar tu contraseña")
 }
 
 }
+function validarFormulario(e) {
+    let input = e.target 
+    
+     if (!input.value.length) {
+         input.style.borderBottomColor = 'red';
+         input.style.color = 'red';
+         //como estoy en el elemento llamo al error directo con el mensaje. 
+         mostrarError(input, 'Debe ingresar un valor');
+     } else {
+         input.style.borderBottomColor = 'green';
+         input.style.color = 'black';
+     }
+ }
+
+ let contentError = document.getElementById('error');
+ function mostrarError(input, error) {
+    let errores = []
+    
+        contentError.innerHTML += `
+        <p class='error'>${error}</p>
+        `  
+ }e.preventDefault();
