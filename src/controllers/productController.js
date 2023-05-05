@@ -51,32 +51,32 @@ const productController =
      // },
      category: async (req, res) => {
           try {
-               if(req.params.id==1){
+               if (req.params.id == 1) {
                     let category = await Product.findAll({
-                         where: {products_categories_id : 1}
+                         where: { products_categories_id: 1 }
                     });
                     // let catName = await ProductCategory.findOne({
                     //      where: {products_categories_id : 1}
                     // })
-                    res.render('../views/products/vistaCategory.ejs', {category})
-               } else if (req.params.id==2){
+                    res.render('../views/products/vistaCategory.ejs', { category })
+               } else if (req.params.id == 2) {
                     let category = await Product.findAll({
-                         where: {products_categories_id : 2}
+                         where: { products_categories_id: 2 }
                     });
-                    res.render('../views/products/vistaCategory.ejs', {category})    
-               } else if (req.params.id==3){
+                    res.render('../views/products/vistaCategory.ejs', { category })
+               } else if (req.params.id == 3) {
                     let category = await Product.findAll({
-                         where: {products_categories_id : 3}
+                         where: { products_categories_id: 3 }
                     });
-                    res.render('../views/products/vistaCategory.ejs', {category})    
+                    res.render('../views/products/vistaCategory.ejs', { category })
                } else {
                     let category = await Product.findAll({
-                         where: {products_categories_id : 4}
+                         where: { products_categories_id: 4 }
                     });
-                    res.render('../views/products/vistaCategory.ejs', category)    
+                    res.render('../views/products/vistaCategory.ejs', { category })
                }
           } catch (error) {
-               
+
           }
 
      },
