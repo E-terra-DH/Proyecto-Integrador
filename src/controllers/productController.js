@@ -28,42 +28,73 @@ const productController =
                res.json(error)
           }
      },
-     detalleMysql: async (req, res) => {
-          try {
-               let productsId = await Product.findByPk(req.params.id);
-               //res.json(productsId)
-               res.render('../views/products/mysqlDetail', { productsId })
+     // detalleMysql: async (req, res) => {
+     //      try {
+     //           let productsId = await Product.findByPk(req.params.id);
+     //           //res.json(productsId)
+     //           res.render('../views/products/mysqlDetail', { productsId })
 
-          }
-          catch (error) {
-               res.json(error)
+     //      }
+     //      catch (error) {
+     //           res.json(error)
 
-          }
-     },
-     editmysql: async (req, res) => {
+     //      }
+     // },
+     // editmysql: async (req, res) => {
+     //      try {
+     //           let productsId = await Product.findByPk(req.params.id);
+     //           res.render('../views/products/editMysql', { productsId })
+     //      }
+     //      catch (error) {
+     //           res.json(error)
+     //      }
+     // },
+     category: async (req, res) => {
           try {
-               let productsId = await Product.findByPk(req.params.id);
-               res.render('../views/products/editMysql', { productsId })
-          }
-          catch (error) {
-               res.json(error)
-          }
-     },
-     macetas: async (req, res) => {
-          try {
-               let macetas = await Product.findAll({
-                    attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
-                    where: {
-                         products_categories_id: 2
-                    }
-               })
-               //res.json({macetas})
-               res.render('../views/products/macetas.ejs', { title: 'Listado de macetas', macetas })
+               if(req.params.id==1){
+                    let category = await Product.findAll({
+                         where: {products_categories_id : 1}
+                    });
+                    // let catName = await ProductCategory.findOne({
+                    //      where: {products_categories_id : 1}
+                    // })
+                    res.render('../views/products/vistaCategory.ejs', {category})
+               } else if (req.params.id==2){
+                    let category = await Product.findAll({
+                         where: {products_categories_id : 2}
+                    });
+                    res.render('../views/products/vistaCategory.ejs', {category})    
+               } else if (req.params.id==3){
+                    let category = await Product.findAll({
+                         where: {products_categories_id : 3}
+                    });
+                    res.render('../views/products/vistaCategory.ejs', {category})    
+               } else {
+                    let category = await Product.findAll({
+                         where: {products_categories_id : 4}
+                    });
+                    res.render('../views/products/vistaCategory.ejs', category)    
+               }
           } catch (error) {
-               res.json(error)
+               
           }
 
      },
+     // macetas: async (req, res) => {
+     //      try {
+     //           let macetas = await Product.findAll({
+     //                attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
+     //                where: {
+     //                     products_categories_id: 2
+     //                }
+     //           })
+     //           //res.json({macetas})
+     //           res.render('../views/products/macetas.ejs', { title: 'Listado de macetas', macetas })
+     //      } catch (error) {
+     //           res.json(error)
+     //      }
+
+     // },
      accesorios: async (req, res) => {
           try {
                let accesorios = await Product.findAll({
@@ -80,21 +111,21 @@ const productController =
           }
 
      },
-     sustratos: async (req, res) => {
-          try {
-               let sustratos = await Product.findAll({
-                    attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
-                    where: {
-                         products_categories_id: 4
-                    }
-               })
-               //res.json({macetas})
-               res.render('../views/products/sustratos.ejs', { title: 'Listado de sustratos', sustratos })
-          } catch (error) {
-               res.json(error)
-          }
+     // sustratos: async (req, res) => {
+     //      try {
+     //           let sustratos = await Product.findAll({
+     //                attributes: ['id', 'name', 'description', 'price', 'stock', 'image'],
+     //                where: {
+     //                     products_categories_id: 4
+     //                }
+     //           })
+     //           //res.json({macetas})
+     //           res.render('../views/products/sustratos.ejs', { title: 'Listado de sustratos', sustratos })
+     //      } catch (error) {
+     //           res.json(error)
+     //      }
 
-     },
+     // },
 
 
      /* -----------------------CON LA BASE DE DATOS DE JSON-------------------*/

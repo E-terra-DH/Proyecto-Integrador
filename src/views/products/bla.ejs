@@ -8,8 +8,9 @@
 
   <h3>---> Nuestras plantas disponibles</h3>
 
-  <button class="main-button"><a class="font-color" href="/products/create">Crear nuevo producto</a></button>
-
+  <%  if (locals.adminLogged) { %>
+   <button class="main-button"><a class="font-color" href="/products/create">Crear nuevo producto</a></button>
+  <% } %>
   <ul>
     <% plantasList.forEach(planta => { %>
     <li>

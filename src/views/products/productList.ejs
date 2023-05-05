@@ -17,8 +17,10 @@
         <section class="catalogue">
             <h3 class="cat-titles">Explora todo nuestro catálogo</h3>
 
+            <% if (locals.adminLogged) {%>
             <button class="new-product"><a class="new-p" href="/products/create">Crea un nuevo producto</a></button>
-
+            <% } %>
+            
             <section class="ct-products">
 
                 <% plantasList.forEach(planta => { %>

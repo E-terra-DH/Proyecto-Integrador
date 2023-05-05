@@ -11,13 +11,14 @@ const productController = require('../controllers/productController');
 
 //Creando indice de productos disponibles en la base de datos MySQL
 router.get('/mysqlProducts',productController.listaProductos);
-router.get('/mysqlDetail/:id',productController.detalleMysql);
-router.get('/editmysql/:id',productController.editmysql);
+// router.get('/mysqlDetail/:id',productController.detalleMysql);
+// router.get('/editmysql/:id',productController.editmysql);
 
 // Macetas, Accesorios y Sutratos
-router.get('/macetas', productController.macetas);
-router.get('/accesorios', productController.accesorios);
-router.get('/sustratos', productController.sustratos);
+router.get('/category/:id', productController.category);
+// router.get('/macetas', productController.macetas);
+//router.get('/accesorios', productController.accesorios);
+// router.get('/sustratos', productController.sustratos);
 
 /*-----------------------------------------------------------------------------*/
 
