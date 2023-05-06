@@ -117,7 +117,7 @@
 
             <label class="icon-register">
                 <i class="fa-solid fa-mobile-screen"></i>
-            <input id= "phone"type="cel" name="cel" placeholder="Celular" value="<%= locals.oldBody ? oldBody.cel : '' %>"/></label>
+            <input id="phone"type="cel" name="cel" placeholder="Celular" value="<%= locals.oldBody ? oldBody.cel : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.cel) { %>
               <p class="error-message"> <%= mensajeDeError.cel.msg  %> </p>
             <% } %>
@@ -128,7 +128,7 @@
             <button id="enviar" class="register-button" type="submit">Crear cuenta</button>
 
             <div class="errores">
-              <ul></ul>
+              <ul class="ulErrores"></ul>
             </div>
           </form> 
         
