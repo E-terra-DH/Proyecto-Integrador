@@ -27,13 +27,22 @@ window.addEventListener("load", function () {
   }
   
   if (!categoria.value){
-      categoria.style.borderLeftColor = "white"
+    let checkbox = document.getElementsByName('groupCheckbox[]');
+    let contador = 0;
+    for(var i=0; i< checkbox.length; i++) {
+        if(checkbox[i].checked)
+            contador++
+    }
+    if(contador ==0){
+        categoria.style.borderLeftColor = "white"
         categoria.style.borderBottom = "#F23E3E solid 3px"
         e.preventDefault();
         let errorCategoria = document.getElementById('error-categoria')
         if(!errorCategoria){
             errores.innerHTML += `<p id='error-categoria' La categoría no es valida</p>` 
         }
+}
+     
   } else {
       categoria.style.borderBottomColor = "white"
      categoria.style.borderLeft = "#344E41 solid 1px"
