@@ -69,11 +69,6 @@
         <h3 class="form-title2">¡Qué bueno que volviste!</h3>
         <h1 class="form-title">Iniciá sesión aquí...</h1>
 
-        <div class="error">
-          <ul>
-            
-          </ul>
-        </div>
         <form action="./login" id="form-login" method="post">
           <label class="usuario">
             <i class="fa-solid fa-user"></i>
@@ -84,7 +79,7 @@
 
           <label class="candado">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" name="contrasena" placeholder="Contraseña" id="password"></label>
+            <input type="password" name="contrasena" placeholder="Contraseña" id="contrasena"></label>
             <% if(locals.errors && errors.contrasena) { %>
               <p class="error-message"> <%= errors.contrasena.msg  %> </p>
             <% } %>
@@ -97,6 +92,11 @@
           </label>
 
           <button class="login-button" type="submit"> <a class="inicia-sesion">Iniciar Sesión</a></button>
+        
+          <div class="errorLogin">
+            <ul class="errorList"> 
+            </ul>
+          </div>
         </form>
 
         <div class="otros-login">

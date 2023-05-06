@@ -1,45 +1,44 @@
-//capturar los elementos
+window.addEventListener("DOMContentLoaded", function () {
 const form = document.getElementById('form-login');
-//espera que se cargue el dom, el doc con todos los html css etc. 
-document.addEventListener('DOMContentLoaded', login);
+let email = document.getElementById("email");
+let password = document.getElementById("contrasena");
 
-//funciones
-function login(){
-form.email.addEventListener('blur', validarFormulario)
-form.password.addEventListener('blur', validarFormulario)
-
-form.addEventListener('submit', loginUsuario)
+form.addEventListener('submit', (e) => {
+    let errores = document.querySelector ('.errorLogin .errorList')
+    var expRegEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    if (!expRegEmail.test(email.value)){
+    email.style.borderLeftColor = "white"
+    email.style.borderBottom = "#F23E3E solid 3px"
+    e.preventDefault();
+    let errorEmail = document.getElementById('error-email')
+    if(!errorEmail){
+        errores.innerHTML += `<li id='error-email'> > El email no es valido</li>` 
+    }
+} else {
+    email.style.borderBottomColor = "white"
+    email.style.borderLeft = "#344E41 solid 1px"
+    let errorEmail = document.getElementById('error-email')
+    if (errorEmail) {
+        errorEmail.remove()
+    }
 }
-function loginUsuario(e){
 
-if (form.email.value == ""){
-    ("Debes ingresar tu email")
+if (!password.value){
+    password.style.borderLeftColor = "white"
+      password.style.borderBottom = "#F23E3E solid 3px"
+      e.preventDefault();
+      let errorPassword = document.getElementById('error-password')
+      if(!errorPassword){
+          errores.innerHTML += `<li id='error-password'> > La contraseña no es valida</li>` 
+      }
+} else {
+    password.style.borderBottomColor = "white"
+   password.style.borderLeft = "#344E41 solid 1px"
+   let errorPassword = document.getElementById('error-password')
+   if (errorPassword) {
+       errorPassword.remove()
+   }
 }
 
-if (form.password.value == ""){
-    ("Debes ingresar tu contraseña")
-}
-
-}
-function validarFormulario(e) {
-    let input = e.target 
-    
-     if (!input.value.length) {
-         input.style.borderBottomColor = 'red';
-         input.style.color = 'red';
-         //como estoy en el elemento llamo al error directo con el mensaje. 
-         mostrarError(input, 'Debe ingresar un valor');
-     } else {
-         input.style.borderBottomColor = 'green';
-         input.style.color = 'black';
-     }
- }
-
- let contentError = document.getElementById('error');
- function mostrarError(input, error) {
-    let errores = []
-    
-        contentError.innerHTML += `
-        <p class='error'>${error}</p>
-        `  
- }e.preventDefault();
+    });
+})

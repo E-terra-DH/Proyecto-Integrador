@@ -203,9 +203,6 @@ const userController = {
           res.render('./users/register', {
                title: 'Editando usuarios',
                user
-
-
-
           });
      },
      update: (req, res) => {

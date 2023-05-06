@@ -18,17 +18,17 @@
 
             <h3>Crea un producto nuevo</h3>
 
-            <form action="./create" method="post" enctype="multipart/form-data">
+            <form action="./create" id="form-create-p" method="post" enctype="multipart/form-data">
 
                 <label for="name">Nombre del producto</label>
-                <input class="icon-register" type="text" name="name" value=" <%= locals.oldBody ? oldBody.name : '' %> ">
+                <input class="icon-register" type="text" name="name" id="name" value=" <%= locals.oldBody ? oldBody.name : '' %> ">
                 <% if (locals.mensajeDeError && mensajeDeError.name) { %>
                     <p class="error-message"> <%= mensajeDeError.name.msg  %> </p>
                 <% } %>
 
            
                 <label for="categoria">Tipo de producto</label>
-                <label class="categories" for="categoria">
+                <label class="categories" for="categoria" id="categoria">
                     <input type="radio" name="categoria" value="1" id="Plantas">Plantas
                     <input type="radio" name="categoria" value="2" id="Macetas">Macetas
                     <input type="radio" name="categoria" value="3" id="Accesorios">Accesorios
@@ -39,19 +39,19 @@
              
 
                 <label for="precio">Descripción</label>
-                <textarea class="icon-register" name="descripcion" value=" <%= locals.oldBody ? oldBody.descripcion : '' %> "></textarea>
+                <textarea class="icon-register" name="descripcion" id="descripcion" value=" <%= locals.oldBody ? oldBody.descripcion : '' %> "></textarea>
                 <% if (locals.mensajeDeError && mensajeDeError.descripcion) { %>
                     <p class="error-message"> <%= mensajeDeError.descripcion.msg  %> </p>
                 <% } %>
 
                 <label for="precio">Precio</label>
-                <input class="icon-register" type="number" name="precio" value=" <%= locals.oldBody ? locals.oldBody.precio : '' %> ">
+                <input class="icon-register" type="number" name="precio" id="precio" value=" <%= locals.oldBody ? locals.oldBody.precio : '' %> ">
                 <% if (locals.mensajeDeError && mensajeDeError.precio) { %>
                     <p class="error-message"> <%= mensajeDeError.precio.msg  %> </p>
                 <% } %>
 
                 <label for="cantidad">Cantidad</label>
-                <input class="icon-register" type="number" name="cantidad" value=" <%= locals.oldBody ? locals.oldBody.cantidad : '' %> ">
+                <input class="icon-register" type="number" name="cantidad" id="cantidad" value=" <%= locals.oldBody ? locals.oldBody.cantidad : '' %> ">
                 <% if (locals.mensajeDeError && mensajeDeError.cantidad) { %>
                     <p class="error-message"> <%= mensajeDeError.cantidad.msg  %> </p>
                 <% } %>
@@ -62,11 +62,14 @@
                     <p class="error-message"> <%= mensajeDeError.image.msg  %> </p>
                 <% } %>
 
-                
-
                 <button class="load-button" type="submit">Crear producto</button>
+                
+                <div class="errores">
+                    <ul></ul>
+                  </div>
             </form>
         </div>
+        <script src="/public/js/createProValidation.js"></script>
 
     </main>
 
