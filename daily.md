@@ -101,5 +101,35 @@
 <li>cambios middlewares, categories, user controller de nombre y apellido, cambiando el register para que quede con nombre y apellido</li>
 <li>Arreglo de  las validaciones de register</li>
 
+## Daily sprint 7
 
+# <ul>
+<li>25 de Abril</li>
+<li>Se realizo el retro del sprint 6 para comenzar el sprint 7 </li>
+</ul>
+
+# <ul>
+<li>3 de Mayo</li>
+<li>CRUD en processLogin</li>
+<li>errores de login, middlewares de administrador</li>
+<li>Arreglo del Error email ya registrado</li>
+<li>Correcciones en las validaciones del bakc</li>
+
+# <ul>
+<li>4 de Mayo</li>
+<li>Validaciones login front </li>
+<li>Validaciones register front</li>
+
+# <ul>
+<li>5 de Mayo</li>
+<li>Creacion de archivo para products validation create del front</li>
+<li>Mejoras en las categorias</li>
+<li>cambio en la propiedad del phone</li>
+
+# <ul>
+<li>6 de Mayo</li>
+<li>validacion register final
+</li>
+<li> script sql actualizado</li>
+<li>validacion login chequeado - terminado create products validation front pero sin funcionar</li>
 
