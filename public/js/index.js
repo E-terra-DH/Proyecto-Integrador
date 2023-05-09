@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
       evt.preventDefault()
       let errorEmail = document.getElementById("error-email")
       if(!errorEmail){
-        losErrores.innerHTML += `<li id="error-email"> • El email no es valido </li>`
+        losErrores.innerHTML += `<li id="error-email"> • Formato de email invalido </li>`
         
       }
       
@@ -38,7 +38,7 @@ window.addEventListener("load", function () {
       evt.preventDefault()
       let errorName = document.getElementById("error-name")
       if(!errorName){
-      losErrores.innerHTML += `<li id="error-name"> • El nombre no es valido </li>`
+      losErrores.innerHTML += `<li id="error-name"> • El nombre debe contener al menos 2 caracteres</li>`
     }
     } else {
         name.style.borderBottomColor = "white"
@@ -55,7 +55,7 @@ window.addEventListener("load", function () {
       evt.preventDefault()
       let errorApellido = document.getElementById("error-apellido")
       if(!errorApellido){
-      losErrores.innerHTML += `<li id="error-apellido"> • El apellido no es valido </li>`
+      losErrores.innerHTML += `<li id="error-apellido"> • El apellido debe contener al menos 2 caracteres</li>`
     }
     
     } else {
@@ -72,7 +72,7 @@ window.addEventListener("load", function () {
       evt.preventDefault()
       let errorPassword = document.getElementById("error-password")
       if (!errorPassword) {
-        losErrores.innerHTML += `<li id="error-password"> • La constraseña no es valido </li>`
+        losErrores.innerHTML += `<li id="error-password"> • La contraseña debe contener 8 caracteres </li>`
       }
       
     }else {
