@@ -21,6 +21,7 @@ const userRoutes=require('./routes/userRoutes');
 const deniseRoutes=require('./routes/deniseRoutes');
 const { sequelize } = require('../database/models');
 const Product = require('../database/models/Product');
+const apiProductRoutes = require('./routes/api/apiProductRoutes')
 
 app.set('views', path.resolve(__dirname,'views')); /*para que el path resuelva la ruta para la carpeta views, donde esta ejs*/
 
@@ -49,6 +50,7 @@ app.use('/',mainRoutes);
 app.use('/products',productRoutes);
 app.use('/users', userRoutes); //Ver ruteo de productos
 app.use('/denise', deniseRoutes); 
+//app.use('/products', apiProductRoutes); 
 
 //---error---
 app.use((req, res) => {
