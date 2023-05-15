@@ -50,7 +50,9 @@ app.use('/',mainRoutes);
 app.use('/products',productRoutes);
 app.use('/users', userRoutes); //Ver ruteo de productos
 app.use('/denise', deniseRoutes); 
-//app.use('/products', apiProductRoutes); 
+
+// API routes
+app.use('/api/product', apiProductRoutes);
 
 //---error---
 app.use((req, res) => {
