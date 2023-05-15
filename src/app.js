@@ -21,7 +21,7 @@ const userRoutes=require('./routes/userRoutes');
 const deniseRoutes=require('./routes/deniseRoutes');
 const { sequelize } = require('../database/models');
 const Product = require('../database/models/Product');
-const apiProductRoutes = require('./routes/api/apiProductRoutes')
+const apiProductRoutes = require('./api/routes/apiProductRoutes')
 
 app.set('views', path.resolve(__dirname,'views')); /*para que el path resuelva la ruta para la carpeta views, donde esta ejs*/
 
