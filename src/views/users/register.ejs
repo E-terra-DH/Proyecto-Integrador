@@ -81,7 +81,7 @@
 
             <label class="icon-register">
               <i class="fa-solid fa-envelope"></i>
-            <input id="casillaEmail" type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" required/></label>
+            <input id="casillaEmail" type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" /></label>
             <% if (locals.mensajeDeError && mensajeDeError.email) { %>
               <p class="error-message"> <%= mensajeDeError.email.msg  %> </p>
             <% } %>

@@ -13,43 +13,42 @@
 
     <main>
 
-        <div class="edit-users">
+        <div class="new-product">
 
             <h3>Editando usuario</h3>
 
-            <form method="post" action="/products/edit/<%= user.id %>?_method=PUT">
+            <form method="post" action="/users/edit/<%= user.id %>?_method=PUT">
 
                 <label for="name">Nombre del producto</label>
-                <input class="icon-register" type="text" name="name" value="<%=product.name%>">
+                <input class="icon-register" type="text" name="name" value="<%=user.name%>">
 
-                <label for="categoria">Tipo de producto</label>
-                <label class="categories" for="categoria">
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Planta" ? "selected" : ""%> value="1">Plantas
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Macetas" ? "selected" : ""%> value="2">Macetas
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Accesorios" ? "selected" : ""%> value="3">Accesorios
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Sustratos" ? "selected" : ""%> value="4">Sustratos
-                </label>
+                <label for="Apellido">Apellido</label>
+                <input class="icon-register" type="text" name="surname" value="<%=user.surname%>">
 
+                <label for="email">email</label>
+                <input class="icon-register" type="email" name="email" value="<%=user.email%>">
 
-                <label for="precio">Descripción</label>
-                <textarea class="icon-register" name="descripcion"><%=product.description%></textarea>
+                <label for="contraseña">contraseña</label>
+                <input class="icon-register" type="text" name="password" value="<%=user.password%>">
 
-                <label for="precio">Precio</label>
-                <input class="icon-register" type="price" name="precio" value="<%=product.price%>">
-
-                <label for="cantidad">Cantidad</label>
-                <input class="icon-register" type="number" name="cantidad" value="<%=product.stock%>">
+                <label for="phone">Telefono</label>
+                <input class="icon-register" type="number" name="phone" value="<%=user.phone%>">
 
                 <label for="image">Imagen</label>
-                <input class="icon-register" type="file" name="image" id="image" <%=product.image%>>
+                <input class="icon-register" type="file" name="image" id="image" <%=user.image%>>
 
+                <label for="categoria">Tipo de usuario</label>
+                <label class="categories" for="categoria">
+                    <input type="radio" name="categoria" <%=user.user_categories_id == "Admin" ? "selected" : ""%> value="1">Admin
+                    <input type="radio" name="categoria" <%=user.user_categories_id == "General" ? "selected" : ""%> value="2">General
+            
+                </label>
 
-                <button class="load-button" type="submit">Editar producto</button>
+                <button class="load-button" type="submit">Editar usuario</button>
             </form>
         </div>
 
     </main>
-
 
 </body>
 
