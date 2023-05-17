@@ -28,8 +28,8 @@ router.post('/login', userController.processLogin);
 //PERFIL DE USUARIO
 router.get('/profile', userController.profile);
 
-router.get('/edit/:idUser', userController.edit);
-//router.put('/edit/:idUser', userController.update);
+router.get('/edit', userController.edit);
+router.put('/edit', userController.update);
 
 // router.get('/delete/:idUser', userController.delete);
 // router.delete('/delete/:idUser', userController.destroy);

@@ -195,36 +195,45 @@ const userController = {
      },
 
 
+     // edit: async (req, res) => {
+
+     //      let userId = req.params.id;
+     //      let user = User.findByPk(user => user.id == userId)
+     //      //let user = userController.dataBaseUsers().find(user => user.id == userId);
+     //      res.render('./users/register', {
+     //           title: 'Editando usuarios',
+     //           user
+     //      });
+     // },
+
      edit: async (req, res) => {
 
-          let userId = req.params.id;
-          let user = User.findByPk(user => user.id == userId)
-          //let user = userController.dataBaseUsers().find(user => user.id == userId);
-          res.render('./users/register', {
+          let user = req.session.userLogged || req.session.admin;
+          res.render('../views/users/formularioEditUser', {
                title: 'Editando usuarios',
                user
           });
      },
+
      update: (req, res) => {
           //aca hay que capturar el id. viaja la data de lo que viene del formulario, yo lo recibo. Armamos el registro igual al add.  
           User.update({
                name: req.body.name,
-               avatar: file ? file.filename : 'usuarioDefault.jpg',
+               //avatar: file ? file.filename : 'usuarioDefault.jpg',
                surname: req.body.surname,
                email: req.body.email,
                password: bcrypt.hashSync(req.body.password, 10),
                phone: req.body.phone,
-               userCategories_id: req.body.userCategories_id ? req.body.userCategories_id : '1',
           },
                {
                     where: {
-                         id: req.params.id
+                         email: req.params.email
                     }
                })
                .then(() => {
-                    return res.redirect('/userListMtsql');
+                    return res.redirect('/profile');
                })
-               .catch(error => res.send('error'));
+               // .catch(error => res.send('error'));
      },
 
 
