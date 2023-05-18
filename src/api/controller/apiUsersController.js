@@ -3,18 +3,21 @@ const db = require('../../../database/models');
 const apiUsersController = {
     list: async (req, res) => {
 
-        const users = await db.User.findAll();
+        const users = await db.User.findAll({ attributes: [
+            'id', 'name', 'email' ] });
+            // detail: "http://localhost:3006/api/users/" + {users.id}
+            
         res.json({
             status: 200,
             count: users.length,
-            users: users,
-            
-            // {[
-            //     users.id,
-            //     users.name,
-            //     users.email
-            //     detail: "http://localhost:3006/api/users/" + {users.id}
-            // ]}
+            users: users.map(user => {
+                return{
+                    id: user.id,
+                    name: user.name,
+                    email: user.email,
+                    detail: "http://localhost:3006/api/users/" + user.id
+                }
+            })
         });
     },
 
@@ -26,7 +29,8 @@ const apiUsersController = {
             name: user.name,
             surname: user.surname,
             email: user.email,
-            phone: user.phone
+            phone: user.phone,
+            avatar: "http://localhost:3006/public/Images/" + user.avatar
         })
     }
 }
