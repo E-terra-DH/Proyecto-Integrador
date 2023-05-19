@@ -1,139 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include ("../partials/head.ejs") %> 
+
+<head>
+  <%- include ("../partials/head.ejs") %>
     <title>Productos</title>
     <link rel="stylesheet" href="/css/ProductDetail.css" />
-  </head>
-  <body>
-    <div class="to-fix">
-      <header>
-        <%- include('../partials/header.ejs')  %> 
-      </header>
+</head>
+
+<body>
+  <div class="to-fix">
+    <header>
+      <%- include('../partials/header.ejs') %>
+    </header>
+  </div>
+
+  <main>
+    <div class="return">
+      <li>
+        <a href="/products/list">
+          <p><i class="fa-solid fa-arrow-left"></i> Regresá para ver más productos</p>
+        </a>
+      </li>
+    </div>
+    <div class="product">
+      <img class="product-image" src="/Images/<%= planta.image %>" alt="" style="width:400px; height:400px" />
+      <div class="product-info">
+        <div class="name">
+          <h2>
+            <%= planta.name %>
+          </h2>
+          <button class="add">♡ Agregar a favoritos</button>
+        </div>
+        <div class="cost">
+          <h3 class="price">
+            <%= planta.price %> USD
+          </h3>
+          <div class="select">
+            <p>Cantidad</p>
+            <select class="quantity" name="quantity" id="quantity">
+              Cantidad
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+        </div>
+        <div class="description">
+          <h3>Descripción</h3>
+          <p>
+            <%= planta.description %>
+          </p>
+        </div>
+        <div class="add-delete-edit">
+
+          <!-- <button class="add-cart">Agregar al carrito</button> -->
+          <a class="edit" href="/products/edit/<%= planta.id %>">Editar</a>
+          <a class="delete" href="/products/delete/<%= planta.id %>">Borrar</a>
+          <button id="prueba" class="add-cart">Agregar carrito</button>
+          <!-- <button id="prueba" class="add-cart">Probando</button> -->
+        </div>
+
+        <div class="social">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
     </div>
 
-    <main>
-      <div class="return">
-        <li>
-          <a href="/products/list">
-          <p><i class="fa-solid fa-arrow-left"></i> Regresá para ver más productos</p>
-          </a>
-        </li>
+    <section class="related-products">
+      <h3 class="related-title">Productos relacionados</h3>
+
+      <div class="ltd-products">
+        <article class="product-item">
+          <div class="img-fit">
+            <img class="product-img" src="/Images/product-ave-paraiso.png" alt="" />
+          </div>
+          <div class="product-details">
+            <h2 class="product-description">Ave del paraíso</h2>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <div class="img-fit">
+            <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="" />
+          </div>
+          <div class="product-details">
+            <h2 class="product-description">Philodendron</h2>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <div class="img-fit">
+            <img class="product-img" src="/Images/product-syngonium.png" alt="" />
+          </div>
+          <div class="product-details">
+            <h2 class="product-description">Syngonium</h2>
+          </div>
+        </article>
       </div>
-      <div class="product">
-        <img
-          class="product-image"
-          src="/Images/<%= planta.image %>"
-          alt=""
-          style="width:400px; height:400px"
-        />
-        <div class="product-info">
-          <div class="name">
-            <h2> <%= planta.name %> </h2>
-            <button class="add">♡ Agregar a favoritos</button>
-          </div>
-          <div class="cost">
-            <h3 class="price"><%= planta.price %> USD</h3>
-            <div class="select">
-              <p>Cantidad</p>
-              <select class="quantity" name="quantity" id="quantity">
-                Cantidad
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-              </select>
-            </div>
-          </div>
-          <div class="description">
-            <h3>Descripción</h3>
-            <p>
-              <%= planta.description %>
-            </p>
-          </div>
-          <!-- <div class="opinion">
-            <h3>Opiniones</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Laudantium voluptatibus nemo deserunt rerum reiciendis corporis
-              consequuntur tenetur sequi fuga. Optio vero minima cupiditate
-              laudantium aperiam nisi assumenda iure reiciendis nostrum?
-            </p>
-          </div> -->
-          <div class="add-delete-edit">
-          <button class="add-cart">Agregar al carrito</button>
-          <a class="edit" href="/products/edit/<%= planta.id %>">Editar</a>
-          <a class="delete" href="/products/delete/<%= planta.id %>">Borrar</a></div>
+    </section>
 
-          <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-        </div>
-      </div>
+    <div>
+      <ul class="bottom-nav">
+        <li class="bottom"><a class="label-btm" href="/index"><i class="fa-solid fa-house"></i></a></li>
+        <li class="bottom"><a class="label-btm" href="/register"><i class="fa-solid fa-user"></i></a></li>
+        <li class="bottom"><a class="label-btm" href="products/productList"><i class="fas fa-bars"></i></a></li>
+        <li class="bottom"><a class="label-btm" href="/ProductCart" class="user"><i
+              class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </div>
+  </main>
 
-      <section class="related-products">
-        <h3 class="related-title">Productos relacionados</h3>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+  <script src="/js/carrito.js" type="text/javascript"></script>
+</body>
 
-        <div class="ltd-products">
-          <article class="product-item">
-            <div class="img-fit">
-              <img
-                class="product-img"
-                src="/Images/product-ave-paraiso.png"
-                alt=""
-              />
-            </div>
-            <div class="product-details">
-              <h2 class="product-description">Ave del paraíso</h2>
-            </div>
-          </article>
-
-          <article class="product-item">
-            <div class="img-fit">
-              <img
-                class="product-img"
-                src="/Images/product-philodendron-white-knight.png"
-                alt=""
-              />
-            </div>
-            <div class="product-details">
-              <h2 class="product-description">Philodendron</h2>
-            </div>
-          </article>
-
-          <article class="product-item">
-            <div class="img-fit">
-              <img
-                class="product-img"
-                src="/Images/product-syngonium.png"
-                alt=""
-              />
-            </div>
-            <div class="product-details">
-              <h2 class="product-description">Syngonium</h2>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <div>
-        <ul class="bottom-nav">
-          <li class="bottom"><a class="label-btm" href="/index"><i class="fa-solid fa-house"></i></a></li>
-              <li class="bottom"><a class="label-btm" href="/register"><i class="fa-solid fa-user"></i></a></li>
-              <li class="bottom"><a class="label-btm" href="products/productList"><i class="fas fa-bars"></i></a></li>
-              <li class="bottom"><a class="label-btm" href="/ProductCart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
-      </div>
-    </main>
-
-    <footer>
-      <%- include('../partials/footer.ejs')  %> 
-    </footer>
-    
-  </body>
 </html>
