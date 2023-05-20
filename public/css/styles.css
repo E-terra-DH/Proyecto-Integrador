@@ -3,21 +3,35 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background-color:#E5F7E4 ;
-  font-family:"Roboto";
+body {
+  background-color: #e5f7e4;
+  font-family: "Roboto";
 }
 /* Colores de la pagina  */
-.color{
-  color:#DAD7CD;
-  color:#A3B18A;
-  color:#588157;
-  color:#3A5A40;
-  color:#344E41;
-  color: #F0CA7A;
-  color: #988AB1;
+.color {
+  color: #dad7cd;
+  color: #a3b18a;
+  color: #588157;
+  color: #3a5a40;
+  color: #344e41;
+  color: #f0ca7a;
+  color: #988ab1;
   color: #805781;
 }
 
+/* Centered Image Code */
 
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #588157;
+}
 
+.error {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+
+.prueba {
+  color: #805781;
+}

@@ -2,6 +2,9 @@
 //Variables
 const addProduct = document.querySelector('#prueba');
 document.addEventListener('click', (e) => {
+
+    e.preventDefault();
+
     let btnCart = e.target
     console.log(btnCart);
     if (btnCart.id == "prueba") {
@@ -34,7 +37,7 @@ document.addEventListener('click', (e) => {
 
 
 // function agregando(e) {
-//     e.preventDefault();
+//     
 //     if (e.target.classList.contains('add-cart')) {
 //         const productoSeleccionado = e.target.parentElement.parentElement.parentElement;
 
