@@ -2,34 +2,39 @@ const DB = require('../../../database/models');
 
 const apiProductController = {
 
-     findAll: (req,res) => {
+     findAll: async (req,res) => {
      //uso el modelo que quiero consultar
-         DB.Product
+        const products = await DB.Product
          .findAll({
             atributes: [
                 'id', 'name', 'description']
-        })
-         .then (Product => {
-             return res.json({
-                 total: Product.length, 
-                 data: Product,
-                 id: Product.id,
-                 //status: 200, //si fue satisfactorio el req
-                 detail: "http://localhost:3006/api/product/" + Product.id
+        });
+         res.json ({
+                status: 200,
+                total: products.length, 
+                 data: products.map(product => {
+                    return {
+                        id: product.id,
+                        name: product.name,
+                        description: product.description,
+                        detail: "http://localhost:3006/api/product/" + product.id
+                    }
              })
         })
     
      },
-    show: (req,res) => {
-         DB.Product
+    show: async (req,res) => {
+         const product = await DB.Product
         .findByPk(req.params.id)
-        .then (product => {
-            return res.status(200).json({
-                data: product,
-                status: 200 //si fue satisfactorio el req
-            })
+        res.json({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            description: product.description,
+            image: "http://localhost:3006/Images/" + product.image
         })
-    },
+   
+},
 //     store: (req,res) => {
 //          DB.Movie
 //         .create(req.body)
