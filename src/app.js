@@ -55,11 +55,11 @@ app.use('/api/product', apiProductRoutes);
 app.use('/api/users', apiUsersRoutes);
 
 //---error---
-// app.use((req, res) => {
-//     res.status(404).render('404', {
-//         title: '404'
-//     });
-// })
+app.use((req, res) => {
+    res.status(404).render('404', {
+        title: '404'
+    });
+})
 
 // Esta comentado por que rompe con las imagenes
 

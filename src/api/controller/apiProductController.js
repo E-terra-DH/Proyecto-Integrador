@@ -1,30 +1,35 @@
-const db = require('../../../database/models/Product');
+const DB = require('../../../database/models');
 
-const apiProductController = {}
+const apiProductController = {
 
-//     list: (req,res) => {
-//       //uso el modelo que quiero consultar
-//         DB.Movie
-//         .findAll()
-//         .then (movies => {
-//             return res.status.json({
-//                 total: movies.length, 
-//                 data: movies,
-//                 status: 200 //si fue satisfactorio el req
-//             })
-//         })
+     findAll: (req,res) => {
+     //uso el modelo que quiero consultar
+         DB.Product
+         .findAll({
+            atributes: [
+                'id', 'name', 'description']
+        })
+         .then (Product => {
+             return res.json({
+                 total: Product.length, 
+                 data: Product,
+                 id: Product.id,
+                 //status: 200, //si fue satisfactorio el req
+                 detail: "http://localhost:3006/api/product/" + Product.id
+             })
+        })
     
-//     },
-//     show: (req,res) => {
-//          DB.Movie
-//         .findByPk(req.params.id)
-//         .then (movie => {
-//             return res.status(200).json({
-//                 data: movie,
-//                 status: 200 //si fue satisfactorio el req
-//             })
-//         })
-//     },
+     },
+    show: (req,res) => {
+         DB.Product
+        .findByPk(req.params.id)
+        .then (product => {
+            return res.status(200).json({
+                data: product,
+                status: 200 //si fue satisfactorio el req
+            })
+        })
+    },
 //     store: (req,res) => {
 //          DB.Movie
 //         .create(req.body)
@@ -65,5 +70,6 @@ const apiProductController = {}
 
 //     },
 // }
+         }
 
 module.exports = apiProductController;
