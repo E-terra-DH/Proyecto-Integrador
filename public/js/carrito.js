@@ -3,7 +3,7 @@
 const addProduct = document.querySelector('#prueba');
 document.addEventListener('click', (e) => {
 
-    e.preventDefault();
+    // e.preventDefault();
 
     let btnCart = e.target
     console.log(btnCart);

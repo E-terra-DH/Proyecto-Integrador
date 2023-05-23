@@ -20,18 +20,3 @@ body {
 }
 
 /* Centered Image Code */
-
-h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #588157;
-}
-
-.error {
-  display: flex;
-  justify-content: center;
-  width: 50px;
-}
-
-.prueba {
-  color: #805781;
-}
