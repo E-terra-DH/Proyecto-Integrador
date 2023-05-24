@@ -17,6 +17,7 @@ router.post('/login', authMdlw, userController.processLogin);
 router.get('/profile', userController.profile);
 
 router.get('/logout', mainController.logout);
+// router.get('/public/Images/:name', mainController.public)
 
 
 module.exports = router;

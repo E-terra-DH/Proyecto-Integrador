@@ -15,26 +15,26 @@ const cookieParser = require('cookie-parser'); // Proceso de guardar la cookie c
 const session = require('express-session'); // Proceso de login
 
 
-const mainRoutes=require('./routes/mainRoutes');
-const productRoutes=require('./routes/productRoutes');
-const userRoutes=require('./routes/userRoutes');
+const mainRoutes = require('./routes/mainRoutes');
+const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
 const { sequelize } = require('../database/models');
 const Product = require('../database/models/Product');
 const apiProductRoutes = require('./api/routes/apiProductRoutes');
 const apiUsersRoutes = require('./api/routes/apiUsersRoutes');
 
-app.set('views', path.resolve(__dirname,'views')); /*para que el path resuelva la ruta para la carpeta views, donde esta ejs*/
+app.set('views', path.resolve(__dirname, 'views')); /*para que el path resuelva la ruta para la carpeta views, donde esta ejs*/
 
-app.set('view engine','ejs') /*para ir donde esta ejs*/
+app.set('view engine', 'ejs') /*para ir donde esta ejs*/
 app.use(methodOverride('_method'));
 
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
-    secret:'Clave obligatoria',
-    resave:false,
-    saveUninitialized:true
+    secret: 'Clave obligatoria',
+    resave: false,
+    saveUninitialized: true
     //cookie: {masAge: 120000} //Tiempo de 2 minutos guardando la cookie;
 }
 ));
@@ -49,8 +49,8 @@ app.use(cors({
     origin: '*',
 }))
 
-app.use('/',mainRoutes);
-app.use('/products',productRoutes);
+app.use('/', mainRoutes);
+app.use('/products', productRoutes);
 app.use('/users', userRoutes); //Ver ruteo de productos
 
 // API routes
@@ -63,6 +63,10 @@ app.use((req, res) => {
         title: '404'
     });
 })
+
+// Esta comentado por que rompe con las imagenes
+
+
 // sequelize.authenticate()
 // .then(()=>{
 //      console.log("conect con la base")

@@ -1,30 +1,40 @@
-const db = require('../../../database/models/Product');
+const DB = require('../../../database/models');
 
-const apiProductController = {}
+const apiProductController = {
 
-//     list: (req,res) => {
-//       //uso el modelo que quiero consultar
-//         DB.Movie
-//         .findAll()
-//         .then (movies => {
-//             return res.status.json({
-//                 total: movies.length, 
-//                 data: movies,
-//                 status: 200 //si fue satisfactorio el req
-//             })
-//         })
+     findAll: async (req,res) => {
+     //uso el modelo que quiero consultar
+        const products = await DB.Product
+         .findAll({
+            atributes: [
+                'id', 'name', 'description']
+        });
+         res.json ({
+                status: 200,
+                total: products.length, 
+                 data: products.map(product => {
+                    return {
+                        id: product.id,
+                        name: product.name,
+                        description: product.description,
+                        detail: "http://localhost:3006/api/product/" + product.id
+                    }
+             })
+        })
     
-//     },
-//     show: (req,res) => {
-//          DB.Movie
-//         .findByPk(req.params.id)
-//         .then (movie => {
-//             return res.status(200).json({
-//                 data: movie,
-//                 status: 200 //si fue satisfactorio el req
-//             })
-//         })
-//     },
+     },
+    show: async (req,res) => {
+         const product = await DB.Product
+        .findByPk(req.params.id)
+        res.json({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            description: product.description,
+            image: "http://localhost:3006/Images/" + product.image
+        })
+   
+},
 //     store: (req,res) => {
 //          DB.Movie
 //         .create(req.body)
@@ -65,5 +75,6 @@ const apiProductController = {}
 
 //     },
 // }
+         }
 
 module.exports = apiProductController;

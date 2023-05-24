@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <%- include('../partials/head.ejs')  %> 
-    <title>Catálogo de productos</title>
-    <link rel="stylesheet" href="/css/productList.css">
+    <%- include('../partials/head.ejs') %>
+        <title>Catálogo de productos</title>
+        <link rel="stylesheet" href="/css/productList.css">
 </head>
+
 <body>
     <header>
-        <%- include('../partials/header.ejs')  %> 
+        <%- include('../partials/header.ejs') %>
     </header>
-    
+
     <main>
 
 
-       
+
         <section class="catalogue">
             <h3 class="cat-titles">Explora todo nuestro catálogo</h3>
 
             <% if (locals.adminLogged) {%>
-            <button class="new-product"><a class="new-p" href="/products/create">Crea un nuevo producto</a></button>
-            <% } %>
-            
-            <section class="ct-products">
+                <button class="new-product"><a class="new-p" href="/products/create">Crea un nuevo producto</a></button>
+                <% } %>
 
-                <% plantasList.forEach(planta => { %>
-            
-                <article class="product-item">
-                    <!-- <a href="/products/<%= planta.id %>"><img class="product-img" src="/Images/product-ave-paraiso.png" alt=""></a>  -->
-                    <a href="/products/<%= planta.id %>"><img class="product-img" src="/Images/<%= planta.image %>" alt=""></a> 
-                    <div class="product-info">
-                        <a href="/products/<%= planta.id %>"><h2 class="product-description"><%= planta.name %></h2></a>
-                        <a href="/products/<%= planta.id %>"><p class="price"><%= planta.price %> USD</p></a>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                        <!--Poner condicional solo para administradores-->
-                        <% if (locals.adminLogged) {%>
-                            <a class="item-button" href="/products/edit/<%= planta.id %>">Editar</a>
-                            <a class="item-button" href="/products/delete/<%= planta.id %>">Eliminar</a>
-                        <% } %>
+                    <section class="ct-products">
+
+                        <% plantasList.forEach(planta=> { %>
+
+                            <article class="product-item">
+                                <!-- <a href="/products/<%= planta.id %>"><img class="product-img" src="/Images/product-ave-paraiso.png" alt=""></a>  -->
+                                <a href="/products/<%= planta.id %>"><img class="product-img"
+                                        src="/Images/<%= planta.image %>" alt=""></a>
+                                <div class="product-info">
+                                    <a href="/products/<%= planta.id %>">
+                                        <h2 class="product-description">
+                                            <%= planta.name %>
+                                        </h2>
+                                    </a>
+                                    <a href="/products/<%= planta.id %>">
+                                        <p class="price">
+                                            <%= planta.price %> USD
+                                        </p>
+                                    </a>
+                                    <!-- <button id="prueba" class="funciona">Probando</button> -->
+                                    <button class="add" id="prueba">Agregar <i
+                                            class="fa-solid fa-cart-plus"></i></button>
+                                    <!--Poner condicional solo para administradores-->
+                                    <% if (locals.adminLogged) {%>
+                                        <a class="item-button" href="/products/edit/<%= planta.id %>">Editar</a>
+                                        <a class="item-button" href="/products/delete/<%= planta.id %>">Eliminar</a>
+                                        <% } %>
+                                </div>
+                            </article>
+
+                            <% }) %>
+
+
+
+                    </section>
+
+                    <div>
+                        <ul class="bottom-nav">
+                            <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="bottom"><a class="label-btm" href="../users/register"><i
+                                        class="fa-solid fa-user"></i></a></li>
+                            <li class="bottom"><a class="label-btm" href="list"><i class="fas fa-bars"></i></a></li>
+                            <li class="bottom"><a class="label-btm" href="cart" class="user"><i
+                                        class="fa-solid fa-cart-shopping"></i></a></li>
+                        </ul>
                     </div>
-                </article>
-
-                <% }) %>
-
-                
-            
-            </section>
-
-            <div>
-                <ul class="bottom-nav">
-                  <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
-                      <li class="bottom"><a class="label-btm" href="../users/register"><i class="fa-solid fa-user"></i></a></li>
-                      <li class="bottom"><a class="label-btm" href="list"><i class="fas fa-bars"></i></a></li>
-                      <li class="bottom"><a class="label-btm" href="cart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-              </div>
     </main>
 
     <footer>
-        <%- include('../partials/footer.ejs') %> 
+        <%- include('../partials/footer.ejs') %>
     </footer>
+    <script src="/js/carrito.js" type="text/javascript"></script>
 </body>
+
+
 </html>

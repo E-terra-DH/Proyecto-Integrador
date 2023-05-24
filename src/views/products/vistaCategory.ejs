@@ -41,7 +41,7 @@
                   <%= articulo.price %> USD
                 </p>
               </a>
-              <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+              <button id="prueba" class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
               <!--Poner condicional solo para administradores-->
               <% if (locals.adminLogged) {%>
                 <a class="item-button" href="/products/edit/<%= articulo.id %>">Editar</a>
