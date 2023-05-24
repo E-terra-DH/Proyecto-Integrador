@@ -4,8 +4,8 @@ const app = express();
 const path = require('path');
 const { clearScreenDown } = require('readline');
 const methodOverride = require('method-override');
-const PORT = process.env.PORT || 3006
-;
+const PORT = process.env.PORT || 3006;
+const cors = require('cors');
 
 //Para validar la sesión y gurdar las cookies
 // const userSessionMdlw = require('./middlewares/userSessionMdlw');
@@ -45,6 +45,9 @@ app.use(adminLoggedMiddleware);
 app.use(express.static('public'));
 app.use(express.static('views'));
 
+app.use(cors({
+    origin: '*',
+}))
 
 app.use('/',mainRoutes);
 app.use('/products',productRoutes);
