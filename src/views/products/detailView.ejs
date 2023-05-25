@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+  <%= title %>
+</title>
+<head>
+  <%- include('../partials/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/productList.css">
+</head>
+<body>
+  <header>
+    <%- include('../partials/header.ejs') %>
+  </header>
+
+  <main>
+    <section class="best-sellers">
+        <h3 class="bs-titles">
+        <%= title %>
+      </h3>
+
+      <section class="ct-products">
+        <% bestSellers.forEach(product => { %>
+
+          <article class="bs-product">
+            <a href="../products/productDetail/ product.id %>"><img class="product-img" src="/Images/<%= product.image %>"
+                alt=""></a>
+
+            <div class="product-info">
+              <a href="../products/productDetail/<%= product.id %>">
+                <h2 class="product-description">
+                  <%= product.name %>
+                </h2>
+              </a>
+              <a href="../products/productDetail/<%= product.id %>">
+                <p class="price">
+                  <%= product.price %> USD
+                </p>
+              </a>
+              <div><button id="prueba" class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+              <button onclick="addToCart(this)"
+                      data-id="${product.id}"
+                      data-name="${product.name}"
+                      data-image="${product.image}"
+                      data-price="${product.price}"
+                      > Añadir al carrito 
+                    </button>
+                  </div>
+                    <!--Poner condicional solo para administradores-->
+              <% if (locals.adminLogged) {%>
+                <a class="item-button" href="/products/edit/<%= articulo.id %>">Editar</a>
+                <a class="item-button" href="/products/delete/<%= articulo.id %>">Eliminar</a>
+                <% } %>
+            </div>
+          </article>
+
+          <% }) %>
+      </section>
+      <div>
+        <ul class="bottom-nav">
+          <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
+          <li class="bottom"><a class="label-btm" href="../users/register"><i class="fa-solid fa-user"></i></a></li>
+          <li class="bottom"><a class="label-btm" href="list"><i class="fas fa-bars"></i></a></li>
+          <li class="bottom"><a class="label-btm" href="cart" class="user"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+  </main>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+</body>
+</html>
