@@ -12,7 +12,7 @@ const apiProductController = {
          res.json ({
                 status: 200,
                 total: products.length, 
-                 data: products.map(product => {
+                data: products.map(product => {
                     return {
                         id: product.id,
                         name: product.name,
@@ -23,8 +23,25 @@ const apiProductController = {
         })
     
      },
+
+    cat: async (req, res) => {
+        const cat = await DB.ProductCategory
+        .findAll()
+        res.json({
+            status: 200,
+            total: cat.length,
+        })
+    },
+
+    last: async (req,res) => {
+        //uso el modelo que quiero consultar
+           const products = await DB.Product.findAll();
+           const last = products[products.length -1];
+           res.json(last)
+        },
+
     show: async (req,res) => {
-         const product = await DB.Product
+        const product = await DB.Product
         .findByPk(req.params.id)
         res.json({
             id: product.id,
@@ -34,7 +51,7 @@ const apiProductController = {
             image: "http://localhost:3006/Images/" + product.image
         })
    
-},
+    }
 //     store: (req,res) => {
 //          DB.Movie
 //         .create(req.body)
@@ -75,6 +92,6 @@ const apiProductController = {
 
 //     },
 // }
-         }
+}
 
 module.exports = apiProductController;
