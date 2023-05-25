@@ -24,15 +24,27 @@ const apiProductController = {
     
      },
 
-    cat: async (req, res) => {
-        const cat = await DB.ProductCategory
-        .findAll()
-        res.json({
-            status: 200,
-            total: cat.length,
-        })
-    },
-
+     cat: async (req, res) => {
+        try {
+          const cat = await DB.ProductCategory.findByPk(req.params.id);
+          
+          if (!cat) {
+            return res.status(404).json({ error: 'Category not found' });
+          }
+      
+          const categoryData = {
+            id: cat.id,
+            name: cat.name,
+            detail: `http://localhost:3006/api/product/categories/${cat.id}`
+          };
+          
+          res.json(categoryData);
+        } catch (error) {
+          console.error('Error retrieving category:', error);
+          res.status(500).json({ error: 'Internal server error' });
+        }
+      },
+    
     last: async (req,res) => {
         //uso el modelo que quiero consultar
            const products = await DB.Product.findAll();
