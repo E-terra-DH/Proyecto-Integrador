@@ -37,7 +37,12 @@ const apiProductController = {
         //uso el modelo que quiero consultar
            const products = await DB.Product.findAll();
            const last = products[products.length -1];
-           res.json(last)
+           res.json({
+            id: last.id,
+            name: last.name,
+            description: last.description,
+            image: "http://localhost:3006/Images/" + last.image
+           })
         },
 
     show: async (req,res) => {
