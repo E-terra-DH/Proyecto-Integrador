@@ -1,29 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <%- include('partials/header.ejs') %>
-        <title>Error</title>
-        <link href="../../">
+    <%- include ('../views/partials/head.ejs') %>
+        <title>TERRA</title>
+        <link rel="stylesheet" href="/css/header-partial.css">
+        <link rel="stylesheet" href="/css/404.css">
+
+    <section class="nav-search">
+        <ul class="nav-bar">
+            <li><a class="label" href="/">Home</a></li>
+            <li>
+                <% if (locals.isLogged) { %>
+
+                    <% } else if (locals.adminLogged) { %>
+
+                        <% } else { %>
+                            <a class="label" href="/users/register">Registro</a>
+                            <% } %>
+            </li>
+            <li>
+                <a class="label" href="/products/list">Productos</a>
+            </li>
+        </ul>
+        <div class="form" action="#" method="get">
+            <input class="input" type="text" readonly value="Buscar plantas y productos" />
+            <span class="submit"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="icon-user-cart">
+            <% if(locals.isLogged) {%>
+                <li>
+                    <a class="avatar-nav" href="/profile">
+                        <img class="avatar-img-nav" src="../../../Images/<%= locals.userLogged.avatar %>" alt="">
+                        <p class="username-nav">
+                            <%= locals.userLogged.usuario %>
+                        </p>
+                    </a>
+                </li>
+                <% } else if (locals.adminLogged) { %>
+                    <li>
+                        <a class="avatar-nav" href="/profile">
+                            <img class="avatar-img-nav" src="../../../Images/<%= locals.adminLogged.avatar %>" alt="">
+                            <p class="username-nav">
+                                <%= locals.adminLogged.usuario %>
+                            </p>
+                        </a>
+                    </li>
+                    <% } else { %>
+                        <li>
+                            <a class="label-icon3" href="/login" class="user"><i
+                                    class="icon-header fa-solid fa-user"></i></a>
+                        </li>
+                        <% } %>
+                            <li>
+                                <a class="label-icon3" href="/products/cart" class="cart"><i
+                                        class="icon-header fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </li>
+        </div>
+        </ul>
+
+
+    </section>
+
+    <div>
+        <ul class="bottom-nav">
+            <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
+            <li class="bottom">
+                <% if(locals.isLogged) { %>
+                    <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
+                    <% } else if (locals.adminLogged) { %>
+                        <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
+                        <% } else { %>
+                            <a class="label-btm" href="/login"><i class="fa-solid fa-user"></i></a>
+                            <% } %>
+            </li>
+            <li class="bottom"><a class="label-btm" href="/productList"><i class="fas fa-bars"></i></a></li>
+            <li class="bottom"><a class="label-btm" href="/products/cart" class="user"><i
+                        class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </div>
+    <title>Error</title>
+    <link href="../../">
 </head>
 
 <body>
-
-
     <div class="error">
-
-        <!-- <style>
-            display="flex"  justify-content: center;
-  width: 50px;
-
-           </style>  -->
-
-        <img href="../views/users/index.ejs"
-            src="https://cdn.dribbble.com/users/3038056/screenshots/8112684/media/b4f6a4d8af3c0e89957ea29cf61c6e2c.gif"
-            alt="aca va la imagen">
-
+        <a href="/">
+            <img href="../views/users/index.ejs"
+                src="https://cdn.dribbble.com/users/3038056/screenshots/8112684/media/b4f6a4d8af3c0e89957ea29cf61c6e2c.gif"
+                alt=" imagen de error">
+        </a>
     </div>
 
     <footer>
-
-        <%- include('partials/footer.ejs') %>
+        <%- include('../views/partials/footer.ejs') %>
     </footer>
 
 </body>
