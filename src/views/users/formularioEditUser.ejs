@@ -1,15 +1,16 @@
 <html>
 
 <head>
-    <title>Editando productos</title>
-    <link rel="stylesheet" href="../../../css/formLoad.css">
+    <%- include('../partials/head.ejs') %>
+        <title>Editando usuario</title>
+        <link rel="stylesheet" href="/css/formLoad.css">
 </head>
 
+<body>
 <header>
     <%- include('../partials/header.ejs') %>
 </header>
 
-<body>
 
     <main>
 
@@ -28,20 +29,12 @@
                 <label for="email">email</label>
                 <input class="icon-register" type="email" name="email" value="<%=user.email%>">
 
-                <label for="contraseña">contraseña</label>
-                <input class="icon-register" type="text" name="password" value="<%=user.password%>">
-
                 <label for="phone">Telefono</label>
                 <input class="icon-register" type="number" name="phone" value="<%=user.phone%>">
 
                 <label for="image">Imagen</label>
                 <input class="icon-register" type="file" name="image" id="image" <%=user.image%>>
 
-                <label for="categoria">Tipo de usuario</label>
-                <label class="categories" for="categoria">
-                    <input type="radio" name="categoria" <%=user.user_categories_id == "Admin" ? "selected" : ""%> value="1">Admin
-                    <input type="radio" name="categoria" <%=user.user_categories_id == "General" ? "selected" : ""%> value="2">General
-            
                 </label>
 
                 <button class="load-button" type="submit">Editar usuario</button>
@@ -50,10 +43,8 @@
 
     </main>
 
-</body>
-
 <footer>
     <%- include('../partials/footer.ejs') %>
 </footer>
-
+</body>
 </html>

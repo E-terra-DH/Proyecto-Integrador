@@ -5,21 +5,20 @@ window.addEventListener("load", function () {
     let descripcion = document.getElementById("descripcion");
     let precio = document.getElementById("precio");
     let cantidad = document.getElementById("cantidad");
-    //let image = document.getElementById("");
+    let image = document.getElementById("image");
     
     form.addEventListener('submit', (e) => {
+      var expRegImage = /.(gif|jpeg|jpg|png)$/;
       let errores = document.querySelector ('.errorCreate .erroresList')
-  if (!name.value){
-      name.style.borderLeftColor = "white"
+  if (name.value.length < 5){
       name.style.borderBottom = "#F23E3E solid 3px"
       e.preventDefault();
       let errorName = document.getElementById('error-name')
       if(!errorName){
-          errores.innerHTML += `<p id='error-name' > Ingrese un nombre valido</p>` 
+          errores.innerHTML += `<p id='error-name' > • El nombre debe contener al menos 5 caracteres</p>` 
       }
   } else {
       name.style.borderBottomColor = "white"
-      name.style.borderLeft = "#344E41 solid 1px"
       let errorName = document.getElementById('error-name')
       if (errorName) {
           errorName.remove()
@@ -51,51 +50,71 @@ window.addEventListener("load", function () {
 //          errorCategoria.remove()
 //      }
 //   }
-  if (!descripcion.value){
-    descripcion.style.borderLeftColor = "white"
+  if (descripcion.value.length < 100){
       descripcion.style.borderBottom = "#F23E3E solid 3px"
       e.preventDefault();
       let errorDescripcion = document.getElementById('error-descripcion')
       if(!errorDescripcion){
-          errores.innerHTML += `<p id='error-descripcion' La categoría no es valida</p>` 
+          errores.innerHTML += `<p id='error-descripcion'> • La descripción debe ser mas larga</p>` 
       }
 } else {
     descripcion.style.borderBottomColor = "white"
-   descripcion.style.borderLeft = "#344E41 solid 1px"
    let errorDescripcion = document.getElementById('error-descripcion')
    if (errorDescripcion) {
        errorDescripcion.remove()
    }
-}  if (!precio.value){
-    precio.style.borderLeftColor = "white"
+}  if (precio.value.length < 2){
       precio.style.borderBottom = "#F23E3E solid 3px"
       e.preventDefault();
       let errorPrecio = document.getElementById('error-precio')
       if(!errorPrecio){
-          errores.innerHTML += `<p id='error-precio' El precio no es valido</p>` 
+          errores.innerHTML += `<p id='error-precio'> • El precio no es valido</p>` 
       }
 } else {
-    precio.style.borderBottomColor = "white"
-   precio.style.borderLeft = "#344E41 solid 1px"
-   let errorPrecio = document.getElementById('error-precio')
+    image.style.borderBottomColor = "white"
+   precio.style.borderLeft = "#344E41 solid 1px" 
+  let errorPrecio = document.getElementById('error-precio')
    if (errorPrecio) {
        errorPrecio.remove()
    }
-}  if (!cantidad.value){
-    cantidad.style.borderLeftColor = "white"
+}  if (cantidad.value.length <= 0){
       cantidad.style.borderBottom = "#F23E3E solid 3px"
       e.preventDefault();
       let errorCantidad = document.getElementById('error-cantidad')
       if(!errorCantidad){
-          errores.innerHTML += `<p id='error-categoria' Indique una cantidad</p>` 
+          errores.innerHTML += `<p id='error-cantidad'> • Indique una cantidad</p>` 
       }
 } else {
-    cantidad.style.borderBottomColor = "white"
-   cantidad.style.borderLeft = "#344E41 solid 1px"
+    image.style.borderBottomColor = "white"
    let errorCantidad = document.getElementById('error-cantidad')
    if (errorCantidad) {
        errorCantidad.remove()
    }
 }
-      });
-  })
+if (!expRegImage.test(image.value)) {
+  image.style.borderBottomColor= "red";
+  evt.preventDefault()
+  let errorImage = document.getElementById('error-image')
+  if (!errorImage) {
+    errores.innerHTML += `<p id='error-image'> • Debes seleccionar una imagen </p>`
+}
+}else {
+    image.style.borderBottomColor = "white"
+    image.style.borderLeft = "#344E41 solid 1px"
+     let errorImage = document.getElementById("error-image")
+     if (errorImage) {
+         errorImage.remove()
+        }
+ 
+   }
+})
+
+let estilosInput = document.querySelector(".errorCreate")
+       estilosInput.style.color = "black"
+       estilosInput.style.fontSize = "16px"
+       estilosInput.style.textAlign = "left"
+       estilosInput.style.marginTop = "17px"
+       estilosInput.style.fontWeight = "600"
+    });
+  
+  

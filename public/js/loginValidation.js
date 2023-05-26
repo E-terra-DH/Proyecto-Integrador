@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     let errorEmail = document.getElementById('error-email')
     if(!errorEmail){
-        errores.innerHTML += `<li id='error-email'> > El email no es valido</li>` 
+        errores.innerHTML += `<li id='error-email'> • El email no es valido</li>` 
     }
 } else {
     email.style.borderBottomColor = "white"
@@ -23,13 +23,13 @@ form.addEventListener('submit', (e) => {
     }
 }
 
-if (!password.value){
+if (password.value.length < 8){
     password.style.borderLeftColor = "white"
       password.style.borderBottom = "#F23E3E solid 3px"
       e.preventDefault();
       let errorPassword = document.getElementById('error-password')
       if(!errorPassword){
-          errores.innerHTML += `<li id='error-password'> > La contraseña no es valida</li>` 
+          errores.innerHTML += `<li id='error-password'> • La contraseña no es valida</li>` 
       }
 } else {
     password.style.borderBottomColor = "white"
@@ -39,6 +39,11 @@ if (!password.value){
        errorPassword.remove()
    }
 }
-
+let estilosInput = document.querySelector(".errorLogin")
+       estilosInput.style.color = "black"
+       estilosInput.style.fontSize = "16px"
+       estilosInput.style.textAlign = "left"
+       estilosInput.style.marginTop = "17px"
+       estilosInput.style.fontWeight = "600"
     });
 })

@@ -54,6 +54,7 @@ body{
 form {
    display: flex;
    flex-direction: column;
+   align-items: center;
 }
 
 .fa-solid {
@@ -154,9 +155,11 @@ input {
    color: white;
    font-size: 15px;
    text-decoration: none;
-  display: flex;
-  align-items: stretch;
-  flex-direction: row-reverse;
+   display: flex;
+   align-items: stretch;
+   flex-direction: row-reverse;
+   position: relative;
+   left: 39px;
 
   
 }

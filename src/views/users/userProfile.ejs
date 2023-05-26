@@ -80,10 +80,18 @@
 
       <div>
         <ul class="bottom-nav">
-          <li class="bottom"><a class="label-btm" href="/index"><i class="fa-solid fa-house"></i></a></li>
-              <li class="bottom"><a class="label-btm" href="/register"><i class="fa-solid fa-user"></i></a></li>
-              <li class="bottom"><a class="label-btm" href="products/productList"><i class="fas fa-bars"></i></a></li>
-              <li class="bottom"><a class="label-btm" href="/ProductCart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
+          <li class="bottom">
+            <% if(locals.isLogged) { %>
+              <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
+            <% } else if (locals.adminLogged) { %>
+              <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
+            <% } else { %>
+              <a class="label-btm" href="/login"><i class="fa-solid fa-user"></i></a>
+            <% } %>
+          </li>
+              <li class="bottom"><a class="label-btm" href="/products/list"><i class="fas fa-bars"></i></a></li>
+              <li class="bottom"><a class="label-btm" href="/products/cart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
       </div>
     </main>

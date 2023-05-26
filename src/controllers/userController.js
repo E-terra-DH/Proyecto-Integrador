@@ -158,7 +158,7 @@ const userController = {
 
                          errors: {
                               contrasena: {
-                                   msg: 'Contaseña incorrecta'
+                                   msg: 'Contraseña incorrecta'
                               }
                          },
                     });
