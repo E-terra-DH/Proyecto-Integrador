@@ -87,6 +87,14 @@ input {
    color: #344E41;
    font-family: roboto;
 }
+small{
+   display: inline-block;
+   /* width: 300px; */
+   color: purple;
+   text-align: left;
+   font-style: italic;
+   font-size: 14px;
+}
 
 .login-button {
    width: 200px;

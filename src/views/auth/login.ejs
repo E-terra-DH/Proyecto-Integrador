@@ -76,6 +76,9 @@
             <% if(locals.errors && errors.email) { %>
               <p class="error-message"> <%= errors.email.msg  %> </p>
             <% } %>
+            <div class="col-8 col-lg-10">
+              <small class="emailError"></small>
+            </div>
 
           <label class="candado">
             <i class="fa-solid fa-lock"></i>
@@ -83,7 +86,9 @@
             <% if(locals.errors && errors.contrasena) { %>
               <p class="error-message"> <%= errors.contrasena.msg  %> </p>
             <% } %>
-
+            <div class="col-8 col-lg-10">
+              <small class="passwordError"></small>
+            </div>
           <br>
 
           <label class="remember">
@@ -110,6 +115,7 @@
           Creado con <i class="fa-solid fa-leaf"></i> por e-Terra Team
         </p>
         <script src="/js/loginValidation.js"></script>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     </section>
     </div>
   </main>

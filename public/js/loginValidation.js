@@ -1,49 +1,27 @@
-window.addEventListener("DOMContentLoaded", function () {
-const form = document.getElementById('form-login');
-let email = document.getElementById("email");
-let password = document.getElementById("contrasena");
+let form = document.getElementById("form-login");
+let emailError = this.document.querySelector(".emailError");
+let passwordError = this.document.querySelector(".passwordError");
+window.addEventListener('DOMContentLoaded', contentLoaded)
 
-form.addEventListener('submit', (e) => {
-    let errores = document.querySelector ('.errorLogin .errorList')
-    var expRegEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    if (!expRegEmail.test(email.value)){
-    email.style.borderLeftColor = "white"
-    email.style.borderBottom = "#F23E3E solid 3px"
-    e.preventDefault();
-    let errorEmail = document.getElementById('error-email')
-    if(!errorEmail){
-        errores.innerHTML += `<li id='error-email'> • El email no es valido</li>` 
-    }
-} else {
-    email.style.borderBottomColor = "white"
-    email.style.borderLeft = "#344E41 solid 1px"
-    let errorEmail = document.getElementById('error-email')
-    if (errorEmail) {
-        errorEmail.remove()
-    }
+
+function contentLoaded() {
+  //Add register event
+  form.addEventListener('submit', login);
+
+function login(evt){
+  let errors = {}
+  if(!validator.isEmail(form.email.value)) errors.email = 'El email debe ser válido'
+  if(form.contrasena.value.length < 8) errors.contrasena = 'La contraseña es incorrecta'
+    
+
+  console.log("errors", errors);
+  if (Object.keys(errors).length >= 1) {
+    evt.preventDefault();
+   emailError.innerHTML = (errors.email) ? `<li> ${errors.email} </li>` : '';
+   passwordError.innerHTML = (errors.contrasena) ? `<li> ${errors.contrasena} </li>` : '';
+  } else {
+    form.submit();
+  }
 }
 
-if (password.value.length < 8){
-    password.style.borderLeftColor = "white"
-      password.style.borderBottom = "#F23E3E solid 3px"
-      e.preventDefault();
-      let errorPassword = document.getElementById('error-password')
-      if(!errorPassword){
-          errores.innerHTML += `<li id='error-password'> • La contraseña no es valida</li>` 
-      }
-} else {
-    password.style.borderBottomColor = "white"
-   password.style.borderLeft = "#344E41 solid 1px"
-   let errorPassword = document.getElementById('error-password')
-   if (errorPassword) {
-       errorPassword.remove()
-   }
-}
-let estilosInput = document.querySelector(".errorLogin")
-       estilosInput.style.color = "black"
-       estilosInput.style.fontSize = "16px"
-       estilosInput.style.textAlign = "left"
-       estilosInput.style.marginTop = "17px"
-       estilosInput.style.fontWeight = "600"
-    });
-})
+};
