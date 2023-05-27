@@ -46,7 +46,14 @@ input {
     margin: 10px 0px;
     width: 200px;
 }
-
+small{
+    display: inline-block;
+    /* width: 300px; */
+    color: purple;
+    text-align: left;
+    font-style: italic;
+    font-size: 14px;
+ }
 .categories {
     display: flex;
     flex-direction: raw;

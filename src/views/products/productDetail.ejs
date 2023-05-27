@@ -15,6 +15,9 @@
   </div>
 
   <main>
+
+
+
     <div class="return">
       <li>
         <a href="/products/list">
@@ -57,19 +60,21 @@
         </div>
         <div class="add-delete-edit">
 
-          <!-- <button class="add-cart">Agregar al carrito</button> -->
-          <a class="edit" href="/products/edit/<%= planta.id %>">Editar</a>
-          <a class="delete" href="/products/delete/<%= planta.id %>">Borrar</a>
-          <button id="prueba" class="add-cart">Agregar carrito</button>
-          <!-- <button id="prueba" class="add-cart">Probando</button> -->
-        </div>
+          <% if(locals.adminLogged) { %>
+            <a class="edit" href="/products/edit/<%= planta.id %>">Editar</a>
+            <a class="delete" href="/products/delete/<%= planta.id %>">Borrar</a>
+            <% }%>
+              <button class="add-cart" id="add-cart">Agregar carrito</button>
 
-        <div class="social">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-whatsapp"></i>
-          <i class="fa-brands fa-instagram"></i>
         </div>
       </div>
+
+      <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
     </div>
 
     <section class="related-products">

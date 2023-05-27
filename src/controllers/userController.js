@@ -62,7 +62,8 @@ const userController = {
                });
           };
 
-          let avatar = req.file.filename;
+          // let avatar = req.file.filename;
+          let avatar = req.file? req.file.filename : "userdefault.png";
           let newUser = {
                email: req.body.email,
                name: req.body.nombre || 'sin nombre',
@@ -70,7 +71,7 @@ const userController = {
                password: bcrypt.hashSync(req.body.contrasena, 10),
                phone: req.body.cel || 'sin celular',
                user_categories_id: '2',
-               avatar: avatar || 'usuarioDefault.jpg'
+               avatar: avatar 
           }
 
           await User.create(newUser)
@@ -219,7 +220,7 @@ const userController = {
           //aca hay que capturar el id. viaja la data de lo que viene del formulario, yo lo recibo. Armamos el registro igual al add.  
           User.update({
                name: req.body.name,
-               //avatar: file ? file.filename : 'usuarioDefault.jpg',
+               avatar: req.file? req.file.filename : user.avatar,
                surname: req.body.surname,
                email: req.body.email,
                password: bcrypt.hashSync(req.body.password, 10),
