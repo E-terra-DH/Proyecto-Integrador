@@ -1,62 +1,37 @@
+const contentProducts = document.getElementById('add-cart');
+const addButton = document.getElementById('add-cart');
+const addButtonMobile = document.getElementById('cart-button-mobile');
 
-//Variables
-const addProduct = document.querySelector('#prueba');
-document.addEventListener('click', (e) => {
+document.addEventListener('DOMContentLoaded', () => {
+    addButton.addEventListener('click', (evt) => {
+        addToCart(evt.target);
+    })
+    addButtonMobile.addEventListener('click', (evt) => {
+        addToCart(evt.target);
+    })
+})
 
-    // e.preventDefault();
 
-    let btnCart = e.target
-    console.log(btnCart);
-    if (btnCart.id == "prueba") {
+const renderProduct = (product) => {
+    contentProducts.innerHTML += `
+    <h4>${product.title} </h4>
+    <h5>$${product.price} </h5>
+    <img src="${product.image}" width="150">
+    <button data-id="${product.id}"
+    data-title="${product.title}"
+    data-image="${product.image}"
+    data-price="${product.price}"</button>`
 
 
+}
+
+
+//Funciones
+const addToCart = (btn) => {
+    console.log('prueba que trae', btn);
+    let producto = {
+        id: btn.dataset.id,
+        title: btn.dataset.title,
+        price: btn.dataset.price,
     }
-
-
-});
-
-
-
-
-
-// cargar();
-// function cargar() {
-//     addProduct.addEventListener('click', agregando)
-
-//}
-
-
-// Funciones
-
-
-
-
-
-
-
-
-
-// function agregando(e) {
-//     
-//     if (e.target.classList.contains('add-cart')) {
-//         const productoSeleccionado = e.target.parentElement.parentElement.parentElement;
-
-
-//         leeProducto(productoSeleccionado);
-//     }
-// }
-
-// leeProducto = (producto) => {
-//     //    console.log(producto);
-
-//     //obejeto con el producto seleccionado
-//     const carrito = {
-//         imagen: producto.querySelector('img').src,
-//         nombre: producto.querySelector('h2').textContent,
-//         precio: producto.querySelector('h3.price').textContent,
-//         id: producto.querySelector('a.delete').textContent
-
-//     }
-
-//     console.log(carrito);
-// }
+}
