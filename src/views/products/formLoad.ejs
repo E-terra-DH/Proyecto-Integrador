@@ -28,7 +28,9 @@
                         <%= mensajeDeError.name.msg %>
                     </p>
                     <% } %>
-
+                    <div class="col-8 col-lg-10">
+                        <small class="nameProductError"></small>
+                      </div>
 
                  <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria" id="categoria">
@@ -49,6 +51,9 @@
                                 <%= mensajeDeError.descripcion.msg %>
                             </p>
                             <% } %>
+                            <div class="col-8 col-lg-10">
+                                <small class="descriptionProductError"></small>
+                              </div>
 
                                 <label for="precio">Precio</label>
                                 <input class="icon-register" type="number" name="precio" id="precio"
@@ -58,7 +63,9 @@
                                         <%= mensajeDeError.precio.msg %>
                                     </p>
                                     <% } %>
-
+                                  <div class="col-8 col-lg-10">
+                                    <small class="priceProductError"></small>
+                                  </div>
                                         <label for="cantidad">Cantidad</label>
                                         <input class="icon-register" type="number" name="cantidad" id="cantidad"
                                             value=" <%= locals.oldBody ? locals.oldBody.cantidad : '' %> ">
@@ -66,8 +73,10 @@
                                             <p class="error-message">
                                                 <%= mensajeDeError.cantidad.msg %>
                                             </p>
-                                            <% } %>
-
+                                             <% } %>
+                                             <div class="col-8 col-lg-10">
+                                                <small class="cantidadProductError"></small>
+                                              </div>
                                                 <label for="image">Imagen</label>
                                                 <input class="icon-register" type="file" name="image" id="image"
                                                 >
@@ -76,17 +85,16 @@
                                                         <%= mensajeDeError.image.msg %>
                                                     </p>
                                                     <% } %>
-
+                                                    <div class="col-8 col-lg-10">
+                                                        <small class="imageProductError"></small>
+                                                      </div>
                                                         <button class="load-button" type="submit">Crear
                                                             producto</button>
 
-                                                        <div class="errorCreate">
-                                                            <ul class="erroresList"></ul>
-                                                        </div>
             </form>
         </div>
         <script src="/js/createProValidation.js"></script>
-
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     </main>
 
     <footer>
