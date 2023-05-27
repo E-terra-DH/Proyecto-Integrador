@@ -52,7 +52,12 @@ li {
     color: white;
     padding-top: 8px;
   }
-
+  
+.footer-social-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .social-facebook :hover{
   color: white;
   font-size: 23px;
@@ -73,7 +78,6 @@ li {
   color: white;
   text-align: center;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   list-style: none;
