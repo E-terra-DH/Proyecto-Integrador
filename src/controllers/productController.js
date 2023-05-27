@@ -119,14 +119,14 @@ const productController =
                     oldBody: req.body
                });
           }
-
+let image = req.file ? req.file.filename : "productdefaulttt.jpg";
           let newPlanta = {
                //"id": Date.now(),
                "name": req.body.name || 'sin nombre',
                "description": req.body.descripcion,
                "price": req.body.precio || 'sin precio',
                "stock": req.body.cantidad || 'sin cantidad',
-               "image": req.file.filename || 'sin imagen',
+               "image": image || 'sin imagen',
                "products_categories_id": req.body.categoria,
                "disonible": req.body.disponible
           }
@@ -157,7 +157,7 @@ const productController =
                     "description": req.body.descripcion,
                     "price": req.body.precio,
                     "stock": req.body.cantidad,
-                    //"image": req.file.filename,
+                    "image": req.file ? req.file.filename : Product.image,
                     "products_categories_id": req.body.categoria,
                     "disonible": req.body.disponible
                }, {
