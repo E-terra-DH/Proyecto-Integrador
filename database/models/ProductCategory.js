@@ -10,7 +10,7 @@ module.exports = (sequelize,DataTypes) =>{
             allowNull: false,
             autoIncrement: true,
         },
-        name: {
+        type: {
             type:DataTypes.STRING,
             allowNull: false,
         }, 
@@ -19,7 +19,7 @@ module.exports = (sequelize,DataTypes) =>{
     let config ={
         tablename: "productcategories",
         timestamps: false,
-        underscored: true,
+ //       underscored: true,
     }
     const ProductCategory = sequelize.define(alias, cols,config);
    ProductCategory.associate = function(models){

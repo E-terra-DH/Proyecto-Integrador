@@ -30,6 +30,10 @@ li {
     padding-right: 20px;
     border-right: white 2px solid;
   }
+  .terms :hover{
+    color: white;
+    font-size: 23px;
+  }
   
   .hecho-con-amor {
     /* padding-left: 20px; */
@@ -41,3 +45,42 @@ li {
   .hecho-con-amor i {
     color: white;
   }
+  h4 {
+    text-align: center;
+    font-size: 12px;
+    font-weight: lighter;
+    color: white;
+    padding-top: 8px;
+  }
+
+.social-facebook :hover{
+  color: white;
+  font-size: 23px;
+}
+.social-instagram :hover{
+  color: white;
+  font-size: 23px;
+}
+.social-twiter :hover{
+  color: white;
+  font-size: 23px;
+}
+
+.icon-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.icon-container:hover {
+  background-color: #A3B18A;;
+}
+
+

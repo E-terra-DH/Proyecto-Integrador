@@ -26,22 +26,26 @@ const apiProductController = {
 
      cat: async (req, res) => {
         try {
-          const cat = await DB.ProductCategory.findByPk(req.params.id);
-          
+          const cat = await DB.ProductCategory.findAll({
+            include:[{
+              association:"products"
+            }]
+          }
+          )
+
           if (!cat) {
             return res.status(404).json({ error: 'Category not found' });
           }
       
           const categoryData = {
-            id: cat.id,
-            name: cat.name,
-            detail: `http://localhost:3006/api/product/categories/${cat.id}`
+            status: 200,
+            data: cat
           };
           
           res.json(categoryData);
         } catch (error) {
           console.error('Error retrieving category:', error);
-          res.status(500).json({ error: 'Internal server error' });
+          res.status(500).json({ error });
         }
       },
     
