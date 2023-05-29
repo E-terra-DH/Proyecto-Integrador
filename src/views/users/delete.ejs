@@ -2,7 +2,7 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-        <title>Editando usuario</title>
+        <title>Eliminando usuario</title>
         <link rel="stylesheet" href="/css/formLoad.css">
 </head>
 
@@ -16,14 +16,14 @@
 
         <div class="new-product">
 
-            <h3>Editando usuario</h3>
+            <h3>Eliminando usuario</h3>
 
-            <form method="post" action="/users/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
+            <form method="post" action="/users/edit?_method=PUT">
 
                 <label for="name">Nombre del usuario</label>
                 <input class="icon-register" type="text" name="name" value="<%=user.name%>">
 
-                <label for="surname">Apellido</label>
+                <label for="Apellido">Apellido</label>
                 <input class="icon-register" type="text" name="surname" value="<%=user.surname%>">
 
                 <label for="email">email</label>
@@ -32,12 +32,12 @@
                 <label for="phone">Telefono</label>
                 <input class="icon-register" type="number" name="phone" value="<%=user.phone%>">
 
-                <label for="avatar">Imagen</label>
-                <input class="icon-register" type="file" name="avatar" id="image" <%=user.avatar%>>
+                <label for="image">Imagen</label>
+                <input class="icon-register" type="file" name="image" id="image" <%=user.image%>>
 
                 </label>
 
-                <button class="load-button" type="submit">Editar usuario</button>
+                <button class="load-button" type="submit">Eliminar usuario</button>
             </form>
         </div>
 

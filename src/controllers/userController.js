@@ -63,7 +63,7 @@ const userController = {
           };
 
           // let avatar = req.file.filename;
-          let avatar = req.file? req.file.filename : "userdefault.png";
+          let avatar = req.file ? req.file.filename : "userdefault.png";
           let newUser = {
                email: req.body.email,
                name: req.body.nombre || 'sin nombre',
@@ -71,7 +71,7 @@ const userController = {
                password: bcrypt.hashSync(req.body.contrasena, 10),
                phone: req.body.cel || 'sin celular',
                user_categories_id: '2',
-               avatar: avatar 
+               avatar: avatar
           }
 
           await User.create(newUser)
@@ -116,9 +116,9 @@ const userController = {
 
      login: (req, res) => {
           res.render('./auth/login', {
-              title: 'login'
+               title: 'login'
           });
-      },
+     },
 
      processLogin: async (req, res) => {
           const error = validationResult(req);
@@ -134,7 +134,7 @@ const userController = {
 
                let userToLogin = await User.findOne({
                     where: {
-                         email: req.body.email,
+                         email: req.body.email
                     }
                });
 
@@ -175,7 +175,7 @@ const userController = {
                          res.cookie('userCookie', userToLogin.dataValues, { maxage: 1000 * 60 * 60 });
                     };
 
-                    return res.redirect('/users/profile');
+                    return res.redirect('/users/profile/' + userToLogin.id);
                };
 
                if (userToLogin.user_categories_id === 2) {
@@ -188,7 +188,7 @@ const userController = {
                          res.cookie('userCookie', userToLogin.dataValues, { maxage: 1000 * 60 * 60 });
                     };
 
-                    res.redirect('/users/profile');
+                    res.redirect('/users/profile/' + userToLogin.id);
                };
           } catch (error) {
                res.render('error');
@@ -196,99 +196,101 @@ const userController = {
      },
 
 
-     // edit: async (req, res) => {
-
-     //      let userId = req.params.id;
-     //      let user = User.findByPk(user => user.id == userId)
-     //      //let user = userController.dataBaseUsers().find(user => user.id == userId);
-     //      res.render('./users/register', {
-     //           title: 'Editando usuarios',
-     //           user
-     //      });
-     // },
-
      edit: async (req, res) => {
+          try {
+               const user = await User.findByPk(req.params.id);
+               res.render("../views/users/formularioEditUser", {
+                    title: "Mi User",
+                    user
 
-          let user = req.session.userLogged || req.session.admin;
-          res.render('../views/users/formularioEditUser', {
-               title: 'Editando usuarios',
-               user
-          });
-     },
-
-     update: (req, res) => {
-          //aca hay que capturar el id. viaja la data de lo que viene del formulario, yo lo recibo. Armamos el registro igual al add.  
-          User.update({
-               name: req.body.name,
-               avatar: req.file? req.file.filename : user.avatar,
-               surname: req.body.surname,
-               email: req.body.email,
-               password: bcrypt.hashSync(req.body.password, 10),
-               phone: req.body.phone,
-          },
-               {
-                    where: {
-                         email: req.params.email
-                    }
-               })
-               .then(() => {
-                    return res.redirect('/profile');
-               })
-               // .catch(error => res.send('error'));
+               });
+          } catch (error) {
+               res.send(error)
+          }
      },
 
 
-     //async (req, res) => {
-     //      let userId = req.params.id;
-     //      let user = User.findAll();
+     update: async (req, res) => {
+          try {
+               const user = await User.findByPk(req.params.id);
+               // return res.json({ user })
 
-     //      user.forEach((user, index) => {
-     //           if (user.id == userId) {
-     //                user.nombre = req.body.name;
-     //                user.apellido = req.body.apellido;
-     //                user.email = req.body.email;
-     //                user.contraseña = req.body.contraseña;
-     //                user.tipo = req.body.tipo;
-     //                user.avatar = req.file.filename;
+               await User.update(
+                    {
+                         name: req.body.name,
+                         surname: req.body.surname,
+                         email: req.body.email,
+                         phone: req.body.phone,
+                         avatar: req.file ? req.file.filename : "userdefault.png",
 
-     //                user[index] = user;
-     //           }
-     //      })
-
-     //fs.writeFileSync(usersPath, JSON.stringify(user, null, ' '));
+                    },
 
 
+                    {
+                         where: { id: req.params.id }
+                    })
+               console.log('mostrando el body', req.body)
+               return res.redirect('/users/profile/' + req.params.id);
 
-     // delete: (req, res) => {
-     //      let userId = req.params.id;
-     //      let user = userController.dataBaseUsers().find(user => user.id == userId);
+               //"http://localhost:3006/users/edit/11"
+          } catch (error) {
+               res.json(error)
+          }
 
-     //      res.render('products/delete', {
-     //           title: 'Eliminando usuario',
-     //           user
-     //      });
 
-     // },
-     // destroy: (req, res) => {
-     //      let userId = req.params.id;
-     //      let user = userController.dataBaseUsers();
+     },
 
-     //      newUser = user.filter(user => user.id != userId);
 
-     //      fs.writeFileSync(usersPath, JSON.stringify(newUser, null, ' '));
 
-     //      res.redirect('/users/index');
+     delete: async (req, res) => {
+          try {
+               const user = await User.findByPk(req.params.id);
+               res.render("../views/users/delete", {
+                    title: "Borrar usuario",
+                    user: user
+               });
+          } catch (error) {
+               res.send(error)
+          }
+     },
 
-     // },
-
-     profile: (req, res) => {
-
-          res.render('../views/users/userProfile.ejs', {
-               title: 'user profile',
-               user: req.session.userLogged || req.session.admin, // Guardo el user logged en la variable user que llevo a la vista
+     destroy: (req, res) => {
+          User.destroy({
+               where: { id: req.params.id }
           })
+               .then(() => {
+                    return res.redirect('/users');
+               })
+               .catch(error => {
+                    res.send(error);
+               });
+     },
+
+     profile: async (req, res) => {
+          try {
+
+               let profile = await User.findByPk(req.params.id)
+
+               res.render("../views/users/userProfile.ejs", {
+                    title: "Profile",
+                    user: profile
+               })
+
+          } catch (error) {
+               res.json(error)
+          }
+
+
+
+
+          // let profile = req.session.userLogged || req.session.admin;
+
+          // res.render("../views/users/userProfile.ejs", {
+          //      title: "Profile",
+          //      user: profile
+          // });
      }
-     
+
 };
 
 module.exports = userController

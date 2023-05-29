@@ -1,104 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include ("../partials/head.ejs") %> 
+
+<head>
+  <%- include ("../partials/head.ejs") %>
     <title>Productos</title>
     <link rel="stylesheet" href="/css/ProductDetail.css" />
-  </head>
-  <body>
-    <div class="to-fix">
-      <header>
-        <%- include('../partials/header.ejs')  %> 
-      </header>
+</head>
+
+<body>
+  <div class="to-fix">
+    <header>
+      <%- include('../partials/header.ejs') %>
+    </header>
+  </div>
+
+  <main>
+    <div class="return">
+      <li>
+        <p>Tu perfil</p>
+      </li>
+      <div>
+        <a class="Logout" href="/logout">Logout</a>
+        <a class="Logout" href="/users/edit/<%= user.id %>">Editar perfil</a>
+        <a class="Logout" href="/users/delete/<%= user.id %>">Eliminar perfil</a>
+      </div>
+    </div>
+    <div class="edit-logout">
+
     </div>
 
-    <main>
-      <div class="return">
-        <li><p>Tu perfil</p></li>
+    <div class="product">
+      <img class="user-image" src="../../../Images/<%= user.avatar %>" alt="" style="width:300px; height:300px" />
+      <div class="user-info">
+        <div class="name">
+          <h2>
+            <%= user.name + ' ' + user.surname %>
+          </h2>
+          <!-- <button class="add">♡ Agregar a favoritos</button> -->
+        </div>
+
+        <div class="description">
+          <h3>Correo</h3>
+          <p>
+            <%= user.email %>
+          </p>
+        </div>
+        <div class="description">
+          <h3>Celular</h3>
+          <p>
+            <%= user.phone %>
+          </p>
+        </div>
+        <!-- <div class="opinion">
+          <h3>Bio</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Laudantium voluptatibus nemo deserunt rerum reiciendis corporis
+            consequuntur tenetur sequi fuga. Optio vero minima cupiditate
+            laudantium aperiam nisi assumenda iure reiciendis nostrum?
+          </p>
+        </div> -->
+
+        <div class="social">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+
         <div>
-          <a class="Logout" href="/logout">Logout</a>
-          <a class="Logout" href="/users/edit">Editar perfil</a>
-          <a class="Logout" href="">Eliminar perfil</a>
-        </div>
-      </div>
-      <div class="edit-logout">
-
-      </div>
-
-      <div class="product">
-        <img
-          class="user-image"
-          src="../../../Images/<%= user.avatar %>"
-          alt=""
-          style="width:300px; height:300px"
-        />
-        <div class="user-info">
-          <div class="name">
-            <h2> <%= user.name + ' ' + user.surname %> </h2>
-            <!-- <button class="add">♡ Agregar a favoritos</button> -->
-          </div>
-
-          <div class="description">
-            <h3>Correo</h3>
-            <p>
-              <%= user.email %>
-            </p>
-          </div>
-          <div class="description">
-            <h3>Celular</h3>
-            <p>
-              <%= user.phone %>
-            </p>
-          </div>
-          <div class="opinion">
-            <h3>Bio</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Laudantium voluptatibus nemo deserunt rerum reiciendis corporis
-              consequuntur tenetur sequi fuga. Optio vero minima cupiditate
-              laudantium aperiam nisi assumenda iure reiciendis nostrum?
-            </p>
-          </div>
-
-          <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-instagram"></i>            
-          </div>
-
-          <div>
-            <% if (locals.adminLogged) {%>
-              <div class="description">
-                <h3>Funciones de Administrador</h3>
-                <a class="admin-edit" href="/products/list">Editar productos</a>
-                <a class="admin-edit" href="/users/listado">Editar usuarios</a>
-              </div>
+          <% if (locals.adminLogged) {%>
+            <div class="description">
+              <h3>Funciones de Administrador</h3>
+              <a class="admin-edit" href="/products/list">Editar productos</a>
+              <a class="admin-edit" href="/users/listado">Editar usuarios</a>
+            </div>
             <% } %>
-          </div>
         </div>
       </div>
+    </div>
 
-      <div>
-        <ul class="bottom-nav">
-          <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
-          <li class="bottom">
-            <% if(locals.isLogged) { %>
-              <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
+    <div>
+      <ul class="bottom-nav">
+        <li class="bottom"><a class="label-btm" href="/"><i class="fa-solid fa-house"></i></a></li>
+        <li class="bottom">
+          <% if(locals.isLogged) { %>
+            <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
             <% } else if (locals.adminLogged) { %>
               <a class="label-btm" href="/profile"><i class="fa-solid fa-user"></i></a>
-            <% } else { %>
-              <a class="label-btm" href="/login"><i class="fa-solid fa-user"></i></a>
-            <% } %>
-          </li>
-              <li class="bottom"><a class="label-btm" href="/products/list"><i class="fas fa-bars"></i></a></li>
-              <li class="bottom"><a class="label-btm" href="/products/cart" class="user"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
-      </div>
-    </main>
+              <% } else { %>
+                <a class="label-btm" href="/login"><i class="fa-solid fa-user"></i></a>
+                <% } %>
+        </li>
+        <li class="bottom"><a class="label-btm" href="/products/list"><i class="fas fa-bars"></i></a></li>
+        <li class="bottom"><a class="label-btm" href="/products/cart" class="user"><i
+              class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </div>
+  </main>
 
-    <footer>
-      <%- include('../partials/footer.ejs')  %> 
-    </footer>
-    
-  </body>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
+
+</body>
+
 </html>

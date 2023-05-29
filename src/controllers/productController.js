@@ -98,7 +98,12 @@ const productController =
      productDetail: async (req, res) => {
           try {
                let planta = await Product.findByPk(req.params.id)
-               res.render('./products/productDetail', { planta })
+               if (planta) {
+                    res.render('./products/productDetail', { planta })
+
+               } else { res.render('404') }
+
+
           } catch (error) {
                res.json(error)
           }
@@ -119,7 +124,7 @@ const productController =
                     oldBody: req.body
                });
           }
-let image = req.file ? req.file.filename : "productdefaulttt.jpg";
+          let image = req.file ? req.file.filename : "productdefaulttt.jpg";
           let newPlanta = {
                //"id": Date.now(),
                "name": req.body.name || 'sin nombre',

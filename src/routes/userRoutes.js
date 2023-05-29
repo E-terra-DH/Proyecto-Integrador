@@ -26,13 +26,14 @@ router.post('/login', userController.processLogin);
 
 
 //PERFIL DE USUARIO
-router.get('/profile', userController.profile);
 
-router.get('/edit', userController.edit);
-router.put('/edit', userController.update);
+router.get('/profile/:id', userController.profile);
 
-// router.get('/delete/:idUser', userController.delete);
-// router.delete('/delete/:idUser', userController.destroy);
+router.get('/edit/:id', userController.edit);
+router.put('/edit/:id', upload.single('avatar'), userController.update);
+
+router.get('/delete/:id', userController.delete);
+router.delete('/delete/:id', userController.destroy);
 
 //router.get('/:id', userController.profile); //Detalle de usuario
 
