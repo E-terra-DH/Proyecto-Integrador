@@ -4,6 +4,7 @@ const path = require('path');
 const upload = require('../middlewares/multer');
 const validateRegister = require('../middlewares/validationsRegister');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const nuevoMiddleware = require('../middlewares/nuevoMiddleware');
 
 // const validateProductInfo = require('../middlewares/validations');
 
