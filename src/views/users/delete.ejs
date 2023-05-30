@@ -26,14 +26,7 @@
                 <label for="Apellido">Apellido</label>
                 <input class="icon-register" type="text" name="surname" value="<%=user.surname%>">
 
-                <label for="email">email</label>
-                <input class="icon-register" type="email" name="email" value="<%=user.email%>">
 
-                <label for="phone">Telefono</label>
-                <input class="icon-register" type="number" name="phone" value="<%=user.phone%>">
-
-                <label for="image">Imagen</label>
-                <input class="icon-register" type="file" name="image" id="image" <%=user.image%>>
 
                 </label>
 
@@ -46,6 +39,8 @@
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/alert.js"></script>
 </body>
 
 </html>
