@@ -18,7 +18,7 @@
 
             <h3>Eliminando usuario</h3>
 
-            <form method="post" action="/users/edit?_method=PUT">
+            <form method="post" action="/users/delete/<%= user.id %>?_method=DELETE">
 
                 <label for="name">Nombre del usuario</label>
                 <input class="icon-register" type="text" name="name" value="<%=user.name%>">

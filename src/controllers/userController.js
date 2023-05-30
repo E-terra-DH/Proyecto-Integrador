@@ -229,10 +229,10 @@ const userController = {
                     {
                          where: { id: req.params.id }
                     })
-               console.log('mostrando el body', req.body)
+
                return res.redirect('/users/profile/' + req.params.id);
 
-               //"http://localhost:3006/users/edit/11"
+
           } catch (error) {
                res.json(error)
           }
@@ -254,16 +254,27 @@ const userController = {
           }
      },
 
-     destroy: (req, res) => {
-          User.destroy({
-               where: { id: req.params.id }
-          })
-               .then(() => {
-                    return res.redirect('/users');
-               })
-               .catch(error => {
-                    res.send(error);
+
+
+
+
+     destroy: async (req, res) => {
+          try {
+               const user = await User.destroy({
+                    where: { id: req.params.id }
+
                });
+
+               return res.redirect('/users/listado')
+
+          }
+          catch (error) {
+               res.send(error);
+          }
+
+
+
+
      },
 
      profile: async (req, res) => {
