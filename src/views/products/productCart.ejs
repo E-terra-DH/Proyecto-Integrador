@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include ("../partials/head") %>
+
+<head>
+  <%- include ("../partials/head") %>
     <title>Shopping Cart e-Terra</title>
     <link rel="stylesheet" href="/css/ProductCart.css" />
-  </head>
-  <script
-    src="https://kit.fontawesome.com/2ba480a08c.js"
-    crossorigin="anonymous"
-  ></script>
+</head>
+<script src="https://kit.fontawesome.com/2ba480a08c.js" crossorigin="anonymous"></script>
 
-  <body>
-    <div class="to-fix">
-      <header>
-        <%- include('../partials/header.ejs')  %> 
-      </header>
+<body>
+  <div class="to-fix">
+    <header>
+      <%- include('../partials/header.ejs') %>
+    </header>
+  </div>
+
+  <main>
+    <div id="prueba">
+
+
     </div>
 
-    <main>
+
+
+    <div>
+
       <section>
         <p class="next">Tus próximas compras</p>
         <div class="product titular">
@@ -32,11 +39,7 @@
         <div class="product">
           <div class="product-info">
             <div class="product-description">
-              <img
-                class="product-image"
-                src="/Images/product-begonia-maculata.png"
-                alt=""
-              />
+              <img class="product-image" src="/Images/product-begonia-maculata.png" alt="" />
               <p>Begonia maculata</p>
             </div>
           </div>
@@ -52,11 +55,7 @@
         <div class="product">
           <li class="product-info">
             <div class="product-description">
-              <img
-                class="product-image"
-                src="/Images/product-syngonium.png"
-                alt=""
-              />
+              <img class="product-image" src="/Images/product-syngonium.png" alt="" />
               <p>Syngonium</p>
             </div>
           </li>
@@ -73,15 +72,20 @@
       <section class="to-pay">
         <div>
           <span class="total">Total:</span>
-          <span class="total">$2000</span>
+          <span class="total">$2400</span>
         </div>
         <div><button class="pay">Ir a pagar</button></div>
-        <!-- </div>
-      </li> -->
+
       </section>
-    </main>
-<footer>
+    </div>
+
+
+  </main>
+  <footer>
     <%- include ("../partials/footer.ejs") %>
-  </footer>  
-  </body>
+  </footer>
+  <script src="/js/caja.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+
 </html>
