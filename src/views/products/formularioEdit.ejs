@@ -21,7 +21,8 @@
 
             <h3>Editando producto</h3>
 
-            <form method="post" id="form-create-p" action="/products/edit/<%= product.id %>?_method=PUT">
+            <form method="post" id="form-create-p" action="/products/edit/<%= product.id %>?_method=PUT"
+                enctype="multipart/form-data">
 
                 <label for="name">Nombre del producto</label>
                 <input class="icon-register" type="text" name="name" value="<%=product.name%>">
@@ -30,10 +31,14 @@
                   </div>
                 <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria">
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Planta" ? "selected" : ""%> value="1">Plantas
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Macetas" ? "selected" : ""%> value="2">Macetas
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Accesorios" ? "selected" : ""%> value="3">Accesorios
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Sustratos" ? "selected" : ""%> value="4">Sustratos
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Planta" ? "selected" : ""
+                        %> value="1">Plantas
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Macetas" ? "selected" : ""
+                        %> value="2">Macetas
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Accesorios" ? "selected"
+                        : "" %> value="3">Accesorios
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Sustratos" ? "selected"
+                        : "" %> value="4">Sustratos
                 </label>
 
 
@@ -43,15 +48,13 @@
                     <small class="descriptionProductError"></small>
                   </div>
                 <label for="precio">Precio</label>
-                <input class="icon-register" type="price"  id="precio" name="precio" value="<%=product.price%>">
+                <input class="icon-register" type="price" id="precio" name="precio" value="<%=product.price%>">
                 <div class="col-8 col-lg-10">
                     <small class="priceProductError"></small>
                   </div>
                 <label for="cantidad">Cantidad</label>
                 <input class="icon-register" type="number"  id="cantidad" name="cantidad" value="<%=product.stock%>">
-                <div class="col-8 col-lg-10">
-                    <small class="cantidadProductError"></small>
-                  </div>
+
                 <label for="image">Imagen</label>
                 <input class="icon-register" type="file" name="image" id="image" <%=product.image%>>
                 <div class="col-8 col-lg-10">
@@ -67,8 +70,9 @@
 
 
 
-<footer>
-    <%- include('../partials/footer.ejs') %>
-</footer>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
 </body>
+
 </html>

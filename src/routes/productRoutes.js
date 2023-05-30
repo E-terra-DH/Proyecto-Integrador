@@ -10,7 +10,7 @@ const productController = require('../controllers/productController');
 // router.get('/', productController.productList); //ESTE LO COMENTÉ PORQUE REALMENTE LO ESTAMOS HACIENDO EN EL INDEX
 
 //Creando indice de productos disponibles en la base de datos MySQL
-router.get('/mysqlProducts',productController.listaProductos);
+router.get('/mysqlProducts', productController.listaProductos);
 // router.get('/mysqlDetail/:id',productController.detalleMysql);
 // router.get('/editmysql/:id',productController.editmysql);
 

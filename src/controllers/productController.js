@@ -158,18 +158,16 @@ const productController =
           try {
                const product = await Product.findByPk(req.params.id);
 
-
-
-
                await Product.update(
                     {
                          name: req.body.name,
                          products_categories_id: req.body.categoria,
-                         description: req.body.description,
                          price: req.body.precio,
+                         "image": req.file ? req.file.filename : "staff.jpg",
+                         description: req.body.description,
                          stock: req.body.cantidad,
                          disponible: req.body.disponible,
-                         image: req.file ? req.file.filename : "staff.jpg"
+
                     },
 
                     {
