@@ -25,7 +25,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #988AB1;
+    background-color: #EAD2F6;
     /* padding: 66px; */
     position: absolute;
     opacity: 95%;
@@ -39,9 +39,10 @@ body{
 
 .form-title, .form-title2 {
    font-family: roboto;
-   font-size: 20px;
-   color: white;
-   margin-bottom: 10px;
+    font-size: 20px;
+    color: #344E41;
+    margin-bottom: 10px;
+    margin-top: 16px;
 }
 
 form {
@@ -103,9 +104,8 @@ input {
  small{
    display: inline-block;
    /* width: 300px; */
-   color: purple;
+   color: red;
    text-align: left;
-   font-style: italic;
    font-size: 14px;
 }
 .error-message{
@@ -116,7 +116,9 @@ input {
    font-style: italic;
    font-size: 14px;
 }
-
+.registro{
+   color: #344E41;
+}
 .register-button {
    width: 200px;
    margin-top: 10px;
@@ -139,17 +141,17 @@ input {
    color: white;
    line-height: 25px;
 }
+.fa-leaf{
+   color: #9DA785;
+}
+
 
 .with-love {
    position: relative;
-   color: white;
+   color: #344E41;
    margin-top: 40px;
    /* bottom: 10px;
    left: 20px; */
-}
-
-.fa-leaf {
-   color: white;
 }
 
 .nav-search{
