@@ -163,7 +163,7 @@ const productController =
                          name: req.body.name,
                          products_categories_id: req.body.categoria,
                          price: req.body.precio,
-                         "image": req.file ? req.file.filename : "staff.jpg",
+                         image: req.file ? req.file.filename : "staff.jpg",
                          description: req.body.description,
                          stock: req.body.cantidad,
                          disponible: req.body.disponible,

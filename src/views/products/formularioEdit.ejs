@@ -28,7 +28,7 @@
                 <input class="icon-register" type="text" name="name" value="<%=product.name%>">
                 <div class="col-8 col-lg-10">
                     <small class="nameProductError"></small>
-                  </div>
+                </div>
                 <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria">
                     <input type="radio" name="categoria" <%=product.products_categories_id=="Planta" ? "selected" : ""
@@ -43,23 +43,24 @@
 
 
                 <label for="precio">Descripción</label>
-                <textarea class="icon-register" id="descripcion" name="descripcion"><%=product.description%></textarea>
+                <textarea class="icon-register" id="descripcion" name="descripcion"
+                    <%=product.description%>> </textarea>
                 <div class="col-8 col-lg-10">
                     <small class="descriptionProductError"></small>
-                  </div>
+                </div>
                 <label for="precio">Precio</label>
                 <input class="icon-register" type="price" id="precio" name="precio" value="<%=product.price%>">
                 <div class="col-8 col-lg-10">
                     <small class="priceProductError"></small>
-                  </div>
+                </div>
                 <label for="cantidad">Cantidad</label>
-                <input class="icon-register" type="number"  id="cantidad" name="cantidad" value="<%=product.stock%>">
+                <input class="icon-register" type="number" id="cantidad" name="cantidad" value="<%=product.stock%>">
 
                 <label for="image">Imagen</label>
                 <input class="icon-register" type="file" name="image" id="image" <%=product.image%>>
                 <div class="col-8 col-lg-10">
                     <small class="imageProductError"></small>
-                  </div>
+                </div>
 
                 <button class="load-button" type="submit">Editar producto</button>
             </form>

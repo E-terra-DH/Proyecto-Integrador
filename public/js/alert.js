@@ -2,7 +2,7 @@
 function deleteUser(evt, id) {
   evt.preventDefault()
 
-  sure('no floreciste???', id);
+  sure('¿no floreciste?', id);
 
 }
 function sure(msg = "alerta de eliminación", id) {
@@ -20,17 +20,22 @@ function sure(msg = "alerta de eliminación", id) {
     if (result.isConfirmed) {
       deleteData(id)
         .then(data => {
-          location.replace('/')
+          Swal.fire(
+            'Eliminado',
+            'tu perfil se nos marchito',
+            'ok'
+          )
+
+          setTimeout(() => {
+            location.replace('/');
+          }, "5000");
+
         })
         .catch(error => console.log(error))
         ;
 
 
-      Swal.fire(
-        'Eliminado',
-        'tu perfil se nos marchito',
-        'ok'
-      )
+
     }
   })
 
