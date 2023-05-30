@@ -12,8 +12,9 @@
 
     <ul>
       <% userList.forEach(user=> { %>
+
         <li>
-          <a class="item" href="/<%= user.id %>">
+          <a class="item" href="/users/profile/<%= user.id %>">
             <%= user.name %>
           </a>
 
