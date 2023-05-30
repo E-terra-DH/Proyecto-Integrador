@@ -1,44 +1,42 @@
 <%- include('../partials/header.ejs') %>
 
-<head>
-  <link rel="stylesheet" href="/css/listas-CRUD.css" />
-</head>
+  <head>
+    <link rel="stylesheet" href="/css/listas-CRUD.css" />
+  </head>
 
-<section class="main-section">
+  <section class="main-section">
 
-  <h3> Usuarios</h3>
+    <h3> Usuarios</h3>
 
-  <!-- <button class="main-button"><a class="font-color" href="/products/create">Crear nuevo producto</a></button> -->
+    <!-- <button class="main-button"><a class="font-color" href="/products/create">Crear nuevo producto</a></button> -->
 
-  <ul>
-    <% userList.forEach(user => { %>
-    <li>
-      <a class="item" href="/<%= user.id %>"><%= user.name %> </a>
-        
-      <button class="other-buttons"> 
-      <a class="item-button" href="/<%= user.id %>"> Editar </a>
-      </button>
-        
-      <button class="other-buttons"> 
-      <a class="item-button" href="/<%= user.id %>"> Eliminar </a>
-      </button>
+    <ul>
+      <% userList.forEach(user=> { %>
 
-      <br>
+        <li>
+          <a class="item" href="/users/profile/<%= user.id %>">
+            <%= user.name %>
+          </a>
 
-    </li>
-    <% }) %>
-  </ul>
+          <button class="other-buttons">
+            <a class="item-button" href="/users/edit/<%= user.id %>"> Editar </a>
+          </button>
 
-</section>
+          <button class="other-buttons">
+            <a class="item-button" href="/users/delete/<%= user.id %>"> Eliminar </a>
+          </button>
 
-<footer>
-  <%- include('../partials/footer.ejs')  %> 
-</footer>
+          <br>
 
+        </li>
+        <% }) %>
+    </ul>
 
+  </section>
 
-
-
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+  </footer>
 
 
 
@@ -46,7 +44,12 @@
 
 
 
-<!-- <!DOCTYPE html>
+
+
+
+
+
+  <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
    < include('../partials/head.ejs')  %> 

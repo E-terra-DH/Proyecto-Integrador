@@ -25,32 +25,32 @@
                         <% plantasList.forEach(planta=> { %>
 
                             <article class="product-item">
-                                <%= planta.id %>
+
+                                <a href="/products/<%= planta.id %>">
+                                    <img class="product-img" src="/Images/<%= planta.image %>" alt="">
+                                </a>
+                                <div class="product-info">
                                     <a href="/products/<%= planta.id %>">
-                                        <img class="product-img" src="/Images/<%= planta.image %>" alt="">
+                                        <h2 class="product-description">
+                                            <%= planta.name %>
+                                        </h2>
                                     </a>
-                                    <div class="product-info">
-                                        <a href="/products/<%= planta.id %>">
-                                            <h2 class="product-description">
-                                                <%= planta.name %>
-                                            </h2>
-                                        </a>
-                                        <a href="/products/<%= planta.id %>">
-                                            <p class="price">
-                                                <%= planta.price %> USD
-                                            </p>
-                                        </a>
+                                    <a href="/products/<%= planta.id %>">
+                                        <p class="price">
+                                            <%= planta.price %> USD
+                                        </p>
+                                    </a>
 
-                                        <button class="add" id="prueba">Agregar <i
-                                                class="fa-solid fa-cart-plus"></i></button>
+                                    <button class="add" id="add-cart">Agregar <i
+                                            class="fa-solid fa-cart-plus"></i></button>
 
 
-                                        <!--Poner condicional solo para administradores-->
-                                        <% if (locals.adminLogged) {%>
-                                            <a class="item-button" href="/products/edit/<%= planta.id %>">Editar</a>
-                                            <a class="item-button" href="/products/delete/<%= planta.id %>">Eliminar</a>
-                                            <% } %>
-                                    </div>
+                                    <!--Poner condicional solo para administradores-->
+                                    <% if (locals.adminLogged) {%>
+                                        <a class="item-button" href="/products/edit/<%= planta.id %>">Editar</a>
+                                        <a class="item-button" href="/products/delete/<%= planta.id %>">Eliminar</a>
+                                        <% } %>
+                                </div>
                             </article>
 
                             <% }) %>

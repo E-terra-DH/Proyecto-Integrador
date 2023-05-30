@@ -4,6 +4,7 @@ const path = require('path');
 const upload = require('../middlewares/multer');
 const validateRegister = require('../middlewares/validationsRegister');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const nuevoMiddleware = require('../middlewares/nuevoMiddleware');
 
 // const validateProductInfo = require('../middlewares/validations');
 
@@ -26,13 +27,14 @@ router.post('/login', userController.processLogin);
 
 
 //PERFIL DE USUARIO
-router.get('/profile', userController.profile);
 
-router.get('/edit', userController.edit);
-router.put('/edit', userController.update);
+router.get('/profile/:id', userController.profile);
 
-// router.get('/delete/:idUser', userController.delete);
-// router.delete('/delete/:idUser', userController.destroy);
+router.get('/edit/:id', userController.edit);
+router.put('/edit/:id', upload.single('avatar'), userController.update);
+
+router.get('/delete/:id', userController.delete);
+router.delete('/delete/:id', userController.destroy);
 
 //router.get('/:id', userController.profile); //Detalle de usuario
 

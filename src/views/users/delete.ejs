@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <%- include('../partials/head.ejs') %>
+        <title>Eliminando usuario</title>
+        <link rel="stylesheet" href="/css/formLoad.css">
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
+
+    <main>
+
+        <div class="new-product">
+
+            <h3>Eliminando usuario</h3>
+
+            <form method="post" action="/users/delete/<%= user.id %>?_method=DELETE">
+
+                <label for="name">Nombre del usuario</label>
+                <input class="icon-register" type="text" name="name" value="<%=user.name%>">
+
+                <label for="Apellido">Apellido</label>
+                <input class="icon-register" type="text" name="surname" value="<%=user.surname%>">
+
+                <label for="email">email</label>
+                <input class="icon-register" type="email" name="email" value="<%=user.email%>">
+
+                <label for="phone">Telefono</label>
+                <input class="icon-register" type="number" name="phone" value="<%=user.phone%>">
+
+                <label for="image">Imagen</label>
+                <input class="icon-register" type="file" name="image" id="image" <%=user.image%>>
+
+                </label>
+
+                <button class="load-button" type="submit">Eliminar usuario</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>
