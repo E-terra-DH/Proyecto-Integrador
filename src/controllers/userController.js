@@ -265,7 +265,10 @@ const userController = {
 
                });
 
-               return res.redirect('/users/listado')
+               return res.json({
+                    data: user,
+                    msg: 'elimanado con exito'
+               })
 
           }
           catch (error) {

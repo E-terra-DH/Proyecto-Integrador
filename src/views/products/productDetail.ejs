@@ -65,7 +65,9 @@
             <a class="edit" href="/products/edit/<%= planta.id %>">Editar</a>
             <a class="delete" href="/products/delete/<%= planta.id %>">Borrar</a>
             <% }%>
-              <button class="add-cart" id="add-cart">Agregar carrito</button>
+              <button class="add-cart" id="add-cart" data-productid="<%= planta.id %>"
+                data-productname="<%= planta.name %>" data-productprice="<%= planta.price %>"
+                data-productimage="<%= planta.image %>">Agregar carrito</button>
 
         </div>
       </div>
@@ -126,6 +128,7 @@
     <%- include('../partials/footer.ejs') %>
   </footer>
   <script src="/js/carrito.js" type="text/javascript"></script>
+  <script src="/js/common.js" type="text/javascript"></script>
 </body>
 
 </html>
