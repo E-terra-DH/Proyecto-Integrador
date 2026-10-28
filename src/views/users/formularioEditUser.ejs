@@ -1,15 +1,16 @@
 <html>
 
 <head>
-    <title>Editando productos</title>
-    <link rel="stylesheet" href="../../../css/formLoad.css">
+    <%- include('../partials/head.ejs') %>
+        <title>Editando usuario</title>
+        <link rel="stylesheet" href="/css/formLoad.css">
 </head>
 
-<header>
-    <%- include('../partials/header.ejs') %>
-</header>
-
 <body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
 
     <main>
 
@@ -17,31 +18,23 @@
 
             <h3>Editando usuario</h3>
 
-            <form method="post" action="/users/edit?_method=PUT">
+            <form method="post" action="/users/edit/<%= user.id %>?_method=PUT" enctype="multipart/form-data">
 
-                <label for="name">Nombre del producto</label>
+                <label for="name">Nombre del usuario</label>
                 <input class="icon-register" type="text" name="name" value="<%=user.name%>">
 
-                <label for="Apellido">Apellido</label>
+                <label for="surname">Apellido</label>
                 <input class="icon-register" type="text" name="surname" value="<%=user.surname%>">
 
                 <label for="email">email</label>
                 <input class="icon-register" type="email" name="email" value="<%=user.email%>">
 
-                <label for="contraseña">contraseña</label>
-                <input class="icon-register" type="text" name="password" value="<%=user.password%>">
-
                 <label for="phone">Telefono</label>
                 <input class="icon-register" type="number" name="phone" value="<%=user.phone%>">
 
-                <label for="image">Imagen</label>
-                <input class="icon-register" type="file" name="image" id="image" <%=user.image%>>
+                <label for="avatar">Imagen</label>
+                <input class="icon-register" type="file" name="avatar" id="image" <%=user.avatar%>>
 
-                <label for="categoria">Tipo de usuario</label>
-                <label class="categories" for="categoria">
-                    <input type="radio" name="categoria" <%=user.user_categories_id == "Admin" ? "selected" : ""%> value="1">Admin
-                    <input type="radio" name="categoria" <%=user.user_categories_id == "General" ? "selected" : ""%> value="2">General
-            
                 </label>
 
                 <button class="load-button" type="submit">Editar usuario</button>
@@ -50,10 +43,9 @@
 
     </main>
 
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
 </body>
-
-<footer>
-    <%- include('../partials/footer.ejs') %>
-</footer>
 
 </html>

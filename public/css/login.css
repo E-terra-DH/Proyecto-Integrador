@@ -26,7 +26,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #988AB1;
+    background-color: #EAD2F6;
     padding: 93px;
     position: absolute;
     opacity: 95%;
@@ -47,13 +47,14 @@ body{
 .form-title2 {
    font-family: roboto;
    font-size: 20px;
-   color: white;
+   color: #344E41;
    margin-bottom: 10px;
 }
 
 form {
    display: flex;
    flex-direction: column;
+   align-items: center;
 }
 
 .fa-solid {
@@ -85,6 +86,13 @@ input {
    font-size: 15px;
    color: #344E41;
    font-family: roboto;
+}
+small{
+   display: inline-block;
+   /* width: 300px; */
+   color: red;
+   text-align: left;
+   font-size: 14px;
 }
 
 .login-button {
@@ -121,14 +129,14 @@ input {
 
 .with-love {
    position: relative;
-   color: white;
+   color: #344E41;
    margin-top: 40px;
    /* bottom: 10px;
    left: 20px; */
 }
 
 .fa-leaf {
-   color: white;
+   color: #9DA785
 }
 .nav-search{
    display: none;
@@ -149,14 +157,19 @@ input {
 .fa-bars{
    color: #344E41;
 }
+.registro{
+   color: #344E41;
+}
 
 .remember{
-   color: white;
+   color: #344E41;
    font-size: 15px;
    text-decoration: none;
-  display: flex;
-  align-items: stretch;
-  flex-direction: row-reverse;
+   display: flex;
+   align-items: stretch;
+   flex-direction: row-reverse;
+   position: relative;
+   left: 39px;
 
   
 }

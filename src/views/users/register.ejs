@@ -79,7 +79,7 @@
           <form  action="./register" id="formRegister" method="post" enctype="multipart/form-data"> 
             <!-- action="/users/delete///%= users [i].id %>?_method=DELETE" -->
 
-            <label class="icon-register">
+            <label class="icon-register" for="emailForm">
               <i class="fa-solid fa-envelope"></i>
             <input id="casillaEmail" type="text" name="email" placeholder="Escribe tu e-mail" value="<%= locals.oldBody ? oldBody.email : '' %>" /></label>
             <% if (locals.mensajeDeError && mensajeDeError.email) { %>
@@ -88,50 +88,63 @@
             <% if(locals.errors && errors.email) { %>
               <p class="error-message"> <%= errors.email.msgregistered  %> </p>
             <% } %>
+            <div class="col-8 col-lg-10">
+              <small class="emailError"></small>
+            </div>
 
             
-            <label class="icon-register">
+            <label class="icon-register " for="nameForm">
               <i class="fa-solid fa-user"></i>
             <input id= "name" type="text" name="nombre" placeholder="Nombre" value="<%= locals.oldBody ? oldBody.nombre : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.usuario) { %>
               <p class="error-message"> <%= mensajeDeError.usuario.msg  %> </p>
             <% } %>
+            <div class="col-8 col-lg-10">
+              <small class="nameError"></small>
+            </div>
 
-            <label class="icon-register">
+            <label class="icon-register" for="lastnameForm">
               <i class="fa-solid fa-user"></i>
             <input id="apellido" type="text" name="apellido" placeholder="Apellido" value="<%= locals.oldBody ? oldBody.apellido : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.apellido) { %>
               <p class="error-message"> <%= mensajeDeError.apellido.msg  %> </p>
             <% } %>
+            <div class="col-8 col-lg-10">
+              <small class="lastnameError"></small>
+            </div>
 
-            <label class="icon-register">
+            <label class="icon-register" for="passwordForm">
               <i class="fa-solid fa-lock"></i>
             <input id="contrasena" type="password" name="contrasena" placeholder="Contraseña" value="<%= locals.oldBody ? oldBody.contrasena : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.contrasena) { %>
               <p class="error-message"> <%= mensajeDeError.contrasena.msg  %> </p>
             <% } %>
+            <div class="col-8 col-lg-10">
+              <small class="passwordError"></small>
+            </div>
 
             <!-- <label class="icon-register">
                 <i class="fa-solid fa-check"></i>
             <input type="password" name="contraseña-conf" placeholder="Confirmar contraseña" required/></label> -->
 
-            <label class="icon-register">
+            <label class="icon-register" for="phoneForm">
                 <i class="fa-solid fa-mobile-screen"></i>
             <input id="phone"type="cel" name="cel" placeholder="Celular" value="<%= locals.oldBody ? oldBody.cel : '' %>"/></label>
             <% if (locals.mensajeDeError && mensajeDeError.cel) { %>
               <p class="error-message"> <%= mensajeDeError.cel.msg  %> </p>
             <% } %>
+            <div class="col-8 col-lg-10">
+              <small class="phoneError"></small>
+            </div>
 
             <label class="icon-register">
             <input class="input-image" type="file" name="avatar" id="avatar" placeholder="avatar"/></label>
+            <div class="col-8 col-lg-10">
+              <small class="avatarError"></small>
+            </div>
 
             <button id="enviar" class="register-button" type="submit">Crear cuenta</button>
           </form> 
-
-
-            <div class="errores">
-              <ul class="ulErrores"></ul>
-            </div>
          
         
           <div class="otros-login">
@@ -147,5 +160,6 @@
     <script src="/js/index.js"
     type="text/javascript"
     ></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
   </body>
 </html>

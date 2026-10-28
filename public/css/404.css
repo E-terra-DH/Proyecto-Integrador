@@ -1,5 +1,17 @@
-.error {
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+img {
+  width: 100%;
+
+}.error {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
   justify-content: center;
 }
 

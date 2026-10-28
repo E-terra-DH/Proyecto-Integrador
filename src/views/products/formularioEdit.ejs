@@ -1,15 +1,19 @@
 <html>
 
 <head>
-    <title>Editando productos</title>
-    <link rel="stylesheet" href="../../../css/formLoad.css">
+    <%- include('../partials/head.ejs') %>
+        <title>Listado de productos</title>
+        <link rel="stylesheet" href="/css/formLoad.css">
 </head>
 
-<header>
-    <%- include('../partials/header.ejs') %>
-</header>
+
 
 <body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
+
 
     <main>
 
@@ -17,43 +21,59 @@
 
             <h3>Editando producto</h3>
 
-            <form method="post" action="/products/edit/<%= product.id %>?_method=PUT">
+            <form method="post" id="form-create-p" action="/products/edit/<%= product.id %>?_method=PUT"
+                enctype="multipart/form-data">
 
                 <label for="name">Nombre del producto</label>
                 <input class="icon-register" type="text" name="name" value="<%=product.name%>">
-
+                <div class="col-8 col-lg-10">
+                    <small class="nameProductError"></small>
+                </div>
                 <label for="categoria">Tipo de producto</label>
                 <label class="categories" for="categoria">
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Planta" ? "selected" : ""%> value="1">Plantas
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Macetas" ? "selected" : ""%> value="2">Macetas
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Accesorios" ? "selected" : ""%> value="3">Accesorios
-                    <input type="radio" name="categoria" <%=product.products_categories_id == "Sustratos" ? "selected" : ""%> value="4">Sustratos
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Planta" ? "selected" : ""
+                        %> value="1">Plantas
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Macetas" ? "selected" : ""
+                        %> value="2">Macetas
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Accesorios" ? "selected"
+                        : "" %> value="3">Accesorios
+                    <input type="radio" name="categoria" <%=product.products_categories_id=="Sustratos" ? "selected"
+                        : "" %> value="4">Sustratos
                 </label>
 
 
                 <label for="precio">Descripción</label>
-                <textarea class="icon-register" name="descripcion"><%=product.description%></textarea>
-
+                <textarea class="icon-register" id="descripcion" name="descripcion"
+                    <%=product.description%>> </textarea>
+                <div class="col-8 col-lg-10">
+                    <small class="descriptionProductError"></small>
+                </div>
                 <label for="precio">Precio</label>
-                <input class="icon-register" type="price" name="precio" value="<%=product.price%>">
-
+                <input class="icon-register" type="price" id="precio" name="precio" value="<%=product.price%>">
+                <div class="col-8 col-lg-10">
+                    <small class="priceProductError"></small>
+                </div>
                 <label for="cantidad">Cantidad</label>
-                <input class="icon-register" type="number" name="cantidad" value="<%=product.stock%>">
+                <input class="icon-register" type="number" id="cantidad" name="cantidad" value="<%=product.stock%>">
 
                 <label for="image">Imagen</label>
                 <input class="icon-register" type="file" name="image" id="image" <%=product.image%>>
-
+                <div class="col-8 col-lg-10">
+                    <small class="imageProductError"></small>
+                </div>
 
                 <button class="load-button" type="submit">Editar producto</button>
             </form>
         </div>
-
+        <script src="/js/createProValidation.js"></script>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     </main>
 
-</body>
 
-<footer>
-    <%- include('../partials/footer.ejs') %>
-</footer>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+</body>
 
 </html>

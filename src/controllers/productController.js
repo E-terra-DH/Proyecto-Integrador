@@ -98,7 +98,12 @@ const productController =
      productDetail: async (req, res) => {
           try {
                let planta = await Product.findByPk(req.params.id)
-               res.render('./products/productDetail', { planta })
+               if (planta) {
+                    res.render('./products/productDetail', { planta })
+
+               } else { res.render('404') }
+
+
           } catch (error) {
                res.json(error)
           }
@@ -126,7 +131,7 @@ const productController =
                "description": req.body.descripcion,
                "price": req.body.precio || 'sin precio',
                "stock": req.body.cantidad || 'sin cantidad',
-               "image": req.file.filename || 'sin imagen',
+               "image": req.file ? req.file.filename : "staff.jpg",
                "products_categories_id": req.body.categoria,
                "disonible": req.body.disponible
           }
@@ -149,26 +154,30 @@ const productController =
           }
      },
 
-     update: (req, res) => {
+     update: async (req, res) => {
+          try {
+               const product = await Product.findByPk(req.params.id);
 
-          Product.update(
-               {
-                    "name": req.body.name,
-                    "description": req.body.descripcion,
-                    "price": req.body.precio,
-                    "stock": req.body.cantidad,
-                    //"image": req.file.filename,
-                    "products_categories_id": req.body.categoria,
-                    "disonible": req.body.disponible
-               }, {
-               where: {
-                    id: req.params.id
-               }
+               await Product.update(
+                    {
+                         name: req.body.name,
+                         products_categories_id: req.body.categoria,
+                         price: req.body.precio,
+                         image: req.file ? req.file.filename : "staff.jpg",
+                         description: req.body.description,
+                         stock: req.body.cantidad,
+                         disponible: req.body.disponible,
+
+                    },
+
+                    {
+                         where: { id: req.params.id }
+                    })
+               // res.render('preuba de la imagen', image)
+               return res.redirect('/products/' + req.params.id);
+          } catch (error) {
+               res.json(error);
           }
-          )
-               .then(() => {
-                    res.redirect('/products/index')
-               })
      },
 
      delete: async (req, res) => {

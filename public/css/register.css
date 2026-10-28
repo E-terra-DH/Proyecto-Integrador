@@ -22,22 +22,27 @@ body{
 
 .register {
    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background-color: #988AB1;
-   padding: 93px;
-   position: absolute;
-   opacity: 95%;
-   top: 78px;
-   border-radius: 4px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAD2F6;
+    /* padding: 66px; */
+    position: absolute;
+    opacity: 95%;
+    top: 78px;
+    border-radius: 4px;
+    padding-left: 83px;
+    padding-right: 83px;
+    padding-top: 36px;
+    padding-bottom: 25px;
 }
 
 .form-title, .form-title2 {
    font-family: roboto;
-   font-size: 20px;
-   color: white;
-   margin-bottom: 10px;
+    font-size: 20px;
+    color: #344E41;
+    margin-bottom: 10px;
+    margin-top: 16px;
 }
 
 form {
@@ -96,7 +101,13 @@ input {
    font-family: roboto;
    /* display: none; */
 }
-
+ small{
+   display: inline-block;
+   /* width: 300px; */
+   color: red;
+   text-align: left;
+   font-size: 14px;
+}
 .error-message{
    display: inline-block;
    /* width: 300px; */
@@ -105,7 +116,9 @@ input {
    font-style: italic;
    font-size: 14px;
 }
-
+.registro{
+   color: #344E41;
+}
 .register-button {
    width: 200px;
    margin-top: 10px;
@@ -128,17 +141,17 @@ input {
    color: white;
    line-height: 25px;
 }
+.fa-leaf{
+   color: #9DA785;
+}
+
 
 .with-love {
    position: relative;
-   color: white;
+   color: #344E41;
    margin-top: 40px;
    /* bottom: 10px;
    left: 20px; */
-}
-
-.fa-leaf {
-   color: white;
 }
 
 .nav-search{

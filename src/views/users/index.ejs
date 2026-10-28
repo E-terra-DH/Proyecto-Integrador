@@ -30,7 +30,7 @@
             <div class="icon-user-cart">
                 <% if(locals.isLogged) {%>
                     <li>
-                        <a class="avatar-nav" href="/users/profile">
+                        <a class="avatar-nav" href="/users/profile/<%= locals.userLogged.id %>">
                             <img class="avatar-img-nav" src="../../../Images/<%= locals.userLogged.avatar %>" alt="">
                             <p class="username-nav">
                                 <%= locals.userLogged.usuario %>
@@ -39,7 +39,7 @@
                     </li>
                     <% } else if (locals.adminLogged) { %>
                         <li>
-                            <a class="avatar-nav" href="/users/profile">
+                            <a class="avatar-nav" href="/users/profile/<%= locals.adminLogged.id %>">
                                 <img class="avatar-img-nav" src="../../../Images/<%= locals.adminLogged.avatar %>"
                                     alt="">
                                 <p class="username-nav">
@@ -88,8 +88,8 @@
                                 <a class="label-btm" href="/login"><i class="fa-solid fa-user"></i></a>
                                 <% } %>
                 </li>
-                <li class="bottom"><a class="label-btm" href="products/list"><i class="fas fa-bars"></i></a></li>
-                <li class="bottom"><a class="label-btm" href="products/cart" class="user"><i
+                <li class="bottom"><a class="label-btm" href="/products/list"><i class="fas fa-bars"></i></a></li>
+                <li class="bottom"><a class="label-btm" href="/products/cart" class="user"><i
                             class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
         </div>
@@ -99,8 +99,6 @@
     <main>
         <section class="categories">
             <h3 class="cat-titles">Categorías</h3>
-
-
 
             <div class="products">
                 <a href="/products/category/1">
@@ -138,13 +136,7 @@
                         <h4 class="description">Sustratos</h4>
                     </article>
                 </a>
-
             </div>
-
-
-
-
-
         </section>
 
         <section class="best-sellers">
@@ -152,42 +144,49 @@
 
             <section class="bs-products">
 
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Ave del paraíso</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add" id="add-producto" type="submit">Agregar <i
-                                class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-                <div>
+                <a href="../products/1">
                     <article class="product-item">
-                        <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
+                        <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
                         <div class="product-info">
-                            <h2 class="product-description">Philodendron</h2>
+                            <h2 class="product-description">Ave del paraíso</h2>
                             <p class="price">50 USD</p>
-                            <button class="add" id="prueba">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                            <button class="add" id="add-producto" type="submit">Agregar <i
+                                    class="fa-solid fa-cart-plus"></i></button>
                         </div>
                     </article>
+                </a>
+                <div>
+                    <a href="../products/2">
+                        <article class="product-item">
+                            <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
+                            <div class="product-info">
+                                <h2 class="product-description">Philodendron</h2>
+                                <p class="price">50 USD</p>
+                                <button class="add" id="prueba">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                            </div>
+                        </article>
+                    </a>
                 </div>
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-syngonium.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Syngonium</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-begonia-maculata.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Begonia maculata</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
+                <a href="../products/3">
+                    <article class="product-item">
+                        <img class="product-img" src="/Images/product-syngonium.png" alt="">
+                        <div class="product-info">
+                            <h2 class="product-description">Syngonium</h2>
+                            <p class="price">50 USD</p>
+                            <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </article>
+                </a>
+                <a href="../products/4">
+                    <article class="product-item">
+                        <img class="product-img" src="/Images/product-begonia-maculata.png" alt="">
+                        <div class="product-info">
+                            <h2 class="product-description">Begonia maculata</h2>
+                            <p class="price">50 USD</p>
+                            <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </article>
+                </a>
 
             </section>
         </section>
@@ -197,41 +196,46 @@
 
             <section class="ct-products">
 
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-ave-paraiso.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Ave del paraíso</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-philodendron-white-knight.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Philodendron</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-syngonium.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Syngonium</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
-
-                <article class="product-item">
-                    <img class="product-img" src="/Images/product-begonia-maculata.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-description">Begonia maculata</h2>
-                        <p class="price">50 USD</p>
-                        <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
-                    </div>
-                </article>
+                <a href="../products/17">
+                    <article class="product-item">
+                        <img class="product-img" src="/Images/Accesorios-tejido-colgante-macrame.jpg" alt="">
+                        <div class="product-info">
+                            <h2 class="product-description">Tejido colgante Colombia</h2>
+                            <p class="price">50 USD</p>
+                            <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </article>
+                </a>
+                <a href="../products/26">
+                    <article class="product-item">
+                        <img class="product-img" src="/Images/nuevas_plantas.jpg" alt="">
+                        <div class="product-info">
+                            <h2 class="product-description">Nuevas plantas</h2>
+                            <p class="price">5 USD</p>
+                            <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </article>
+                </a>
+                <a href="../products/15">
+                    <article class="product-item">
+                        <img class="product-img" src="/Images/Matera-gold-retro.jpg" alt="">
+                        <div class="product-info">
+                            <h2 class="product-description">Matera gold retro</h2>
+                            <p class="price">50 USD</p>
+                            <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </article>
+                </a>
+                <a href="../products/22">
+                    <article class="product-item">
+                        <img class="product-img" src="/Images/Sustrato-cascarilla-arroz.jpg" alt="">
+                        <div class="product-info">
+                            <h2 class="product-description">Begonia maculata</h2>
+                            <p class="price">50 USD</p>
+                            <button class="add">Agregar <i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </article>
+                </a>
 
             </section>
         </section>

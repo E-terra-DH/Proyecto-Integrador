@@ -1,6 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="/css/header-partial.css">
-    <link rel="stylesheet" href="/css/404.css">
+    <%- include ('../views/partials/head.ejs') %>
+        <title>TERRA</title>
+        <link rel="stylesheet" href="/css/header-partial.css">
+        <link rel="stylesheet" href="/css/404.css">
 
     <section class="nav-search">
         <ul class="nav-bar">
@@ -80,24 +85,16 @@
 </head>
 
 <body>
-
-
     <div class="error">
-
-
-
         <a href="/">
-
             <img href="../views/users/index.ejs"
                 src="https://cdn.dribbble.com/users/3038056/screenshots/8112684/media/b4f6a4d8af3c0e89957ea29cf61c6e2c.gif"
-                alt="aca va la imagen">
+                alt=" imagen de error">
         </a>
-
     </div>
 
     <footer>
-
-        <%- include('partials/footer.ejs') %>
+        <%- include('../views/partials/footer.ejs') %>
     </footer>
 
 </body>
