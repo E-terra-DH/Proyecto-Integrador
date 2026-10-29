@@ -6,6 +6,8 @@ const { clearScreenDown } = require('readline');
 const methodOverride = require('method-override');
 const PORT = process.env.PORT || 3006;
 const cors = require('cors');
+// Bloque de importaciones lo que se rqeuiere base para correr
+
 
 //Para validar la sesión y gurdar las cookies
 // const userSessionMdlw = require('./middlewares/userSessionMdlw');
